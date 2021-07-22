@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Минестерство по налогам и сборам"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page page__decor">
+				<div class="content">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Главная<i class="bi-chevron-right"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Поиск инспекции</li>
+							</ol>
+						</div>
+					 </nav>
+					<div class="search-inspectorate">
+						<div class='container'>
+							<div class="title title_white">Введите данные для поиска</div>
+							<form class="form-search-inspectorate">
+								<div class="form-search-inspectorate__line">
+									<label class="form-search-inspectorate__label h4" for="city">Город</label>
+									<input id="city" type="text" class="form-search-inspectorate__input">
+								</div>
+								<div class="form-search-inspectorate__line">
+									<label class="form-search-inspectorate__label h4" for="street">Улица</label>
+									<input id="street" type="text" class="form-search-inspectorate__input">
+								</div>
+								<div class="form-search-inspectorate__line">
+									<label class="form-search-inspectorate__label h4" for="number">Номер дома</label>
+									<input id="number" type="text" class="form-search-inspectorate__input">
+								</div>
+								<button class="form-search-inspectorate__button" type="button">Поиск</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		<!-- @@include('_popup.html',{}) -->
+		@@include('_js.html',{})
+	</body>
+</html>
