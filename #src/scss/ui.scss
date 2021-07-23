@@ -243,9 +243,18 @@ a.title_white {
 	color: $white;
 
 	&:hover {
-		color: #C5C7C6;
+		color: $white;
+		opacity: 0.7;
 	}
 
+	&_black {
+		color: $black;
+
+		&:hover {
+			color: $black;
+			opacity: 0.7;
+		}
+	}
 }
 .breadcrumb {
 	margin: 30px 0px;
