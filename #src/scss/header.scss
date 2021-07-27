@@ -140,7 +140,23 @@
       }
    }
 }
+.map-site-header {
+	&__btn {
+		i:before {
+			color: $white;
+			font-size: 20px;
+		}
+
+		&:hover {
+			i:before {
+				opacity: 0.7;
+			}
+		}
+	}
+}
 .phone-header {
+	margin: 0px 0px 0px 40px;
+
 	&__btn {
 		animation: 1s ease infinite alternate rotate-phone;
 		
@@ -236,7 +252,7 @@
       justify-content: center;
       background: #014A37;
       order: 2;
-      padding: 10px 20px 10px 10px;
+      padding: 10px 15px;
       min-height: 40px;
       cursor: pointer;
 
@@ -244,6 +260,8 @@
       }
 
       &._active {
+			margin-bottom: 10px;
+			padding: 10px 20px 10px 10px;
          order: 1;
          pointer-events: none;
       }
@@ -483,12 +501,12 @@
 		img {
 			width: 73px;
 			height: 73px;
+			margin: 0px 5px 0px 0px;
 		}
 	}
 
 	&__name {
-		width: 335px;
-		margin: 0px 0px 0px 5px;
+		max-width: 335px;
 	}
 
 	&__label {

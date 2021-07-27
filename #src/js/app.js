@@ -89,6 +89,13 @@ $(function(){
 	$('.language-select').click(function(){
 		$(this).toggleClass('open');
 	})
+
+	$(document).click(function (e) {
+		let s = $('.language-select');
+		if (!s.is(e.target)) {
+         s.removeClass('open');
+      }
+   });
 		
 	$('.language-select__item').click(function(){
 	var setLang = $('.language-select').data('location'),
