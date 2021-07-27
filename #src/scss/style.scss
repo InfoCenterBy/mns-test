@@ -331,7 +331,7 @@ body {
 }
 .main-news {
 	padding: 30px 0;
-	background-color: #007A65;
+	background-color: $green-light;
 
 	&__title {
 		margin: 0px 0px 30px 0px;
@@ -348,11 +348,17 @@ body {
 		border-radius: 10px;
 		overflow: hidden;
 		position: relative;
-		padding: 39% 0px 0px 0px;
+		padding: 53% 0px 0px 0px;
 		filter: grayscale(0%);
+		background-color: transparent;
+		color: $white;
 
 		&:hover img {
 			filter: grayscale(100%);
+		}
+
+		&:hover {
+			color: $white;
 		}
 		
 		&_big {
@@ -381,6 +387,7 @@ body {
 		&_mid {
 			grid-column-start: 2;
 			grid-column-end: 4;
+			padding: 10px 10px 0;
 		}
 	}
 
@@ -398,9 +405,9 @@ body {
 
 	&__label {
 		font-size: 14px;
-		color:#fff;
+		color: $white;
 		padding: 3px 15px;
-		background-color: #FBC469;
+		background-color: $orangeColor;
 		border-radius: 10px;
 		position: absolute;
 		top: 15px;
@@ -414,15 +421,26 @@ body {
 		bottom: 15px;
 	}
 
+	&__link {
+		display: inline-block;
+		color: $white;
+		
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+
+		&:hover {
+			color: rgba(254, 254, 254, 0.7);
+		}
+	}
+
 	&__date {
 		font-size: 14px;
-		color:#fff;
 		margin: 0px 0px 5px 0px;
 	}
 
 	&__header {
 		font-size: 18px;
-		color:#fff;
 		font-weight: 600;
 	}
 }
@@ -433,7 +451,6 @@ body {
 	}
 
 	&__title {
-		// display: block;
 		padding: 30px 0;
 		
 		i:before {
