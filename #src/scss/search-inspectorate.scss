@@ -26,14 +26,14 @@
 
 	&__input {
 		width: 100%;
-		background-color: $white;
-		border: 1px solid $white;
+		background-color: $color-white;
+		border: 1px solid $color-white;
 		padding: 0 10px;
 		font-size: 14px;
 		line-height: 46px;
 
 		&:focus {
-			border: 1px solid $green-light;
+			border: 1px solid $color-green-light;
 			border-radius: 10px;
 		}
 	}
