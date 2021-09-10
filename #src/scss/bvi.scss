@@ -1477,6 +1477,11 @@ html body .bvi-body[data-bvi-theme=black] * a.bvi-link:focus {
   text-underline: none !important;
   text-decoration: none !important;
 }
+// html body .bvi-body[data-bvi-theme=black] * i {
+// 	// color: #000000 !important;
+// 	background-color: #000000 !important;
+// 	text-decoration: none !important;
+//  }
 html body .bvi-body[data-bvi-theme=black] * :checked,
 html body .bvi-body[data-bvi-theme=black] * :default,
 html body .bvi-body[data-bvi-theme=black] * :disabled,
@@ -1583,6 +1588,56 @@ html body .bvi-body[data-bvi-theme=black] * button, html body .bvi-body[data-bvi
   background-color: #ffffff !important;
   text-decoration: none !important;
 }
+// ================================================================================
+html body .bvi-body[data-bvi-theme=black] * button i, html body .bvi-body[data-bvi-theme=black] * input[type=submit] i, html body .bvi-body[data-bvi-theme=black] * input[type=button] i, html body .bvi-body[data-bvi-theme=black] * button[type=submit] i, html body .bvi-body[data-bvi-theme=black] * button[type=button] i {
+	background-color: #ffffff !important;
+}
+html body .bvi-body[data-bvi-theme=black] * button i:before, html body .bvi-body[data-bvi-theme=black] * input[type=submit] i:before, html body .bvi-body[data-bvi-theme=black] * input[type=button] i:before, html body .bvi-body[data-bvi-theme=black] * button[type=submit] i:before, html body .bvi-body[data-bvi-theme=black] * button[type=button] i:before {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  text-decoration: none !important;
+}
+.bvi-body[data-bvi-theme=black] .header-search__input {
+	background-color: transparent !important;
+}
+.bvi-body[data-bvi-theme=black] .header-search__input:focus {
+	background-color: #ffffff !important;
+}
+@media (max-width: 900px) {
+	html body .bvi-body .bvi-panel-close {
+		margin: 0px 0px 0px 15px;
+	}
+}
+@media (max-width: $md4+px) {
+	html body .bvi-body .bvi-panel-close {
+		margin: 0px 0px 0px 10px;
+	}
+}
+html body .bvi-body[data-bvi-theme=black] a.bvi-background-image.bvi-panel-close:hover {
+	background-color: #3a3a3a !important;
+}
+html body .bvi-body[data-bvi-images="false"] .bvi-background-image.bvi-panel-close {
+	background: url('../img/icons/handicapped-line.svg') 0 0 no-repeat !important;
+}
+html body .bvi-body[data-bvi-images="false"] .header-top__logo {
+	position: relative;
+	background: #ffffff !important;
+}
+html body .bvi-body[data-bvi-images="false"] .header-top__logo:before {
+	content: "Главная";
+	font-size: 9px;
+	color:#000 !important;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+// ================================================================================
 html body .bvi-body[data-bvi-theme=black] * button:hover.active, html body .bvi-body[data-bvi-theme=black] * input[type=button]:hover.active, html body .bvi-body[data-bvi-theme=black] * input[type=submit]:hover.active, html body .bvi-body[data-bvi-theme=black] * button[type=submit]:hover.active, html body .bvi-body[data-bvi-theme=black] * button[type=button]:hover.active {
   color: #000000 !important;
   background-color: #ffffff !important;
@@ -3271,8 +3326,8 @@ html body .bvi-body[data-bvi-images=true] .bvi-background-image {
   background-color: transparent !important;
 }
 html body .bvi-body[data-bvi-images=false] .bvi-background-image {
-//   background-image: none !important;
-//   border: 0 !important;
+  background-image: none !important;
+  border: 0 !important;
 }
 html body .bvi-body[data-bvi-images=false] div.bvi-img-wrapper {
 	display: none;

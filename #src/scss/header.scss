@@ -1,6 +1,11 @@
 .header-top {
    background-color: $color-green-dark;
 	z-index: 5;
+
+	&__logo {
+		width: 35px;
+		height: 35px;
+	}
 }
 .header-special {
 
@@ -62,7 +67,6 @@
 		height: 15px;
 		font-size: 14px;
 		color: $color-white;
-		cursor: pointer;
 		
 		&._show-block {
 			i:before {
@@ -81,17 +85,6 @@
 	}
 
 	&__btn {
-		cursor: pointer;
-		color: $color-black;
-
-		&:hover {
-			opacity: 0.7;
-		}
-
-		&_toggle-theme {
-			font-size: 20px;
-		}
-
 		&_close {
 			font-size: 30px;
 		}
@@ -103,7 +96,6 @@
 		color: $color-gray-dark;
 		font-size: 18px;
 		font-weight: 600;
-		cursor: pointer;
 
 		&.active {
 			color: $color-black;
@@ -171,7 +163,6 @@
 		font-weight: 600;
 		font-size: 20px;
 		color: $color-white;
-      cursor: pointer;
 		transition: all 0.3s ease 0s;
 		
 		@media (min-width: $md3+px) {
@@ -239,20 +230,6 @@
       }
    }
 }
-.map-site-header {
-	&__btn {
-		i:before {
-			color: $color-white;
-			font-size: 20px;
-		}
-
-		&:hover {
-			i:before {
-				opacity: 0.7;
-			}
-		}
-	}
-}
 .phone-header {
 	margin: 0px 0px 0px 40px;
 
@@ -266,13 +243,6 @@
 
 	&__btn {
 		animation: 1s ease infinite alternate rotate-phone;
-		color: $color-white;
-		font-size: 20px;
-		cursor: pointer;
-
-		&:hover {
-			opacity: 0.7;
-		}
 	}
 
 	&__list {
@@ -288,18 +258,11 @@
 			}
 		}
 		&.show {
-			transform: translate(0px, 40px) !important;
-		}
-	}
+			transform: translate(-10px, 40px) !important;
 
-	&__link {
-		font-size: 18px;
-		color: $color-white;
-		font-weight: 600;
-
-		&:hover {
-			color: $color-white;
-			opacity: 0.7;
+			@media (max-width: 900px) {
+				transform: translate(-120px, 40px) !important;
+			}
 		}
 	}
 }
@@ -314,13 +277,6 @@
 .header-handicapped {
 	margin: 0px 0px 0px 40px;
 	animation: 1s ease infinite alternate scale-handicapped;
-	font-size: 20px;
-	color: $color-white;
-	cursor: pointer;
-
-	&:hover {
-		opacity: 0.7;
-	}
 
 	@media (max-width: 900px) {
 		margin: 0px 0px 0px 15px;
@@ -374,15 +330,7 @@
 	}
 	
 	&__button {
-		position: absolute;
-		top: 0px;
-		right: 0;
 		z-index: 4;
-		font-size: 20px;
-		color: $color-white;
-		
-		i:before {
-		}
 	}
 }
 .header-language {
@@ -435,7 +383,6 @@
       order: 2;
       padding: 10px 15px;
       min-height: 40px;
-      cursor: pointer;
 
       &:hover {
       }
@@ -471,9 +418,8 @@
 
 	&__burger {
 		width: 20px;
-		height: 16px;
+		height: 20px;
 		position: relative;
-		cursor: pointer;
 
 		&:hover {
 			span {
@@ -482,12 +428,21 @@
 		}
 
 		span {
-			display: block;
-			margin: 4px 0px;
 			width: 20px;
 			height: 2px;
 			background-color: $color-white;
 			transition: all 0.3s ease-in-out;
+			position: absolute;
+			left: 0;
+			top: 9px;
+
+			&:first-child {
+				top: 2px;
+			}
+
+			&:last-child {
+				top: 16px;
+			}
 		}
 
 		&._show-block {
@@ -503,7 +458,7 @@
 				}
 
 				&:first-child {
-					transform: translateY(6px);
+					top: 9px;
 				}
 
 				&:nth-child(2) {
@@ -511,7 +466,8 @@
 				}
 
 				&:last-child {
-					transform: translateY(-6px) rotate(90deg);
+					top: 9px;
+					transform: rotate(90deg);
 				}
 			}
 		}
@@ -547,10 +503,6 @@
 	}
 
 	&__toggle-theme {
-		font-size: 20px;
-		border-color: $color-black;
-		cursor: pointer;
-		transition: all 0.3s ease 0s;
 		
 		&:hover {
 			i:before {
@@ -579,7 +531,6 @@
 		}
 	}
 }
-
 .header-bottom {
 	background: url('../img/decor.jpg') 0 0 repeat;
 
@@ -670,10 +621,11 @@
 	}
 }
 .submenu {
+	width: 100%;
 	padding: 40px 0px 0px 0px;
 	display: none;
 	position: absolute;
-	top: 65px;
+ 	top: 65px;
 	left: 0;
 	z-index: 5;
 
@@ -688,7 +640,6 @@
 	}
 	
 }
-
 .header-marquee {
 	padding: 15px 0;
 	background-color: #02826C;

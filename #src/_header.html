@@ -3,18 +3,18 @@
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center position-relative">
 				<div class="d-flex align-items-center">
-					<a href="#" class="ms-lg-5 me-2 img"><img src="./img/logo-gray.png" alt=""/></a>
+					<a href="#" class="header-top__logo ms-lg-5 me-2 img"><img src="./img/logo-gray.png" alt=""/></a>
 					<div class="header-special">
-						<span class="header-special__button me-2 me-sm-3 me-md-5 d-block _btn-toggle"><i class="bi bi-chevron-down"></i></span>
+						<button class="header-special__button me-2 me-sm-3 me-md-5 d-block _btn-toggle"><i class="bi bi-chevron-down"></i></button>
 						<div class="header-special__wrapper container hidden-block">
 							<div class="d-flex align-items-center mb-3">
 								<div class="h2 me-auto">Специальные проекты</div>
-								<div class="header-special__btn ms-2 header-special__btn_toggle-theme">
+								<button class="header-special__btn ms-2 header-special__btn_toggle-theme btn-accord">
 									<i class="bi bi-moon"></i>
-								</div>
-								<div class="header-special__btn header-special__btn_close ms-2 ms-sm-4">
+								</button>
+								<button class="header-special__btn header-special__btn_close btn-accord ms-2 ms-sm-4">
 									<i class="bi bi-x"></i>
-								</div>
+								</button>
 							</div>
 							<nav>
 								<div class="nav" id="nav-tab" role="tablist">
@@ -170,11 +170,11 @@
 						</div>
 					</div>
 					<div class="inspectorates">
-						<div class="inspectorates__btn d-md-flex align-items-center _btn-toggle">
+						<button class="inspectorates__btn d-md-flex align-items-center _btn-toggle">
 							<div class="inspectorates__title me-auto">Налоговые инспекции</div>
 							<i class="bi bi-chevron-down d-none d-md-block"></i>
 							<i class="bi bi-geo-alt d-block d-md-none"></i>
-						</div>
+						</button>
 						<ul class="inspectorates__list hidden-block">
 							<li><a href="search-inspectorate.html" class="inspectorates__link">Найти инспекцию</a></li>
 							<li><a href="test.html" class="inspectorates__link">ИМНС по городу Минску</a></li>
@@ -188,26 +188,20 @@
 					</div>
 				</div>
 				<div class="d-flex align-items-center">
-					<div class="map-site-header">
-						<div class="map-site-header__btn"><i class="bi-diagram-3"></i></div>
-					</div>
+					<a href="#"class="map-site-header btn-accord btn-accord_white"><i class="bi-diagram-3"></i></a>
 					<div class="dropdown phone-header">
-						<div class="phone-header__btn" id="dropdowmPhone" data-bs-toggle="dropdown" aria-expanded="false">
+						<button type="button" class="phone-header__btn btn-accord btn-accord_white" id="dropdowmPhone" data-bs-toggle="dropdown" aria-expanded="false">
 							<i class="bi-telephone"></i>
-						</div>
+						</button>
 						<ul class="dropdown-menu phone-header__list" aria-labelledby="dropdowmPhone">
-							<li><a class="phone-header__link" href="tel:189"><i class="bi-telephone me-2"></i>189 (стационарная сеть)</a></li>
-						  	<li><a class="phone-header__link" href="tel:80172297979"><i class="bi-telephone me-2"></i>(017) 229-79-79</a></li>
+							<li><a class="link" href="tel:189"><i class="bi-telephone me-2"></i>189 (стационарная сеть)</a></li>
+						  	<li><a class="link" href="tel:80172297979"><i class="bi-telephone me-2"></i>(017) 229-79-79</a></li>
 						</ul>
 					</div>
-					<div class="header-handicapped bvi-open bvi-icon bvi-eye bvi-2x" title="Версия сайта для слабовидящих"><i class="bi bi-eye"></i></div>
+					<a href="" class="header-handicapped btn-accord btn-accord_white bvi-open bvi-icon bvi-eye bvi-2x" title="Версия сайта для слабовидящих"><i class="bi bi-eye"></i></a>
 					<form class="header-search">
-						<input
-							class="header-search__input"
-							type="text"
-							placeholder="Искать здесь"
-						/>
-						<div class="header-search__button"><i class="bi bi-search"></i></div>
+						<input  type="text" placeholder="Искать здесь" class="header-search__input" />
+						<div class="header-search__button btn-accord btn-accord_white"><i class="bi bi-search position-absolute top-0 end-0"></i></div>
 					</form>
 					<div class="header-language">
 						<div class="language-select">
@@ -217,14 +211,14 @@
 						</div>
 					</div>
 					<div class="nav-header">
-						<div class="nav-header__burger _btn-toggle">
+						<button class="nav-header__burger d-block _btn-toggle">
 							<span></span>
 							<span></span>
 							<span></span>
-						</div>
+						</button>
 						<nav class="nav-header__nav hidden-block">
 							<div class="text-end mb-2 mb-sm-4">
-								<span class="nav-header__toggle-theme"><i class="bi bi-moon"></i></span>
+								<button class="nav-header__toggle-theme btn-accord"><i class="bi bi-moon"></i></button>
 							</div>
 							<ul class="nav-header__list">
 								<li class="nav-header__tablet-link"><a href="#" class="nav-header__hidden link-nav link-nav_black">О Министерстве</a></li>
@@ -253,7 +247,7 @@
 					<img class="logo" src="./img/coat-of-arms.png" alt="Лого" />
 					<div class="header-bottom__name">
 						<div class="header-bottom__label">Официальный сайт</div>
-						<div class="h3">
+						<div class="h5">
 							Министерство по налогам и сборам Республики Беларусь
 						</div>
 					</div>
@@ -263,7 +257,7 @@
 						<a href="about.html" class="menu__link">О Министерстве</a>
 						<div class="submenu">
 							<div class="submenu__body row">
-								<div class="col-4 h2 h2_white">О Министерстве</div>
+								<div class="col-4 h3 h3_white">О Министерстве</div>
 								<ul class="col-8 row">
 									<li class="col-6"><a href="#" class="link-nav">Oбщие сведения о налоговых органах</a></li>
 									<li class="col-6"><a href="#" class="link-nav">Стандарты обслуживания</a></li>
@@ -289,7 +283,7 @@
 						<a href="#" class="menu__link">Формы документов</a>
 						<div class="submenu">
 							<div class="submenu__body row">
-								<div class="col-4 h2 h2_white">Формы документов для плательщиков</div>
+								<div class="col-4 h3 h3_white">Формы документов для плательщиков</div>
 								<ul class="col-8 row">
 									<li class="col-6"><a href="#" class="link-nav">Для физических лиц</a></li>
 									<li class="col-6"><a href="#" class="link-nav">Для индивидуальных предпринимателей</a></li>
@@ -302,7 +296,7 @@
 						<a href="#" class="menu__link">Одно окно</a>
 						<div class="submenu">
 							<div class="submenu__body row">
-								<div class="col-4 h2 h2_white">Одно окно</div>
+								<div class="col-4 h3 h3_white">Одно окно</div>
 								<ul class="col-8 row">
 									<li class="col-6"><a href="#" class="link-nav">Административные процедуры, осуществляемые налоговыми органами по заявлениям граждан</a></li>
 									<li class="col-6"><a href="#" class="link-nav">Нормативные правовые акты</a></li>
@@ -316,7 +310,7 @@
 						<a href="#" class="menu__link">Электронное обращение</a>
 						<div class="submenu">
 							<div class="submenu__body row">
-								<div class="col-4 h2 h2_white">Электронное обращение</div>
+								<div class="col-4 h3 h3_white">Электронное обращение</div>
 								<ul class="col-8 row">
 									<li class="col-6"><a href="#" class="link-nav">Порядок подачи и рассмотрения электронных обращений</a></li>
 									<li class="col-6"><a href="#" class="link-nav">Подать электронное</a></li>

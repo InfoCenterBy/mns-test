@@ -67,7 +67,7 @@ body {
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 // @import "forms";
 @import "ui";
-@import "slick";
+// @import "slick";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -110,12 +110,11 @@ body {
 //===================================================================================================================================
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 .main-menu {
-	padding: 30px 0px 0px 0px;
+	padding: 30px 0px;
 	
 	&__item {
 		background-color: $color-gray-light;
 		transition: all 0.3s ease 0s;
-		position: relative;
 		border-radius: 10px;
 		
 		&:hover {
@@ -130,104 +129,42 @@ body {
 				z-index: 5;
 			}
 
-			.main-menu__link {
+			.main-menu__menu a {
 				color: $color-white;
-			}
-
-			.main-menu__enter {
-				color: $color-white;
-
-				&:before {
-					border-color: $color-white;
-				}
-			}
-
-			.main-menu__app {
-				color: $color-white;
-				background: url('../img/icons/mobile-white.svg') 0 0 no-repeat;
 			}
 		}
 	}
 
 	&__info {
 		padding: 60px 30px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
 
-	&__image {
-		img {
-			max-width: 100%;
+		@media (max-width: $md5+px) {
+			padding: 30px 10px;
 		}
 	}
 
 	&__menu {
-		width: 200px;
-		margin: 0px 0px 0px 10px;
-	}
+		flex: 0 0 205px;
 
-	&__link {
-		display: inline-block;
-		margin: 0px 0px 15px 0px;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	&__enter {
-		display: inline-block;
-		color: #1A1A1A;
-		font-size: 16px;
-		padding: 0px 20px 0px 0px;
-		margin: 0px 0px 15px 0px;
-
-		&:hover {
+		a:hover {
 			text-decoration: underline;
 		}
 	}
 
 	&__app {
-		display: inline-block;
-		padding: 0px 0px 0px 20px;
-		background: url('../img/icons/mobile.svg') 0 0 no-repeat;
 		font-size: 14px;
-		line-height: 20px;
-		color: #1A1A1A;
-
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 }
 .main-menu-drop {
 	display: none;
-	width: 100%;
-	padding: 15px;
+	padding: 30px;
 	background-color: $color-green;
 	border-radius: 10px;
-	position: absolute;
-	top: 100%;
-	left: 0;
 	z-index: -1;
 	perspective: 1000px;
 
-	&__link {
-		color:#fff;
-		border-color: #00654D;
-
-		&:hover {
-			color:#000;
-
-			&:before {
-				background-color: #000;
-			}
-		}
-
-		&:before {
-			background-color: #fff;
-		}
+	@media (max-width: $md5+px) {
+		padding: 10px;
 	}
 }
 @keyframes growDown {
@@ -239,86 +176,45 @@ body {
 	}
 }
 .services {
-	padding: 85px 0px 0px 0px;
+	padding: 0px 0px 30px 0px;
 
-	&__title {
-		margin: 0px 35px 30px 0px;
-		color: $color-gray-dark;
-
+	.btn-accord {
+		opacity: 0.7;
+		
 		i:before {
-			color: $color-gray-dark;
+			transform: rotate(0deg);
 		}
 
 		&.active {
-			color: $color-black;
+			opacity: 1;
 
 			i:before {
-				color: $color-black;
+				transform: rotate(90deg);
 			}
 		}
 	}
-
 }
 .item-services {
-	height: 100%;
 	min-height: 150px;
-	display: block;
-	padding: 35px 30px;
 	background-color: $color-gray-light;
-	position: relative;
 	border-radius: 10px;
-	overflow: hidden;
 
-	
 	&:hover {
 		.item-services-drop {
 			transform: translateY(0%);
 		}
 	}
-
-	&__info {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	&__text {
-		width: 240px;
-	}
 }
 .item-services-drop {
-	width: 100%;
 	height: 85%;
-	padding: 35px 30px;
 	background-color: $color-green;
 	border-radius: 10px;
-	position: absolute;
 	bottom: -1px;
 	left: 0;
 	transform: translateY(100%);
 	transition: all 0.3s ease 0s;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	
-
-	&__description {
-		color: $color-white;
-	}
-
-	&__moreDetails {
-		text-align: right;
-		
-		span {
-			font-size: 16px;
-			color: $color-white;
-			padding: 0px 20px 0px 0px;
-		}
-	}
 }
 .item-actual {
-	height: 100%;
-	padding: 15px;
 	background-color: $color-gray-light;
 	border-radius: 10px;
 
@@ -331,27 +227,34 @@ body {
 	}
 }
 .main-news {
-	padding: 30px 0;
+	padding: 30px 0px;
 	background-color: $color-green-light;
 
-	&__title {
-		margin: 0px 0px 30px 0px;
-	}
-
-	&__items {
+	&__wrapper {
 		display: grid;
 		gap: 10px;
 		grid-template-columns: 3fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+
+		@media (max-width: 1200px) {
+			grid-template-columns: 2fr 2fr;
+			grid-template-rows: 1fr 1fr 1fr;
+		}
+
+		@media (max-width: $md3+px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+		}
 	}
 
 	&__item {
 		border-radius: 10px;
-		overflow: hidden;
-		position: relative;
 		padding: 39% 0px 0px 0px;
 		color: $color-white;
-		position: relative;
+
+		@media (max-width: $md4+px) {
+			padding: 75% 0px 0px 0px;
+		}
 
 		&:before {
 			content:'';
@@ -377,30 +280,69 @@ body {
 		
 		&_big {
 			grid-row-start: 1;
-			grid-row-end: 3;
+			grid-row-end: 3; 
 
-			.main-news__label {
-				left: 30px;
-				top: 30px;
+			@media (max-width: 1200px) {
+				grid-row-start: 1;
+				grid-row-end: 2;
+				grid-column-start: 1;
+				grid-column-end: 3;
 			}
 
-			.main-news__info {
-				left: 30px;
-				bottom: 30px;
+			@media (max-width: $md3+px) {
+				grid-column-start: 1;
+				grid-column-end: 2;
 			}
 
-			.main-news__date {
-				font-size: 18px;
-			}
+			@media (min-width: 1200px) {
+				.main-news__info {
+					left: 30px;
+					bottom: 30px;
+				}
 
-			.main-news__header {
-				font-size: 30px;
+				.main-news__label {
+					left: 30px;
+					top: 30px;
+				}
+
+				.h5 {
+					font-size: 30px;
+				}
+				
+				.main-news__date {
+					font-size: 16px;
+				}
 			}
 		}
 		
 		&_mid {
 			grid-column-start: 2;
 			grid-column-end: 4;
+
+			@media (min-width: 1200px) {
+				.main-news__info {
+					left: 30px;
+					bottom: 30px;
+				}
+
+				.main-news__label {
+					left: 30px;
+					top: 15px;
+				}
+			}
+
+			@media (max-width: 1200px) {
+				grid-column-start: 1;
+				grid-column-end: 3;
+				grid-row-start: 3;
+				grid-row-end: 4;
+			}
+
+			@media (max-width: $md3+px) {
+				grid-column-end: 2;
+				grid-row-start: 4;
+				grid-row-end: 5;
+			}
 		}
 	}
 
@@ -425,7 +367,7 @@ body {
 		position: absolute;
 		top: 15px;
 		left: 15px;
-		z-index: 3;
+		z-index: 2;
 	}
 
 	&__info {
@@ -433,74 +375,46 @@ body {
 		position: absolute;
 		left: 15px;
 		bottom: 15px;
-		z-index: 3;
+		z-index: 2;
 	}
 
 	&__date {
 		font-size: 14px;
-		margin: 0px 0px 5px 0px;
-	}
-
-	&__header {
-		font-size: 18px;
 		font-weight: 600;
 	}
 }
 .ref-info {
 	background-color: $color-green;
 
-	&__body {
-	}
-
-	&__title {
-		padding: 30px 0;
+	.btn-accord {
 		
 		i:before {
-			transform: rotate(-90deg);
+			transform: rotate(-180deg);
 		}
 		
 		&.collapsed {
 			i:before {
-				transform: rotate(90deg);
-			}
-		}
-	}
-	
-	&__content {
-		padding: 30px 0px;
-		border-top: 3px solid $color-white;
-	}
-
-	&__item {
-		
-		&:hover {
-			color: rgba(255, 255, 255, 0.7);
-
-			&:before {
-				background-color: rgba(255, 255, 255, 0.7);
+				transform: rotate(0deg);
 			}
 		}
 	}
 }
 .partners {
-	padding: 60px 0;
-	background-color: #FAFAFA;
+	padding: 50px 0;
+	background-color: #ffffff;
 
-	&__slider {
-		display: flex;
-	}
-
-	&__item {
+	&__slide {
 		
 		&:hover img {
 			filter: grayscale(0%);
+			opacity: 1;
 		}
 		
 		img {
-			margin: 0 35px;
 			max-width: 100%;
 			position: relative;
 			transition: all 0.3s ease 0s;
+			opacity: 0.5;
 			filter: grayscale(100%);
 		}
 	}

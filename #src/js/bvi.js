@@ -785,9 +785,9 @@
                 '                <div class="bvi-title">Цвета сайта</div>\n' +
                 '                <a href="#" id="bvi-theme-white" class="bvi-link bvi-link-white " title="Черным по белому">Ц</a>\n' +
                 '                <a href="#" id="bvi-theme-black" class="bvi-link bvi-link-black" title="Белым по черному">Ц</a>\n' +
-                '                <a href="#" id="bvi-theme-blue" class="bvi-link bvi-link-blue" title="Темно-синим по голубому">Ц</a>\n' +
-                '                <a href="#" id="bvi-theme-brown" class="bvi-link bvi-link-brown" title="Коричневым по бежевому">Ц</a>\n' +
-                '                <a href="#" id="bvi-theme-green" class="bvi-link bvi-link-green" title="Зеленым по темно-коричневому">Ц</a>\n' +
+               //  '                <a href="#" id="bvi-theme-blue" class="bvi-link bvi-link-blue" title="Темно-синим по голубому">Ц</a>\n' +
+               //  '                <a href="#" id="bvi-theme-brown" class="bvi-link bvi-link-brown" title="Коричневым по бежевому">Ц</a>\n' +
+               //  '                <a href="#" id="bvi-theme-green" class="bvi-link bvi-link-green" title="Зеленым по темно-коричневому">Ц</a>\n' +
                 '            </div>\n' +
                 '            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-2 bvi-text-center">\n' +
                 '                <div class="bvi-title">Изображения</div>\n' +

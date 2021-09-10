@@ -46,7 +46,7 @@ let { src, dest } = require('gulp'),
 	fonter = require('gulp-fonter'),
 	deploy = require('gulp-gh-pages');
 
-function browserSync(params) {
+function browserSync(done) {
 	browsersync.init({
 		server: {
 			baseDir: "./" + project_folder + "/"

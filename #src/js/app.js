@@ -1,3 +1,6 @@
+
+
+
 const btnShowBlock = document.querySelectorAll('._btn-toggle');
 const closeBlock = document.querySelector('.header-special__btn_close');
 const body = document.querySelector('body');
@@ -42,13 +45,6 @@ closeBlock.addEventListener('click', function(e){
 	overlay.classList.remove('_active');
 })
 
-// const btnShowAccardeon = document.querySelector('.ref-info__btn');
-// const wrapperDrop = document.querySelector('.ref-info-drop');
-// btnShowAccardeon.addEventListener('click', function (){
-// 	btnShowAccardeon.classList.toggle('_show-block');
-// 	wrapperDrop.classList.toggle('_show-block');
-// });
-
 
 // ===========  Toggle theme nav-header ===========================
 $('.nav-header__toggle-theme').click(function (){
@@ -64,7 +60,7 @@ $('.header-special__btn_toggle-theme').click(function (){
 
 
 $(function(){
-
+// ===========  Toggle language ===========================
 	$('.language-select').click(function(){
 		$(this).toggleClass('open');
 	})
@@ -83,56 +79,9 @@ $(function(){
 			$('.language-select__item').removeClass('_active');
 			$(this).toggleClass('_active');
 	})
-
-	$('.partners__slider').slick({
-		infinite: true,
-		arrows: false,
-		dots: false,
-		slidesToShow: 11,
-		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		responsive: [
-			{
-				breakpoint: 1600,
-				settings: {
-					slidesToShow: 9,
-				}
-			},
-			{
-				breakpoint: 1400,
-				settings: {
-					slidesToShow: 7,
-				}
-			},
-			{
-				breakpoint: 991,
-				settings: {
-					slidesToShow: 5,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 4,
-				}
-			},
-			{
-				breakpoint: 565,
-				settings: {
-					slidesToShow: 3,
-				}
-			},
-			{
-				breakpoint: 475,
-				settings: {
-					slidesToShow: 2,
-				}
-			}
-		]
-	});
 });
 
+// =============Function ibg  ====================================================
 function ibg() {
 	let ibg = document.querySelectorAll("._ibg");
 	for (var i = 0; i < ibg.length; i++) {
