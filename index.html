@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -15,148 +16,184 @@
 </head>
 	<body>
 		<div class="wrapper">
-			<header class="header">
-	<div class="header-top">
+			<header>
+	<div class="header-top py-3 position-relative">
 		<div class="container">
-			<div class="header-top__body">
-				<div class="header-top__left">
-					<a href="#" class="header-top__logo img"><img src="./img/logo-gray.png" alt=""/></a>
-					<div class="header-top__special header-special">
-						<div class="header-special__button arrow _btn-toggle"></div>
-						<div class="header-special__block hidden-block">
-							<div class="header-special__header">
-								<div class="h3">Специальные проекты</div>
-								<div class="header-special__buttons">
-									<button class="header-special__toggle-theme"></button>
-									<button class="header-special__btn-close"></button>
-								</div>
+			<div class="d-flex justify-content-between align-items-center position-relative">
+				<div class="d-flex align-items-center">
+					<a href="#" class="header-top__logo ms-lg-5 me-2 img"><img src="./img/logo-gray.png" alt=""/></a>
+					<div class="header-special">
+						<button class="header-special__button me-2 me-sm-3 me-md-5 d-block _btn-toggle"><i class="bi bi-chevron-down"></i></button>
+						<div class="header-special__wrapper container hidden-block">
+							<div class="d-flex align-items-center mb-3">
+								<div class="h2 me-auto">Специальные проекты</div>
+								<button class="header-special__btn ms-2 header-special__btn_toggle-theme btn-accord">
+									<i class="bi bi-moon"></i>
+								</button>
+								<button class="header-special__btn header-special__btn_close btn-accord ms-2 ms-sm-4">
+									<i class="bi bi-x"></i>
+								</button>
 							</div>
 							<nav>
 								<div class="nav" id="nav-tab" role="tablist">
-								  <button class="header-special__nav-link active" id="nav-tv-tab" data-bs-toggle="tab" data-bs-target="#nav-tv" type="button" role="tab" aria-controls="nav-tv" aria-selected="true">Телепроекты</button>
-								  <button class="header-special__nav-link" id="nav-photo-tab" data-bs-toggle="tab" data-bs-target="#nav-photo" type="button" role="tab" aria-controls="nav-photo" aria-selected="false">Фото</button>
-								  <button class="header-special__nav-link" id="nav-advertising-tab" data-bs-toggle="tab" data-bs-target="#nav-advertising" type="button" role="tab" aria-controls="nav-advertising" aria-selected="false">Реклама</button>
-								  <button class="header-special__nav-link" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-video" type="button" role="tab" aria-controls="nav-video" aria-selected="false">Видео</button>
+									<button class="header-special__nav-link active" id="nav-tv-tab" data-bs-toggle="tab" data-bs-target="#nav-tv" type="button" role="tab" aria-controls="nav-tv" aria-selected="true">Телепроекты</button>
+									<button class="header-special__nav-link" id="nav-photo-tab" data-bs-toggle="tab" data-bs-target="#nav-photo" type="button" role="tab" aria-controls="nav-photo" aria-selected="false">Фото</button>
+									<button class="header-special__nav-link" id="nav-advertising-tab" data-bs-toggle="tab" data-bs-target="#nav-advertising" type="button" role="tab" aria-controls="nav-advertising" aria-selected="false">Реклама</button>
+									<button class="header-special__nav-link" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-video" type="button" role="tab" aria-controls="nav-video" aria-selected="false">Видео</button>
+									<button class="header-special__nav-link" id="nav-print-tab" data-bs-toggle="tab" data-bs-target="#nav-print" type="button" role="tab" aria-controls="nav-print" aria-selected="false">Печатные издания</button>
 								</div>
 							</nav>
 							<div class="tab-content" id="nav-tabContent">
 								<div class="tab-pane fade show active" id="nav-tv" role="tabpanel" aria-labelledby="nav-tv-tab">
 									<div class="row g-2">
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/YixlIfNjMso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">13.11.2020</div>
-											<a href="#" class="header-special__title">Онлайн-выставка детских работ: "Налоги: вчера, сегодня, завтра"</a>
+											<div class="mb-3">13.11.2020</div>
+											<a href="#" class="header-special__title mb-3">Онлайн-выставка детских работ: "Налоги: вчера, сегодня, завтра"</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/zAdisSOre6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">10.07.2020</div>
-											<a href="#" class="header-special__title">30 лет налоговым органам Республики Беларусь
+											<div class="mb-3">10.07.2020</div>
+											<a href="#" class="header-special__title mb-3">30 лет налоговым органам Республики Беларусь
 											</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/bdi6BSUzjJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">13.07.2020</div>
-											<a href="#" class="header-special__title">Социальная стабильность и защита прав государства и налогоплательщиков. Работники налоговых органов отмечают праздник
+											<div class="mb-3">13.07.2020</div>
+											<a href="#" class="header-special__title mb-3">Социальная стабильность и защита прав государства и налогоплательщиков. Работники налоговых органов отмечают праздник
 											</a>
 										</div>
 									</div>
-									<a href="#"class="header-special__all-links">Все видео</a>
+									<div class="mt-3 text-end">
+										<a href="#"class="header-special__all-links">Все видео</a>
+									</div>
 								</div>
 								<div class="tab-pane fade" id="nav-photo" role="tabpanel" aria-labelledby="nav-photo-tab">
 									<div class="row g-2">
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<img src="./img/photos/01.jpg" alt="">
 											</div>
-											<div class="header-special__date">13.11.2020</div>
-											<a href="#" class="header-special__title">В МНС Республики Беларусь состоялась встреча с представителями ФНС России</a>
+											<div class="mb-3">13.11.2020</div>
+											<a href="#" class="header-special__title mb-3">В МНС Республики Беларусь состоялась встреча с представителями ФНС России</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<img src="./img/photos/02.jpg" alt="">
 											</div>
-											<div class="header-special__date">24.08.2020</div>
-											<a href="#" class="header-special__title">Министерстве по налогам и сборам квалификационный аттестат вручен 500-му налоговому консультанту</a>
+											<div class="mb-3">24.08.2020</div>
+											<a href="#" class="header-special__title mb-3">Министерстве по налогам и сборам квалификационный аттестат вручен 500-му налоговому консультанту</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<img src="./img/photos/03.jpg" alt="">  
 											</div>
-											<div class="header-special__date">07.03.2020</div>
-											<a href="#" class="header-special__title">1 сентября 2020 года заместитель Министра по налогам и сборам Шевченко Светлана Александровна посетила ГУО «Гимназия № 24 г.Минска»
+											<div class="mb-3">07.03.2020</div>
+											<a href="#" class="header-special__title mb-3">1 сентября 2020 года заместитель Министра по налогам и сборам Шевченко Светлана Александровна посетила ГУО «Гимназия № 24 г.Минска»
 											</a>
 										</div>
 									</div>
-									<a href="#"class="header-special__all-links">Все фото</a>
+									<div class="mt-3 text-end">
+										<a href="#"class="header-special__all-links">Все фото</a>
+									</div>
 								</div>
 								<div class="tab-pane fade" id="nav-advertising" role="tabpanel" aria-labelledby="nav-advertising-tab">
 									<div class="row g-2">
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/MZaMFvY0tVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">13.11.2020</div>
-											<a href="#" class="header-special__title">Включите таксометр - получите оплату!
+											<div class="mb-3">13.11.2020</div>
+											<a href="#" class="header-special__title mb-3">Включите таксометр - получите оплату!
 											</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/ZZXVzrVpm3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">24.08.2020</div>
-											<a href="#" class="header-special__title">Контрафакт. Алкогольная продукция неизвестного происхождения смертельно опасна!</a>
+											<div class="mb-3">24.08.2020</div>
+											<a href="#" class="header-special__title mb-3">Контрафакт. Алкогольная продукция неизвестного происхождения смертельно опасна!</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/WZAXKVukkHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">07.03.2020</div>
-											<a href="#" class="header-special__title">Возьмите кассовый чек!
+											<div class="mb-3">07.03.2020</div>
+											<a href="#" class="header-special__title mb-3">Возьмите кассовый чек!
 											</a>
 										</div>
 									</div>
-									<a href="#"class="header-special__all-links">Все видео</a>
+									<div class="mt-3 text-end">
+										<a href="#"class="header-special__all-links">Все видео</a>
+									</div>
 								</div>
 								<div class="tab-pane fade" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
 									<div class="row g-2">
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/dYbWYSb_w5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">25.02.2021</div>
-											<a href="#" class="header-special__title">Проект "Просто о налогах". Транспортный налог для компаний: платежи не за горами</a>
+											<div class="mb-3">25.02.2021</div>
+											<a href="#" class="header-special__title mb-3">Проект "Просто о налогах". Транспортный налог для компаний: платежи не за горами</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/qcQ9tscO13c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">24.02.2021</div>
-											<a href="#" class="header-special__title">Проект "Просто о налогах". Налоговые вычеты: а куда обращаться?</a>
+											<div class="mb-3">24.02.2021</div>
+											<a href="#" class="header-special__title mb-3">Проект "Просто о налогах". Налоговые вычеты: а куда обращаться?</a>
 										</div>                     
 										<div class="col-md-4">
-											<div class="header-special__media">
+											<div class="header-special__media mb-3">
 												<iframe src="https://www.youtube.com/embed/hLoVBZex9P0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
-											<div class="header-special__date">19.02.2021</div>
-											<a href="#" class="header-special__title">Проект "Просто о налогах". Транспортный налог. Нестандартные ситуации</a>
+											<div class="mb-3">19.02.2021</div>
+											<a href="#" class="header-special__title mb-3">Проект "Просто о налогах". Транспортный налог. Нестандартные ситуации</a>
 										</div>
 									</div>
-									<a href="#"class="header-special__all-links">Все видео</a>
+									<div class="mt-3 text-end">
+										<a href="#"class="header-special__all-links">Все видео</a>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="nav-print" role="tabpanel" aria-labelledby="nav-print-tab">
+									<div class="row g-2">
+										<div class="col-md-4">
+											<div class="header-special__media mb-3">
+												<img class="_ibg" src="./img/plug/01.jpg" alt="">
+											</div>
+											<a href="#" class="header-special__title mb-3">Налоги Беларуси</a>
+											<a href="#" class="header-special__title mb-3">Оформить подписку на 2-е полугодие 2021 года</a>
+											<a href="#" class="header-special__title mb-3 ">Оформить подписку на 2-е полугодие 2021 года на электронный журнал</a>
+										</div>                     
+										<div class="col-md-4">
+											<div class="header-special__media mb-3">
+												<img class="_ibg" src="./img/plug/02.jpg" alt="">
+											</div>
+											<a href="#" class="header-special__title mb-3 mb-3">Консультант предпринимателя</a>
+											<a href="#" class="header-special__title mb-3 mb-3">Оформить подписку на 2-е полугодие 2021 года</a>
+											<a href="#" class="header-special__title mb-3">Оформить подписку на 2-е полугодие 2021 года на электронный журнал</a>
+										</div>
+									</div>
+									<div class="mt-3 text-end">
+										<a href="#"class="header-special__all-links">Подписка</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="dropdown inspectorates">
-						<button class="inspectorates__title arrow" type="button" id="dropdowmInspectorates" data-bs-toggle="dropdown" aria-expanded="false">
-							Налоговые инспекции
+					<div class="inspectorates">
+						<button class="inspectorates__btn d-md-flex align-items-center _btn-toggle">
+							<div class="inspectorates__title me-auto">Налоговые инспекции</div>
+							<i class="bi bi-chevron-down d-none d-md-block"></i>
+							<i class="bi bi-geo-alt d-block d-md-none"></i>
 						</button>
-						<ul class="dropdown-menu inspectorates__list" aria-labelledby="dropdowmInspectorates">
+						<ul class="inspectorates__list hidden-block">
 							<li><a href="search-inspectorate.html" class="inspectorates__link">Найти инспекцию</a></li>
 							<li><a href="test.html" class="inspectorates__link">ИМНС по городу Минску</a></li>
 							<li><a href="#" class="inspectorates__link">ИМНС по Минской области</a></li>
@@ -168,90 +205,52 @@
 						</ul>
 					</div>
 				</div>
-				<div class="header-top__right">
-					<div class="map-site-header">
-						<button class="map-site-header__btn"><i class="bi-diagram-3"></i></button>
-					</div>
+				<div class="d-flex align-items-center">
+					<a href="#"class="map-site-header btn-accord btn-accord_white"><i class="bi-diagram-3"></i></a>
 					<div class="dropdown phone-header">
-						<button class="phone-header__btn" type="button" id="dropdowmPhone" data-bs-toggle="dropdown" aria-expanded="false">
+						<button type="button" class="phone-header__btn btn-accord btn-accord_white" id="dropdowmPhone" data-bs-toggle="dropdown" aria-expanded="false">
 							<i class="bi-telephone"></i>
 						</button>
 						<ul class="dropdown-menu phone-header__list" aria-labelledby="dropdowmPhone">
-							<li>
-								<a class="phone-header__link" href="tel:189"><i class="bi-telephone"></i>189 (стационарная сеть)</a>
-							</li>
-						  	<li>
-								<a class="phone-header__link" href="tel:80172297979"><i class="bi-telephone"></i>(017) 229-79-79</a>
-							</li>
+							<li><a class="link" href="tel:189"><i class="bi-telephone me-2"></i>189 (стационарная сеть)</a></li>
+						  	<li><a class="link" href="tel:80172297979"><i class="bi-telephone me-2"></i>(017) 229-79-79</a></li>
 						</ul>
 					</div>
-					<a href="#" class="header-handicapped bvi-open bvi-icon bvi-eye bvi-2x" title="Версия сайта для слабовидящих"><i class="bi bi-eye"></i></a>
+					<a href="#" class="header-handicapped btn-accord btn-accord_white bvi-open bvi-icon bvi-eye bvi-2x" title="Версия сайта для слабовидящих"><i class="bi bi-eye"></i></a>
 					<form class="header-search">
-						<input
-							class="header-search__input"
-							type="text"
-							placeholder="Искать здесь"
-						/>
-						<button class="header-search__button"><i class="bi bi-search"></i></button>
+						<input  type="text" placeholder="Искать здесь" class="header-search__input" />
+						<div class="header-search__button btn-accord btn-accord_white"><i class="bi bi-search position-absolute top-0 end-0"></i></div>
 					</form>
 					<div class="header-language">
-						<div class="language-select arrow">
+						<div class="language-select">
 							<div class="language-select__item _active" data-lang="ru">RU</div>
 							<div class="language-select__item" data-lang="en">EN</div>
 							<div class="language-select__item" data-lang="by">BY</div>
 						</div>
 					</div>
-					<div class="header-top__nav nav-header">
-						<button class="nav-header__burger _btn-toggle">
+					<div class="nav-header">
+						<button class="nav-header__burger d-block _btn-toggle">
 							<span></span>
 							<span></span>
 							<span></span>
 						</button>
 						<nav class="nav-header__nav hidden-block">
-							<button class="nav-header__toggle-theme"></button>
+							<div class="text-end mb-2 mb-sm-4">
+								<button class="nav-header__toggle-theme btn-accord"><i class="bi bi-moon"></i></button>
+							</div>
 							<ul class="nav-header__list">
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Комиссия по противодействию коррупции
-										(наличие перечня ИМНС, при выборе инспекции
-										попадаешь на страницу по комиссии)
-									</a>
-								</li>
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Обсуждение законопроектов</a
-									>
-								</li>
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Налоговый контроль
-									</a>
-								</li>
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Международное сотрудничество
-									</a>
-								</li>
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Евразийский экономический союз
-									</a>
-								</li>
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Аналитика
-									</a>
-								</li>
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Программное обеспечение
-									</a>
-								</li>
-								<li>
-									<a href="#" class="nav-header__link nav-link nav-link_black"
-										>Налоговый кодекс</a
-									>
-								</li>
+								<li class="nav-header__tablet-link"><a href="#" class="nav-header__hidden link-nav link-nav_black">О Министерстве</a></li>
+								<li class="nav-header__tablet-link"><a href="#" class="nav-header__hidden link-nav link-nav_black">Формы документов</a></li>
+								<li class="nav-header__tablet-link"><a href="#" class="nav-header__hidden link-nav link-nav_black">Одно окно</a></li>
+								<li class="nav-header__tablet-link"><a href="#" class="nav-header__hidden link-nav link-nav_black">Электронное обращение</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Комиссия по противодействию коррупции (наличие перечня ИМНС, при выборе инспекции попадаешь на страницу по комиссии)</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Обсуждение законопроектов</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Налоговый контроль</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Международное сотрудничество</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Евразийский экономический союз</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Аналитика</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Программное обеспечение</a></li>
+								<li><a href="#" class="link-nav link-nav_black">Налоговый кодекс</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -261,192 +260,82 @@
 	</div>
 	<div class="header-bottom">
 		<div class="container">
-			<div class="header-bottom__body">
-				<a href="index.html" class="header-bottom__logo">
-					<img src="./img/coat-of-arms.png" alt="" />
+			<div class="d-flex justify-content-between align-items-center position-relative">
+				<a href="index.html" class="d-flex align-items-center my-3">
+					<img class="logo" src="./img/coat-of-arms.png" alt="Лого" />
 					<div class="header-bottom__name">
 						<div class="header-bottom__label">Официальный сайт</div>
-						<div class="header-bottom__title h3">
+						<div class="h5">
 							Министерство по налогам и сборам Республики Беларусь
 						</div>
 					</div>
 				</a>
-				<ul class="menu__list">
+				<ul class="menu">
 					<li>
 						<a href="about.html" class="menu__link">О Министерстве</a>
 						<div class="submenu">
-							<div class="submenu__title h2">О Министерстве</div>
-							<ul class="submenu__list">
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Oбщие сведения о налоговых органах</a
-									>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Стандарты обслуживания
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Руководство
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Консультативный совет
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Положение о МНС
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Личный прием руководством МНС граждан и
-										юридических лиц</a
-									>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Структура МНС
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Книга замечаний и предложений</a
-									>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Структура налоговых органов
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Охрана труда</a
-									>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Геральдика налоговых органов
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Контакты
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Режим работы
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Для СМИ
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Порядок проведения открытых коллегий
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Стратегия развития налоговых органов
-									</a>
-								</li>
-							</ul>
+							<div class="submenu__body row">
+								<div class="col-4 h3 h3_white">О Министерстве</div>
+								<ul class="col-8 row">
+									<li class="col-6"><a href="#" class="link-nav">Oбщие сведения о налоговых органах</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Стандарты обслуживания</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Руководство</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Консультативный совет</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Положение о МНС</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Личный прием руководством МНС граждан юрлиц</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Структура МНС</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Книга замечаний и предложений</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Структура налоговых органов</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Охрана труда</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Геральдика налоговых органов</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Контакты</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Режим работы</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Для СМИ</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Порядок проведения открытых коллегий</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Стратегия развития налоговых органов</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 					<li>
 						<a href="#" class="menu__link">Формы документов</a>
 						<div class="submenu">
-							<div class="submenu__title h2">Формы документов для плательщиков</div>
-							<ul class="submenu__list">
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Для физических лиц</a
-									>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Для индивидуальных предпринимателей</a
-									>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Для организаций</a
-									>
-								</li>
-							</ul>
+							<div class="submenu__body row">
+								<div class="col-4 h3 h3_white">Формы документов для плательщиков</div>
+								<ul class="col-8 row">
+									<li class="col-6"><a href="#" class="link-nav">Для физических лиц</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Для индивидуальных предпринимателей</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Для организаций</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 					<li>
 						<a href="#" class="menu__link">Одно окно</a>
 						<div class="submenu">
-							<div class="submenu__title h2">Одно окно</div>
-							<ul class="submenu__list">
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Административные процедуры, осуществляемые
-										налоговыми органами по заявлениям граждан</a
-									>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link">
-										Нормативные правовые акты
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Административные процедуры, осуществляемые
-										налоговыми органами в отношении юридических
-										лиц и ИП;
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link">
-										Перечень самостоятельно запрашиваемых
-										налоговыми органами документов и (или)
-										сведений, необходимых для осуществления
-										административных процедур.
-									</a>
-								</li>
-							</ul>
+							<div class="submenu__body row">
+								<div class="col-4 h3 h3_white">Одно окно</div>
+								<ul class="col-8 row">
+									<li class="col-6"><a href="#" class="link-nav">Административные процедуры, осуществляемые налоговыми органами по заявлениям граждан</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Нормативные правовые акты</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Административные процедуры, осуществляемые налоговыми органами в отношении юридических лиц и ИП</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Перечень самостоятельно запрашиваемых налоговыми органами документов и (или) сведений, необходимых для осуществления административных процедур</a></li>
+								</ul>
+							</div>
 						</div>
 					</li>
 					<li>
 						<a href="#" class="menu__link">Электронное обращение</a>
 						<div class="submenu">
-							<div class="submenu__title h2">
-								Электронное обращение
+							<div class="submenu__body row">
+								<div class="col-4 h3 h3_white">Электронное обращение</div>
+								<ul class="col-8 row">
+									<li class="col-6"><a href="#" class="link-nav">Порядок подачи и рассмотрения электронных обращений</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Подать электронное</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Результат рассмотрения налоговыми органами обращений налогоплательщиков</a></li>
+									<li class="col-6"><a href="#" class="link-nav">Нормативные правовые акты, регулирующие обращения граждан и юридических лиц.</a></li>
+								</ul>
 							</div>
-							<ul class="submenu__list">
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Порядок подачи и рассмотрения электронных
-										обращений
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link">Подать электронное обращение</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Результат рассмотрения налоговыми органами
-										обращений налогоплательщиков
-									</a>
-								</li>
-								<li>
-									<a href="#" class="submenu__link nav-link"
-										>Нормативные правовые акты, регулирующие
-										обращения граждан и юридических лиц.
-									</a>
-								</li>
-							</ul>
 						</div>
 					</li>
 				</ul>
@@ -455,10 +344,10 @@
 	</div>
 	<div class="header-marquee">
 		<marquee scrolldelay="15" scrollamount="2" truespeed behavior="scroll" direction="left" onmouseout="this.start();document.getElementById('scrollText').scrollDelay='15'" onmouseover="this.stop();" id="scrollText">
-			<ul>
-				<li><a href="#">Налоговое консультирование индивидуальных предпринимателей и физических лиц!!!</a></li>
-				<li><a href="#">О применении норм Указа Президента Республики Беларусь от 12.05.2020 № 160</a></li>
-				<li><a href="#">Сведения для заполнения платёжных документов в республиканский и местный бюджеты</a></li>
+			<ul class="d-flex">
+				<li><a class="link" href="#">Налоговое консультирование индивидуальных предпринимателей и физических лиц!!!</a></li>
+				<li><a class="link" href="#">О применении норм Указа Президента Республики Беларусь от 12.05.2020 № 160</a></li>
+				<li><a class="link" href="#">Сведения для заполнения платёжных документов в республиканский и местный бюджеты</a></li>
 			</ul>
 		</marquee>
 	</div>
@@ -468,45 +357,44 @@
 				<div class="content">
 					<div class="main-menu">
 						<div class='container'>
-							<div class="row g-3">
-								<div class="col-sm-6 col-md-4">
-									<div class="main-menu__item">
-										<div class="main-menu__info">
-											<div class="main-menu__image img">
-												<img src="./img/main/01.png" alt="">
+							<div class="row justify-content-center g-3">
+								<div class="col-md-6 col-xl-4">
+									<div class="main-menu__item h-100 position-relative">
+										<div class="main-menu__info d-flex justify-content-center justify-content-md-between align-items-center">
+											<div class="me-3">
+												<img class="img-fluid" src="./img/main/01.png" alt="">
 											</div>
 											<div class="main-menu__menu">
-												<a href="#" class="main-menu__link h2">Налогообложение 
-													физических лиц</a>
-												<a href="#" class="main-menu__enter arrow arrow-right-black">Личный кабинет</a>
-												<a href="#" class="main-menu__app">Скачать моб.приложение</a>
+												<a href="#" class="h4 d-block mb-3">Налогообложение физических лиц</a>
+												<a href="#" class="h6 d-block mb-3">Личный кабинет</a>
+												<a href="#" class="main-menu__app"><i class="bi bi-phone me-2"></i>Скачать моб.приложение</a>
 											</div>
 										</div>
-										<ul class="main-menu-drop">
-											<li><a href="#" class="main-menu-drop__link nav-link">Вход в личный кабинет
+										<ul class="main-menu-drop w-100 position-absolute top-100 start-0">
+											<li><a href="#" class="link-nav">Вход в личный кабинет
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Скачать мобильное приложение (доступное для скачивания)
+											<li><a href="#" class="link-nav">Скачать мобильное приложение (доступное для скачивания)
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Проверь выставленные налоги
+											<li><a href="#" class="link-nav">Проверь выставленные налоги
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Калькулятор расчета подоходного налога
+											<li><a href="#" class="link-nav">Калькулятор расчета подоходного налога
 												с физических лиц
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Постановка на учет
+											<li><a href="#" class="link-nav">Постановка на учет
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Налоги и сборы, уплачиваемые 
+											<li><a href="#" class="link-nav">Налоги и сборы, уплачиваемые 
 												физическими лицами
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Декларирование доходов и имущества
+											<li><a href="#" class="link-nav">Декларирование доходов и имущества
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Ответы на типовые вопросы
+											<li><a href="#" class="link-nav">Ответы на типовые вопросы
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Виды деятельности, при осуществлении 
+											<li><a href="#" class="link-nav">Виды деятельности, при осуществлении 
 												которых не требуется регистрация 
 												физического лица в качестве 
 												индивидуального предпринимателя
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Декларирование доходов и имущества 
+											<li><a href="#" class="link-nav">Декларирование доходов и имущества 
 												государственными должностными и иными 
 												обязанными лицами в соответствии 
 												с антикоррупционным законодательством
@@ -514,92 +402,91 @@
 										</ul>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="main-menu__item">
-										<div class="main-menu__info">
-											<div class="main-menu__image img">
-												<img src="./img/main/02.png" alt="">
+								<div class="col-md-6 col-xl-4">
+									<div class="main-menu__item h-100 position-relative">
+										<div class="main-menu__info d-flex justify-content-center justify-content-md-between align-items-center">
+											<div class="me-3">
+												<img class="img-fluid" src="./img/main/02.png" alt="">
 											</div>
 											<div class="main-menu__menu">
-												<a href="#" class="main-menu__link h2">Налогообложение <br>
-													ИП</a>
-												<a href="#" class="main-menu__enter arrow arrow-right-black">Личный кабинет</a>
-												<a href="#" class="main-menu__app">Скачать моб.приложение</a>
+												<a href="#" class="h4 d-block mb-3">Налогообложение ИП</a>
+												<a href="#" class="h6 d-block mb-3">Личный кабинет</a>
+												<a href="#" class="main-menu__app"><i class="bi bi-phone me-2"></i>Скачать моб.приложение</a>
 											</div>
 										</div>
-										<ul class="main-menu-drop">
-											<li><a href="#" class="main-menu-drop__link nav-link">Вход в личный кабинет
+										<ul class="main-menu-drop w-100 position-absolute top-100 start-0">
+											<li><a href="#" class="link-nav">Вход в личный кабинет
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Скачать мобильное приложение (доступное для скачивания)
+											<li><a href="#" class="link-nav">Скачать мобильное приложение (доступное для скачивания)
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Постановка на учет
+											<li><a href="#" class="link-nav">Постановка на учет
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Формы документов, заполняемые индивидуальными предпринимателями в отношении физических лиц
+											<li><a href="#" class="link-nav">Формы документов, заполняемые индивидуальными предпринимателями в отношении физических лиц
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Налоги и сборы, уплачиваемые индивидуальными предпринимателями
+											<li><a href="#" class="link-nav">Налоги и сборы, уплачиваемые индивидуальными предпринимателями
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Порядок ведения учета доходов
+											<li><a href="#" class="link-nav">Порядок ведения учета доходов
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Особенности налогообложения
+											<li><a href="#" class="link-nav">Особенности налогообложения
 												резидентов СЭЗ
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Особенности налогообложения 
+											<li><a href="#" class="link-nav">Особенности налогообложения 
 												резидентов ПВТ
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Изменение установленного законодательством срока уплаты налогов, сборов (пошлин), пеней и иные преференции
+											<li><a href="#" class="link-nav">Изменение установленного законодательством срока уплаты налогов, сборов (пошлин), пеней и иные преференции
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Признание задолженности безнадежным 
+											<li><a href="#" class="link-nav">Признание задолженности безнадежным 
 												долгом
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Плательщики, обладающие статусом уполномоченного экономического оператора и включенные в реестр владельцев таможенных складов и (или) в реестр владельцев складов временного хранения
+											<li><a href="#" class="link-nav">Плательщики, обладающие статусом уполномоченного экономического оператора и включенные в реестр владельцев таможенных складов и (или) в реестр владельцев складов временного хранения
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Ответы на типовые вопросы
+											<li><a href="#" class="link-nav">Ответы на типовые вопросы
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Актуальная информация по представлению индивидуальными предпринимателями в налоговые органы документов в электронном виде
+											<li><a href="#" class="link-nav">Актуальная информация по представлению индивидуальными предпринимателями в налоговые органы документов в электронном виде
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Разъяснение
+											<li><a href="#" class="link-nav">Разъяснение
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Архив
+											<li><a href="#" class="link-nav">Архив
 											</a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="col-sm-6 col-md-4">
-									<div class="main-menu__item">
-										<div class="main-menu__info">
-											<div class="main-menu__image img">
-												<img src="./img/main/03.png" alt="">
+								<div class="col-md-6 col-xl-4">
+									<div class="main-menu__item h-100 position-relative">
+										<div class="main-menu__info d-flex justify-content-center justify-content-md-between align-items-center">
+											<div class="me-3">
+												<img class="img-fluid" src="./img/main/03.png" alt="">
 											</div>
 											<div class="main-menu__menu">
-												<a href="#" class="main-menu__link h2">Налогообложение организаций</a>
-												<a href="#" class="main-menu__enter arrow arrow-right-black">Личный кабинет</a>
-												<a href="#" class="main-menu__app">Скачать моб.приложение</a>
+												<a href="#" class="h4 d-block mb-3">Налогообложение организаций</a>
+												<a href="#" class="h6 d-block mb-3">Личный кабинет</a>
+												<a href="#" class="main-menu__app"><i class="bi bi-phone me-2"></i>Скачать моб.приложение</a>
 											</div>
 										</div>
-										<ul class="main-menu-drop">
-											<li><a href="#" class="main-menu-drop__link nav-link">Вход в личный кабинет
+										<ul class="main-menu-drop w-100 position-absolute top-100 start-0">
+											<li><a href="#" class="link-nav">Вход в личный кабинет
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Скачать мобильное приложение (доступное для скачивания)
+											<li><a href="#" class="link-nav">Скачать мобильное приложение (доступное для скачивания)
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Постановка на учет
+											<li><a href="#" class="link-nav">Постановка на учет
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Формы документов, заполняемые организациями в отношении физических лиц
+											<li><a href="#" class="link-nav">Формы документов, заполняемые организациями в отношении физических лиц
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Налоги, уплачиваемые организациями
+											<li><a href="#" class="link-nav">Налоги, уплачиваемые организациями
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Особенности налогообложения иностранных организаций
+											<li><a href="#" class="link-nav">Особенности налогообложения иностранных организаций
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Особенности налогообложения резидентов СЭЗ
+											<li><a href="#" class="link-nav">Особенности налогообложения резидентов СЭЗ
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Особенности налогообложения резидентов ПВТ
+											<li><a href="#" class="link-nav">Особенности налогообложения резидентов ПВТ
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Особенности налогообложения в Китайско-Белорусском индустриальном парке «Великий камень»
+											<li><a href="#" class="link-nav">Особенности налогообложения в Китайско-Белорусском индустриальном парке «Великий камень»
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Изменение установленного законодательством срока уплаты налогов, сборов (пошлин), пеней и иные преференции
+											<li><a href="#" class="link-nav">Изменение установленного законодательством срока уплаты налогов, сборов (пошлин), пеней и иные преференции
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Признание задолженности безнадежным долгом
+											<li><a href="#" class="link-nav">Признание задолженности безнадежным долгом
 											</a></li>
-											<li><a href="#" class="main-menu-drop__link nav-link">Плательщики, обладающие статусом уполномоченного экономического оператора и включенные в реестр владельцев таможенных складов и (или) в реестр владельцев складов временного хранения
+											<li><a href="#" class="link-nav">Плательщики, обладающие статусом уполномоченного экономического оператора и включенные в реестр владельцев таможенных складов и (или) в реестр владельцев складов временного хранения
 											</a></li>
 										</ul>
 									</div>
@@ -611,179 +498,152 @@
 						<div class='container'>
 							<ul class="nav" id="block-services" role="tablist">
 								<li role="presentation">
-								  	<button class="services__title title active" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="true">Сервисы<i class="bi-chevron-right"></i></button>
+								  	<button class="btn-accord me-4 mb-4 active" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="true">Сервисы<i class="bi-chevron-right ms-3"></i></button>
 								</li>
 								<li role="presentation">
-								  	<button class="services__title title" id="actual-tab" data-bs-toggle="tab" data-bs-target="#actual" type="button" role="tab" aria-controls="actual" aria-selected="false">Актуальное<i class="bi-chevron-right"></i></button>
+								  	<button class="btn-accord me-4 mb-4" id="actual-tab" data-bs-toggle="tab" data-bs-target="#actual" type="button" role="tab" aria-controls="actual" aria-selected="false">Актуальное<i class="bi-chevron-right ms-3"></i></button>
 								</li>
 							</ul>
 							<div class="tab-content" id="myTabContent">
 								<div class="tab-pane fade show active" id="services" role="tabpanel" aria-labelledby="services-tab">
 									<div class="row g-3 mb-3">
-										<div class="col-sm-6 col-md-4">
-											<a href="#"class="item-services">
-												<div class="item-services__info">
-													<div class="item-services__text h4">е-НДС</div>
-													<div>
-														<img class="img-fluid" src="./img/services/01.png" alt="">
-													</div>
-												</div>
-												<div class="item-services-drop">
-													<div class="item-services-drop__description h3">е-НДС иностранной организации</div>
-													<div class="item-services-drop__moreDetails"><span class="arrow arrow-right">Подробнее</span></div>
+										<div class="col-md-6 col-xl-4">
+											<a href="#"class="item-services p-3 p-sm-4 h-100 d-flex justify-content-between align-items-center position-relative overflow-hidden">
+												<div class="h6">е-НДС</div>
+												<img class="img-fluid" src="./img/services/01.png" alt="">
+												<div class="item-services-drop w-100 p-3 p-sm-4 position-absolute d-flex flex-column justify-content-between">
+													<div class="h5 h5_white">е-НДС иностранной организации</div>
+													<div class="h4 h4_white fw-normal text-end">Подробнее<i class="bi-chevron-right ms-2"></i></div>
 												</div>
 											</a>
 										</div>
-										<div class="col-sm-6 col-md-4">
-											<a href="#"class="item-services">
-												<div class="item-services__info">
-													<div class="item-services__text h4">Сведения о задолженности по налоговым платежам в бюджет</div>
-													<div>
-														<img class="img-fluid" src="./img/services/02.png" alt="">
-													</div>
-												</div>
-												<div class="item-services-drop">
-													<div class="item-services-drop__description h3">Сведения об организациях и индивидуальных предпринимателях...</div>
-													<div class="item-services-drop__moreDetails"><span class="arrow arrow-right">Подробнее</span></div>
+										<div class="col-md-6 col-xl-4">
+											<a href="#"class="item-services p-3 p-sm-4 h-100 d-flex justify-content-between align-items-center position-relative overflow-hidden">
+												<div class="h6">Сведения о задолженности по налоговым платежам в бюджет</div>
+												<img class="img-fluid" src="./img/services/02.png" alt="">
+												<div class="item-services-drop w-100 p-3 p-sm-4 position-absolute d-flex flex-column justify-content-between">
+													<div class="h5 h5_white">Сведения об организациях и индивидуальных предпринимателях...</div>
+													<div class="h4 h4_white fw-normal text-end">Подробнее<i class="bi-chevron-right ms-2"></i></div>
 												</div>
 											</a>
 										</div>
-										<div class="col-sm-6 col-md-4">
-											<a href="#"class="item-services">
-												<div class="item-services__info">
-													<div class="item-services__text h4">Проверка электронного сертификата налогового резидентства, выданного в Республике Беларусь</div>
-													<div>
-														<img class="img-fluid" src="./img/services/03.png" alt="">
-													</div>
-												</div>
-												<div class="item-services-drop">
-													<div class="item-services-drop__description h3">Сведения об организациях и индивидуальных предпринимателях...</div>
-													<div class="item-services-drop__moreDetails"><span class="arrow arrow-right">Подробнее</span></div>
+										<div class="col-md-6 col-xl-4">
+											<a href="#"class="item-services p-3 p-sm-4 h-100 d-flex justify-content-between align-items-center position-relative overflow-hidden">
+												<div class="h6">Проверка электронного сертификата налогового резидентства, выданного в Республике Беларусь</div>
+												<img class="img-fluid" src="./img/services/03.png" alt="">
+												<div class="item-services-drop w-100 p-3 p-sm-4 position-absolute d-flex flex-column justify-content-between">
+													<div class="h5 h5_white">Сведения об организациях и индивидуальных предпринимателях...</div>
+													<div class="h4 h4_white fw-normal text-end">Подробнее<i class="bi-chevron-right ms-2"></i></div>
 												</div>
 											</a>
 										</div>
-										<div class="col-sm-6 col-md-4">
-											<a href="#"class="item-services">
-												<div class="item-services__info">
-													<div class="item-services__text h4">Мобильное приложение</div>
-													<div>
-														<img class="img-fluid" src="./img/services/04.png" alt="">
-													</div>
-												</div>
-												<div class="item-services-drop">
-													<div class="item-services-drop__description h3">Скачать мобильное 
-														приложение для...</div>
-													<div class="item-services-drop__moreDetails"><span class="arrow arrow-right">Подробнее</span></div>
+										<div class="col-md-6 col-xl-4">
+											<a href="#"class="item-services p-3 p-sm-4 h-100 d-flex justify-content-between align-items-center position-relative overflow-hidden">
+												<div class="h6">Мобильное приложение</div>
+												<img class="img-fluid" src="./img/services/04.png" alt="">
+												<div class="item-services-drop w-100 p-3 p-sm-4 position-absolute d-flex flex-column justify-content-between">
+													<div class="h5 h5_white">Скачать мобильное приложение для...</div>
+													<div class="h4 h4_white fw-normal text-end">Подробнее<i class="bi-chevron-right ms-2"></i></div>
 												</div>
 											</a>
 										</div>
-										<div class="col-sm-6 col-md-4">
-											<a href="#"class="item-services">
-												<div class="item-services__info">
-													<div class="item-services__text h4">Государственный реестр плательщиков</div>
-													<div>
-														<img class="img-fluid" src="./img/services/05.png" alt="">
-													</div>
-												</div>
-												<div class="item-services-drop">
-													<div class="item-services-drop__description h3">Сведения из Государственного 
-														реестра плательщиков...</div>
-													<div class="item-services-drop__moreDetails"><span class="arrow arrow-right">Подробнее</span></div>
+										<div class="col-md-6 col-xl-4">
+											<a href="#"class="item-services p-3 p-sm-4 h-100 d-flex justify-content-between align-items-center position-relative overflow-hidden">
+												<div class="h6">Государственный реестр плательщиков</div>
+												<img class="img-fluid" src="./img/services/05.png" alt="">
+												<div class="item-services-drop w-100 p-3 p-sm-4 position-absolute d-flex flex-column justify-content-between">
+													<div class="h5 h5_white">Сведения из Государственного реестра плательщиков...</div>
+													<div class="h4 h4_white fw-normal text-end">Подробнее<i class="bi-chevron-right ms-2"></i></div>
 												</div>
 											</a>
 										</div>
-										<div class="col-sm-6 col-md-4">
-											<a href="#"class="item-services">
-												<div class="item-services__info">
-													<div class="item-services__text h4">Узнать о ходе рассмотрения электронного обращения</div>
-													<div>
-														<img class="img-fluid" src="./img/services/06.png" alt="">
-													</div>
-												</div>
-												<div class="item-services-drop">
-													<div class="item-services-drop__description h3">Узнать о ходе рассмотрения 
-														электронного обращения...</div>
-													<div class="item-services-drop__moreDetails"><span class="arrow arrow-right">Подробнее</span></div>
+										<div class="col-md-6 col-xl-4">
+											<a href="#"class="item-services p-3 p-sm-4 h-100 d-flex justify-content-between align-items-center position-relative overflow-hidden">
+												<div class="h6">Узнать о ходе рассмотрения электронного обращения</div>
+												<img class="img-fluid" src="./img/services/06.png" alt="">
+												<div class="item-services-drop w-100 p-3 p-sm-4 position-absolute d-flex flex-column justify-content-between">
+													<div class="h5 h5_white">Узнать о ходе рассмотрения электронного обращения...</div>
+													<div class="h4 h4_white fw-normal text-end">Подробнее<i class="bi-chevron-right ms-2"></i></div>
 												</div>
 											</a>
 										</div>
 									</div>
 									<div class="mb-5">
-										<a href="#" class="link link_black">Все сервисы</a>
+										<a href="#" class="h5 link link_black">Все сервисы</a>
 									</div>
 								</div>
 								<div class="tab-pane fade" id="actual" role="tabpanel" aria-labelledby="actual-tab">
 									<div class="row g-3 mb-5">
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/01.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Транспортный налог</div>
+												<div class="h5">Транспортный налог</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/02.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Максимальные розничные цены на сигареты с фильтром</div>
+												<div class="h5">Максимальные розничные цены на сигареты с фильтром</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/03.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Прослеживаемость товаров</div>
+												<div class="h5">Прослеживаемость товаров</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/04.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Примеры корректировки налоговой базы, применяемой налоговыми органами</div>
+												<div class="h5">Примеры корректировки налоговой базы, применяемой налоговыми органами</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/05.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Налоги 2021</div>
+												<div class="h5">Налоги 2021</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/06.png" alt="">
 												</div>
-												<div class="item-actual__text h3">О развитии Оршанского района Витебской области</div>
+												<div class="h5">О развитии Оршанского района Витебской области</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/07.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Электронные счет-фактуры</div>
+												<div class="h5">Электронные счет-фактуры</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/08.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Трансферное ценообразование</div>
+												<div class="h5">Трансферное ценообразование</div>
 											</a>
 										</div>
-										<div class="col-sm-12 col-md-6">
-											<a href="#" class="item-actual d-flex align-items-center">
+										<div class="col-lg-6">
+											<a href="#" class="item-actual h-100 p-3 d-flex align-items-center">
 												<div class="me-4">
 													<img src="./img/actual/09.png" alt="">
 												</div>
-												<div class="item-actual__text h3">Детям о налогах</div>
+												<div class="h5">Детям о налогах</div>
 											</a>
 										</div>
 									</div>
@@ -793,38 +653,40 @@
 					</div>
 					<div class="main-news">
 						<div class='container'>
-							<a href="#"class="main-news__title title title_white">Новости<i class="bi-chevron-right"></i></a>
-							<div class="main-news__items">
-								<a href="#" class="main-news__item main-news__item_big">
-									<img class="main-news__image" src="./img/photos/01.jpg" alt="">
+							<div class="mb-4">
+								<a href="#"class="title">Новости<i class="bi-chevron-right ms-3"></i></a>
+							</div>
+							<div class="main-news__wrapper">
+								<a href="#" class="main-news__item main-news__item_big _ibg overflow-hidden position-relative">
+									<img src="./img/photos/01.jpg" alt="">
 									<div class="main-news__label">Новое</div>
 									<div class="main-news__info">
-										<div class="main-news__date">27.12.2020</div>
-										<div class="main-news__header">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
+										<div class="main-news__date mb-2">27.12.2020</div>
+										<div class="h5 h5_white">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
 									</div>
 								</a>
-								<a href="#" class="main-news__item">
-									<img class="main-news__image" src="./img/photos/02.jpg" alt="">
+								<a href="#" class="main-news__item _ibg overflow-hidden position-relative">
+									<img src="./img/photos/02.jpg" alt="">
 									<div class="main-news__label">Новое</div>
 									<div class="main-news__info">
-										<div class="main-news__date">27.12.2020</div>
-										<div class="main-news__header">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
+										<div class="main-news__date mb-2">27.12.2020</div>
+										<div class="h5 h5_white">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
 									</div>
 								</a>
-								<a href="#" class="main-news__item">
-									<img class="main-news__image" src="./img/photos/03.jpg" alt="">
+								<a href="#" class="main-news__item _ibg overflow-hidden position-relative">
+									<img src="./img/photos/03.jpg" alt="">
 									<div class="main-news__label">Новое</div>
 									<div class="main-news__info">
-										<div class="main-news__date">27.12.2020</div>
-										<div class="main-news__header">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
+										<div class="main-news__date mb-2">27.12.2020</div>
+										<div class="h5 h5_white">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
 									</div>
 								</a>
-								<a href="#" class="main-news__item main-news__item_mid">
-									<img class="main-news__image" src="./img/photos/04.jpg" alt="">
+								<a href="#" class="main-news__item main-news__item_mid _ibg overflow-hidden position-relative">
+									<img src="./img/decor-news.jpg" alt="">
 									<div class="main-news__label">Новое</div>
 									<div class="main-news__info">
-										<div class="main-news__date">27.12.2020</div>
-										<div class="main-news__header">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
+										<div class="main-news__date mb-2">27.12.2020</div>
+										<div class="h5 h5_white">С 1 января в Беларуси отменяют единый налог на вмененный доход</div>
 									</div>
 								</a>
 							</div>
@@ -832,193 +694,198 @@
 					</div>
 					<div class="ref-info">
 						<div class='container'>
-							<div class="ref-info__body">
-								<button class="ref-info__title title title_white collapsed" data-bs-toggle="collapse" href="#refInfo" role="button" aria-expanded="false" aria-controls="refInfo">
-									Справочная информация<i class="bi-chevron-right"></i>
-								</button>
-								<div class="collapse" id="refInfo">
-									<div class="ref-info__content">
-										<div class="row gx-4">
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													О налогах из первых уст
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Публикации
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Репортажи
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Прямые линии
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Оn-line конференции
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Разъяснения
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Комментарии
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Перечень регистрирующих органов
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Ставка пеней
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Электронный банк данных бланков документов и документов с определенной степенью защиты и печатной продукции
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Ставки подоходного налога
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Базовая величина
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Ставка рефинансирования
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Перечни и формы ведомственной отчетности
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Правовой мониторинг
-												</a>
-											</div>
-											<div class="col-sm-6 col-md-4">
-												<a href="#" class="ref-info__item nav-link">
-													Сведения о бизнес-партнере
-												</a>
-											</div>
+							<button class="btn-accord btn-accord_white py-4 collapsed" data-bs-toggle="collapse" href="#refInfo" role="button" aria-expanded="false" aria-controls="refInfo">Справочная информация<i class="bi bi-chevron-down ms-4"></i></button>
+							<div class="collapse" id="refInfo">
+								<div class="py-4 border-top border-3">
+									<div class="row gx-4">
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												О налогах из первых уст
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Публикации
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Репортажи
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Прямые линии
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Оn-line конференции
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Разъяснения
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Комментарии
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Перечень регистрирующих органов
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Ставка пеней
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Электронный банк данных бланков документов и документов с определенной степенью защиты и печатной продукции
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Ставки подоходного налога
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Базовая величина
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Ставка рефинансирования
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Перечни и формы ведомственной отчетности
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Правовой мониторинг
+											</a>
+										</div>
+										<div class="col-sm-6 col-md-4">
+											<a href="#" class="link-nav">
+												Сведения о бизнес-партнере
+											</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="partners">
-						<div class="partners__slider">
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/01.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/02.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/03.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/04.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/05.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/06.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/07.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/08.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/09.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/10.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/11.png" alt="">
-								</a>
-							</div>
-							<div>
-								<a href="#" class="partners__item">
-									<img src="./img/partners/12.png" alt="">
-								</a>
-							</div>
-						</div>
+					<div class="partners _swiper">
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/01.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/02.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/03.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/04.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/05.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/06.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/07.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/08.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/09.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/10.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/11.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/12.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/13.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/14.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/15.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/16.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/17.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/18.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/19.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/20.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/21.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/22.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/23.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/24.jpg" alt="">
+						</a>
+						<a href="#" class="partners__slide d-flex justify-content-center">
+							<img src="./img/partners/25.jpg" alt="">
+						</a>
 					</div>
 				</div>
 			</main>
-			<footer class="footer">
+			<footer class="footer py-4">
 	<div class="container">
-		<div class="footer__top">
-			<div class="footer__left">
-				<a href=""class="footer__logo">
+		<div class="row gx-4 gy-5">
+			<div class="col-md-6">
+				<a href="index.html" class="d-flex align-items-center mb-4">
 					<img src="./img/logo.png" alt="">
-					<span class="footer__name">Министерство по налогам и сборам Республики Беларусь</span>
+					<div class="ms-3">Министерство по налогам и сборам Республики Беларусь</div>
 				</a>
-				<div class="footer__address">УНП 100582333, 220010, г. Минск, ул. Советская, 9
-				</div>
-				<a href="mailto:gnk@mail.belpak.by" class="footer__mail footer__link">e-mail: gnk@mail.belpak.by (кроме обращений)</a>
+				<div class="ms-md-5 mb-2"><i class="bi bi-geo-alt me-3"></i>УНП 100582333, 220010, г. Минск, ул. Советская, 9</div>
+				<a href="mailto:gnk@mail.belpak.by" class="link ms-md-5 d-block"><i class="bi bi-envelope me-3"></i>e-mail: gnk@mail.belpak.by (кроме обращений)</a>
 			</div>
-			<div class="footer__right">
-				<div class="footer__text">Пресс-центр Министерства по налогам и сборам Республики Беларусь</div>
-				<a href="tel:375172297929" class="footer__phone footer__link">тел.: +375 (17) 229-79-29 (для СМИ)</a>
-				<a href="tel:375172297933" class="footer__phone footer__link">тел.: +375 (17) 229-79-33 (для СМИ)</a>
-				<a href="mailto:mns-press@nalog.gov.by" class="footer__mail footer__link">e-mail: mns-press@nalog.gov.by (для СМИ)
-				</a>
+			<div class="col-md-6">
+				<div class="mb-3">Пресс-центр Министерства по налогам и сборам Республики Беларусь</div>
+				<a href="tel:375172297929" class="link mb-2 d-block"><i class="bi-telephone me-3"></i>тел.: +375 (17) 229-79-29 (для СМИ)</a>
+				<a href="tel:375172297933" class="link mb-2 d-block"><i class="bi-telephone me-3"></i>тел.: +375 (17) 229-79-33 (для СМИ)</a>
+				<a href="mailto:mns-press@nalog.gov.by" class="link d-block"><i class="bi bi-envelope me-3"></i>e-mail: mns-press@nalog.gov.by (для СМИ)</a>
 			</div>
 		</div>
-		<div class="footer__bottom">
-			<div class="footer__author">
-				<span>Разработка сайта: <a href="" class="footer__developer">«Информационно-издательский центр
-					по налогам и сборам»</a></span>
-				
+		<div class="row gx-4 gy-3 mt-3">
+			<div class="col-md-6">
+				<div class="border-top pt-2">Разработка сайта: <a href="" class="link link-author" target="_blank">«Информационно-издательский центр по налогам и сборам»</a></div>
 			</div>
-			<div class="footer__old-version">
-				<a href="">Вернуться к старой версии</a>
+			<div class="col-md-6">
+				<a href="#" class="link mt-2 d-inline-block fw-bold">Вернуться к старой версии</a>
 			</div>
 		</div>
 	</div>
@@ -1026,7 +893,8 @@
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- <script src="js/vendors.min.js"></script> -->
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script src="js/script.min.js"></script>
 
