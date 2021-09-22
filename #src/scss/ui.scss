@@ -35,19 +35,17 @@
 .h6 {
 	font-size: 16px;
 }
-.btn {
-	font-size: 16px;
+.button {
+	padding: 11px 28px;
 	color: $color-white;
-	border-radius: 10px;
-	padding: 10px 28px;
-}
-.btn-green {
+	font-size: 16px;
+	text-align: center;
 	background-color: $color-green-light;
-	border: none;
+	border-radius: 10px;
 
 	&:hover {
-		background-color: $color-green-dark;
 		color: $color-white;
+		background-color: $color-green;
 	}
 }
 .btn-accord {
@@ -194,19 +192,7 @@
 			}
 		}
 }
-.button {
-	width: 120px;
-	color: $color-white;
-	font-size: 16px;
-	line-height: 44px;
-	text-align: center;
-	background-color: $color-green-light;
-	border-radius: 10px;
 
-	&:hover {
-		background-color: $color-green;
-	}
-}
 ._ibg {
 	position: relative;
 	img {

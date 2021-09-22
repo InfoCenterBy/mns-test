@@ -526,7 +526,7 @@
 
 	
 	&__tablet-link {
-		@media (min-width: 1250px) {
+		@media (min-width: 1260px) {
 			display: none;
 		}
 	}
@@ -541,7 +541,11 @@
 	}
 
 	&__name {
-		max-width: 335px;
+		max-width: 300px;
+
+		@media (max-width: 1260px) {
+			max-width: 100%;
+		}
 	}
 
 	&__label {
@@ -556,23 +560,18 @@
 	
 }
 .menu {
-	@media (max-width: 1250px) {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 1260px) {
 		display: none;
 	}
 
-	display: flex;
-	align-items: center;
-	margin: 0;
-	padding: 0;
-
 	> li {
-		margin: 0px 45px 0px 0px;
-		display: flex;
-		justify-content:center;
-		align-items: center;
+		margin: 0px 20px 0px 0px;
 
 		@media (max-width: 1350px) {
-			margin: 0px 0px 0px 0px;
+			margin: 0px 5px 0px 0px;
 		}
 		
 
@@ -598,10 +597,6 @@
 	
 
 	&__link {
-		color: $color-black;
-		font-size: 16px;
-		font-weight: 600;
-		padding: 8px 22px;
 		border-radius: 10px;
 		background-color: transparent;
 		position: relative;
