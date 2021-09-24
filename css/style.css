@@ -4818,78 +4818,20 @@ html body .bvi-panel-close {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border-radius: 10px;
+  color: #1A1A1A;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .main-menu__item:hover {
   background-color: #00654D;
-  border-radius: 10px 10px 0 0;
-}
-
-.main-menu__item:hover .main-menu-drop {
-  border-radius: 0 0 10px 10px;
-  display: block;
-  -webkit-animation: growDown 300ms ease-in-out forwards;
-          animation: growDown 300ms ease-in-out forwards;
-  -webkit-transform-origin: top center;
-      -ms-transform-origin: top center;
-          transform-origin: top center;
-  z-index: 5;
-}
-
-.main-menu__item:hover .main-menu__menu a {
   color: #FAFAFA;
 }
 
-.main-menu__info {
-  padding: 60px 30px;
-}
-
-.main-menu__menu {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 205px;
-          flex: 0 0 205px;
-}
-
-.main-menu__menu a:hover {
-  text-decoration: underline;
-}
-
-.main-menu__app {
-  font-size: 14px;
-}
-
-.main-menu-drop {
-  display: none;
-  padding: 30px;
-  background-color: #00654D;
-  border-radius: 10px;
-  z-index: -1;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-@-webkit-keyframes growDown {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-
-@keyframes growDown {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
+.main-menu__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .services {
@@ -4916,43 +4858,52 @@ html body .bvi-panel-close {
           transform: rotate(90deg);
 }
 
-.item-services {
-  min-height: 150px;
-  background-color: #EBEBEB;
-  border-radius: 10px;
-}
-
-.item-services:hover .item-services-drop {
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
-}
-
-.item-services-drop {
-  height: 85%;
-  background-color: #00654D;
-  border-radius: 10px;
-  bottom: -1px;
-  left: 0;
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
+.item-services,
 .item-actual {
   background-color: #EBEBEB;
   border-radius: 10px;
 }
 
-.item-actual:hover {
-  background-color: #00654D;
+.item-services img,
+.item-actual img {
+  min-width: 65px;
 }
 
-.item-actual:hover .item-actual__text {
+.item-services:hover,
+.item-actual:hover {
+  background-color: #007A65;
+}
+
+.item-services:hover .h5,
+.item-actual:hover .h5 {
   color: #FAFAFA;
+}
+
+.tax-inspectorates {
+  background-color: #EBEBEB;
+}
+
+.tax-inspectorates__body {
+  padding: 40px 60px 40px 90px;
+  border-radius: 10px;
+  background-color: #FAFAFA;
+}
+
+.tax-inspectorates__title {
+  color: #007A65;
+}
+
+.tax-inspectorates__link {
+  color: #1A1A1A;
+  font-size: 14px;
+}
+
+.tax-inspectorates__link i {
+  color: #007A65;
+}
+
+.tax-inspectorates__link:hover {
+  color: #007A65;
 }
 
 .main-news {
@@ -6329,6 +6280,12 @@ html body .bvi-panel-close {
   }
 }
 
+@media (max-width: 1432px) {
+  .tax-inspectorates__body {
+    padding: 40px;
+  }
+}
+
 @media (max-width: 1400px) {
   .header-special__wrapper {
     padding: 30px 30px;
@@ -6374,6 +6331,13 @@ html body .bvi-panel-close {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .tax-inspectorates__map {
+    max-width: 700px;
+    margin: 0 auto;
   }
 }
 
@@ -6648,6 +6612,16 @@ html body .bvi-panel-close {
     margin: 0px 0px 0px 10px;
   }
 
+  .item-services img,
+  .item-actual img {
+    min-width: auto;
+    max-width: 40px;
+  }
+
+  .tax-inspectorates__body {
+    padding: 20px;
+  }
+
   .main-news__item {
     padding: 75% 0px 0px 0px;
   }
@@ -6661,14 +6635,6 @@ html body .bvi-panel-close {
   .nav-header__nav {
     width: 300px;
     padding: 20px 10px;
-  }
-
-  .main-menu__info {
-    padding: 30px 10px;
-  }
-
-  .main-menu-drop {
-    padding: 10px;
   }
 }
 
