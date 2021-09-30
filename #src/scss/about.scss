@@ -89,10 +89,54 @@
 		font-size: 40px;
 		transition: all 0.3s ease 0s;
 	}
+}
+.tab-content {
+	a:hover {
+		color: $color-green;
+		text-decoration: underline;
+	}
+}
+.table-tab {
+	margin: 0 -24px;
+	overflow-x: auto;
 
+	th,
+	td {
+		padding: 25px;
+	}
 
+	tbody tr:nth-child(odd) {
+		background-color: $color-gray-light;
+		border-radius: 10px;
+	}
+
+	@media (max-width: 1200px) {
+		th,
+		td {
+			padding: 15px;
+		}
+	}
+
+	@media (max-width: $md3+px) {
+		margin: 0 -8px;
+	}
+
+	.position {
+		color: $color-green;
+		font-weight: 700;
+	}
 }
 .address-tab {
+
+	&__head {
+		font-size: 18px;
+		color: $color-green-light;
+
+		i {
+			font-size: 50px;
+		}
+	}
+
 	iframe {
 		border-radius: 10px;
 		max-width: 100%;
@@ -102,11 +146,57 @@
 		border-bottom: 1px solid $color-gray-light;
 	}
 
-	&__info {
-		color: $color-green-light;
-	}
-	a.address-tab__info:hover {
+	a:hover {
 		color: $color-green;
+	}
+}
+.work-mode-tab {
+
+	&__head {
+		font-size: 18px;
+		color: $color-green-light;
+
+		i {
+			font-size: 50px;
+		}
+	}
+
+	&__line {
+		position: relative;
+		border-bottom: 1px dashed $color-black;
+
+		span {
+			bottom: -5px;
+			background-color: $color-white;
+		}
+	}
+
+	&__text {
+		position: relative;
+		padding: 0px 5px 0px 0px;
+		margin: 0px 150px 0px 0px;
+	}
+
+	&__time {
+		padding: 0px 0px 0px 5px;
+		position: absolute;
+		right: 0;
+	}
+}
+.book-tab {
+
+	&__head {
+		font-size: 18px;
+		color: $color-green-light;
+
+		i {
+			font-size: 50px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		color: $color-black;
 	}
 }
 .reception-tab {
@@ -126,40 +216,14 @@
 	}
 	
 	&__table {
-		margin: 0 -24px;
-		overflow-x: auto;
+		
 
-		th,
-		td {
-			padding: 25px;
-		}
-
-		tbody tr:nth-child(odd) {
-			background-color: rgba(196, 196, 196, 0.2);
-			border-radius: 10px;
-		}
-
-		@media (max-width: 1200px) {
-			th,
-			td {
-				padding: 15px;
-			}
-		}
-
-		@media (max-width: $md3+px) {
-			margin: 0 -8px;
-		}
+		
 	}
 
-	&__position {
-		color: $color-green;
-		font-weight: 700;
-	}
-
-	&__number {
-		text-align: center;
-	}
+	
 }
+
 .sidebar {
 
 	&__body {

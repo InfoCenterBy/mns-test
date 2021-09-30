@@ -47,6 +47,14 @@
 		color: $color-white;
 		background-color: $color-green;
 	}
+
+	&_green {
+		background-color: $color-green;
+
+		&:hover {
+			background-color: $color-green-dark;
+		}
+	}
 }
 .btn-accord {
 	color: $color-black;
@@ -192,7 +200,6 @@
 			}
 		}
 }
-
 ._ibg {
 	position: relative;
 	img {

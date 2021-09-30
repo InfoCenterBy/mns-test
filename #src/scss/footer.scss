@@ -2,6 +2,11 @@
 	background-color: $color-green-dark;
 	color: $color-white;
 
+	&__logo:hover {
+		color: $color-white;
+		opacity: 0.7;
+	}
+
 	.link-author {
 		font-size: 14px;
 	}

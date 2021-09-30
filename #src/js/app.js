@@ -85,6 +85,7 @@ var sidebar = new StickySidebar('.sidebar', {
 	topSpacing: 20,
 	bottomSpacing: 20
 });
+sidebar.updateSticky();
 
 // =============Function ibg  ====================================================
 function ibg() {

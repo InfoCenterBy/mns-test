@@ -365,7 +365,7 @@
 					 </nav>
 					<div class="about">
 						<div class='container'>
-							<div class="row g-3">
+							<div class="about__cnt row g-3">
 								<aside class="col-lg-4 order-lg-2">
 									<div class="sidebar">
 										<div class="sidebar__body px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
@@ -397,8 +397,8 @@
 													<a href="#" class="management-item management-item_main d-flex flex-sm-row flex-column align-items-center p-3 h-100">
 														<img class="management-item__photo" src="./img/management/01.jpg" alt="">
 														<div class="align-items-center__info">
-															<div class="management-item__position h4 fw-bold mb-2">Первый заместитель Министра по налогам и сборам</div>
-															<div class="management-item__name h3">Клепча Игорь Николаевич</div>
+															<div class="management-item__position h4 fw-bold mb-2">Министр по налогам и сборам</div>
+															<div class="management-item__name h5">Наливайко Сергей Эдуардович</div>
 														</div>
 													</a>
 												</div>
@@ -456,7 +456,7 @@
 														<div class="contacts-tabs__icon mb-3"><i class="bi bi-person"></i></div>
 														<div class="h6 text-center">Личный прием</div>
 													</button>
-													<button class="contacts-tabs" id="contact-workMode-tab" data-bs-toggle="tab" data-bs-target="#contact-workMode" type="button" role="tab" aria-controls="contact-workMode" aria-selected="false">
+													<button class="contacts-tabs" id="contact-work-mode-tab" data-bs-toggle="tab" data-bs-target="#contact-work-mode" type="button" role="tab" aria-controls="contact-work-mode" aria-selected="false">
 														<div class="contacts-tabs__icon mb-3"><i class="bi bi-clock"></i></div>
 														<div class="h6 text-center">Режим работы</div>
 													</button>
@@ -469,7 +469,10 @@
 											<div class="tab-content" id="nav-tabContent">
 												<div class="tab-pane fade show active" id="contact-address" role="tabpanel" aria-labelledby="contact-address-tab">
 													<div class="address-tab">
-														<div class="h6 mb-4"><i class="bi bi-pin-map me-2"></i>Схема проезда:</div>
+														<div class="address-tab__head d-flex align-items-center mb-3">
+															<i class="bi bi-geo-alt me-3"></i>
+															<div><b>Схема проезда:</b></div>
+														</div>
 														<div class="row g-3">
 															<div class="col-sm-8">
 																<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa3edc11a13fec65083696c9ba8aaa6927a5fe637642b0fac7335ff053b6c09ef&amp;source=constructor" width="700" height="400" frameborder="0"></iframe>
@@ -477,15 +480,15 @@
 															<div class="col-sm-4">
 																<div class="mb-5">
 																	<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-list-ol me-2"></i>УНП:</div>
-																	<div class="address-tab__info">100582333</div>
+																	<div>100582333</div>
 																</div>
 																<div class="mb-5">
 																	<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-geo-alt me-2"></i>Юридический адрес:</div>
-																	<div class="address-tab__info">220010, г.Минск, ул. Советская, 9</div>
+																	<div>220010, г.Минск, ул. Советская, 9</div>
 																</div>
 																<div class="mb-5">
 																	<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-envelope me-2"></i>Электронный адрес:</div>
-																	<a class="address-tab__info" href="mailto:gnk@mail.belpak.by">gnk@mail.belpak.by</a> 
+																	<a href="mailto:gnk@mail.belpak.by">gnk@mail.belpak.by</a> 
 																	<div>(кроме обращений)</div>
 																</div>
 															</div>
@@ -493,16 +496,16 @@
 													</div>
 												</div>
 												<div class="tab-pane fade" id="contact-phone" role="tabpanel" aria-labelledby="contact-phone">
-													222
+													22222222
 												</div>
 												<div class="tab-pane fade" id="contact-reception" role="tabpanel" aria-labelledby="contact-reception-tab">
 													<div class="reception-tab">
 														<div class="reception-tab__head d-flex align-items-center mb-3">
-															<div class="reception-tab__icon"><i class="bi bi-exclamation-circle-fill me-2"></i></div>
-															<div class="reception-tab__text">Личный прием граждан и представителей юридических лиц осуществляется по предварительной записи по телефону или с помощью электронных средств связи</div>
+															<div class="reception-tab__icon"><i class="bi bi-exclamation-circle-fill me-3"></i></div>
+															<div>Личный прием граждан и представителей юридических лиц осуществляется по предварительной записи по телефону или с помощью электронных средств связи</div>
 														</div>
-														<div class="reception-tab__title fw-bold ps-3">Личный прием руководством МНС граждан и представителей юридических лиц:</div>
-														<div class="reception-tab__table">
+														<div><b>Личный прием руководством МНС граждан и представителей юридических лиц:</b></div>
+														<div class="table-tab">
 															<table>
 																<thead>
 																	<tr>
@@ -515,49 +518,47 @@
 																 <tbody>
 																	<tr>
 																	  <td>
-																		  <div class="reception-tab__position">Министр</div>
-																		  <div class="h6">Наливайко Сергей Эдуардович</div>
+																		  <div class="position">Министр</div>
+																		  <div class="h6"><b>Наливайко Сергей Эдуардович</b></div>
 																		</td>
-																	  <td>первая среда месяца
-																		с 08.00 до 13.00</td>
-																	  <td class="reception-tab__number">417</td>
-																	  <td>@т. 229-79-11
-																		(каб. 417)</td>
+																	  <td>первая среда месяца с 08.00 до 13.00</td>
+																	  <td class="text-center">417</td>
+																	  <td>т. 229-79-11 (каб. 417)</td>
 																	</tr>
 																	<tr>
 																	  <td>
-																		  <div class="reception-tab__position">Первый заместитель Министра</div>
-																		  <div class="h6">Клепча Игорь Николаевич</div>
+																		  <div class="position">Первый заместитель Министра</div>
+																		  <div class="h6"><b></b>Клепча Игорь Николаевич</div>
 																		</td>
 																	  <td>вторая среда месяца с 8.00 до 13.00</td>
-																	  <td class="reception-tab__number">621</td>
+																	  <td class="text-center">621</td>
 																	  <td>т. 229-79-15 (каб. 609)</td>
 																	</tr>
 																	<tr>
 																	  <td>
-																		  <div class="reception-tab__position">Заместитель Министра</div>
-																		  <div class="h6">Скринников Игорь Викторович</div>
+																		  <div class="position">Заместитель Министра</div>
+																		  <div class="h6"><b>Скринников Игорь Викторович</b></div>
 																		</td>
 																	  <td>пятая среда* месяца с 8.00 до 13.00</td>
-																	  <td class="reception-tab__number">203</td>
+																	  <td class="text-center">203</td>
 																	  <td>т. 229-79-72 (каб. 208)</td>
 																	</tr>
 																	<tr>
 																	  <td>
-																		  <div class="reception-tab__position">Заместитель Министра</div>
-																		  <div class="h6">Муквич Владимир Валерьевич</div>
+																		  <div class="position">Заместитель Министра</div>
+																		  <div class="h6"><b>Муквич Владимир Валерьевич</b></div>
 																		</td>
 																	  <td>четвертая среда месяца с 08.00 до 13.00</td>
-																	  <td class="reception-tab__number">410</td>
+																	  <td class="text-center">410</td>
 																	  <td>т. 229-79-72 (каб. 208)</td>
 																	</tr>
 																	<tr>
 																	  <td>
-																		  <div class="reception-tab__position">Заместитель Министра</div>
-																		  <div class="h6">Селицкая Элла Александровна</div>
+																		  <div class="position">Заместитель Министра</div>
+																		  <div class="h6"><b>Селицкая Элла Александровна</b></div>
 																		</td>
 																	  <td>третья среда месяца с 8.00 до 13.00</td>
-																	  <td class="reception-tab__number">609</td>
+																	  <td class="text-center">609</td>
 																	  <td>т. 229-79-15 (каб. 609)</td>
 																	</tr>
 																 </tbody>
@@ -566,11 +567,70 @@
 														<div class="mt-3">*при отсутствии в месяце пятой среды прием проводится в первую среду этого месяца с 14.00 до 18.00</div>
 													</div>
 												</div>
-												<div class="tab-pane fade" id="contact-workMode" role="tabpanel" aria-labelledby="contact-workMode-tab">
-													444
+												<div class="tab-pane fade" id="contact-work-mode" role="tabpanel" aria-labelledby="contact-work-mode-tab">
+													<div class="work-mode-tab">
+														<div class="work-mode-tab__head d-flex align-items-center mb-3">
+															<i class="bi bi-clock me-3"></i>
+															<div><b>Режим работы</b></div>
+														</div>
+														<div class="work-mode-tab__line mb-4">
+															<span class="work-mode-tab__text"><b>Понедельник – пятница</b></span>
+															<span class="work-mode-tab__time"><b>с 9.00 до 18.00</b></span>
+														</div>
+														<div class="work-mode-tab__line mb-4">
+															<span class="work-mode-tab__text">Перерыв на обед</span>
+															<span class="work-mode-tab__time">с 13.00 до 14.00</span>
+														</div>
+														<div class="work-mode-tab__line">
+															<span class="work-mode-tab__text"><b>Cуббота и воскресенье</b></span>
+															<span class="work-mode-tab__time"><b>выходные дни</b></span>
+														</div>
+													</div>
 												</div>
 												<div class="tab-pane fade" id="contact-book" role="tabpanel" aria-labelledby="contact-book-tab">
-													5555
+													<div class="book-tab">
+														<div class="book-tab__head d-flex align-items-center mb--3">
+															<i class="bi bi-book me-3"></i>
+															<div>
+																<b>Книга замечаний и предложений</b>
+																<div class="book-tab__text mt-2">Место нахождения книги: г. Минск, ул. Советская, 9, кабинет 208</div>
+															</div>
+														</div>
+														<div><b>Ответственные за ведение, хранение и выдачу книги замечаний и предложений</b></div>
+														<div class="table-tab">
+															<table>
+																<thead>
+																	<tr>
+																		<th>Ответственное лицо</th>
+																		<th>Должность</th>
+																		<th>Кабинет</th>
+																		<th>Служебный телефон</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>
+																			<div class="h6 position"><b>Гладкая Татьяна Геннадьевна</b></div>
+																		</td>
+																		<td>начальник службы делопроизводства управления обеспечения налоговых органов</td>
+																		<td class="text-center">208</td>
+																		<td>т. 229-79-71</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2">В случае отсутствия Гладкой Т. Г.</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="h6 position"><b>Стельмах Ольга Викторовна</b></div>
+																		</td>
+																		<td>заместитель начальника службы делопроизводства управления обеспечения налоговых органов</td>
+																		<td class="text-center">208</td>
+																		<td>т. 229-79-72</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -623,7 +683,7 @@
 	<div class="container">
 		<div class="row gx-4 gy-5">
 			<div class="col-md-6">
-				<a href="index.html" class="d-flex align-items-center mb-4">
+				<a href="index.html" class="footer__logo d-flex align-items-center mb-4">
 					<img src="./img/logo.png" alt="">
 					<div class="ms-3">Министерство по налогам и сборам Республики Беларусь</div>
 				</a>

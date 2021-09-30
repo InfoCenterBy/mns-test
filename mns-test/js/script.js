@@ -136,6 +136,514 @@ const swiper = new Swiper('.partners', {
 // 	//},
 // });
 ;
+// Dynamic Adapt v.1
+// HTML data-da="where(uniq class name),position(digi),when(breakpoint)"
+// e.x. data-da="item,2,992"
+// Andrikanych Yevhen 2020
+// https://www.youtube.com/c/freelancerlifestyle
+
+"use strict";
+
+(function () {
+	let originalPositions = [];
+	let daElements = document.querySelectorAll('[data-da]');
+	let daElementsArray = [];
+	let daMatchMedia = [];
+	//Заполняем массивы
+	if (daElements.length > 0) {
+		let number = 0;
+		for (let index = 0; index < daElements.length; index++) {
+			const daElement = daElements[index];
+			const daMove = daElement.getAttribute('data-da');
+			if (daMove != '') {
+				const daArray = daMove.split(',');
+				const daPlace = daArray[1] ? daArray[1].trim() : 'last';
+				const daBreakpoint = daArray[2] ? daArray[2].trim() : '767';
+				const daType = daArray[3] === 'min' ? daArray[3].trim() : 'max';
+				const daDestination = document.querySelector('.' + daArray[0].trim())
+				if (daArray.length > 0 && daDestination) {
+					daElement.setAttribute('data-da-index', number);
+					//Заполняем массив первоначальных позиций
+					originalPositions[number] = {
+						"parent": daElement.parentNode,
+						"index": indexInParent(daElement)
+					};
+					//Заполняем массив элементов 
+					daElementsArray[number] = {
+						"element": daElement,
+						"destination": document.querySelector('.' + daArray[0].trim()),
+						"place": daPlace,
+						"breakpoint": daBreakpoint,
+						"type": daType
+					}
+					number++;
+				}
+			}
+		}
+		dynamicAdaptSort(daElementsArray);
+
+		//Создаем события в точке брейкпоинта
+		for (let index = 0; index < daElementsArray.length; index++) {
+			const el = daElementsArray[index];
+			const daBreakpoint = el.breakpoint;
+			const daType = el.type;
+
+			daMatchMedia.push(window.matchMedia("(" + daType + "-width: " + daBreakpoint + "px)"));
+			daMatchMedia[index].addListener(dynamicAdapt);
+		}
+	}
+	//Основная функция
+	function dynamicAdapt(e) {
+		for (let index = 0; index < daElementsArray.length; index++) {
+			const el = daElementsArray[index];
+			const daElement = el.element;
+			const daDestination = el.destination;
+			const daPlace = el.place;
+			const daBreakpoint = el.breakpoint;
+			const daClassname = "_dynamic_adapt_" + daBreakpoint;
+
+			if (daMatchMedia[index].matches) {
+				//Перебрасываем элементы
+				if (!daElement.classList.contains(daClassname)) {
+					let actualIndex = indexOfElements(daDestination)[daPlace];
+					if (daPlace === 'first') {
+						actualIndex = indexOfElements(daDestination)[0];
+					} else if (daPlace === 'last') {
+						actualIndex = indexOfElements(daDestination)[indexOfElements(daDestination).length];
+					}
+					daDestination.insertBefore(daElement, daDestination.children[actualIndex]);
+					daElement.classList.add(daClassname);
+				}
+			} else {
+				//Возвращаем на место
+				if (daElement.classList.contains(daClassname)) {
+					dynamicAdaptBack(daElement);
+					daElement.classList.remove(daClassname);
+				}
+			}
+		}
+		//customAdapt();
+	}
+
+	//Вызов основной функции
+	dynamicAdapt();
+
+	//Функция возврата на место
+	function dynamicAdaptBack(el) {
+		const daIndex = el.getAttribute('data-da-index');
+		const originalPlace = originalPositions[daIndex];
+		const parentPlace = originalPlace['parent'];
+		const indexPlace = originalPlace['index'];
+		const actualIndex = indexOfElements(parentPlace, true)[indexPlace];
+		parentPlace.insertBefore(el, parentPlace.children[actualIndex]);
+	}
+	//Функция получения индекса внутри родителя
+	function indexInParent(el) {
+		var children = Array.prototype.slice.call(el.parentNode.children);
+		return children.indexOf(el);
+	}
+	//Функция получения массива индексов элементов внутри родителя 
+	function indexOfElements(parent, back) {
+		const children = parent.children;
+		const childrenArray = [];
+		for (let i = 0; i < children.length; i++) {
+			const childrenElement = children[i];
+			if (back) {
+				childrenArray.push(i);
+			} else {
+				//Исключая перенесенный элемент
+				if (childrenElement.getAttribute('data-da') == null) {
+					childrenArray.push(i);
+				}
+			}
+		}
+		return childrenArray;
+	}
+	//Сортировка объекта
+	function dynamicAdaptSort(arr) {
+		arr.sort(function (a, b) {
+			if (a.breakpoint > b.breakpoint) { return -1 } else { return 1 }
+		});
+		arr.sort(function (a, b) {
+			if (a.place > b.place) { return 1 } else { return -1 }
+		});
+	}
+	//Дополнительные сценарии адаптации
+	function customAdapt() {
+		//const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	}
+}());;
+'use strict';
+
+/**
+ * Copyright Marc J. Schmidt. See the LICENSE file at the top-level
+ * directory of this distribution and at
+ * https://github.com/marcj/css-element-queries/blob/master/LICENSE.
+ */
+(function (root, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(factory);
+    } else if (typeof exports === "object") {
+        module.exports = factory();
+    } else {
+        root.ResizeSensor = factory();
+    }
+}(typeof window !== 'undefined' ? window : this, function () {
+
+    // Make sure it does not throw in a SSR (Server Side Rendering) situation
+    if (typeof window === "undefined") {
+        return null;
+    }
+    // https://github.com/Semantic-Org/Semantic-UI/issues/3855
+    // https://github.com/marcj/css-element-queries/issues/257
+    var globalWindow = typeof window != 'undefined' && window.Math == Math
+        ? window
+        : typeof self != 'undefined' && self.Math == Math
+            ? self
+            : Function('return this')();
+    // Only used for the dirty checking, so the event callback count is limited to max 1 call per fps per sensor.
+    // In combination with the event based resize sensor this saves cpu time, because the sensor is too fast and
+    // would generate too many unnecessary events.
+    var requestAnimationFrame = globalWindow.requestAnimationFrame ||
+        globalWindow.mozRequestAnimationFrame ||
+        globalWindow.webkitRequestAnimationFrame ||
+        function (fn) {
+            return globalWindow.setTimeout(fn, 20);
+        };
+
+    var cancelAnimationFrame = globalWindow.cancelAnimationFrame ||
+        globalWindow.mozCancelAnimationFrame ||
+        globalWindow.webkitCancelAnimationFrame ||
+        function (timer) {
+            globalWindow.clearTimeout(timer);
+        };
+
+    /**
+     * Iterate over each of the provided element(s).
+     *
+     * @param {HTMLElement|HTMLElement[]} elements
+     * @param {Function}                  callback
+     */
+    function forEachElement(elements, callback){
+        var elementsType = Object.prototype.toString.call(elements);
+        var isCollectionTyped = ('[object Array]' === elementsType
+            || ('[object NodeList]' === elementsType)
+            || ('[object HTMLCollection]' === elementsType)
+            || ('[object Object]' === elementsType)
+            || ('undefined' !== typeof jQuery && elements instanceof jQuery) //jquery
+            || ('undefined' !== typeof Elements && elements instanceof Elements) //mootools
+        );
+        var i = 0, j = elements.length;
+        if (isCollectionTyped) {
+            for (; i < j; i++) {
+                callback(elements[i]);
+            }
+        } else {
+            callback(elements);
+        }
+    }
+
+    /**
+    * Get element size
+    * @param {HTMLElement} element
+    * @returns {Object} {width, height}
+    */
+    function getElementSize(element) {
+        if (!element.getBoundingClientRect) {
+            return {
+                width: element.offsetWidth,
+                height: element.offsetHeight
+            }
+        }
+
+        var rect = element.getBoundingClientRect();
+        return {
+            width: Math.round(rect.width),
+            height: Math.round(rect.height)
+        }
+    }
+
+    /**
+     * Apply CSS styles to element.
+     *
+     * @param {HTMLElement} element
+     * @param {Object} style
+     */
+    function setStyle(element, style) {
+        Object.keys(style).forEach(function(key) {
+            element.style[key] = style[key];
+        });
+    }
+
+    /**
+     * Class for dimension change detection.
+     *
+     * @param {Element|Element[]|Elements|jQuery} element
+     * @param {Function} callback
+     *
+     * @constructor
+     */
+    var ResizeSensor = function(element, callback) {
+        //Is used when checking in reset() only for invisible elements
+        var lastAnimationFrameForInvisibleCheck = 0;
+
+        /**
+         *
+         * @constructor
+         */
+        function EventQueue() {
+            var q = [];
+            this.add = function(ev) {
+                q.push(ev);
+            };
+
+            var i, j;
+            this.call = function(sizeInfo) {
+                for (i = 0, j = q.length; i < j; i++) {
+                    q[i].call(this, sizeInfo);
+                }
+            };
+
+            this.remove = function(ev) {
+                var newQueue = [];
+                for(i = 0, j = q.length; i < j; i++) {
+                    if(q[i] !== ev) newQueue.push(q[i]);
+                }
+                q = newQueue;
+            };
+
+            this.length = function() {
+                return q.length;
+            }
+        }
+
+        /**
+         *
+         * @param {HTMLElement} element
+         * @param {Function}    resized
+         */
+        function attachResizeEvent(element, resized) {
+            if (!element) return;
+            if (element.resizedAttached) {
+                element.resizedAttached.add(resized);
+                return;
+            }
+
+            element.resizedAttached = new EventQueue();
+            element.resizedAttached.add(resized);
+
+            element.resizeSensor = document.createElement('div');
+            element.resizeSensor.dir = 'ltr';
+            element.resizeSensor.className = 'resize-sensor';
+
+            var style = {
+                pointerEvents: 'none',
+                position: 'absolute',
+                left: '0px',
+                top: '0px',
+                right: '0px',
+                bottom: '0px',
+                overflow: 'hidden',
+                zIndex: '-1',
+                visibility: 'hidden',
+                maxWidth: '100%'
+            };
+            var styleChild = {
+                position: 'absolute',
+                left: '0px',
+                top: '0px',
+                transition: '0s',
+            };
+
+            setStyle(element.resizeSensor, style);
+
+            var expand = document.createElement('div');
+            expand.className = 'resize-sensor-expand';
+            setStyle(expand, style);
+
+            var expandChild = document.createElement('div');
+            setStyle(expandChild, styleChild);
+            expand.appendChild(expandChild);
+
+            var shrink = document.createElement('div');
+            shrink.className = 'resize-sensor-shrink';
+            setStyle(shrink, style);
+
+            var shrinkChild = document.createElement('div');
+            setStyle(shrinkChild, styleChild);
+            setStyle(shrinkChild, { width: '200%', height: '200%' });
+            shrink.appendChild(shrinkChild);
+
+            element.resizeSensor.appendChild(expand);
+            element.resizeSensor.appendChild(shrink);
+            element.appendChild(element.resizeSensor);
+
+            var computedStyle = window.getComputedStyle(element);
+            var position = computedStyle ? computedStyle.getPropertyValue('position') : null;
+            if ('absolute' !== position && 'relative' !== position && 'fixed' !== position && 'sticky' !== position) {
+                element.style.position = 'relative';
+            }
+
+            var dirty = false;
+
+            //last request animation frame id used in onscroll event
+            var rafId = 0;
+            var size = getElementSize(element);
+            var lastWidth = 0;
+            var lastHeight = 0;
+            var initialHiddenCheck = true;
+            lastAnimationFrameForInvisibleCheck = 0;
+
+            var resetExpandShrink = function () {
+                var width = element.offsetWidth;
+                var height = element.offsetHeight;
+
+                expandChild.style.width = (width + 10) + 'px';
+                expandChild.style.height = (height + 10) + 'px';
+
+                expand.scrollLeft = width + 10;
+                expand.scrollTop = height + 10;
+
+                shrink.scrollLeft = width + 10;
+                shrink.scrollTop = height + 10;
+            };
+
+            var reset = function() {
+                // Check if element is hidden
+                if (initialHiddenCheck) {
+                    var invisible = element.offsetWidth === 0 && element.offsetHeight === 0;
+                    if (invisible) {
+                        // Check in next frame
+                        if (!lastAnimationFrameForInvisibleCheck){
+                            lastAnimationFrameForInvisibleCheck = requestAnimationFrame(function(){
+                                lastAnimationFrameForInvisibleCheck = 0;
+                                reset();
+                            });
+                        }
+
+                        return;
+                    } else {
+                        // Stop checking
+                        initialHiddenCheck = false;
+                    }
+                }
+
+                resetExpandShrink();
+            };
+            element.resizeSensor.resetSensor = reset;
+
+            var onResized = function() {
+                rafId = 0;
+
+                if (!dirty) return;
+
+                lastWidth = size.width;
+                lastHeight = size.height;
+
+                if (element.resizedAttached) {
+                    element.resizedAttached.call(size);
+                }
+            };
+
+            var onScroll = function() {
+                size = getElementSize(element);
+                dirty = size.width !== lastWidth || size.height !== lastHeight;
+
+                if (dirty && !rafId) {
+                    rafId = requestAnimationFrame(onResized);
+                }
+
+                reset();
+            };
+
+            var addEvent = function(el, name, cb) {
+                if (el.attachEvent) {
+                    el.attachEvent('on' + name, cb);
+                } else {
+                    el.addEventListener(name, cb);
+                }
+            };
+
+            addEvent(expand, 'scroll', onScroll);
+            addEvent(shrink, 'scroll', onScroll);
+
+            // Fix for custom Elements and invisible elements
+            lastAnimationFrameForInvisibleCheck = requestAnimationFrame(function(){
+                lastAnimationFrameForInvisibleCheck = 0;
+                reset();
+            });
+        }
+
+        forEachElement(element, function(elem){
+            attachResizeEvent(elem, callback);
+        });
+
+        this.detach = function(ev) {
+            // clean up the unfinished animation frame to prevent a potential endless requestAnimationFrame of reset
+            if (lastAnimationFrameForInvisibleCheck) {
+                cancelAnimationFrame(lastAnimationFrameForInvisibleCheck);
+                lastAnimationFrameForInvisibleCheck = 0;
+            }
+            ResizeSensor.detach(element, ev);
+        };
+
+        this.reset = function() {
+            //To prevent invoking element.resizeSensor.resetSensor if it's undefined
+            if (element.resizeSensor.resetSensor) {
+                element.resizeSensor.resetSensor();
+            }
+        };
+    };
+
+    ResizeSensor.reset = function(element) {
+        forEachElement(element, function(elem){
+            //To prevent invoking element.resizeSensor.resetSensor if it's undefined
+            if (element.resizeSensor.resetSensor) {
+                elem.resizeSensor.resetSensor();
+            }
+        });
+    };
+
+    ResizeSensor.detach = function(element, ev) {
+        forEachElement(element, function(elem){
+            if (!elem) return;
+            if(elem.resizedAttached && typeof ev === "function"){
+                elem.resizedAttached.remove(ev);
+                if(elem.resizedAttached.length()) return;
+            }
+            if (elem.resizeSensor) {
+                if (elem.contains(elem.resizeSensor)) {
+                    elem.removeChild(elem.resizeSensor);
+                }
+                delete elem.resizeSensor;
+                delete elem.resizedAttached;
+            }
+        });
+    };
+
+    if (typeof MutationObserver !== "undefined") {
+        var observer = new MutationObserver(function (mutations) {
+            for (var i in mutations) {
+                if (mutations.hasOwnProperty(i)) {
+                    var items = mutations[i].addedNodes;
+                    for (var j = 0; j < items.length; j++) {
+                        if (items[j].resizeSensor) {
+                            ResizeSensor.reset(items[j]);
+                        }
+                    }
+                }
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true,
+            });
+        });
+    }
+    return ResizeSensor;
+}));;
 /**
  * Sticky Sidebar JavaScript Plugin.
  * @version 3.3.4
@@ -2129,6 +2637,7 @@ var sidebar = new StickySidebar('.sidebar', {
 	topSpacing: 20,
 	bottomSpacing: 20
 });
+sidebar.updateSticky();
 
 // =============Function ibg  ====================================================
 function ibg() {

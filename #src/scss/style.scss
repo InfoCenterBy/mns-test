@@ -1,5 +1,5 @@
 //<МИКСИНЫ>===============================================================================================
-// @import "mixins";
+@import "mixins";
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
@@ -83,6 +83,7 @@ body {
 @import "search-inspectorate";
 @import "item-inspectorate";
 @import "about";
+@import "inspectorates";
 @import "bvi";
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
@@ -116,63 +117,18 @@ body {
 		background-color: $color-gray-light;
 		transition: all 0.3s ease 0s;
 		border-radius: 10px;
+		color: $color-black;
+		font-weight: 600;
+		font-size: 18px;
 		
 		&:hover {
 			background-color: $color-green;
-			border-radius: 10px 10px 0 0;
-
-			.main-menu-drop {
-				border-radius: 0 0 10px 10px;
-				display: block;
-				animation: growDown 300ms ease-in-out forwards;
-				transform-origin: top center;
-				z-index: 5;
-			}
-
-			.main-menu__menu a {
-				color: $color-white;
-			}
+			color: $color-white;
 		}
 	}
 
-	&__info {
-		padding: 60px 30px;
-
-		@media (max-width: $md5+px) {
-			padding: 30px 10px;
-		}
-	}
-
-	&__menu {
-		flex: 0 0 205px;
-
-		a:hover {
-			text-decoration: underline;
-		}
-	}
-
-	&__app {
-		font-size: 14px;
-	}
-}
-.main-menu-drop {
-	display: none;
-	padding: 30px;
-	background-color: $color-green;
-	border-radius: 10px;
-	z-index: -1;
-	perspective: 1000px;
-
-	@media (max-width: $md5+px) {
-		padding: 10px;
-	}
-}
-@keyframes growDown {
-	0% {
-		 transform: scaleY(0)
-	}
-	100% {
-		 transform: scaleY(1)
+	&__text {
+		flex: 1 1 auto;
 	}
 }
 .services {
@@ -194,38 +150,70 @@ body {
 		}
 	}
 }
-.item-services {
-	min-height: 150px;
-	background-color: $color-gray-light;
-	border-radius: 10px;
-
-	&:hover {
-		.item-services-drop {
-			transform: translateY(0%);
-		}
-	}
-}
-.item-services-drop {
-	height: 85%;
-	background-color: $color-green;
-	border-radius: 10px;
-	bottom: -1px;
-	left: 0;
-	transform: translateY(100%);
-	transition: all 0.3s ease 0s;
-}
+.item-services,
 .item-actual {
 	background-color: $color-gray-light;
 	border-radius: 10px;
 
-	&:hover {
-		background-color: $color-green;
+	img {
+		min-width: 65px;
 
-		.item-actual__text {
+		@media (max-width: $md4+px) {
+			min-width: auto;
+			max-width: 40px;
+		}
+	}
+
+	&:hover {
+		background-color: $color-green-light;
+
+		.h5 {
 			color: $color-white;
 		}
 	}
 }
+.tax-inspectorates {
+	background-color: $color-gray-light;
+
+	&__body {
+		padding: 40px 60px 40px 90px;
+		border-radius: 10px;
+		background-color: $color-white;
+
+		@media (max-width: 1432px) {
+			padding: 40px;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 20px;
+		}
+	}
+
+	&__map {
+		@media (max-width: $md2+px) {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+	}
+
+	&__title {
+		color: $color-green-light;
+	}
+
+	&__link {
+		color: $color-black;
+		font-size: 14px;
+
+		i {
+			color: $color-green-light;
+		}
+
+		&:hover {
+			color: $color-green-light;
+		}
+	}
+}
+
 .main-news {
 	padding: 30px 0px;
 	background-color: $color-green-light;
@@ -417,5 +405,43 @@ body {
 			opacity: 0.5;
 			filter: grayscale(100%);
 		}
+	}
+}
+
+
+.map-belarus {
+	svg {
+		display: block;
+		width: 100%;
+
+		@media (max-width: $md2+px) {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+	path {
+		fill: $color-green-light;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		position: relative;
+	}
+	path:hover {
+		fill: $color-yellow;
+	}
+	path.minsk {
+		position: relative;
+		z-index: 3;
+		fill: red;
+	}
+
+	.desc {
+		width: 100px;
+		padding: 10px;
+		font-size: 10px;
+		color:#000;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 }
