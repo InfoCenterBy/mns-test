@@ -359,30 +359,19 @@
 						<div class='container'>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item me-3"><a href="index.html">Главная<i class="bi-chevron-right ms-2"></i></a></li>
-								<li class="breadcrumb-item me-3"><a href="about.html">О Министерстве<i class="bi-chevron-right ms-2"></i></a></li>
-								<li class="breadcrumb-item active" aria-current="page">Общие сведения о налоговых органах</li>
+								<li class="breadcrumb-item active" aria-current="page">Формы документов для плательщиков</li>
 							</ol>
 						</div>
 					 </nav>
 					<div class="about">
 						<div class='container'>
-							<div class="row g-3">
+							<div class="about__cnt row g-3">
 								<aside class="col-lg-4 order-lg-2">
 									<div class="sidebar">
 										<div class="sidebar__body px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
-											<a href="about.html#management" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Руководство</a>
-											<a href="about.html#contacts" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Контакты</a>
-											<a href="about.html#position" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Положение о МНС</a>
-											<a href="about.html#strategy" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Стратегия развития налоговых органов</a>
-											<a href="about.html#collegiums" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Порядок проведения открытых коллегий</a>
-											<a href="about.html#security" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Охрана труда</a>
-											<a href="general-information.html" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Общие сведения о налоговых органах</a>
-											<a href="#" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Структура МНС</a>
-											<a href="#" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Структура налоговых органов</a>
-											<a href="#" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Геральдика налоговых органов</a>
-											<a href="#" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Стандарты обслуживания</a>
-											<a href="#" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Консультативный совет</a>
-											<a href="#" class="sidebar__title"><i class="bi bi-check-circle me-2"></i>Для СМИ</a>
+											<a href="#entrepreneurs" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Для индивидуальных предпринимателей</a>
+											<a href="#organizations" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Для организаций</a>
+											<a href="#individuals" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Для физических лиц</a>
 										</div>
 										<a href="#" class="sidebar__online-appointment p-3 d-flex align-items-center justify-content-between">
 											<div>Онлайн-запись</div><i class="bi bi-calendar-event"></i>
@@ -390,181 +379,288 @@
 									</div>
 								</aside>
 								<div class="col-lg-8">
-									<div class="sidebar-content p-md-4 p-2">
-										<div class="item-sidebar">
-											<nav>
-												<div class="nav nav-tab general-information-tabs" id="contacts-tab" role="tablist">
-													<a class="general-information-tabs__link active" id="general-information-history-tab" data-bs-toggle="tab" href="#general-information-history" role="tab" aria-controls="general-information-history" aria-selected="true">
-														<span>История</span>
-													</a>
-													<a class="general-information-tabs__link" id="general-information-executives-tab" data-bs-toggle="tab" href="#general-information-executives" role="tab" aria-controls="general-information-executives" aria-selected="false">
-														<span>Руководители</span>	
-													</a>
+									<div class="sidebar-content p-md-4 p-2" id="accordionFormsDocuments"> 
+										<div class="item-sidebar item-sidebar_accordion">
+											<button id="entrepreneurs" class="item-sidebar__title item-sidebar__title_accordion h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+												<i class="bi bi-arrow-down-circle me-2"></i>Руководство
+											</button>
+											<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionFormsDocuments">
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2021 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
 												</div>
-											</nav>
-											<div class="tab-content" id="nav-tabContent">
-												<div class="tab-pane fade show active" id="general-information-history" role="tabpanel" aria-labelledby="general-information-history">
-													<div class="history-tab">
-														<div class="item-sidebar">
-															<h4 class="item-sidebar__title h4">История налоговой службы Республики Беларусь</h4>
-															<div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">1992</div>
-																	<div>Постановлением Совета Министров Республики Беларусь от 05.08.1992 № 485 «Вопросы укрепления налоговой службы» в Главной государственной налоговой инспекции создано управление налоговых расследований и соответствующие подразделения в государственных налоговых инспекциях по областям и г. Минску и в городах с численностью населения свыше 90 тыс. человек.</div>
-																</div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">1994</div>
-																	<div>Указом Президента Республики Беларусь от 17.10.1994 № 150 Главная государственная налоговая инспекция при Министерстве финансов переименована в Главную государственную налоговую инспекцию при Кабинете Министров Республики Беларусь и наделена правами министерств и самостоятельных ведомств.</div>
-																</div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">1997</div>
-																	<div>Указом Президента Республики Беларусь от 11.01.1997 № 30 Главная государственная налоговая инспекция при Кабинете Министров Республики Беларусь была преобразована в Государственный налоговый комитет Республики Беларусь, который вошёл в систему республиканских органов государственного управления, подчинённых Правительству Республики Беларусь.</div>
-																</div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">1998</div>
-																	<div>Указом Президента Республики Беларусь от 11.02.1998 № 71 Главное управление налоговых расследований, входящее в состав Государственного налогового комитета, преобразовано в Государственный комитет финансовых расследований Республики Беларусь.</div>
-																</div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">1999</div>
-																	<div>Указом Президента Республики Беларусь от 03.08.1999 № 456 при Государственном налоговом комитете Республики Беларусь создан Комитет по контролю за производством и оборотом алкогольной, непищевой спиртосодержащей продукции, спирта этилового из непищевого сырья и табачных изделий.</div>
-																</div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">2001</div>
-																	<div>Указом Президента Республики Беларусь от 24.09.2001 № 516 Государственный налоговый комитет преобразован в Министерство по налогам и сборам Республики Беларусь, а Комитет по контролю за производством и оборотом алкогольной, непищевой спиртосодержащей продукции, спирта этилового из непищевого сырья и табачных изделий при Государственном налоговом комитете в департамент по контролю за производством и оборотом алкогольной, непищевой спиртосодержащей продукции, спирта этилового из непищевого сырья и табачных изделий Министерства по налогам и сборам без прав юридического лица.</div>
-																</div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">2004</div>
-																	<div>C 16 августа 2004 г. департамент преобразован в управление контроля за подакцизными товарами главного управления организации контрольной деятельности.</div>
-																</div>
-																<div class="history-tab__item d-sm-flex align-items-sm-center">
-																	<div class="history-tab__date">2009</div>
-																	<div>В 2009 году было создано главное управление контроля подакцизных товаров и электронных технологий.</div>
-																</div>
-															</div>
-														</div>
-														<div class="item-sidebar">
-															<h4 class="item-sidebar__title h4">Нормативные правовые акты, регламентирующие детельность МНС</h4>
-															<div class="mb-3">Деятельность налоговых органов в республике регламентируется:</div>
-															<ul class="mb-3">
-																<li>Положением о Министерстве по налогам и сборам Республики Беларусь, утверждённым постановлением Совета Министров Республики Беларусь от 31.10.2001 № 1592 «Вопросы Министерства по налогам и сборам Республики Беларусь</li>
-																<li>Указом Президента Республики Беларусь от 16.10.2009 № 510 «О совершенствовании контрольной (надзорной) деятельности в Республике Беларусь</li>
-																<li>Налоговым кодексом Республики Беларусь</li>
-																<li>Типовым положением об инспекции Министерства по налогам и сборам Республики Беларусь, утвержденным постановлением МНС от 28.12.2001 № 136 (в редакции постановления МНС от 19.03.2010 № 17)</li>
-															</ul>
-															<div>Для обсуждения и выработки решений по наиболее важным вопросам утверждена коллегия МНС.</div>
-														</div>
-														<div class="item-sidebar">
-															<h4 class="item-sidebar__title h4">Структура МНС</h4>
-															<div class="mb-3">В структуру МНС входят 88 инспекций МНС, из них:</div>
-															<div class="d-sm-flex justify-content-sm-around align-items-sm-center">
-																<div class="mb-3 text-center">
-																	<img class="" src="./img/map.png" alt="">
-																</div>
-																<div>
-																	<ul class="mb-3">
-																		<li>7 – по областям и г.Минску;</li> 
-																		<li>81 – по районам, городам, районам в городах.</li>
-																	</ul>
-																	<a href="" class="button d-inline-block">Все налоговые инспеции</a>
-																</div>
-															</div>
-														</div>
-														<div class="item-sidebar">
-															<h4 class="item-sidebar__title h4">Подготовка специалистов для налоговых органов</h4>
-															<div class="mb-3">Подготовка специалистов для налоговых органов осуществляется в:</div>
-															<ul class="mb-3">
-																<li>УО «Белорусский государственный экономический университет»</li>
-																<li>Академии управления при Президенте Республики Беларусь</li>
-																<li>на экономических факультетах других учебных заведений республики. </li>
-															</ul>
-															<div>Повышение квалификации кадров осуществляется на базе учебных учреждений при учебных заведениях республики.</div>
-															<div class="mb-3">Среди них ведущее место занимают:</div>
-															<ul class="mb-3">
-																<li>Институт государственной службы Академии управления при Президенте Республики Беларусь</li>
-																<li>Институт повышения квалификации и переподготовки экономических кадров УО «Белорусский государственный экономический университет»</li>
-																<li>УО «Учебный центр подготовки, повышения квалификации и переподготовки кадров» Министерства финансов Республики Беларусь</li>
-															</ul>
-														</div>
-														<div class="item-sidebar">
-															<h4 class="item-sidebar__title h4">Символика МНС</h4>
-															<div class="mb-3">Указом Президента Республики Беларусь от 04.11.1998 № 527 установлен профессиональный праздник «День работников налоговых органов», который отмечается ежегодно во второе воскресенье июля месяца.</div>
-															<div class="d-md-flex align-items-md-center mb-4">
-																<div class="d-sm-flex me-md-3">
-																	<img class="me-2" src="./img/badge-01.png" alt="badge">
-																	<img src="./img/badge-02.png" alt="badge">
-																</div>
-																<div>
-																	<div class="mb-3">Указом Президента Республики Беларусь от 10.06.2005 № 268 учреждены:</div>
-																	<ul class="mb-3">
-																		<li>геральдический знак – эмблема налоговых органов</li> 
-																		<li>нагрудный знак Министерства по налогам и сборам Республики Беларусь «Выдатнiк падатковай службы»</li>
-																	</ul>
-																	<a href="" class="button d-inline-block">Геральдика налоговых органов</a>
-																</div>
-															</div>
-															<div class="mb-3">За высокие показатели в труде работники налоговых органов:</div>
-															<ul>
-																<li>награждаются нагрудным знаком Министерства по налогам и сборам Республики Беларусь «Выдатнік падатковай службы», почётной грамотой Министерства по налогам и сборам</li>
-																<li>поощряются объявлением Благодарности Министра по налогам и сборам</li>
-																<li>заносятся на Доску почета Министерства по налогам и сборам Республики Беларусь</li>
-															</ul>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2020 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Приложение 3 к Постановлению Министерства по налогам и сборам Республики Беларусь от 31.12.2010 № 100 «Об исчислении и уплате налогов с физических лиц</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Уведомление об использовании в предпринимательской деятельности капитальных строений</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Уведомление об увеличении (уменьшении) в налоговом периоде площади используемых в предпринимательской деятельности капитальных строений или прекращения их использования</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-sidebar item-sidebar_accordion">
+											<button id="organizations" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+												<i class="bi bi-arrow-down-circle me-2"></i>Для организаций
+											</button>
+											<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionFormsDocuments">
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2021 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2020 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2019 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2018 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2017 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2016 году</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2015 году </div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций в 2014 году </div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление Министерства по налогам и сборам Республики Беларусь от 24.12.2014 № 42 "О некоторых вопросах, связанных с исчислением и уплатой налогов, сборов (пошлин), иных платежей, контроль за исчислением и уплатой которых осуществляют налоговые органы"
 														</div>
 													</div>
+													<a href="#" class="button" download>Скачать</a>
 												</div>
-												<div class="tab-pane fade" id="general-information-executives" role="tabpanel" aria-labelledby="general-information-executives">
-													<div class="executives-tab">
-														<h4 class="item-sidebar__title h4">Руководители налоговых органов Республики Беларусь с момента создания службы</h4>
-														<div class="row g-3">
-															<div class="col-md-6">
-																<a href="#" class="management-item d-flex flex-sm-row flex-column align-items-center p-3 h-100">
-																	<img class="management-item__photo" src="./img/management/06.jpg" alt="">
-																	<div class="align-items-center__info">
-																		<div class="management-item__name">Иван Александрович Макоед</div>
-																	</div>
-																</a>
-															</div>
-															<div class="col-md-6">
-																<a href="#" class="management-item d-flex flex-sm-row flex-column align-items-center p-3 h-100">
-																	<img class="management-item__photo" src="./img/management/07.jpg" alt="">
-																	<div class="align-items-center__info">
-																		<div class="management-item__name">Василий Федорович Некрашевич</div>
-																	</div>
-																</a>
-															</div>
-															<div class="col-md-6">
-																<a href="#" class="management-item d-flex flex-sm-row flex-column align-items-center p-3 h-100">
-																	<img class="management-item__photo" src="./img/management/08.jpg" alt="">
-																	<div class="align-items-center__info">
-																		<div class="management-item__name">Николай Николаевич	Демчук</div>
-																	</div>
-																</a>
-															</div>
-															<div class="col-md-6">
-																<a href="#" class="management-item d-flex flex-sm-row flex-column align-items-center p-3 h-100">
-																	<img class="management-item__photo" src="./img/management/09.jpg" alt="">
-																	<div class="align-items-center__info">
-																		<div class="management-item__name">Константин Андреевич Сумар</div>
-																	</div>
-																</a>
-															</div>
-															<div class="col-md-6">
-																<a href="#" class="management-item d-flex flex-sm-row flex-column align-items-center p-3 h-100">
-																	<img class="management-item__photo" src="./img/management/10.jpg" alt="">
-																	<div class="align-items-center__info">
-																		<div class="management-item__name">Анна Константиновна Дейко</div>
-																	</div>
-																</a>
-															</div>
-															<div class="col-md-6">
-																<a href="#" class="management-item d-flex flex-sm-row flex-column align-items-center p-3 h-100">
-																	<img class="management-item__photo" src="./img/management/11.jpg" alt="">
-																	<div class="align-items-center__info">
-																		<div class="management-item__name">Владимир Николаевич Полуян</div>
-																	</div>
-																</a>
-															</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Заявление о ввозе товаров и уплате косвенных налогов. Приложение 1 к Протоколу об обмене информацией в электронном виде между налоговыми органами государств - членов Таможенного союза об уплаченных суммах косвенных налогов
 														</div>
 													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление Министерства по налогам и сборам Республики Беларусь от 15 ноября 2010 г. № 82 (в ред. от 17.02.2014).</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление Министерства по налогам и сборам Республики Беларусь от 17 февраля 2014 г. N 10 "Об установлении документа, подтверждающего уплату утилизационного сбора, и внесении дополнений в постановление Министерства по налогам и сборам Республики Беларусь от 15 ноября 2010 г. N 82."</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление Министерства по налогам и сборам Республики Беларусь от 3 января 2014 г. N 1 "О внесении изменений и дополнений в постановления Министерства по налогам и сборам Республики Беларусь от 15 ноября 2010 г. N 82 и от 12 декабря 2012 г. N 40."
+														</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление МНС Республики Беларусь от 31.10.2012 № 34 "О внесении изменений и дополнений в постановление Министерства по налогам и сборам Республики Беларусь от 15 ноября 2010 года № 82" (DOC/1051Kb)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление Министерства по налогам и сборам Республики Беларусь от 15.11.2010 № 82 "Об установлении форм документов, необходимых для исчисления, уплаты налогов, сборов (пошлин), и о некоторых вопросах порядка их заполнения, представления подтверждения постоянного местонахождения иностранной организации, ведения учета выручки от реализации товаров (работ, услуг), доходов и расходов индивидуальными предпринимателями (частными нотариусами, адвокатами, осуществляющими адвокатскую деятельность индивидуально)" (в редакции постановления Министерства по налогам и сборам Республики Беларусь от 31.10.2012 № 34) (RTF/2822Kb)
+														</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление МНС Республики Беларусь, Министерства финансов Республики Беларусь, Министерства труда и социальной защиты Республики Беларусь, Национального статистического комитета Республики Беларусь "О внесении дополнений и изменений в постановление МНС Республики Беларусь, Министерства финансов Республики Беларусь, Министерства труда и социальной защиты Республики Беларусь, Министерства статистики и анализа Республики Беларусь от 19 апреля 2007 года № 55/60/59/38 от 20 декабря 2012 года № 45/78/120/225" (DOC/251Kb)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Постановление Министерства по налогам и сборам Республики Беларусь от 15.11.2010 №82 (ред. от 02.01.2012 №1) “Об установлении форм документов, необходимых для исчисления, уплаты налогов, сборов (пошлин), и о некоторых вопросах порядка их заполнения, представления подтверждения постоянного местонахождения иностранной организации, ведения учета выручки от реализации товаров (работ, услуг), доходов и расходов индивидуальными предпринимателями (частными нотариусами, адвокатами) (DOC/803Kb)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Книга покупок (XLS/33Kb)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Формы налоговых деклараций (расчетов), представляемых в 2012 году (ZIP/175Kb)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-sidebar item-sidebar_accordion">
+											<button id="individuals" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+												<i class="bi bi-arrow-down-circle me-2"></i>Для физических лиц
+											</button>
+											<div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionFormsDocuments">
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Договор аренды (субаренды) машино-мест</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма Договора найма жилого помещения частного жилищного фонда граждан, утверждена постановлением Совета Министров Республики Беларусь от 12.09.2006 № 1191 (в редакции постановления от 07.02.2020 № 391)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма налоговой декларации (расчета) по подоходному налогу с физических лиц, приложение 1 к постановлению МНС РБ от 31.12.2010 №100 (в ред. постановлений МНС от 29.05.2020 N 10)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма налоговой декларации (расчета) по подоходному налогу с физических лиц, приложение 1 к постановлению МНС РБ от 31.12.2010 №100</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма налоговой декларации (расчета) по подоходному налогу с физических лиц с доходов плательщиков, не признаваемых налоговыми резидентами Республики Беларусь, полученных от физических лиц, не являющихся индивидуальными предпринимателями, за реализованные им товары (работы, услуги), иное имущество, приложение 2 к постановлению МНС РБ от 31.12.2010 №100 (в редакции постановления от 29.04.2019 № 22)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма декларации о доходах и имуществе (для лиц, представляющих декларацию о доходах и имуществе по письменному требованию налогового органа), утвержденная постановлением Совета Министров Республики Беларусь от 11 июля 2017 г. №516 (в ред. постановления от 02.07.2020 № 391)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма информации о заключении (незаключении, отсутствии) договоров на оказание услуг в сфере агроэкотуризма в отчетном году, утверждена постановлением Министерства по налогам и сборам Республики Беларусь от 24 января 2011 № 4</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Договор аренды (субаренды) нежилых помещений (в редакции постановления СМ РБ от 02.07.2020 № 391)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма типового договора найма жилого помещения государственного жилищного фонда, утверждена постановлением Совета Министров Республики Беларусь от 19.3.2013 № 193 (в редакции постановления от 03.05.2014 № 424)</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Договор найма жилого помещения частного жилищного фонда граждан</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Уведомление о выборе объекта налогообложения, освобождаемого от уплаты налога на недвижимости</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма уведомления об осуществлении деятельности с уплатой единого налога с индивидуальных предпринимателей и иных физических лиц</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
+												</div>
+												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center">
+													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+														<div class="text-start">Форма уведомления о начале (прекращении) осуществления ремесленной деятельности</div>
+													</div>
+													<a href="#" class="button" download>Скачать</a>
 												</div>
 											</div>
 										</div>

@@ -131,10 +131,6 @@ i:hover {
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
-}
-
 img {
   vertical-align: top;
 }
@@ -224,6 +220,7 @@ body._lock {
 }
 
 .button {
+  display: inline-block;
   padding: 11px 28px;
   color: #FAFAFA;
   font-size: 16px;
@@ -586,6 +583,10 @@ body._lock {
   left: 0;
 }
 
+.inspectorates__list li {
+  list-style: none;
+}
+
 .inspectorates__list li:not(:last-child) {
   margin: 0px 0px 12px 0px;
 }
@@ -897,6 +898,7 @@ body._lock {
 }
 
 .nav-header__list li {
+  list-style: none;
   border-bottom: 3px solid #EBEBEB;
 }
 
@@ -924,6 +926,10 @@ body._lock {
   margin: 0px 0px 5px 0px;
 }
 
+.header-bottom ul li {
+  list-style: none;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -942,7 +948,8 @@ body._lock {
 }
 
 .menu > li:hover .submenu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu > li:hover .menu__link {
@@ -978,11 +985,12 @@ body._lock {
 .submenu {
   width: 100%;
   padding: 40px 0px 0px 0px;
-  display: none;
   position: absolute;
   top: 65px;
   left: 12px;
   z-index: 5;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .submenu__body {
@@ -1109,18 +1117,43 @@ body._lock {
   margin: 0px 0px 90px 0px;
 }
 
+.item-sidebar_accordion {
+  margin: 0px 0px 60px 0px;
+}
+
 .item-sidebar__title {
   padding: 0px 0px 16px 0px;
   margin: 0px 0px 20px 0px;
   border-bottom: 7px solid #00654D;
 }
 
-.item-sidebar__link {
+.item-sidebar__title_accordion {
   color: #007A65;
 }
 
+.item-sidebar__title_accordion.collapsed {
+  margin: 0;
+  color: #1A1A1A;
+}
+
+.item-sidebar__title_accordion.collapsed i:before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.item-sidebar__title_accordion:hover {
+  color: #007A65;
+}
+
+.item-sidebar__link {
+  color: #1A1A1A;
+  text-decoration: underline;
+}
+
 .item-sidebar__link:hover {
-  color: #00654D;
+  color: #007A65;
+  text-decoration: none;
 }
 
 .sidebar-content {
@@ -1467,6 +1500,7 @@ body._lock {
 .content-inspectorate iframe {
   border-radius: 10px;
   max-width: 100%;
+  height: 100%;
 }
 
 .content-inspectorate__item {
@@ -1475,6 +1509,11 @@ body._lock {
 
 .content-inspectorate__table {
   overflow-x: auto;
+}
+
+.content-inspectorate__table table {
+  width: 100%;
+  min-width: 450px;
 }
 
 .content-inspectorate__table th,
@@ -5152,6 +5191,47 @@ html body .bvi-panel-close {
   color: #007A65;
 }
 
+.map-inspectorates {
+  position: relative;
+}
+
+.map-inspectorates svg {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.map-inspectorates path {
+  fill: #007A65;
+  stroke: #FAFAFA;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  -webkit-transform: matrix(0.5099, 0, 0, 0.5099, 0, 0);
+      -ms-transform: matrix(0.5099, 0, 0, 0.5099, 0, 0);
+          transform: matrix(0.5099, 0, 0, 0.5099, 0, 0);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.map-inspectorates path:hover {
+  fill: #FBC469;
+}
+
+.map-inspectorates__description {
+  display: none;
+  width: 130px;
+  padding: 10px;
+  font-size: 10px;
+  color: .map-inspectorates__description color-black;
+  background-color: rgba(250, 250, 250, 0.7);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 20px -8px rgba(0, 0, 0, 0.67);
+          box-shadow: 0px 5px 20px -8px rgba(0, 0, 0, 0.67);
+  position: absolute;
+}
+
 .main-news {
   padding: 30px 0px;
   background-color: #007A65;
@@ -5280,41 +5360,6 @@ html body .bvi-panel-close {
   opacity: 0.5;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-}
-
-.map-belarus svg {
-  display: block;
-  width: 100%;
-}
-
-.map-belarus path {
-  fill: #007A65;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  position: relative;
-}
-
-.map-belarus path:hover {
-  fill: #FBC469;
-}
-
-.map-belarus path.minsk {
-  position: relative;
-  z-index: 3;
-  fill: red;
-}
-
-.map-belarus .desc {
-  width: 100px;
-  padding: 10px;
-  font-size: 10px;
-  color: #000;
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 @media (min-width: 576px) {
@@ -6671,14 +6716,8 @@ html body .bvi-panel-close {
     margin: 30px 0px 0px 12px;
   }
 
-  .tax-inspectorates__map {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .map-belarus svg {
+  .map-inspectorates svg {
     max-width: 600px;
-    margin: 0 auto;
   }
 }
 
@@ -6793,6 +6832,10 @@ html body .bvi-panel-close {
 
   .history-tab__date {
     margin: 0px 25px 0px 0px;
+  }
+
+  .content-inspectorate iframe {
+    height: 300px;
   }
 
   .content-inspectorate__table {
