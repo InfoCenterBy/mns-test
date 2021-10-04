@@ -4,17 +4,42 @@
 .item-sidebar {
 	margin: 0px 0px 90px 0px;
 
+	&_accordion {
+		margin: 0px 0px 60px 0px;
+	}
+
 	&__title {
 		padding: 0px 0px 16px 0px;
 		margin: 0px 0px 20px 0px;
 		border-bottom: 7px solid $color-green;
+		
+		&_accordion {
+			color: $color-green-light;
+			
+			&.collapsed {
+				margin: 0;
+				color: $color-black;
+
+				i:before {
+					transform: rotate(-90deg);
+				}
+			}
+
+			&:hover {
+				color: $color-green-light;
+			}
+		}
+
 	}
 
 	&__link {
-		color: $color-green-light;
-
+		color: $color-black;
+		text-decoration: underline;
+		
 		&:hover {
-			color: $color-green;
+			color: $color-green-light;
+			text-decoration: none;
+			// color: $color-green;
 		}
 	}
 }
@@ -93,7 +118,7 @@
 .tab-content {
 	a:hover {
 		color: $color-green;
-		text-decoration: underline;
+		text-decoration: underline; 
 	}
 }
 .table-tab {

@@ -207,6 +207,7 @@
 		left: 0;
 		
       li {
+			list-style: none;
 			&:not(:last-child) {
 				margin: 0px 0px 12px 0px;
 			}
@@ -516,6 +517,7 @@
 		padding: 0;
 
 		li {
+			list-style: none;
 			border-bottom: 3px solid $color-gray-light;
 			
 			&:last-child {
@@ -554,10 +556,9 @@
 		margin: 0px 0px 5px 0px;
 	}
 
-	&__title {        
+	ul li {
+		list-style: none;
 	}
-
-	
 }
 .menu {
 	display: flex;
@@ -581,7 +582,8 @@
 
 		&:hover {
 			.submenu  {
-				display: block;
+				opacity: 1;
+				visibility: visible;
 			}
 
 			.menu__link {
@@ -618,11 +620,12 @@
 .submenu {
 	width: 100%;
 	padding: 40px 0px 0px 0px;
-	display: none;
 	position: absolute;
  	top: 65px;
 	left: 12px;
 	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
 
 	&__body {
 		padding: 30px;

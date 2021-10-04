@@ -80,12 +80,7 @@ $(function(){
 
 });
 
-// ===========  Sticky Sidebar ===========================
-var sidebar = new StickySidebar('.sidebar', {
-	topSpacing: 20,
-	bottomSpacing: 20
-});
-sidebar.updateSticky();
+
 
 // =============Function ibg  ====================================================
 function ibg() {
@@ -156,9 +151,30 @@ ibg();
 	};
   
 // 	Toggle will appear on size 991px
-  $('.nav-tab').tabConvert({
-    	activeClass: "active",
-		screenSize: 767,
-  });
+	$('.nav-tab').tabConvert({
+			activeClass: "active",
+			screenSize: 767,
+	});
 
+
+  // ================   MAP INSPECTORATES   ==============================================
+	$('.map-inspectorates__path').hover ( 
+		function() {
+			$('.map-inspectorates__description').html($(this).attr('data-description'))
+			$('.map-inspectorates__description').fadeIn(0);
+		},
+		function() {
+			$('.map-inspectorates__description').fadeOut(0);
+		}
+	)
 }( jQuery ));
+
+// ===========  Sticky Sidebar ===========================
+const sidebarBlock = document.querySelector(".sidebar")
+if (sidebarBlock) {
+	var sidebar = new StickySidebar(sidebarBlock, {
+		topSpacing: 20,
+		bottomSpacing: 20
+	});
+	sidebar.updateSticky();
+}
