@@ -355,173 +355,263 @@
 </header>
 			<main class="page page__decor">
 				<div class="content">
-					<div class="header-inspectorate py-5">
+					<div class="header-inspectorate pt-5 pb-3 pb-md-5">
 						<div class='container'>
 							<div class="d-flex align-items-center mb-5">
 								<img src="./img/inspectorates/icon-brest.svg" alt="" />
-								<div class="h2 h2_white ms-2">Инспекция МНС РБ по Бресту и Брестской области</div>
+								<span class="header-inspectorate__title ms-2">Инспекция МНС РБ по Бресту и Брестской области</span>
 							</div>
-							<div class="header-inspectorate-menu row g-4">
-								<div class="col col-md-3">
-									<div class="header-inspectorate-menu__item d-flex h-100">
-										<a href="#info" class="header-inspectorate-menu__link d-flex align-items-center w-100">
-											<div class="header-inspectorate-menu__icon me-2">
-												<img src="./img/icons/icon-files.svg" alt="">
-											</div>
-											<div class="h4 h4_white">Общие данные</div>
-										</a>
-									</div>
-								</div>
-								<div class="col col-md-3">
-									<div class="header-inspectorate-menu__item d-flex h-100">
-										<a href="#management" class="header-inspectorate-menu__link d-flex align-items-center w-100">
-											<div class="header-inspectorate-menu__icon me-2">
-												<img src="./img/icons/icon-files.svg" alt="">
-											</div>
-											<div class="h4 h4_white">Руководство</div>
-										</a>
-									</div>
-								</div>
-								<div class="col col-md-3">
-									<div class="header-inspectorate-menu__item d-flex h-100">
-										<a href="#" class="header-inspectorate-menu__link d-flex align-items-center w-100">
-											<div class="header-inspectorate-menu__icon me-2">
-												<img src="./img/icons/icon-files.svg" alt="">
-											</div>
-											<div class="h4 h4_white">Структурные подразделения</div>
-										</a>
-									</div>
-								</div>
-								<div class="col col-md-3">
-									<div class="header-inspectorate-menu__item d-flex h-100">
-										<a href="#" class="header-inspectorate-menu__link d-flex align-items-center w-100">
-											<div class="header-inspectorate-menu__icon me-2">
-												<img src="./img/icons/icon-files.svg" alt="">
-											</div>
-											<div class="h4 h4_white">Об инспекции МНС по Бресту и Брестской области</div>
-										</a>
-									</div>
-								</div>
-							</div>
+							<nav class="nav nav-tab inspectorate-nav-tab row g-0 g-md-4" id="data-tab" role="tablist">
+								<a href="#info-inspectorate" class="col-md-3 inspectorate-nav-tab__link d-flex align-items-center active" id="info-inspectorate-tab" data-bs-toggle="tab" role="tab" aria-controls="info-inspectorate" aria-selected="true">
+									<i class="inspectorate-nav-tab__icon me-2 rounded-circle _icon-files"></i>
+									<span>Общие данные</span>
+								</a>
+								<a href="#management-inspectorate" class="col-md-3 inspectorate-nav-tab__link d-flex align-items-center" id="management-inspectorate-tab" data-bs-toggle="tab" role="tab" aria-controls="management-inspectorate" aria-selected="false">
+									<i class="inspectorate-nav-tab__icon me-2 rounded-circle _icon-files"></i>
+									<span>Руководство</span>
+								</a>
+								<a href="#subdivisions-inspectorate" class="col-md-3 inspectorate-nav-tab__link d-flex align-items-center" id="subdivisions-inspectorate-tab" data-bs-toggle="tab" role="tab" aria-controls="subdivisions-inspectorate" aria-selected="false">
+									<i class="inspectorate-nav-tab__icon me-2 rounded-circle _icon-files"></i>
+									<span>Структурные подразделения</span>
+								</a>
+								<a href="#about-inspectorate" class="col-md-3 inspectorate-nav-tab__link d-flex align-items-center" id="about-inspectorate-tab" data-bs-toggle="tab" role="tab" aria-controls="about-inspectorate" aria-selected="false">
+									<i class="inspectorate-nav-tab__icon me-2 rounded-circle _icon-files"></i>
+									<span>Об инспекции МНС по Бресту и Брестской области</span>
+								</a>
+							</nav>
 						</div>
 					</div>
-					<div class='container'>
-						<div class="content-inspectorate px-3 py-5">
-							<div class="content-inspectorate__item">
-								<h4 id="info" class="item-sidebar__title h4">Общие данные об инспекции. Режим работы</h4>
-								<div class="h5 my-5">Инспекция Министерства по налогам и сборам Республики Беларусь по Брестской области (далее – инспекция) находится по адресу:</div>
-								<div class="row g-4">
-									<div class="col-md-6">
-										<div class="mb-5">
-											<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-geo-alt me-2"></i>Юридический адрес:</div>
-											<div>224013, г. Брест ул. Малая, 2</div>
-										</div>
-										<div class="mb-5">
-											<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-list-ol me-2"></i>УНП:</div>
-											<div>200045467,код 201.</div>
-										</div>
-										<div class="mb-5">
-											<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-telephone me-2"></i>Телефон приёмной:</div>
-											<div><a href="tel:80162278704">(8-016-2) 27-87-04</a>, <a href="tel:80162236778">(8-016-2) 23-67-78 (факс)</a></div>
-										</div>
-										<div class="mb-5">
-											<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-envelope me-2"></i>Электронный адрес:</div>
-											<a href="mailto:imns201@nalog.gov.by">imns201@nalog.gov.by</a> 
-											<div> (не для направления электронных обращений)</div>
-										</div>
-										<div>
-											<div class="address-tab__title h6 pb-2 mb-2"><i class="bi bi-clock me-2"></i>Режим работы:</div>
-											<div class="h6 mb-2">Инспекция работает в режиме пятидневной рабочей недели.</div>
-											<div>Рабочий день устанавливается: <b>с 8.30 до 17.30</b></div>
-											<div class="mb-2">с перерывом на обед <b>с 13.00 до 14.00.</b></div>
-											<div>Выходные дни:<b> суббота и воскресенье.</b></div>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A74f3defab4bbf03f1c9ccf60d11cdc6d634d52d77584e517d0d16a22d9a5f75e&amp;source=constructor" width="800" height="500" frameborder="0"></iframe>
-									</div>
-								</div>
-							</div>
-							<div class="content-inspectorate__item">
-								<h4 id="management" class="item-sidebar__title h4">Руководство</h4>
-								<div class="content-inspectorate__table">
-									<table>
-										<thead>
-											<tr>
-											  <th>ФИО</th>
-											  <th>Должность</th>
-											</tr>
-										 </thead>
-										 <tbody>
-											<tr>
-											  <td>
-												  <div class="h6">Лилисон Юрий Рудольфович</div>
-												</td>
-											  <td>Начальник инспекции</td>
-											</tr>
-											<tr>
-											  <td>
-												  <div class="h6">Шевчук Вадим Васильевич</div>
-												</td>
-											  <td>Первый заместитель начальника инспекции</td>
-											</tr>
-											<tr>
-											  <td>
-												  <div class="h6">Хандога Ольга Сергеевна</div>
-												</td>
-											  <td>Заместитель начальника инспекции</td>
-											</tr>
-											<tr>
-											  <td>
-												  <div class="h6">Зинчук Сергей Васильевич</div>
-												</td>
-											  <td>Заместитель начальника инспекции</td>
-											</tr>
-											<tr>
-											  <td>
-												  <div class="h6">Брилевский Павел Вацлавович</div>
-												</td>
-											  <td>Заместитель начальника инспекции - начальник управления оперативных мероприятий</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="nav-inspectorate">
+					<div class="content-inspectorate">
 						<div class='container'>
-							<div class="row g-3">
-								<div class="col-md-3">
-									<a href="#" class="nav-inspectorate__link d-flex flex-column h-100">
-										<div class="nav-inspectorate__title h5">Справочник плательщика</div>
-										<div>
-											<span class="nav-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
+							<div class="px-md-3 py-3 tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="info-inspectorate" role="tabpanel" aria-labelledby="info-inspectorate">
+									<div class="row gy-4 gx-0 gx-md-4">
+										<div class="col-lg-6 order-lg-2 ps-md-4">
+											<h3 class="h3 mb-4">Инспекция МНС РБ по Бресту и Брестской области</h3>
+											<ul>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Барановичскому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Берёзовскому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Бресткому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Ивацевичскому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Кобринскому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Лунинецкому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Пинскому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Пружанскому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Столинскому району</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Ленинскому району г.Бреста</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по Московскому району г.Бреста</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по г.Барановичи</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="h6 d-flex">
+														<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+														<span>Инспекция МНС Республики Беларусь по г.Пинску</span>
+													</a>
+												</li>
+											</ul>
 										</div>
+										<div class="col-lg-6">
+											<div class="address-inspectorate p-3 h-100">
+												<h3 class="h3 mb-3">Общие данные об инспекции. Режим работы</h3>
+												<h6 class="h6 mb-3">Инспекция Министерства по налогам и сборам Республики Беларусь по Брестской области (далее – инспекция) находится по адресу:</h6>
+												<div class="row g-3">
+													<div class="col-md-7">
+														<div class="address-inspectorate__map mb-3">
+															<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A74f3defab4bbf03f1c9ccf60d11cdc6d634d52d77584e517d0d16a22d9a5f75e&amp;source=constructor" frameborder="0"></iframe>
+														</div>
+														<div class="address-inspectorate__item">
+															<div class="address-inspectorate__title pb-2 mb-2"><i class="bi bi-clock me-2"></i>Режим работы:</div>
+															<div class="fw-bold mb-2">Инспекция работает в режиме пятидневной рабочей недели.</div>
+															<div>Рабочий день устанавливается: <span class="address-inspectorate__text">с 8.30 до 17.30</span></div>
+															<div class="mb-2">с перерывом на обед <span class="address-inspectorate__text">с 13.00 до 14.00.</span></div>
+															<div>Выходные дни: <span class="address-inspectorate__text"> суббота и воскресенье.</span></div>
+														</div>
+													</div>
+													<div class="col-md-5">
+														<div class="address-inspectorate__item mb-3">
+															<div class="address-inspectorate__title pb-2 mb-2"><i class="bi bi-geo-alt me-2"></i>Юридический адрес:</div>
+															<div class="address-inspectorate__text">224013, г. Брест ул. Малая, 2</div>
+														</div>
+														<div class="address-inspectorate__item mb-3">
+															<div class="address-inspectorate__title pb-2 mb-2"><i class="bi bi-list-ol me-2"></i>УНП:</div>
+															<div class="address-inspectorate__text">200045467,код 201.</div>
+														</div>
+														<div class="address-inspectorate__item mb-3">
+															<div class="address-inspectorate__title pb-2 mb-2"><i class="bi bi-telephone me-2"></i>Телефон приёмной:</div>
+															<div class="address-inspectorate__text"><a href="tel:80162278704">(8-016-2) 27-87-04</a>, <a href="tel:80162236778">(8-016-2) 23-67-78 (факс)</a></div>
+														</div>
+														<div class="address-inspectorate__item">
+															<div class="address-inspectorate__title pb-2 mb-2"><i class="bi bi-envelope me-2"></i>Электронный адрес:</div>
+															<div class="address-inspectorate__text">
+																<a href="mailto:imns201@nalog.gov.by">imns201@nalog.gov.by</a>
+															</div> 
+															<div>(не для направления электронных обращений)</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="management-inspectorate" role="tabpanel" aria-labelledby="management-inspectorate">
+									<h3 class="h3 mb-2">Руководство</h3>
+									<div class="content-inspectorate__table">
+										<table>
+											<thead>
+												<tr>
+													<th>ФИО</th>
+													<th>Должность</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+													<td>
+														<div class="h6">Лилисон Юрий Рудольфович</div>
+													</td>
+													<td>Начальник инспекции</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="h6">Шевчук Вадим Васильевич</div>
+													</td>
+													<td>Первый заместитель начальника инспекции</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="h6">Хандога Ольга Сергеевна</div>
+													</td>
+													<td>Заместитель начальника инспекции</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="h6">Зинчук Сергей Васильевич</div>
+													</td>
+													<td>Заместитель начальника инспекции</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="h6">Брилевский Павел Вацлавович</div>
+													</td>
+													<td>Заместитель начальника инспекции - начальник управления оперативных мероприятий</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="subdivisions-inspectorate" role="tabpanel" aria-labelledby="subdivisions-inspectorate">
+									333333
+								</div>
+								<div class="tab-pane fade" id="about-inspectorate" role="tabpanel" aria-labelledby="about-inspectorate">
+									444444<br>444444
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-inspectorate">
+						<div class='container'>
+							<div class="menu-inspectorate__body">
+								<div class="menu-inspectorate__column">
+									<a href="#" class="menu-inspectorate__link d-flex flex-column h-100">
+										<i class="_icon-files mb-3"></i>
+										<span class="menu-inspectorate__title h5">Электронное декларирование</span>
+										<span>
+											<span class="menu-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
+										</span>
 									</a>
 								</div>
-								<div class="col-md-3">
-									<a href="#" class="nav-inspectorate__link d-flex flex-column h-100">
-										<div class="nav-inspectorate__title h5">Сведения о платежах</div>
-										<div>
-											<span class="nav-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
-										</div>
+								<div class="menu-inspectorate__column">
+									<a href="#" class="menu-inspectorate__link d-flex flex-column h-100">
+										<i class="_icon-files mb-3"></i>
+										<span class="menu-inspectorate__title h5">Справочник плательщика</span>
+										<span>
+											<span class="menu-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
+										</span>
 									</a>
 								</div>
-								<div class="col-md-3">
-									<a href="#" class="nav-inspectorate__link d-flex flex-column h-100">
-										<div class="nav-inspectorate__title h5">Программное обеспечение для плательщиков</div>
-										<div>
-											<span class="nav-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
-										</div>
+								<div class="menu-inspectorate__column">
+									<a href="#" class="menu-inspectorate__link d-flex flex-column h-100">
+										<i class="_icon-files mb-3"></i>
+										<span class="menu-inspectorate__title h5">Сведения о платежах</span>
+										<span>
+											<span class="menu-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
+										</span>
 									</a>
 								</div>
-								<div class="col-md-3">
-									<a href="#" class="nav-inspectorate__link d-flex flex-column h-100">
-										<div class="nav-inspectorate__title h5">Аналитика</div>
-										<div>
-											<span class="nav-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
-										</div>
+								<div class="menu-inspectorate__column">
+									<a href="#" class="menu-inspectorate__link d-flex flex-column h-100">
+										<i class="_icon-files mb-3"></i>
+										<span class="menu-inspectorate__title h5">Программное обеспечение для плательщиков</span>
+										<span>
+											<span class="menu-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
+										</span>
+									</a>
+								</div>
+								<div class="menu-inspectorate__column">
+									<a href="#" class="menu-inspectorate__link d-flex flex-column h-100">
+										<i class="_icon-files mb-3"></i>
+										<span class="menu-inspectorate__title h5">Аналитика</span>
+										<span>
+											<span class="menu-inspectorate__btn px-3 py-2">Подробнее<i class="bi bi-chevron-right ms-2"></i></span>
+										</span>
 									</a>
 								</div>
 							</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	 <head>
-	<title>О министерстве по налогам и сборам</title>
+	<title>Формы документов для плательщиков</title>
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -363,16 +363,31 @@
 							</ol>
 						</div>
 					 </nav>
-					<div class="about">
+					<div class="item-content">
 						<div class='container'>
-							<div class="about__cnt row g-3">
+							<div class="row g-3">
 								<aside class="col-lg-4 order-lg-2">
 									<div class="sidebar">
-										<div class="sidebar__body px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
-											<a href="#entrepreneurs" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Для индивидуальных предпринимателей</a>
-											<a href="#organizations" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Для организаций</a>
-											<a href="#individuals" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Для физических лиц</a>
-										</div>
+										<ul class="sidebar__list px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
+											<li>
+												<a href="#entrepreneurs" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Для индивидуальных предпринимателей</span>
+												</a>
+											</li>
+											<li>
+												<a href="#organizations" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Для организаций</span>
+												</a>
+											</li>
+											<li>
+												<a href="#individuals" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Для физических лиц</span>
+												</a>
+											</li>
+										</ul>
 										<a href="#" class="sidebar__online-appointment p-3 d-flex align-items-center justify-content-between">
 											<div>Онлайн-запись</div><i class="bi bi-calendar-event"></i>
 										</a>
@@ -381,10 +396,11 @@
 								<div class="col-lg-8">
 									<div class="sidebar-content p-md-4 p-2" id="accordionFormsDocuments"> 
 										<div class="item-sidebar item-sidebar_accordion">
-											<button id="entrepreneurs" class="item-sidebar__title item-sidebar__title_accordion h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-												<i class="bi bi-arrow-down-circle me-2"></i>Руководство
+											<button id="entrepreneurs" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+												<span>Руководство</span>
 											</button>
-											<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionFormsDocuments">
+											<div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#accordionFormsDocuments">
 												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
 													<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
 														<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
@@ -424,7 +440,8 @@
 										</div>
 										<div class="item-sidebar item-sidebar_accordion">
 											<button id="organizations" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
-												<i class="bi bi-arrow-down-circle me-2"></i>Для организаций
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+												<span>Для организаций</span>
 											</button>
 											<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionFormsDocuments">
 												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
@@ -568,7 +585,8 @@
 										</div>
 										<div class="item-sidebar item-sidebar_accordion">
 											<button id="individuals" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
-												<i class="bi bi-arrow-down-circle me-2"></i>Для физических лиц
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+												<span>Для физических лиц</span>
 											</button>
 											<div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionFormsDocuments">
 												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">

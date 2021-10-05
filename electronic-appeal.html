@@ -363,30 +363,51 @@
 							</ol>
 						</div>
 					 </nav>
-					<div class="about">
+					<div class="item-content">
 						<div class='container'>
-							<div class="about__cnt row g-3">
+							<div class="row g-3">
 								<aside class="col-lg-4 order-lg-2">
 									<div class="sidebar">
-										<div class="sidebar__body px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
-											<a href="#electronicappeal" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2" ></i>Порядок подачи и рассмотрения электронных обращений</a>
-											<a href="#submitappeal" class="sidebar__title d-flex" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2"><i class="bi bi-arrow-down-circle me-2"></i>Подать электронное обращение</a>
-											<a href="#appealtaxpayers" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Результат рассмотрения налоговыми органами обращений налогоплательщиков</a>
-											<a href="#appealcitizens" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Нормативные правовые акты, регулирующие обращения граждан и юридических лиц</a>
-										</div>
+										<ul class="sidebar__list px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
+											<li>
+												<a href="#electronicappeal" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Порядок подачи и рассмотрения электронных обращений</span>
+												</a>
+											</li>
+											<li>
+												<a href="#submitappeal" class="d-flex" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Подать электронное обращение</span>
+												</a>
+											</li>
+											<li>
+												<a href="#appealtaxpayers" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Результат рассмотрения налоговыми органами обращений налогоплательщиков</span>
+												</a>
+											</li>
+											<li>
+												<a href="#appealcitizens" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Нормативные правовые акты, регулирующие обращения граждан и юридических лиц</span>
+												</a>
+											</li>
+										</ul>
 										<a href="#" class="sidebar__online-appointment p-3 d-flex align-items-center justify-content-between">
-											<div>Онлайн-запись</div><i class="bi bi-calendar-event"></i>
+											<span>Онлайн-запись</span>
+											<i class="bi bi-calendar-event"></i>
 										</a>
 									</div>
 								</aside>
 								<div class="col-lg-8">
 									<div class="sidebar-content p-md-4 p-2" id="accordionElectronicAppeal"> 
 										<div class="item-sidebar item-sidebar_accordion">
-											<button id="citizens" class="item-sidebar__title item-sidebar__title_accordion h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-												<i class="bi bi-arrow-down-circle me-2"></i>
+											<button id="citizens" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
 												<span>Порядок подачи и рассмотрения электронных обращений</span> 
 											</button>
-											<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionElectronicAppeal">
+											<div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#accordionElectronicAppeal">
 												<p>Граждане, в том числе индивидуальные предприниматели, и юридические лица Республики Беларусь направляют электронные обращения с использованием специальной формы, размещенной на официальном сайте Министерства по налогам и сборам Республики Беларусь в глобальной компьютерной сети Интернет (www.nalog.gov.by) в рубрике «Электронные обращения».-</p>
 												<p>Обращаем внимание, что рубрика «Электронные обращения» не предназначена для подачи жалобы на действия (бездействие) должностных лиц налоговых органов или на решение налогового органа. Такие жалобы подаются в электронной форме (для субъектов хозяйствования с ЭЦП, для физических лиц без ЭЦП) через Личный кабинет плательщика или в письменной форме на бумажном носителе.</p>
 												<p>Электронные обращения, направленные на электронный адрес gnk@mail.belpak.by, НЕ РАССМАТРИВАЮТСЯ.</p>
@@ -424,7 +445,7 @@
 										</div>
 										<div class="item-sidebar item-sidebar_accordion">
 											<button id="businessmen" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
-												<i class="bi bi-arrow-down-circle me-2"></i>
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
 												<span>Подать электронное обращение</span>
 											</button>
 											<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionElectronicAppeal">
@@ -466,7 +487,7 @@
 										</div>
 										<div class="item-sidebar item-sidebar_accordion">
 											<button id="legalacts" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
-												<i class="bi bi-arrow-down-circle me-2"></i>
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
 												<span>Результат рассмотрения налоговыми органами обращений налогоплательщиков</span>
 											</button>
 											<div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionElectronicAppeal">
@@ -475,7 +496,7 @@
 										</div>
 										<div class="item-sidebar item-sidebar_accordion">
 											<button id="documents" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
-												<i class="bi bi-arrow-down-circle me-2"></i>
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
 												<span>Нормативные правовые акты, регулирующие обращения граждан и юридических лиц</span>
 											</button>
 											<div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#accordionElectronicAppeal">
