@@ -1265,7 +1265,6 @@ body._lock {
 
 .tab-content a:hover {
   color: #00654D;
-  text-decoration: underline;
 }
 
 .table-tab {
@@ -1499,7 +1498,7 @@ body._lock {
 }
 
 .inspectorate-nav-tab__link {
-  padding: 40px 30px;
+  padding: 10px 30px;
   font-size: 20px;
   color: #FAFAFA;
   font-weight: 600;
@@ -1548,6 +1547,14 @@ body._lock {
   background-color: #FAFAFA;
 }
 
+.content-inspectorate a {
+  font-size: 14px;
+}
+
+.content-inspectorate a:hover {
+  color: #007A65;
+}
+
 .content-inspectorate ul {
   margin: 0;
   padding: 0;
@@ -1561,35 +1568,27 @@ body._lock {
   margin: 0px 0px 16px 0px;
 }
 
-.content-inspectorate__item {
-  margin: 0px 0px 90px 0px;
+.content-inspectorate__management .row:nth-child(even) {
+  background-color: #EBEBEB;
 }
 
-.content-inspectorate__table {
-  overflow-x: auto;
-}
-
-.content-inspectorate__table table {
-  width: 100%;
-  min-width: 450px;
-}
-
-.content-inspectorate__table th,
-.content-inspectorate__table td {
+.content-inspectorate__management .col {
   padding: 25px;
 }
 
-.content-inspectorate__table tbody tr:nth-child(odd) {
-  background-color: #EBEBEB;
-  border-radius: 10px;
+.content-inspectorate__management .text {
+  color: #007A65;
 }
 
 .address-inspectorate {
   background-color: #ffffff;
+}
+
+.address-inspectorate.region {
   position: relative;
 }
 
-.address-inspectorate:before {
+.address-inspectorate.region :before {
   content: '';
   width: 1px;
   height: 80%;
@@ -6797,7 +6796,7 @@ html body .bvi-panel-close {
 
 @media (max-width: 1300px) {
   .inspectorate-nav-tab__link {
-    padding: 15px;
+    padding: 10px;
   }
 }
 
@@ -6850,14 +6849,13 @@ html body .bvi-panel-close {
 }
 
 @media (max-width: 991px) {
-  .content-inspectorate__table th,
-  .content-inspectorate__table td {
+  .content-inspectorate__management .col {
     padding: 15px;
   }
 }
 
 @media (max-width: 991.98px) {
-  .address-inspectorate:before {
+  .address-inspectorate.region :before {
     display: none;
   }
 
@@ -6995,10 +6993,6 @@ html body .bvi-panel-close {
 
   .inspectorate-nav-tab__link {
     color: #1A1A1A;
-  }
-
-  .content-inspectorate__table {
-    margin: 0 -12px;
   }
 
   .menu-inspectorate__column {
