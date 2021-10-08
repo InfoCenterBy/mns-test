@@ -1701,6 +1701,18 @@ body._lock {
   margin: 0px 0px 0px 0px;
 }
 
+.attention {
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+          filter: drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+}
+
+.attention i {
+  font-size: 40px;
+  color: #007A65;
+}
+
 .nav-tab-personal-area__link {
   position: relative;
   z-index: 1;
@@ -1755,18 +1767,6 @@ body._lock {
 }
 
 .personal-area__subtitle i {
-  color: #007A65;
-}
-
-.personal-area__attention {
-  background-color: #EBEBEB;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
-}
-
-.personal-area__attention i {
-  font-size: 40px;
   color: #007A65;
 }
 
