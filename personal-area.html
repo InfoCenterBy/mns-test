@@ -381,15 +381,15 @@
 												</a>
 											</li>
 										</ul>
-										<a href="#" class="ecp sidebar__online-appointment p-3 mb-3 mb-lg-4 d-flex align-items-center justify-content-between">
+										<a href="#" class="link-entries sidebar__link-block p-3 mb-3 mb-lg-4 d-flex align-items-center justify-content-between">
 											<span>Вход по логину и паролю</span>
 											<i class="bi bi-person-fill"></i>
 										</a>
-										<a href="#" class="sidebar__online-appointment p-3 mb-3 mb-lg-4 d-flex align-items-center justify-content-between">
+										<a href="#" class="sidebar__link-block p-3 mb-3 mb-lg-4 d-flex align-items-center justify-content-between">
 											<span>Вход с ЭЦП</span>
 											<i class="bi bi-key-fill"></i>
 										</a>
-										<a href="#" class="ecp sidebar__online-appointment p-3 d-flex align-items-center justify-content-between">
+										<a href="#" class="link-entries sidebar__link-block p-3 d-flex align-items-center justify-content-between">
 											<span>Вход через мобильную ЭЦП</span>
 											<i class="bi bi-phone-fill"></i>
 										</a>
@@ -397,26 +397,26 @@
 								</aside>
 								<div class="col-lg-8">
 									<div class="sidebar-content p-md-4 p-2" id="accordionPersonalArea"> 
-										<div class="item-sidebar item-sidebar_accordion">
+										<div id="heading-1" class="item-sidebar">
 											<button id="users" class="item-sidebar__title item-sidebar__title_accordion h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
 												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
-												<span>Личный кабинет предназначен для следующих категорий плательщиков</span>
+												<span>Вход в Личный кабинет</span>
 											</button>
 											<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionPersonalArea">
 												<nav class="nav nav-tab nav-tab-personal-area row g-0 g-md-4" id="data-tab" role="tablist">
-													<a href="#prsa-1" class="nav-tab-personal-area__link col-md-4 d-md-flex flex-column justify-content-center align-items-center active" id="insp-1-tab" data-bs-toggle="tab" role="tab" aria-controls="insp-1" aria-selected="true">
+													<a href="#prsa-1" class="nav-tab-personal-area__link link-nav-tab col-md-4 d-md-flex flex-column justify-content-center align-items-center active" id="insp-1-tab" data-bs-toggle="tab" role="tab" aria-controls="insp-1" aria-selected="true">
 														<span class="nav-tab-personal-area__icon mb-2 mb-lg-3 rounded-circle">
 															<i class="bi bi-people"></i>
 														</span>
 														<span class="h6">Физические лица</span>
 													</a>
-													<a href="#prsa-2" class="nav-tab-personal-area__link col-md-4 d-md-flex flex-column justify-content-center align-items-center" id="insp-2-tab" data-bs-toggle="tab" role="tab" aria-controls="insp-2" aria-selected="true">
+													<a href="#prsa-2" class="nav-tab-personal-area__link link-nav-tab col-md-4 d-md-flex flex-column justify-content-center align-items-center" id="insp-2-tab" data-bs-toggle="tab" role="tab" aria-controls="insp-2" aria-selected="true">
 														<span class="nav-tab-personal-area__icon mb-2 mb-lg-3 rounded-circle">
 															<i class="bi bi-briefcase"></i>
 														</span>
 														<span class="h6 text-center">ИП</span>
 													</a>
-													<a href="#prsa-3" class="company nav-tab-personal-area__link col-md-4 d-md-flex flex-column justify-content-center align-items-center" id="insp-3-tab" data-bs-toggle="tab" role="tab" aria-controls="insp-3" aria-selected="true">
+													<a href="#prsa-3" class="company nav-tab-personal-area__link link-nav-tab col-md-4 d-md-flex flex-column justify-content-center align-items-center" id="insp-3-tab" data-bs-toggle="tab" role="tab" aria-controls="insp-3" aria-selected="true">
 														<span class="nav-tab-personal-area__icon mb-2 mb-lg-3 rounded-circle">
 															<i class="bi bi-building"></i>
 														</span>
@@ -447,117 +447,137 @@
 																</div>
 															</div>
 														</div>
-														<div id="accordion1" class="mb-5">
-															<button class="personal-area__title personal-area__title_accordion fw-bold pb-1 mb-4 w-100 d-flex text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-11" aria-expanded="true" aria-controls="collapse-11">
-															<i class="_icon-chevron-down-circle me-2"></i>
-															<span>Личный кабинет предназначен для следующих категорий плательщиков</span>
-														</button>
-														<div id="collapse-11" class="accordion-collapse collapse" aria-labelledby="heading-11" data-bs-parent="#accordion1">
-															<div class="row g-4">
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">1</div>
-																	<div>
-																		<div class="h6 mb-3">Получение документов:</div>
-																		<ul class="m-0">
-																			<li>сведения о недоимках, переплатах и пене;</li>
-																			<li>справка о расчетах с бюджетом;</li>
-																			<li>выписка из лицевых счетов;</li>
-																			<li>о проведенных зачетах;</li>
-																			<li>реестр платежей;</li>
-																			<li>извещение на уплату земельного налогами налога на недвижимость.</li>
-																		</ul>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">2</div>
-																	<div>
-																		<div class="h6 mb-3">Заполнение деклараций (расчетов):</div>
-																		<ul class="m-0">
-																			<li>по подоходному налогу с физических лиц;</li>
-																			<li>по подоходному налогу с физических лиц с доходов плательщиков, не признаваемых налоговыми резидентами Республики Беларусь.</li>
-																		</ul>
-																		<div>Кроме того, можно просмотреть список ранее поданных деклараций.</div>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">3</div>
-																	<div>
-																		<div class="h6 mb-3">Извещения на уплату:</div>
-																		<ul class="m-0">
-																			<li>налога на недвижимость с физических лиц;</li>
-																			<li>земельного налога с физических лиц;</li>
-																			<li>подоходного налога с физических лиц.</li>
-																		</ul>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">4</div>
-																	<div>
-																		<div class="h6 mb-3">Уплата налогов в «Личном кабинете» посредством использования интернет-банкинга:</div>
-																		<ul class="m-0">
-																			<li>ЗАО «Альфа-банк»</li>
-																			<li>ОАО «АСБ Беларусбанк»</li>
-																			<li>ОАО «Белгазпромбанк»</li>
-																			<li>ОАО «Белинвестбанк»</li>
-																			<li>ОАО «Технобанк»</li>
-																			<li>ОАО «Приорбанк»</li>
-																		</ul>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">5</div>
-																	<div>
-																		<div class="h6 mb-3">Подача заявлений на осуществление административных процедур в электронном виде в налоговый орган</div>
-																		<ul class="m-0">
-																			<li>заявление о зачете (возврате) излишне уплаченных (взысканных) сумм налогов, сборов (пошлин), пеней.</li>
-																		</ul>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">6</div>
-																	<div>
-																		<div class="h6">Подача уведомления об осуществлении деятельности для расчета единого налога</div>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">7</div>
-																	<div>
-																		<div class="h6">Запись на личный прием к руководству инспекций МНС</div>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">8</div>
-																	<div>
-																		<div class="h6 mb-3">Предварительная регистрация на прием в инспекции, где внедрена электронная очередь</div>
-																		<div>просмотр информации о количестве человек в очереди и возможности информирования о качестве обслуживания.</div>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">9</div>
-																	<div>
-																		<div class="h6">Просмотр сообщений, поступающих от налоговых органов</div>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">10</div>
-																	<div>
-																		<div class="h6">Визуализация электронного документа</div>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">11</div>
-																	<div>
-																		<div class="h6">Редактирование персональных данных плательщика.</div>
-																	</div>
-																</div>
-																<div class="col-md-6 d-flex">
-																	<div class="function-services__number h6 me-3">12</div>
-																	<div>
-																		<div class="h6">Возможность оценить работу налоговых органов воспользовавшись сервисом "Анкетирование".</div>
+														<div id="accordion11" class="mb-5">
+															<div id="heading-11">
+																<button class="personal-area__title personal-area__title_accordion fw-bold pb-1 w-100 d-flex text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-11" aria-expanded="true" aria-controls="collapse-11">
+																	<i class="_icon-chevron-down-circle me-2"></i>
+																	<span>Функциональные возможности сервиса для физических лиц</span>
+																</button>
+																<div id="collapse-11" class="accordion-collapse collapse" aria-labelledby="heading-11" data-bs-parent="#accordion11">
+																	<div class="pt-4">
+																		<div class="row g-4">
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">1</div>
+																				<div>
+																					<div class="h6 mb-3">Получение документов:</div>
+																					<ul class="m-0">
+																						<li>сведения о недоимках, переплатах и пене;</li>
+																						<li>справка о расчетах с бюджетом;</li>
+																						<li>выписка из лицевых счетов;</li>
+																						<li>о проведенных зачетах;
+																							<span class="tooltips" data-info="При наличии ЭЦП">
+																								<i class="bi bi-info-circle-fill"></i>
+																							</span>
+																						</li>
+																						<li>реестр платежей;</li>
+																						<li>извещение на уплату земельного налогами налога на недвижимость.</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">2</div>
+																				<div>
+																					<div class="h6 mb-3">Заполнение деклараций (расчетов):</div>
+																					<ul class="m-0">
+																						<li>по подоходному налогу с физических лиц;</li>
+																						<li>по подоходному налогу с физических лиц с доходов плательщиков, не признаваемых налоговыми резидентами Республики Беларусь.</li>
+																					</ul>
+																					<div>Кроме того, можно просмотреть список ранее поданных деклараций.</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">3</div>
+																				<div>
+																					<div class="h6 mb-3">Извещения на уплату:</div>
+																					<ul class="m-0">
+																						<li>налога на недвижимость с физических лиц;</li>
+																						<li>земельного налога с физических лиц;</li>
+																						<li>подоходного налога с физических лиц.</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">4</div>
+																				<div>
+																					<div class="h6 mb-3">Уплата налогов в «Личном кабинете» посредством использования интернет-банкинга:</div>
+																					<ul class="m-0">
+																						<li>ЗАО «Альфа-банк»</li>
+																						<li>ОАО «АСБ Беларусбанк»</li>
+																						<li>ОАО «Белгазпромбанк»</li>
+																						<li>ОАО «Белинвестбанк»</li>
+																						<li>ОАО «Технобанк»</li>
+																						<li>ОАО «Приорбанк»</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">5</div>
+																				<div>
+																					<div class="h6 mb-3">Подача заявлений на осуществление административных процедур в электронном виде в налоговый орган
+																						<span class="tooltips" data-info="При наличии ЭЦП">
+																							<i class="bi bi-info-circle-fill"></i>
+																						</span>
+																					</div>
+																					<ul class="m-0">
+																						<li>заявление о зачете (возврате) излишне уплаченных (взысканных) сумм налогов, сборов (пошлин), пеней.</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">6</div>
+																				<div>
+																					<div class="h6">Подача уведомления об осуществлении деятельности для расчета единого налога</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">7</div>
+																				<div>
+																					<div class="h6">Запись на личный прием к руководству инспекций МНС</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">8</div>
+																				<div>
+																					<div class="h6 mb-3">Предварительная регистрация на прием в инспекции, где внедрена электронная очередь</div>
+																					<div>просмотр информации о количестве человек в очереди и возможности информирования о качестве обслуживания.</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">9</div>
+																				<div>
+																					<div class="h6">Просмотр сообщений, поступающих от налоговых органов
+																						<span class="tooltips" data-info="При наличии ЭЦП">
+																							<i class="bi bi-info-circle-fill"></i>
+																						</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">10</div>
+																				<div>
+																					<div class="h6">Визуализация электронного документа
+																						<span class="tooltips" data-info="При наличии ЭЦП">
+																							<i class="bi bi-info-circle-fill"></i>
+																						</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">11</div>
+																				<div>
+																					<div class="h6">Редактирование персональных данных плательщика.</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">12</div>
+																				<div>
+																					<div class="h6">Возможность оценить работу налоговых органов воспользовавшись сервисом "Анкетирование".</div>
+																				</div>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
-														</div>
 														</div>
 														<div class="personal-area__title fw-bold pb-1 mb-4">Мобильное приложение (для физических лиц)</div>
 														<p>Для физических лиц, которые пользуются сервисом без ЭЦП, доступно мобильное приложение. 
@@ -583,53 +603,57 @@
 															<div class="col-md-4">
 																<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																	<i class="bi bi-person-fill me-2 me-xl-4"></i>
-																	<span>C помощью логина и пароля</span>
+																	<a href="#">C помощью логина и пароля</a>
 																</div>
 															</div>
 															<div class="col-md-4">
 																<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																	<i class="bi bi-key-fill me-2 me-xl-4 rotate"></i>
-																	<span>C использованием физической ЭЦП</span>
+																	<a href="#">C использованием физической ЭЦП</a>
 																</div>
 															</div>
 															<div class="col-md-4">
 																<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																	<i class="bi bi-phone-fill me-2 me-xl-4"></i>
-																	<span>C использованием мобильной ЭЦП</span>
+																	<a href="#">C использованием мобильной ЭЦП</a>
 																</div>
 															</div>
 														</div>
-														<div id="accordion2" class="mb-5">
-															<button class="personal-area__title personal-area__title_accordion fw-bold pb-1 mb-4 w-100 d-flex text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-22" aria-expanded="true" aria-controls="collapse-22">
-																<i class="_icon-chevron-down-circle me-2"></i>
-																<span>Функциональные возможности сервиса для индивидуальных предпринимателей</span>
-															</button>
-															<div id="collapse-22" class="accordion-collapse collapse" aria-labelledby="heading-22" data-bs-parent="#accordion2">
-																<p class="mb-4">Для индивидуальных предпринимателей в «Личном кабинете плательщика» объединены функциональные электронные услуги, доступные как физических лиц, так и для индивидуальных предпринимателей.</p>
-																<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill me-2"></i>Доступ к сервису «Личный кабинет плательщика» для индивидуальных предпринимателей</div>
-																<p>Если гражданин одновременно является плательщиком как физическое лицо и как ИП, то в «Личном кабинете плательщика» ему будет предлоджено выбрать категорию плательщика, в отношении которой он будет заказывать электронные услуги.</p>
-																<p>Для этого необходимо в выпадающем списке выбрать один из его УНП: УНП физического лица либо УНП индивидуального предпринимателя.</p>
-																<p>В зависимости от этой информации система будет показывать соответствующие доступные сервисы и автоматически заполнять реквизиты в формы предоставления информации.</p>
-																<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill me-2"></i>Аутентификация через ЭЦП или МЦЭП</div>
-																<p>При аутентификации через ЭЦП или МЦЭП в «Личном кабинете плательщика» для ИП дополнительно будут доступны следующие разделы:</p>
-																<div class="row g-4">
-																	<div class="col-md-6 d-flex">
-																		<div class="function-services__number h6 me-3">1</div>
-																		<div>
-																			<div class="h6">Декларации ИП</div>
-																		</div>
-																	</div>
-																	<div class="col-md-6 d-flex">
-																		<div class="function-services__number h6 me-3">2</div>
-																		<div>
-																			<div class="h6">Работа с документами ЕАЭС</div>
-																		</div>
-																	</div>
-																	<div class="col-md-6 d-flex">
-																		<div class="function-services__number h6 me-3">3</div>
-																		<div>
-																			<div class="h6 mb-3">Подача заявления</div>
-																			<div>заявление о зачете (возврате) излишне уплаченных (взысканных) сумм налогов, сборов (пошлин), пеней;</div>
+														<div id="accordion22" class="mb-5">
+															<div id="heading-22">
+																<button class="personal-area__title personal-area__title_accordion fw-bold pb-1 w-100 d-flex text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-22" aria-expanded="true" aria-controls="collapse-22">
+																	<i class="_icon-chevron-down-circle me-2"></i>
+																	<span>Функциональные возможности сервиса для индивидуальных предпринимателей</span>
+																</button>
+																<div id="collapse-22" class="accordion-collapse collapse" aria-labelledby="heading-22" data-bs-parent="#accordion22">
+																	<div class="pt-4">
+																		<p class="mb-4">Для индивидуальных предпринимателей в «Личном кабинете плательщика» объединены функциональные электронные услуги, доступные как физических лиц, так и для индивидуальных предпринимателей.</p>
+																		<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill me-2"></i>Доступ к сервису «Личный кабинет плательщика» для индивидуальных предпринимателей</div>
+																		<p>Если гражданин одновременно является плательщиком как физическое лицо и как ИП, то в «Личном кабинете плательщика» ему будет предлоджено выбрать категорию плательщика, в отношении которой он будет заказывать электронные услуги.</p>
+																		<p>Для этого необходимо в выпадающем списке выбрать один из его УНП: УНП физического лица либо УНП индивидуального предпринимателя.</p>
+																		<p>В зависимости от этой информации система будет показывать соответствующие доступные сервисы и автоматически заполнять реквизиты в формы предоставления информации.</p>
+																		<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill me-2"></i>Аутентификация через ЭЦП или МЦЭП</div>
+																		<p>При аутентификации через ЭЦП или МЦЭП в «Личном кабинете плательщика» для ИП дополнительно будут доступны следующие разделы:</p>
+																		<div class="row g-4">
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">1</div>
+																				<div>
+																					<div class="h6">Декларации ИП</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">2</div>
+																				<div>
+																					<div class="h6">Работа с документами ЕАЭС</div>
+																				</div>
+																			</div>
+																			<div class="col-md-6 d-flex">
+																				<div class="function-services__number h6 me-3">3</div>
+																				<div>
+																					<div class="h6 mb-3">Подача заявления</div>
+																					<div>заявление о зачете (возврате) излишне уплаченных (взысканных) сумм налогов, сборов (пошлин), пеней;</div>
+																				</div>
+																			</div>
 																		</div>
 																	</div>
 																</div>
@@ -643,19 +667,19 @@
 															<div class="col-md-4">
 																<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center hidden">
 																	<i class="bi bi-person-fill me-2 me-xl-4"></i>
-																	<span>C помощью логина и пароля</span>
+																	<a href="#">C помощью логина и пароля</a>
 																</div>
 															</div>
 															<div class="col-md-4">
 																<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																	<i class="bi bi-key-fill me-2 me-xl-4 rotate"></i>
-																	<span>C использованием физической ЭЦП</span>
+																	<a href="#">C использованием физической ЭЦП</a>
 																</div>
 															</div>
 															<div class="col-md-4">
 																<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center hidden">
 																	<i class="bi bi-phone-fill me-2 me-xl-4"></i>
-																	<span>C использованием мобильной ЭЦП</span>
+																	<a href="#">C использованием мобильной ЭЦП</a>
 																</div>
 															</div>
 														</div>
@@ -663,10 +687,10 @@
 												</div>
 											</div>
 										</div>
-										<div class="item-sidebar item-sidebar_accordion">
+										<div id="heading-2" class="item-sidebar">
 											<button id="organizations" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
 												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
-												<span>Способы входа в личный кабинет</span>
+												<span>Инструкции по входу в Личный кабинет</span>
 											</button>
 											<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionPersonalArea">
 												<nav class="nav nav-tab nav-tab-personal-area row g-0 g-md-4" id="data-tab" role="tablist">
@@ -689,8 +713,148 @@
 														<span class="h6 text-center">Мобильная ЭЦП</span>
 													</a>
 												</nav>
-												
-												
+												<div class="py-4 tab-content" id="nav-tabContent">
+													<div class="tab-pane fade show active" id="enprsa-1" role="tabpanel" aria-labelledby="enprsa-1">
+														<div class="personal-area__attention d-flex align-items-center mb-4 p-3 p-sm-4">
+															<i class="bi bi-info-circle-fill me-3 me-sm-4"></i>
+															<div>
+																<h6><b>Обратите внимание!</b></h6>
+																<div>Использование Личного кабинета по логину и паролю существляется без сертифицированных средств защиты.</div>
+															</div>
+														</div>
+														<div class="personal-area__title fw-bold pb-1 mb-4">Инструкция</div>
+														<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+															<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+																<span>Инструкция по Личному кабинету для пользователей ЛК с логином-паролем</span>
+															</div>
+															<a href="#" class="button" download>Скачать инструкцию</a>
+														</div>
+														<div class="personal-area__title fw-bold pb-1 mb-4">Нет логина и пароля?</div>
+														<p>Есть два способа, чтобы стать пользователем «Личного кабинета плательщика»:</p>
+														<div id="accordion111">
+															<div id="heading-111" class="mb-4">
+																<button class="personal-area__title personal-area__title_accordion fw-bold pb-1 w-100 d-flex text-start collapsed" type="button" 	data-bs-toggle="collapse" data-bs-target="#collapse-111" aria-expanded="true" aria-controls="collapse-111">
+																	<i class="_icon-chevron-down-circle me-2"></i>
+																	<span>Способ 1. Регистрация через ИМНС</span>
+																</button>
+																<div id="collapse-111" class="accordion-collapse collapse" aria-labelledby="heading-111" data-bs-parent="#accordion111">
+																	<div class="pt-3">
+																		<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+																			<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																				<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+																				<span>Инструкция по порядку получения Плательщиком - физическим лицом идентификационного кода (логина) и пароля к электронному сервису «Личный кабинет»</span>
+																			</div>
+																			<a href="#" class="button" download>Скачать инструкцию</a>
+																		</div>
+																		<div class="h6 mb-4">Пошаговый алгоритм:</div>
+																		<div class="personal-area__step mb-3">Шаг 1.</div>
+																		<p>Обратитесь в ЛЮБУЮ налоговую инспекцию с документом, удостоверяющим личность.</p>
+																		<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+																			<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																				<i class="bi bi-folder-symlink-fill me-2"></i>
+																				<span>Перечень инспекций Министерства по налогам и сборам Республики Беларусь</span>
+																			</div>
+																			<a href="#" class="button">Перейти</a>
+																		</div>
+																		<div class="personal-area__step mb-3">Шаг 2.</div>
+																		<p>Заполните заявку на получение учётной записи и пароля для работы в «Личном кабинете плательщика».</p>
+																		<p>Для экономии времени на внесение Ваших реквизитов в базу данных и формирование идентификационного кода и пароля Вы можете заполнить и отправить заявку непосредственно на портале.</p>
+																		<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+																			<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																				<i class="bi bi-folder-symlink-fill me-2"></i>
+																				<span>Заполнить заявку на получение логина и пароля на портале</span>
+																			</div>
+																			<a href="#" class="button">Перейти на портал</a>
+																		</div>
+																		<p>Также у Вас есть возможность не заполнять форму регистрации на портале, а скачать её, заполнить в ПО Microsoft Word и выслать её в ИМНС на электронный адрес.</p>
+																		<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+																			<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																				<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+																				<span>Инструкция по порядку получения Плательщиком - физическим лицом идентификационного кода (логина) и пароля к электронному сервису «Личный кабинет»</span>
+																			</div>
+																			<a href="#" class="button ms-auto" download>Скачать шаблон заявки</a>
+																		</div>
+																		<div class="personal-area__step mb-3">Шаг 3.</div>
+																		<p>После рассмотрения Вашей Заявки на электронный адрес, указанный Вами в Заявке, придет Уведомление о необходимости посещения налоговой инспекции с документом, удостоверяющим личность. </p>
+																		<p>Вам будет БЕСПЛАТНО выданы учётная запись (идентификационный код) и пароль для входа в «Личный кабинет плательщика»</p>
+																		<div class="personal-area__attention d-flex align-items-center p-3 p-sm-4">
+																			<i class="bi bi-info-circle-fill me-3 me-sm-4"></i>
+																			<div>
+																				<h6><b>Обратите внимание!</b></h6>
+																				<div>После авторизации физическое лицо может изменить логин на более удобный для запоминания, а также сменить пароль для входа в Личный кабинет.</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div id="heading-222" class="mb-4">
+																<button class="personal-area__title personal-area__title_accordion fw-bold pb-1 w-100 d-flex text-start collapsed" type="button" 	data-bs-toggle="collapse" data-bs-target="#collapse-222" aria-expanded="true" aria-controls="collapse-222">
+																	<i class="_icon-chevron-down-circle me-2"></i>
+																	<span>Способ 2. Регистрация через МСИ</span>
+																</button>
+																<div id="collapse-222" class="accordion-collapse collapse" aria-labelledby="heading-222" data-bs-parent="#accordion111">
+																	<div class="pt-3">
+																		<p>Пройти регистрацию в Личном кабинете посредством МСИ могут физические лица, не имеющие учетной записи в Личном кабинете плательщика на портале Министерства по налогам и сборам Республики Беларусь и состоящие на учете в налоговых органах</p>
+																		<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+																			<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																				<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+																				<span>Инструкция процедуры регистрации физического лица в личном кабинете плательщика на портале Министерства по налогам и	сборам Республики Беларусь посредством МСИ</span>
+																			</div>
+																			<a href="#" class="button" download>Скачать инструкцию</a>
+																		</div>
+																		<div class="personal-area__attention d-flex align-items-center p-3 p-sm-4">
+																			<i class="bi bi-info-circle-fill me-3 me-sm-4"></i>
+																			<div>
+																				<h6><b>Обратите внимание!</b></h6>
+																				<div>Для регистрации в Личном кабинете посредством МСИ необходимо наличие учетной записи в Личном кабинете МСИ.</div>
+																				<div>При отсутствии учетной записи в Личном кабинете МСИ, Вы можете пройти процедуру саморегистрации на официальном сайте ОАО «НКФО «ЕРИП».</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="enprsa-2" role="tabpanel" aria-labelledby="enprsa-2">
+														<div class="personal-area__attention d-flex align-items-center mb-4 p-3 p-sm-4">
+															<i class="bi bi-info-circle-fill me-3 me-sm-4"></i>
+															<div>
+																<h6><b>Обратите внимание!</b></h6>
+																<div>Сервис для работы с физической ЭЦП доступен только в браузере Internet Explorer (IE) версии 11.</div>
+															</div>
+														</div>
+														<div class="personal-area__title fw-bold pb-1 mb-4">Инструкция</div>
+														<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+															<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+																<span>Инструкция по Личному кабинету для пользователей ЛК с физической ЭЦП</span>
+															</div>
+															<a href="#" class="button" download>Скачать инструкцию</a>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="enprsa-3" role="tabpanel" aria-labelledby="enprsa-3">
+														<div class="personal-area__attention d-flex align-items-center mb-4 p-3 p-sm-4">
+															<i class="bi bi-info-circle-fill me-3 me-sm-4"></i>
+															<div>
+																<h6><b>Обратите внимание!</b></h6>
+																<ul class="m-0">
+																	<li>Сервис для работы с мобильной ЭЦП доступен в различных браузерах;</li>
+																	<li>Личный кабинет для Юридических лиц с мобильной ЭЦП не доступен;</li>
+																	<li>Использование Личного кабинета по МЦЭП существляется без сертифицированных средств защиты.</li>
+																</ul>
+															</div>
+														</div>
+														<div class="personal-area__title fw-bold pb-1 mb-4">Инструкция</div>
+														<div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+															<div class="d-flex align-items-center mb-3 mb-sm-0 me-sm-3">
+																<i class="bi bi-file-earmark-text-fill fs-3 me-2"></i>
+																<span>Инструкция по Личному кабинету для физических лиц и индивидуальных предпринимателей с мобильной ЭЦП</span>
+															</div>
+															<a href="#" class="button" download>Скачать инструкцию</a>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
