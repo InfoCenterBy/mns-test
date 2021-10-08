@@ -2729,4 +2729,22 @@ if (sidebarBlock) {
 		bottomSpacing: 20
 	});
 	sidebar.updateSticky();
-};
+}
+
+
+// ===========  Page personal-area toggle block entries ===========================
+const linksTab = document.querySelectorAll(".nav-tab-personal-area__link")
+const linksEntries = document.querySelectorAll(".ecp")
+
+linksTab.forEach((linkTab) => {
+	linkTab.addEventListener("click", function (e){
+		if (e.target.classList.contains("company") || e.target.parentNode.classList.contains("company") || e.target.parentNode.parentNode.classList.contains("company")) {
+			console.log('yea');
+			linksEntries.forEach((link => link.classList.add('hidden')))
+			
+		} else {
+			console.log('no');
+			linksEntries.forEach((link => link.classList.remove('hidden')))
+		}
+	})
+});

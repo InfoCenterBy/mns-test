@@ -1350,7 +1350,7 @@ body._lock {
   color: #1A1A1A;
 }
 
-.reception-tab__icon {
+.reception-tab__head i {
   font-size: 58px;
   color: #007A65;
 }
@@ -1388,6 +1388,10 @@ body._lock {
 .sidebar__online-appointment:hover {
   color: #FAFAFA;
   background-color: #014A37;
+}
+
+.sidebar__online-appointment.hidden {
+  display: none !important;
 }
 
 .general-information-tabs {
@@ -1700,6 +1704,11 @@ body._lock {
   margin: 0px 0px 0px 0px;
 }
 
+.nav-tab-personal-area__link {
+  position: relative;
+  z-index: 1;
+}
+
 .nav-tab-personal-area__link.active .nav-tab-personal-area__icon,
 .nav-tab-personal-area__link:hover .nav-tab-personal-area__icon {
   background-color: #007A65;
@@ -1730,8 +1739,25 @@ body._lock {
   border-bottom: 1px solid #007A65;
 }
 
-.personal-area__title_accordion.collapsed,
+.personal-area__title_accordion {
+  color: #007A65;
+}
+
+.personal-area__title_accordion.collapsed {
+  color: #1A1A1A;
+}
+
+.personal-area__title_accordion.collapsed i:before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .personal-area__title_accordion:hover {
+  color: #007A65;
+}
+
+.personal-area__subtitle i {
   color: #007A65;
 }
 
@@ -1815,6 +1841,15 @@ body._lock {
 
 .mobile-app__text {
   width: 130px;
+}
+
+.function-services__number {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32px;
+          flex: 0 0 32px;
+  height: 20px;
+  color: #007A65;
+  border-bottom: 1.5px solid #007A65;
 }
 
 .header-inspectorate {
@@ -7276,6 +7311,10 @@ html body .bvi-panel-close {
 
   .sidebar__list li:not(:last-child) {
     margin: 0px 0px 15px 0px;
+  }
+
+  .sidebar__list {
+    min-height: 125px;
   }
 
   .general-information-tabs {
