@@ -1317,6 +1317,11 @@ body._lock {
   border-bottom: 1px solid #EBEBEB;
 }
 
+.contact-tab__text-link {
+  color: #00654D;
+  text-decoration: underline;
+}
+
 .work-mode-tab__head {
   font-size: 18px;
   color: #007A65;
@@ -1865,6 +1870,10 @@ body._lock {
   white-space: nowrap;
 }
 
+.table-invoices tbody {
+  border-bottom: 2px solid #EBEBEB;
+}
+
 .table-invoices tbody tr.gray {
   background-color: #EBEBEB;
 }
@@ -2160,11 +2169,16 @@ body._lock {
 
 .table-personal-reception table {
   width: 100%;
+  border-bottom: 2px solid #EBEBEB;
 }
 
 .table-personal-reception th,
 .table-personal-reception td {
   padding: 25px;
+}
+
+.table-personal-reception tbody {
+  border-bottom: 2px solid #EBEBEB;
 }
 
 .table-personal-reception tbody tr:nth-child(odd) {
