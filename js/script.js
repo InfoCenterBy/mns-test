@@ -2606,11 +2606,8 @@ $('.header-special__btn_toggle-theme').click(function (){
 	$('.header-special__wrapper').toggleClass('_black');
 })
 
-
-
-
-$(function(){
 // ===========  Toggle language ===========================
+$(function(){
 	$('.language-select').click(function(){
 		$(this).toggleClass('open');
 	})
@@ -2623,16 +2620,13 @@ $(function(){
    });
 		
 	$('.language-select__item').click(function(){
-	var setLang = $('.language-select').data('location'),
-			dataLangSelect = $(this).data('lang')
-			$('.language-select').data('location', dataLangSelect);
-			$('.language-select__item').removeClass('_active');
-			$(this).toggleClass('_active');
+		var setLang = $('.language-select').data('location'),
+				dataLangSelect = $(this).data('lang')
+				$('.language-select').data('location', dataLangSelect);
+				$('.language-select__item').removeClass('_active');
+				$(this).toggleClass('_active');
 	})
-
 });
-
-
 
 // =============Function ibg  ====================================================
 function ibg() {
@@ -2646,10 +2640,9 @@ function ibg() {
 ibg();
 
 // ================   Tab To DropDown   ==============================================
-
 (function( $ ) {
 	$.fn.tabConvert = function(options) {
-    
+
 		var settings = $.extend({
 			activeClass: "active",
 			screenSize: 767,
@@ -2708,17 +2701,6 @@ ibg();
 			screenSize: 767,
 	});
 
-
-  // ================   MAP INSPECTORATES   ==============================================
-	$('.map-inspectorates__path').hover ( 
-		function() {
-			$('.map-inspectorates__description').html($(this).attr('data-description'))
-			$('.map-inspectorates__description').fadeIn(0);
-		},
-		function() {
-			$('.map-inspectorates__description').fadeOut(0);
-		}
-	)
 }( jQuery ));
 
 // ===========  Sticky Sidebar ===========================
@@ -2730,7 +2712,6 @@ if (sidebarBlock) {
 	});
 	sidebar.updateSticky();
 }
-
 
 // ===========  Page personal-area toggle link entries ===========================
 const linksTab = document.querySelectorAll(".link-nav-tab")
@@ -2744,4 +2725,10 @@ linksTab.forEach((linkTab) => {
 			linksEntries.forEach((link => link.classList.remove('hidden')))
 		}
 	})
+})
+
+// ===========  Tooltips ===========================
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
 });
