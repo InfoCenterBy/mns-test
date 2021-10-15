@@ -1,8 +1,9 @@
 .item-content {
    margin: 0px 0px 60px 0px;
 }
-.item-sidebar {
-   margin: 0px 0px 60px 0px;
+.item-block {
+	border-radius: 10px;
+   background-color: $color-white;
 
    &__title {
       padding: 0px 0px 16px 0px;
@@ -35,10 +36,6 @@
          color: $color-green-light;
       }
    }
-}
-.sidebar-content {
-   border-radius: 10px;
-   background-color: $color-white;
 }
 .management-item {
    border-radius: 10px;

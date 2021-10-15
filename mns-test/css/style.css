@@ -1184,47 +1184,43 @@ body._lock {
   margin: 0px 0px 60px 0px;
 }
 
-.item-sidebar {
-  margin: 0px 0px 60px 0px;
+.item-block {
+  border-radius: 10px;
+  background-color: #FAFAFA;
 }
 
-.item-sidebar__title {
+.item-block__title {
   padding: 0px 0px 16px 0px;
   margin: 0px 0px 20px 0px;
   border-bottom: 7px solid #00654D;
 }
 
-.item-sidebar__title_accordion {
+.item-block__title_accordion {
   color: #007A65;
 }
 
-.item-sidebar__title_accordion.collapsed {
+.item-block__title_accordion.collapsed {
   margin: 0;
   color: #1A1A1A;
 }
 
-.item-sidebar__title_accordion.collapsed i:before {
+.item-block__title_accordion.collapsed i:before {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-.item-sidebar__title_accordion:hover {
+.item-block__title_accordion:hover {
   color: #007A65;
 }
 
-.item-sidebar__link {
+.item-block__link {
   color: #1A1A1A;
   font-weight: 600;
 }
 
-.item-sidebar__link:hover {
+.item-block__link:hover {
   color: #007A65;
-}
-
-.sidebar-content {
-  border-radius: 10px;
-  background-color: #FAFAFA;
 }
 
 .management-item {
@@ -1646,7 +1642,6 @@ body._lock {
 }
 
 .content-inspectorate {
-  margin: 0px 0px 60px 0px;
   background-color: #FAFAFA;
 }
 
@@ -1721,10 +1716,6 @@ body._lock {
 .address-inspectorate a:hover {
   color: #007A65;
   opacity: 0.7;
-}
-
-.menu-inspectorate {
-  margin: 0px 0px 60px 0px;
 }
 
 .menu-inspectorate__link {
@@ -1901,38 +1892,6 @@ body._lock {
 
 .about-inspectorate a:hover {
   color: #007A65;
-}
-
-.table-invoices {
-  overflow-x: auto;
-}
-
-.table-invoices a {
-  font-weight: 600;
-}
-
-.table-invoices a:hover {
-  color: #007A65;
-}
-
-.table-invoices th {
-  padding: 25px;
-}
-
-.table-invoices td {
-  padding: 10px 25px;
-}
-
-.table-invoices td a {
-  white-space: nowrap;
-}
-
-.table-invoices tbody {
-  border-bottom: 2px solid #EBEBEB;
-}
-
-.table-invoices tbody tr.gray {
-  background-color: #EBEBEB;
 }
 
 .nav-tab-personal-area__link.active .nav-tab-personal-area__icon,
@@ -2244,6 +2203,38 @@ body._lock {
 
 .table-personal-reception .position {
   color: #00654D;
+}
+
+.table-invoices {
+  overflow-x: auto;
+}
+
+.table-invoices a {
+  font-weight: 600;
+}
+
+.table-invoices a:hover {
+  color: #007A65;
+}
+
+.table-invoices th {
+  padding: 25px;
+}
+
+.table-invoices td {
+  padding: 10px 25px;
+}
+
+.table-invoices td a {
+  white-space: nowrap;
+}
+
+.table-invoices tbody {
+  border-bottom: 2px solid #EBEBEB;
+}
+
+.table-invoices tbody tr.gray {
+  background-color: #EBEBEB;
 }
 
 /*!
@@ -7293,13 +7284,13 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 @media (max-width: 1200px) {
-  .table-invoices th,
-  .table-invoices td {
+  .table-personal-reception th,
+  .table-personal-reception td {
     padding: 15px;
   }
 
-  .table-personal-reception th,
-  .table-personal-reception td {
+  .table-invoices th,
+  .table-invoices td {
     padding: 15px;
   }
 

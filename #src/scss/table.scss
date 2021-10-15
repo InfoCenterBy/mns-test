@@ -38,3 +38,40 @@
       color: $color-green;
    }
 }
+.table-invoices {
+	overflow-x: auto;
+
+	a {
+		font-weight: 600;
+
+		&:hover {
+			color: $color-green-light;
+		}
+	}
+
+	th {
+		padding: 25px;
+	}
+	td {
+		padding: 10px 25px;
+
+		a {
+			white-space: nowrap;
+		}
+	}
+
+	tbody {
+		border-bottom: 2px solid $color-gray-light;
+	}
+
+	tbody tr.gray {
+		background-color: $color-gray-light;
+	}
+
+	@media (max-width: 1200px) {
+		th,
+		td {
+			padding: 15px;
+		}
+	}
+}

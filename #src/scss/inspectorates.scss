@@ -64,7 +64,6 @@
 	}
 }
 .content-inspectorate {
-	margin: 0px 0px 60px 0px;
 	background-color: $color-white;
 
 	&__nav {
@@ -146,8 +145,6 @@
 	}
 }
 .menu-inspectorate {
-	margin: 0px 0px 60px 0px;
-
 	&__link {
 		padding: 30px 20px;
 		border-radius: 10px;
@@ -296,7 +293,6 @@
 	}
 }
 .about-inspectorate {
-
 	&__icon {
 		flex: 0 0 120px;
       height: 120px;
@@ -345,42 +341,5 @@
 
 	a:hover {
 		color: $color-green-light;
-	}
-}
-.table-invoices {
-	overflow-x: auto;
-
-	a {
-		font-weight: 600;
-
-		&:hover {
-			color: $color-green-light;
-		}
-	}
-
-	th {
-		padding: 25px;
-	}
-	td {
-		padding: 10px 25px;
-
-		a {
-			white-space: nowrap;
-		}
-	}
-
-	tbody {
-		border-bottom: 2px solid $color-gray-light;
-	}
-
-	tbody tr.gray {
-		background-color: $color-gray-light;
-	}
-
-	@media (max-width: 1200px) {
-		th,
-		td {
-			padding: 15px;
-		}
 	}
 }
