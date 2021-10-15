@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('_head.html',{
-	"title":"О министерстве по налогам и сборам"
+	"title":"Административные процедуры"
 	})
 	<body>
 		<div class="wrapper">
@@ -16,29 +16,50 @@
 							</ol>
 						</div>
 					 </nav>
-					<div class="about">
+					<div class="item-content">
 						<div class='container'>
 							<div class="about__cnt row g-3">
 								<aside class="col-lg-4 order-lg-2">
 									<div class="sidebar">
-										<div class="sidebar__body px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
-											<a href="#citizens" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2" ></i>Административные процедуры, осуществляемые налоговыми органами по заявлениям граждан</a>
-											<a href="#businessmen" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Административные процедуры, осуществляемые налоговыми органами в отношении юридических лиц и индивидуальных предпринимателей</a>
-											<a href="#legalacts" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Нормативные правовые акты</a>
-											<a href="#documents" class="sidebar__title d-flex"><i class="bi bi-arrow-down-circle me-2"></i>Перечень самостоятельно запрашиваемых налоговыми органами документов и (или) сведений, необходимых для осуществления административных процедур</a>
-										</div>
-										<a href="#" class="sidebar__online-appointment p-3 d-flex align-items-center justify-content-between">
-											<div>Онлайн-запись</div><i class="bi bi-calendar-event"></i>
+										<ul class="sidebar__list px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
+											<li>
+												<a href="#citizens" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Административные процедуры, осуществляемые налоговыми органами по заявлениям граждан</span>
+												</a>
+											</li>
+											<li>
+												<a href="#businessmen" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Административные процедуры, осуществляемые налоговыми органами в отношении юридических лиц и индивидуальных предпринимателей</span>
+												</a>
+											</li>
+											<li>
+												<a href="#legalacts" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Нормативные правовые акты</span>
+												</a>
+											</li>
+											<li>
+												<a href="#documents" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Перечень самостоятельно запрашиваемых налоговыми органами документов и (или) сведений, необходимых для осуществления административных процедур</span>
+												</a>
+											</li>
+										</ul>
+										<a href="#" class="sidebar__link-block p-3 d-flex align-items-center justify-content-between">
+											<span>Онлайн-запись</span><i class="bi bi-calendar-event"></i>
 										</a>
 									</div>
 								</aside>
 								<div class="col-lg-8">
 									<div class="sidebar-content p-md-4 p-2" id="accordionAdministrativeProcedures"> 
-										<div class="item-sidebar item-sidebar_accordion">
-											<button id="citizens" class="item-sidebar__title item-sidebar__title_accordion h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
-												<i class="bi bi-arrow-down-circle me-2"></i><div>Административные процедуры, осуществляемые налоговыми органами по заявлениям граждан</div> 
+										<div id="heading-1" class="item-sidebar">
+											<button id="citizens" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+												<span>Административные процедуры, осуществляемые налоговыми органами по заявлениям граждан</span> 
 											</button>
-											<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#accordionAdministrativeProcedures">
+											<div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#accordionAdministrativeProcedures">
 												<a href="#" class="item-sidebar__link d-flex mb-4"><i class="bi bi-dot"></i><span>Режим работы структурных подразделений и должностных лиц при осуществлении налоговыми органами административных процедур в отношении физических лиц</span></a>
 												<a href="#" class="item-sidebar__link d-flex mb-4"><i class="bi bi-dot"></i><span>ИМНС по Брестской области</span></a>
 												<a href="#" class="item-sidebar__link d-flex mb-4"><i class="bi bi-dot"></i><span>ИМНС по Витебской области</span></a>
@@ -50,9 +71,10 @@
 												<a href="#" class="item-sidebar__link d-flex"><i class="bi bi-dot"></i><span>Перечень административных процедур, осуществляемых налоговыми органами по заявлениям граждан (извлечение из Указа Президента Республики Беларусь от 26 апреля 2010 г. № 200, в редакции Указа Президента Республики Беларусь от 20 января 2017 г. № 21)</span></a>
 											</div>
 										</div>
-										<div class="item-sidebar item-sidebar_accordion">
+										<div id="heading-2" class="item-sidebar">
 											<button id="businessmen" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
-												<i class="bi bi-arrow-down-circle me-2"></i>Административные процедуры, осуществляемые налоговыми органами в отношении юридических лиц и индивидуальных предпринимателей
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+												<span>Административные процедуры, осуществляемые налоговыми органами в отношении юридических лиц и индивидуальных предпринимателей</span> 
 											</button>
 											<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionAdministrativeProcedures">
 												<a href="#" class="item-sidebar__link d-flex mb-4"><i class="bi bi-dot"></i><span>Режим приема заинтересованных лиц при осуществлении налоговыми органами административных процедур в отношении юридических лиц и индивидуальных предпринимателей</span></a>
@@ -67,9 +89,10 @@
 												<a href="#" class="item-sidebar__link d-flex"><i class="bi bi-dot"></i><span>Административные процедуры, совершаемые Министерством по налогам и сборам Республики Беларусь</span></a>
 											</div>
 										</div>
-										<div class="item-sidebar item-sidebar_accordion">
+										<div id="heading-3" class="item-sidebar">
 											<button id="legalacts" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
-												<i class="bi bi-arrow-down-circle me-2"></i>Нормативные правовые акты
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+												<span>Нормативные правовые акты</span> 
 											</button>
 											<div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#accordionAdministrativeProcedures">
 												<div class="d-sm-flex align-items-center justify-content-center justify-content-sm-between text-center mb-4">
@@ -123,9 +146,10 @@
 												</div>
 											</div>
 										</div>
-										<div class="item-sidebar item-sidebar_accordion">
+										<div id="heading-4" class="item-sidebar">
 											<button id="documents" class="item-sidebar__title item-sidebar__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
-												<i class="bi bi-arrow-down-circle me-2"></i>Перечень самостоятельно запрашиваемых налоговыми органами документов и (или) сведений, необходимых для осуществления административных процедур
+												<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+												<span>Перечень самостоятельно запрашиваемых налоговыми органами документов и (или) сведений, необходимых для осуществления административных процедур</span> 
 											</button>
 											<div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#accordionAdministrativeProcedures">
 												<p>Извлечение из постановления Министерства по налогам и сборам Республики Беларусь от 26 апреля 2013 г. № 14 «Об осуществлении налоговыми органами административных процедур и установлении форм документов»</p>

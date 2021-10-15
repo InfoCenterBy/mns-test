@@ -1,0 +1,40 @@
+.table-personal-reception {
+   overflow-x: auto;
+
+	a  {
+		font-weight: 600;
+	}
+
+	a:hover {
+		color: $color-green;
+	}
+
+	table {
+		width: 100%;
+		border-bottom: 2px solid $color-gray-light;
+	}
+
+   th,
+   td {
+      padding: 25px;
+   }
+
+	tbody {
+		border-bottom: 2px solid $color-gray-light;
+	}
+
+   tbody tr:nth-child(odd) {
+      background-color: $color-gray-light;
+   }
+
+   @media (max-width: 1200px) {
+      th,
+      td {
+         padding: 15px;
+      }
+   }
+
+   .position {
+      color: $color-green;
+   }
+}

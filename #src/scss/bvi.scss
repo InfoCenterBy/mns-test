@@ -1597,12 +1597,7 @@ html body .bvi-body[data-bvi-theme=black] * button i:before, html body .bvi-body
   background-color: #ffffff !important;
   text-decoration: none !important;
 }
-.bvi-body[data-bvi-theme=black] .header-search__input {
-	background-color: transparent !important;
-}
-.bvi-body[data-bvi-theme=black] .header-search__input:focus {
-	background-color: #ffffff !important;
-}
+
 @media (max-width: 900px) {
 	html body .bvi-body .bvi-panel-close {
 		margin: 0px 0px 0px 15px;
@@ -3461,3 +3456,21 @@ html body .bvi-panel-close {
 	background: url('../img/icons/handicapped-line.svg') 0 0 no-repeat;
 }
 /*# sourceMappingURL=bvi.css.map */
+.bvi-body[data-bvi-theme=black] .header-search__input {
+	background-color: transparent !important;
+}
+.bvi-body[data-bvi-theme=black] .header-search__input:focus {
+	background-color: #ffffff !important;
+}
+html body .bvi-body[data-bvi-theme=white] .header-search__input:-moz-read-write {
+	background-color: transparent !important;
+}
+.bvi-body[data-bvi-theme=white] .header-search__input:focus:-moz-read-write {
+	background-color: #ffffff !important;
+}
+html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write {
+	background-color: transparent !important;
+}
+.bvi-body[data-bvi-theme=black] .header-search__input:focus:-moz-read-write {
+	background-color: #ffffff !important;
+}

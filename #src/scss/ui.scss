@@ -43,6 +43,7 @@
 	text-align: center;
 	background-color: $color-green-light;
 	border-radius: 10px;
+	white-space: nowrap;
 
 	&:hover {
 		color: $color-white;
@@ -178,28 +179,28 @@
 	margin: 30px 0px;
 	align-items: center;
 
-		&-item {
+	&-item {
 
-			&:before {
-				display: none;
-			}
-			
-			a {
-				color: $color-white;
-				font-size: 14px;
+		&:before {
+			display: none;
+		}
+		
+		a {
+			color: $color-white;
+			font-size: 14px;
 
-				&:hover {
-					opacity: 0.7;
-				}
-			}
-
-			&.active {
-				padding: 0;
-				font-size: 14px;
-				color: $color-white;
+			&:hover {
 				opacity: 0.7;
 			}
 		}
+
+		&.active {
+			padding: 0;
+			font-size: 14px;
+			color: $color-white;
+			opacity: 0.7;
+		}
+	}
 }
 ._ibg {
 	position: relative;
@@ -211,4 +212,34 @@
 		left: 0;
 		object-fit: cover;
 	}
+}
+.attention {
+	background-color: $color-gray-light;
+	border-radius: 10px;
+	filter: drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+	
+	i {
+		font-size: 40px;
+		color: $color-green-light;
+	}
+}
+.tooltips-btn i {
+	color: $color-green-light;
+	cursor: pointer;
+}
+.tooltip.show  {
+	opacity: 1;
+}
+.tooltip .tooltip-arrow {
+	display: none;
+}
+.tooltip-inner {
+	max-width: 240px;
+	padding: 10px;
+   font-size: 12px;
+	color: $color-black;
+	text-align: left;
+	background-color: $color-gray-light;
+	border-radius: 10px;
+	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
 }

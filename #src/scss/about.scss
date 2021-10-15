@@ -1,482 +1,537 @@
-.about {
-	margin: 0px 0px 60px 0px;   
+.item-content {
+   margin: 0px 0px 60px 0px;
 }
 .item-sidebar {
-	margin: 0px 0px 90px 0px;
+   margin: 0px 0px 60px 0px;
 
-	&_accordion {
-		margin: 0px 0px 60px 0px;
-	}
+   &__title {
+      padding: 0px 0px 16px 0px;
+      margin: 0px 0px 20px 0px;
+      border-bottom: 7px solid $color-green;
 
-	&__title {
-		padding: 0px 0px 16px 0px;
-		margin: 0px 0px 20px 0px;
-		border-bottom: 7px solid $color-green;
-		
-		&_accordion {
-			color: $color-green-light;
-			
-			&.collapsed {
-				margin: 0;
-				color: $color-black;
+      &_accordion {
+         color: $color-green-light;
 
-				i:before {
-					transform: rotate(-90deg);
-				}
-			}
+         &.collapsed {
+            margin: 0;
+            color: $color-black;
 
-			&:hover {
-				color: $color-green-light;
-			}
-		}
+            i:before {
+               transform: rotate(-90deg);
+            }
+         }
 
-	}
+         &:hover {
+            color: $color-green-light;
+         }
+      }
+   }
 
-	&__link {
-		color: $color-black;
-		text-decoration: underline;
-		
-		&:hover {
-			color: $color-green-light;
-			text-decoration: none;
-			// color: $color-green;
-		}
-	}
+   &__link {
+      color: $color-black;
+      font-weight: 600;
+
+      &:hover {
+         color: $color-green-light;
+      }
+   }
 }
 .sidebar-content {
-	border-radius: 10px;
-	background-color: $color-white;
+   border-radius: 10px;
+   background-color: $color-white;
 }
 .management-item {
-	border-radius: 10px;
-	background-color: $color-gray-light;
+   border-radius: 10px;
+   background-color: $color-gray-light;
 
-	&_main {
+   &_main {
 		width: 100%;
-		max-width: 530px;
-		margin: 0 auto;
-
-		.management-item__photo {
+      max-width: 530px;
+      margin: 0 auto;
+		
+      .management-item__photo {
 			width: 151px;
-			height: 181px;
-		}
-	}
+         height: 181px;
+      }
+   }
+	
+   &__photo {
+		margin: 0px 20px 0px 0px;
+      width: 133px;
+      height: 160px;
+      border-radius: 10px;
+		
+      @media (max-width: $md4+px) {
+			margin: 0px 0px 20px 0px;
+      }
+   }
 
 	&:hover {
 		color: $color-green;
 
-		.h3,
-		.h4 {
+		.h4,
+		.h5,
+		.h6 {
 			color: $color-green;
 		}
 	}
-
-	&__photo {
-		margin: 0px 20px 0px 0px;
-		width: 133px;
-		height: 160px;
-		border-radius: 10px;
-
-		@media (max-width: $md4+px) {
-			margin: 0px 0px 20px 0px;
-		}
-	}
-
-	&__name {
-		font-weight: 600;
-
-		@media (max-width: $md4+px) {
-			text-align: center;
-		}
-	}
 }
-.contacts-tabs {
-	flex: 0 1 20%;
-
-	&.active,
-	&:hover  {
-		.contacts-tabs__icon {
-			color: $color-white;
-			background-color: $color-green-light;
-		}
-	}
-
-	&__icon {
-		width: 120px;
-		height: 120px;
-		margin: 0 auto;
-		background-color: $color-gray-light;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: $color-green-light;
-		font-size: 40px;
-		transition: all 0.3s ease 0s;
-	}
-}
-.tab-content {
-	a:hover {
-		color: $color-green;
-		text-decoration: underline; 
-	}
-}
-.table-tab {
-	margin: 0 -24px;
-	overflow-x: auto;
-
-	th,
-	td {
-		padding: 25px;
-	}
-
-	tbody tr:nth-child(odd) {
-		background-color: $color-gray-light;
-		border-radius: 10px;
-	}
-
-	@media (max-width: 1200px) {
-		th,
-		td {
-			padding: 15px;
-		}
-	}
-
+.nav-tab-contacts {
 	@media (max-width: $md3+px) {
-		margin: 0 -8px;
+		display: none;
 	}
 
-	.position {
-		color: $color-green;
-		font-weight: 700;
+	&__link {
+		flex: 0 1 20%;
+
+		&.active,
+		&:hover {
+			.nav-tab-contacts__icon {
+				color: $color-white;
+				background-color: $color-green-light;
+			}
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 10px 15px;
+		}
 	}
+
+
+   &__icon {
+      width: 120px;
+      height: 120px;
+      background-color: $color-gray-light;
+      color: $color-green-light;
+      font-size: 40px;
+      transition: all 0.3s ease 0s;
+
+		@media (max-width: 1100px) {
+			width: 80px;
+      	height: 80px;
+			font-size: 30px;
+		}
+
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+   }
 }
 .address-tab {
+   &__head {
+      font-size: 18px;
+      color: $color-green-light;
 
-	&__head {
-		font-size: 18px;
+      i {
+         font-size: 50px;
+      }
+   }
+
+   iframe {
+      border-radius: 10px;
+      max-width: 100%;
+   }
+
+   &__title {
+      border-bottom: 1px solid $color-gray-light;
+   }
+
+   a:hover {
+      color: $color-green;
+   }
+}
+.contact-tab {
+	i {
 		color: $color-green-light;
-
-		i {
-			font-size: 50px;
-		}
 	}
 
-	iframe {
-		border-radius: 10px;
-		max-width: 100%;
+	a:hover {
+		color: $color-green-light;
 	}
 
 	&__title {
-		border-bottom: 1px solid $color-gray-light;
-	}
+      border-bottom: 1px solid $color-gray-light;
+   }
 
-	a:hover {
+	&__text-link {
 		color: $color-green;
+		text-decoration: underline;
 	}
 }
 .work-mode-tab {
+   &__head {
+      font-size: 18px;
+      color: $color-green-light;
 
-	&__head {
-		font-size: 18px;
-		color: $color-green-light;
+      i {
+         font-size: 50px;
+      }
+   }
 
-		i {
-			font-size: 50px;
-		}
-	}
+   &__line {
+      position: relative;
+      border-bottom: 1px dashed $color-black;
 
-	&__line {
-		position: relative;
-		border-bottom: 1px dashed $color-black;
+      span {
+         bottom: -5px;
+         background-color: $color-white;
+      }
+   }
 
-		span {
-			bottom: -5px;
-			background-color: $color-white;
-		}
-	}
+   &__text {
+      position: relative;
+      padding: 0px 5px 0px 0px;
+      margin: 0px 150px 0px 0px;
+   }
 
-	&__text {
-		position: relative;
-		padding: 0px 5px 0px 0px;
-		margin: 0px 150px 0px 0px;
-	}
-
-	&__time {
-		padding: 0px 0px 0px 5px;
-		position: absolute;
-		right: 0;
-	}
+   &__time {
+      padding: 0px 0px 0px 5px;
+      position: absolute;
+      right: 0;
+   }
 }
 .book-tab {
+   &__head {
+      font-size: 18px;
+      color: $color-green-light;
 
-	&__head {
-		font-size: 18px;
-		color: $color-green-light;
+      i {
+         font-size: 50px;
+      }
+   }
 
-		i {
-			font-size: 50px;
-		}
-	}
-
-	&__text {
-		font-size: 16px;
-		color: $color-black;
-	}
+   &__text {
+      font-size: 16px;
+      color: $color-black;
+   }
 }
 .reception-tab {
+   &__head {
+		i {
+			font-size: 58px;
+			color: $color-green-light;
+		}
+   }
 
-	&__head {
-	}
-
-	&__icon {
-		font-size:58px;
-		color: $color-green-light;
-	}
-
-	&__text {
-	}
-
-	&__title {
-	}
+	.table-personal-reception {
+		margin: 0 -24px;
 	
-	&__table {
-		
-
-		
+		@media (max-width: $md3+px) {
+			margin: 0 -8px;
+		}
 	}
-
-	
 }
-
 .sidebar {
+   &__list {
+      border-radius: 10px;
+      background-color: $color-gray-light;
 
-	&__body {
-		border-radius: 10px;
-		background-color: $color-gray-light;
-	}
-	
+      li {
+         list-style: none;
 
-	&__title {
-		display: block;
-		font-size: 16px;
-		color: $color-black;
+         &:not(:last-child) {
+            margin: 0px 0px 30px 0px;
+         }
 
-		&:hover {
-			color: $color-green;
-		}
+         @media (max-width: $md3+px) {
+            &:not(:last-child) {
+               margin: 0px 0px 15px 0px;
+            }
+         }
 
-		&:not(:last-child) {
-			margin: 0px 0px 30px 0px;
-		}
+         a:hover {
+            color: $color-green;
+         }
+
+         a.active {
+            color: $color-green;
+            pointer-events: none;
+         }
+      }
 
 		@media (max-width: $md3+px) {
-			&:not(:last-child) {
-				margin: 0px 0px 15px 0px;
+			min-height: 125px;
+		}
+   }
+
+   &__link-block {
+      border-radius: 10px;
+      background-color: $color-green-light;
+      box-shadow: 0px 4px 30px 0px rgba(0, 122, 102, 0.34);
+      color: $color-white;
+
+		i {
+			font-size: 24px;
+		}
+
+      &:hover {
+         color: $color-white;
+         background-color: $color-green-dark;
+      }
+
+		&_gray {
+			color: $color-black;
+			background-color: $color-gray-light;
+      	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
+			
+			i {
+				color: $color-green-light;
+			}
+
+			&:hover {
+				color: $color-black;
+				background-color: $color-gray;
 			}
 		}
-	}
 
-	&__online-appointment {
-		border-radius: 10px;
-		background-color: $color-green-light;
-		box-shadow: 0px 4px 30px 0px rgba(0, 122, 102, 0.34);
-		color: $color-white;
-
-		&:hover {
-			color: $color-white;
-			background-color: $color-green-dark;
+		&.hidden {
+			display: none !important;
 		}
-	}
+   }
 }
-
 @media only screen and (max-width: 767px) {
-	.tab-to-dropdown {
-		position: relative;
-		margin: 0px 0px 20px 0px;
-	}
-	
-	.selected-tab {
-		width: 100%;
-		text-align: left;
-		position: relative;
-		font-size: 22px;
-		font-weight: 600;
-		padding: 10px 35px 10px 15px;
-		line-height: 30px;
-		color: $color-black;
-		background-color: $color-white;
-		border-bottom: 2px solid $color-gray-light;
-	
-		&:after {
-			display: block;
-			content: "";
-			position: absolute;
-			top: 35%;
-			right: 15px;
-			width: 10px;
-			height: 10px;
-			border-bottom: 2px solid $color-black;
-			border-right: 2px solid $color-black;
-			transform: rotate(45deg);
-		}
-	}
+   .tab-to-dropdown {
+      position: relative;
+      margin: 0px 0px 20px 0px;
+   }
 
-	.converted-tab {
-		position: absolute;
-		z-index: 10;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		background: $color-white;
-		box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+   .selected-tab {
+      width: 100%;
+      text-align: left;
+      position: relative;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 10px 35px 10px 15px;
+      color: $color-black;
+      background-color: $color-white;
+      border-bottom: 3px solid $color-gray-light;
+
+      &:after {
+         display: block;
+         content: '';
+         position: absolute;
+         top: calc(50% - 8px);
+         right: 15px;
+         width: 10px;
+         height: 10px;
+         border-bottom: 2px solid $color-black;
+         border-right: 2px solid $color-black;
+         transform: rotate(45deg);
+      }
+   }
+
+   .converted-tab {
+      position: absolute;
+      z-index: 10;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: $color-white;
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+   }
+
+	.nav-tab {
+		a {
+			display: block;
+
+			&.active {
+            background-color: $color-gray-light;
+            position: relative;
+
+            &:after {
+               content: '';
+               position: absolute;
+               top: 35%;
+               right: 15px;
+               width: 12px;
+               height: 7px;
+               border-bottom: 2px solid $color-black;
+               border-left: 2px solid $color-black;
+               transform: rotate(-45deg);
+            }
+         }
+		}
 	}
 }
 .general-information-tabs {
-	align-items: flex-end;
-	margin: 0px 0px 24px 0px;
+   align-items: flex-end;
+   margin: 0px 0px 24px 0px;
 
-	&__link {
-		width: 250px;
-		height: 50px;
-		padding: 15px 50px;
-		font-size: 14px;
-		text-align: left;
-		position: relative;
-		transition: all 0s ease 0s;
-		
-		&:hover {
-			color: $color-black;
-		}
+   &__link {
+      width: 250px;
+      height: 50px;
+      padding: 15px 50px;
+      font-size: 14px;
+      text-align: left;
+      position: relative;
+      transition: all 0s ease 0s;
 
-		&:nth-child(1) {
-			&.active {
-				margin: 0px 0px 0px -7px;
-			}
-		}
-		&:nth-child(2) {
-			margin: 0px 0px 0px -40px;
-		}
+      &:hover {
+         color: $color-black;
+      }
 
-		&:before {
-			content: '';
-			width: 250px;
-			height: 50px;
-			background: url('../img/icons/tab-02.png') 0 0 no-repeat;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			z-index: 1;
-		}
+      &:nth-child(1) {
+         &.active {
+            margin: 0px 0px 0px -7px;
+         }
+      }
+      &:nth-child(2) {
+         margin: 0px 0px 0px -40px;
+      }
 
-		&.active {
-			width: 306px;
-			height: 68px;
-			padding: 30px 50px 15px;
-			font-size: 16px;
-			font-weight: 600;
+      &:before {
+         content: '';
+         width: 250px;
+         height: 50px;
+         background: url('../img/icons/tab-02.png') 0 0 no-repeat;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         z-index: 1;
+      }
 
-			&:before {
-				width: 306px;
-				height: 68px;
-				background: url('../img/icons/tab-01.png') left bottom no-repeat;
-				z-index: 2;
-			}
-		}
+      &.active {
+         width: 306px;
+         height: 68px;
+         padding: 30px 50px 15px;
+         font-size: 16px;
+         font-weight: 600;
 
-		span {
-			text-align: left;
-			position: relative;
-			z-index: 3;
-		}
-	}
+         &:before {
+            width: 306px;
+            height: 68px;
+            background: url('../img/icons/tab-01.png') left bottom no-repeat;
+            z-index: 2;
+         }
+      }
 
-	@media (max-width: $md3+px) {
-		display: block;
-		margin: 0;
+      span {
+         text-align: left;
+         position: relative;
+         z-index: 3;
+      }
+   }
 
-		&__link,
-		.general-information-tabs__link.active {
-			width: 100%;
-			height: auto;
-			font-size: 18px;
-			font-weight: 400;
-			display: block;
-			margin: 0;
-			padding: 10px 35px 10px 15px;
-			
-			&:before {
-				display: none;
-			}
+   @media (max-width: $md3+px) {
+      display: block;
+      margin: 0;
 
-			&:nth-child(2) {
-				margin: 0px;
-			}
+      &__link,
+      .general-information-tabs__link.active {
+         width: 100%;
+         height: auto;
+         font-size: 18px;
+         font-weight: 400;
+         display: block;
+         margin: 0;
+         padding: 10px 35px 10px 15px;
 
-			&.active {
-				background-color: $color-gray-light;
-				position: relative;
+         &:before {
+            display: none;
+         }
 
-				&:after {
-					content: "";
-					position: absolute;
-					top: 35%;
-					right: 15px;
-					width: 12px;
-					height: 7px;
-					border-bottom: 2px solid $color-black;
-					border-left: 2px solid $color-black;
-					transform: rotate(-45deg);
-				}
-			}
-
-		}
-	}
+         &:nth-child(2) {
+            margin: 0px;
+         }
+      }
+   }
 }
 .history-tab {
+   &__item {
+      margin: 30px 0px 0px 0px;
+      padding: 0 0 30px 0;
+      border-bottom: 1px solid $color-gray-light;
 
-	&__item {
-		margin: 30px 0px 0px 0px;
-		padding: 0 0 30px 0;
-		border-bottom: 1px solid $color-gray-light;
+      @media (max-width: $md3+px) {
+         margin: 15px 0px 0px 0px;
+         padding: 0 0 15px 0;
+      }
 
-		@media (max-width: $md3+px) {
-			margin: 15px 0px 0px 0px;
-			padding: 0 0 15px 0;
-		}
+      @media (max-width: $md4+px) {
+         margin: 5px 0px 0px 0px;
+      }
 
-		@media (max-width: $md4+px) {
-			margin: 5px 0px 0px 0px;
-		}
+      &:last-child {
+         border: none;
+         padding: 0;
+      }
+   }
 
-		&:last-child {
-			border: none;
-			padding: 0;
-		}
-	}
+   &__date {
+      margin: 0px 55px 0px 0px;
+      font-size: 36px;
+      color: $color-green-light;
+      font-weight: 700;
 
-	&__date {
-		margin: 0px 55px 0px 0px;
-		font-size: 36px;
-		color: $color-green-light;
-		font-weight: 700;
+      @media (max-width: $md3+px) {
+         margin: 0px 25px 0px 0px;
+      }
 
-		@media (max-width: $md3+px) {
-			margin: 0px 25px 0px 0px;
-		}
+      @media (max-width: $md4+px) {
+         margin: 0px 0px 5px 0px;
+      }
+   }
 
-		@media (max-width: $md4+px) {
-			margin: 0px 0px 5px 0px;
-		}
-	}
-
-	ul li {
-		list-style-type: disc;
-	}
+   ul li {
+      list-style-type: disc;
+   }
 }
 .executives-tab {
-	.management-item:hover {
-		background-color: $color-green-light;
-		color: $color-white;
+   .management-item:hover {
+      background-color: $color-green-light;
+      color: $color-white;
+   }
+}
+.mass-media {
+	i {
+		color: $color-green-light;
+	}
+
+	a:hover {
+		color: $color-green-dark;
+	}
+}
+.photo-press-media {
+
+		&__photo {
+			border-radius: 10px;
+			height: 235px;
+			flex: 1 1 auto;
+		}
+
+		&__date {
+			color: $color-gray-dark;
+		}
+
+		&__name {
+			min-height: 42px;
+		}
+
+		&__link {
+			color: $color-green-light;
+
+			i:before {
+				transition: all 0.3s ease 0s;
+			}
+
+			&:hover {
+				color: $color-green-dark;
+
+				i:before {
+					transform: translateY(3px);
+				}
+			}
+		}
+}
+.printed-editions {
+
+	&__photo {
+		border-radius: 10px;
+		flex: 1 1 auto;
+		filter: drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+	}
+
+	&__name {
+		min-height: 48px;
 	}
 }
