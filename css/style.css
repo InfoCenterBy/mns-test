@@ -1525,6 +1525,63 @@ body._lock {
   color: #FAFAFA;
 }
 
+.mass-media i {
+  color: #007A65;
+}
+
+.mass-media a:hover {
+  color: #014A37;
+}
+
+.photo-press-media__photo {
+  border-radius: 10px;
+  height: 235px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.photo-press-media__date {
+  color: #727270;
+}
+
+.photo-press-media__name {
+  min-height: 42px;
+}
+
+.photo-press-media__link {
+  color: #007A65;
+}
+
+.photo-press-media__link i:before {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.photo-press-media__link:hover {
+  color: #014A37;
+}
+
+.photo-press-media__link:hover i:before {
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.printed-editions__photo {
+  border-radius: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-filter: drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+          filter: drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+}
+
+.printed-editions__name {
+  min-height: 48px;
+}
+
 .header-inspectorate {
   background-color: #007A65;
 }
