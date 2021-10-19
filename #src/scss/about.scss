@@ -8,7 +8,7 @@
    &__title {
       padding: 0px 0px 16px 0px;
       margin: 0px 0px 20px 0px;
-      border-bottom: 7px solid $color-green;
+      border-bottom: 7px solid $color-green-light;
 
       &_accordion {
          color: $color-green-light;
@@ -530,5 +530,39 @@
 
 	&__name {
 		min-height: 48px;
+	}
+}
+.composition {
+
+	&__head {
+		border-right: 2px solid $color-gray-light;
+
+		@media (max-width: $md4+px) {
+			border: none;
+		}
+	}
+}
+.accordion-btn {
+	padding: 0px 0px 12px 0px;
+   margin: 0px 0px 16px 0px;
+   border-bottom: 1px solid $color-gray-light;
+   color: $color-green-light;
+
+	&.collapsed {
+		margin: 0;
+		color: $color-black;
+
+		i:before {
+			transform: rotate(-90deg);
+		}
+	}
+
+	&:hover {
+		color: $color-green-light;
+	}
+}
+.accordion-link {
+	&:hover {
+		color: $color-green-light;
 	}
 }

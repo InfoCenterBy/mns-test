@@ -1192,7 +1192,7 @@ body._lock {
 .item-block__title {
   padding: 0px 0px 16px 0px;
   margin: 0px 0px 20px 0px;
-  border-bottom: 7px solid #00654D;
+  border-bottom: 7px solid #007A65;
 }
 
 .item-block__title_accordion {
@@ -1576,6 +1576,36 @@ body._lock {
 
 .printed-editions__name {
   min-height: 48px;
+}
+
+.composition__head {
+  border-right: 2px solid #EBEBEB;
+}
+
+.accordion-btn {
+  padding: 0px 0px 12px 0px;
+  margin: 0px 0px 16px 0px;
+  border-bottom: 1px solid #EBEBEB;
+  color: #007A65;
+}
+
+.accordion-btn.collapsed {
+  margin: 0;
+  color: #1A1A1A;
+}
+
+.accordion-btn.collapsed i:before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.accordion-btn:hover {
+  color: #007A65;
+}
+
+.accordion-link:hover {
+  color: #007A65;
 }
 
 .header-inspectorate {
@@ -7748,6 +7778,10 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 
   .history-tab__date {
     margin: 0px 0px 5px 0px;
+  }
+
+  .composition__head {
+    border: none;
   }
 
   .about-inspectorate__icon {
