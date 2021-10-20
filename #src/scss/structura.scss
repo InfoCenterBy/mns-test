@@ -278,3 +278,34 @@
       }
    }
 }
+
+.structura-mns {
+
+		&__item {
+			background-color: $color-gray-light;
+			border-radius: 10px;
+
+			&:hover {
+				background-color: $color-green-light;
+
+				.h6 {
+					transition: all 0.3s ease 0s;
+					color: $color-white;
+				}
+
+				.structura-mns__btn {
+					color: $color-yellow;
+
+					i::before {
+						transform: translateX(5px);
+					}
+				}
+			}
+		}
+
+		&__btn {
+			color: $color-green-light;
+			font-size: 14px;
+			transition: all 0.3s ease 0s;
+		}
+}
