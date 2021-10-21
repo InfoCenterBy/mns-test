@@ -1582,6 +1582,8 @@ body._lock {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+          box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
 }
 
 .advisory-board-tab__link {
@@ -6379,8 +6381,8 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
     border-top-left-radius: 10px;
     margin-bottom: -1px;
     padding: 24px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px, rgba(0, 0, 0, 0.07) 0px -8px 8px, rgba(0, 0, 0, 0.07) 0px -16px 16px;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px, rgba(0, 0, 0, 0.07) 0px -8px 8px, rgba(0, 0, 0, 0.07) 0px -16px 16px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px;
   }
 }
 
