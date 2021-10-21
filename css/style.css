@@ -252,6 +252,18 @@ body._lock {
   font-size: 16px;
 }
 
+.color-green {
+  color: #007A65;
+}
+
+.border-bottom-gray {
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.border-radius-10 {
+  border-radius: 10px;
+}
+
 .button {
   display: inline-block;
   padding: 11px 28px;
@@ -413,6 +425,10 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding: 0px;
 }
 
 .breadcrumb-item:before {
@@ -1494,24 +1510,6 @@ body._lock {
   z-index: 3;
 }
 
-.history-tab__item {
-  margin: 30px 0px 0px 0px;
-  padding: 0 0 30px 0;
-  border-bottom: 1px solid #EBEBEB;
-}
-
-.history-tab__item:last-child {
-  border: none;
-  padding: 0;
-}
-
-.history-tab__date {
-  margin: 0px 55px 0px 0px;
-  font-size: 36px;
-  color: #007A65;
-  font-weight: 700;
-}
-
 .history-tab ul li {
   list-style-type: disc;
 }
@@ -1578,6 +1576,25 @@ body._lock {
   min-height: 48px;
 }
 
+.advisory-board-tab {
+  border-bottom: 1px solid #EBEBEB;
+  margin: 0px 0px 24px 0px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+          box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+}
+
+.advisory-board-tab__link {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+}
+
+.advisory-board-tab__link:hover {
+  color: #1A1A1A;
+}
+
 .composition__head {
   border-right: 2px solid #EBEBEB;
 }
@@ -1606,6 +1623,10 @@ body._lock {
 
 .accordion-link:hover {
   color: #007A65;
+}
+
+.item-supervisor-photo {
+  max-width: 300px;
 }
 
 .header-inspectorate {
@@ -2199,6 +2220,40 @@ body._lock {
 
 .structura__department:last-child {
   margin: 0px 0px 0px 0px;
+}
+
+.structura-mns__item {
+  background-color: #EBEBEB;
+  border-radius: 10px;
+}
+
+.structura-mns__item:hover {
+  background-color: #007A65;
+}
+
+.structura-mns__item:hover .h6 {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #FAFAFA;
+}
+
+.structura-mns__item:hover .structura-mns__btn {
+  color: #FBC469;
+}
+
+.structura-mns__item:hover .structura-mns__btn i::before {
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.structura-mns__btn {
+  color: #007A65;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .table-personal-reception {
@@ -6308,6 +6363,27 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
   }
+
+  .advisory-board-tab__link {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    background-color: #FAFAFA;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .advisory-board-tab__link.active {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: -1px;
+    padding: 24px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -7485,13 +7561,10 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
     margin: 0px;
   }
 
-  .history-tab__item {
-    margin: 15px 0px 0px 0px;
-    padding: 0 0 15px 0;
-  }
-
-  .history-tab__date {
-    margin: 0px 25px 0px 0px;
+  .advisory-board-tab {
+    display: block;
+    border: none;
+    margin: 0;
   }
 
   .inspectorate-nav-tab__link {
@@ -7770,14 +7843,6 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 
   .management-item__photo {
     margin: 0px 0px 20px 0px;
-  }
-
-  .history-tab__item {
-    margin: 5px 0px 0px 0px;
-  }
-
-  .history-tab__date {
-    margin: 0px 0px 5px 0px;
   }
 
   .composition__head {
