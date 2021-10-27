@@ -309,3 +309,14 @@
 			transition: all 0.3s ease 0s;
 		}
 }
+.structura-inspectorate {
+	&__title {
+		flex: 1 1 auto;
+	}
+	
+	&__info {
+		font-size: 14px;
+		color: $color-gray-dark;
+		border: 1px solid rgba(0, 122, 101, 0.34);
+	}
+}

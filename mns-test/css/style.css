@@ -264,6 +264,45 @@ body._lock {
   border-radius: 10px;
 }
 
+.bg-color-white {
+  background-color: #FAFAFA;
+}
+
+.bg-color-green {
+  background-color: #00654D;
+}
+
+.ordered-list li {
+  list-style-type: none;
+}
+
+.ordered-list ol {
+  counter-reset: list1;
+}
+
+.ordered-list ol li:before {
+  counter-increment: list1;
+  content: counter(list1) ". ";
+}
+
+.ordered-list ol ol {
+  counter-reset: list2;
+}
+
+.ordered-list ol ol li:before {
+  counter-increment: list2;
+  content: counter(list1) "." counter(list2) ". ";
+}
+
+.ordered-list ol ol ol {
+  counter-reset: list3;
+}
+
+.ordered-list ol ol ol li:before {
+  counter-increment: list3;
+  content: counter(list1) "." counter(list2) "." counter(list3) ". ";
+}
+
 .button {
   display: inline-block;
   padding: 11px 28px;
@@ -1937,8 +1976,8 @@ body._lock {
   background-color: #EBEBEB;
 }
 
-.about-inspectorate__text-green {
-  color: #007A65;
+.about-inspectorate a {
+  font-weight: 600;
 }
 
 .about-inspectorate a:hover {
@@ -2254,6 +2293,18 @@ body._lock {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.structura-inspectorate__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.structura-inspectorate__info {
+  font-size: 14px;
+  color: #727270;
+  border: 1px solid rgba(0, 122, 101, 0.34);
 }
 
 .table-personal-reception {
@@ -6380,7 +6431,7 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     margin-bottom: -1px;
-    padding: 24px;
+    padding: 24px 16px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px;
             box-shadow: rgba(0, 0, 0, 0.07) 0px -1px 1px, rgba(0, 0, 0, 0.07) 0px -2px 2px, rgba(0, 0, 0, 0.07) 0px -4px 4px;
   }

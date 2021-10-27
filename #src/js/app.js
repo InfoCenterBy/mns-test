@@ -180,3 +180,10 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+
+// ====================   scroll accordion to top   ==========================
+$(".item-block__title, .accordion-btn").click(function(){
+	$('html, body').animate({
+		scrollTop: $(this).offset().top
+	}, 300);
+});
