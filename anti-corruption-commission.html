@@ -428,40 +428,26 @@
 												<span>Информация о дате, времени и месте проведения заседаний комиссии</span>
 											</button>
 											<div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#accordionAntiCorruption">
-												<div class="table-mns-gray mb-5">
-													<table>
-														<thead>
-															<tr>
-															  <th>Дата</th>
-															  <th>Время</th>
-															  <th>Место</th>
-															</tr>
-														 </thead>
-														 <tbody>
-															<tr>
-															  <td>27 октября 2021</td>
-															  <td>12.00</td>
-															  <td>г. Барановичи ул. Репина, 61б каб.208</td>
-															</tr>
-														 </tbody>
-													</table>
-												</div>
-												<div class="row g-4">
-													<div class="col-md-6">
+												<form class="row g-4 mb-5">
+													<div class="col-md-7">
 														<div class="h6 mb-3">Выберите область</div>
-														<select class="select">
-															<option value="value1">ИМНС по городу Минску</option>
-															<option value="value2">ИМНС по Минской области</option>
-															<option value="value3">ИМНС по Брестской области</option>
-															<option value="value4">ИМНС по Витебской области</option>
-															<option value="value5">ИМНС по Гомельской области</option>
-															<option value="value6">ИМНС по Гродненской области</option>
-															<option value="value7">ИМНС по Могилёвской области</option>
-														</select>
+														<div class="d-flex">
+															<select class="select">
+																<option value="value1" selected>Министерство по налогам и сборам</option>
+																<option value="value1">ИМНС по городу Минску</option>
+																<option value="value2">ИМНС по Минской области</option>
+																<option value="value3">ИМНС по Брестской области</option>
+																<option value="value4">ИМНС по Витебской области</option>
+																<option value="value5">ИМНС по Гомельской области</option>
+																<option value="value6">ИМНС по Гродненской области</option>
+																<option value="value7">ИМНС по Могилёвской области</option>
+															</select>
+															<button type="submit" class="button ms-3">Поиск</button>
+														</div>
 													</div>
-													<div class="col-md-6">
+													<div class="col-md-5">
 														<div class="h6 mb-3">Выберите район</div>
-														<select class="select" >
+														<select class="select" disabled>
 															<option value="value1">По Барановичскому району</option>
 															<option value="value2">По Берёзовскому району</option>
 															<option value="value3">По Бресткому району</option>
@@ -477,6 +463,27 @@
 															<option value="value7">По г.Пинску</option>
 														</select>
 													</div>
+												</form>
+												<div class="table-mns-gray">
+													<table>
+														<thead>
+															<tr>
+															  <th>Дата</th>
+															  <th>Время</th>
+															  <th>Место проведения заседания комиссии</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>24 июня 2021</td>
+																<td>15.00</td>
+																<td>
+																	<div>г. Минск, ул. Советская, 9, каб. 211</div>
+																	<div>(в форме видеоконференции)</div>
+																</td>
+															</tr>
+														 </tbody>
+													</table>
 												</div>
 											</div>
 										</div>
