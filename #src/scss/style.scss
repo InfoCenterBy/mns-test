@@ -154,7 +154,8 @@ body {
 	}
 }
 .item-services,
-.item-actual {
+.item-actual,
+.item-clarifications {
 	background-color: $color-gray-light;
 	border-radius: 10px;
 
@@ -168,11 +169,20 @@ body {
 	}
 
 	&:hover {
+		color: $color-white;
 		background-color: $color-green-light;
 
 		.h5 {
 			color: $color-white;
 		}
+
+		.item-clarifications__date {
+
+		}
+	}
+
+	&__date {
+		font-size: 12px;
 	}
 }
 .tax-inspectorates {

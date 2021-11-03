@@ -26,6 +26,12 @@
             color: $color-green-light;
          }
       }
+
+		&_link {
+			&:hover {
+            color: $color-green-light;
+         }
+		}
    }
 
    &__link {
@@ -237,11 +243,11 @@
          }
 
          a:hover {
-            color: $color-green;
+            color: $color-green-light;
          }
 
          a.active {
-            color: $color-green;
+            color: $color-green-light;
             pointer-events: none;
          }
       }
@@ -457,8 +463,11 @@
 
 		&__photo {
 			border-radius: 10px;
-			height: 235px;
 			flex: 1 1 auto;
+
+			img {
+				max-width: 180px;
+			}
 		}
 
 		&__date {
@@ -498,10 +507,10 @@
 	}
 }
 
-.advisory-board-tab {
+.nav-tab-mns {
 	border-bottom: 1px solid $color-gray-light;
 	margin: 0px 0px 24px 0px;
-	align-items: flex-start;
+	align-items: flex-end;
 	box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
 
 	@media (max-width: $md3+px) {
@@ -518,11 +527,13 @@
 			flex: 0 1 50%;
 			background-color: $color-white;
 			padding: 16px;
+			position: relative;
 			text-align: center;
+			margin-bottom: 4px;
+			z-index: 1;
 			
 			&.active {
-				position: relative;
-				z-index: 1;
+				z-index: 2;
 				font-weight: 700;
 				border-top-right-radius: 10px;
 				border-top-left-radius: 10px;

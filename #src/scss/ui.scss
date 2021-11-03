@@ -201,10 +201,35 @@
 
 	&_black {
 		color: $color-black;
+		position: relative;
+
+		&:before {
+			content:'';
+			width: 0%;
+			height: 2px;
+			background-color: $color-black;
+			opacity: 0.7;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			transition: all 0.3s ease 0s;
+		}
+
+		i:before {
+			transition: transform 0.3s ease 0.1s;
+		}
 
 		&:hover {
 			color: $color-black;
 			opacity: 0.7;
+
+			&:before {
+				width: 100%;
+			}
+
+			i:before {
+				transform: translateX(20px);
+			}
 		}
 	}
 }
@@ -278,4 +303,15 @@
 	background-color: $color-gray-light;
 	border-radius: 10px;
 	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
+}
+.select {
+	padding: 10px 15px;
+	border: 1px solid $color-gray-light;
+	background-color: $color-gray-light;
+	border-radius: 10px;
+	cursor: pointer;
+
+	&:focus {
+		border: 1px solid $color-green-light;
+	}
 }
