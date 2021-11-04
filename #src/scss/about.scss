@@ -7,7 +7,7 @@
 
    &__title {
       padding: 0px 0px 16px 0px;
-      margin: 0px 0px 20px 0px;
+      margin: 0px 0px 24px 0px;
       border-bottom: 7px solid $color-green-light;
 
       &_accordion {
@@ -28,6 +28,8 @@
       }
 
 		&_link {
+			margin: 0;
+			
 			&:hover {
             color: $color-green-light;
          }

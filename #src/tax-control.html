@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Налоговый контроль"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page page__decor">
+				<div class="content">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item me-3"><a href="index.html">Главная<i class="bi-chevron-right ms-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Налоговый контроль</li>
+							</ol>
+						</div>
+					 </nav>
+					<div class="item-content">
+						<div class='container'>
+							<div class="row g-3">
+								<aside class="col-lg-4 order-lg-2">
+									<div class="sidebar">
+										<ul class="sidebar__list px-2 px-md-3 py-3 py-md-4">
+											<li>
+												<a href="checks.html" class="d-flex" target="_blank">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Проверки, проводимые налоговыми органами</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Контроль за приемом средств платежа и использованием кассового и иного оборудования</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Контроль за отдельными группами товаров</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Ответственность плательщиков</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Первичные учетные документы</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Игорный бизнес</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Товарно-транспортные документы</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Бланки документов, включенные в ЭБД</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>МТП, ИБП</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Критерии оценки степени риска</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Перевозки пассажиров автомобилями-такси</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</aside>
+								<div class="col-lg-8">
+									<div class="item-block"> 
+										<div class="p-md-4 p-2 mb-4">
+											<a href="checks.html" class="item-block__title item-block__title_link h4 d-block">Проверки, проводимые налоговыми органами</a>
+										</div>
+										<div id="accordionTaxControl"> 
+											<div id="heading-1" class="p-md-4 p-2 mb-4">
+												<button id="1" class="item-block__title item-block__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Контроль за приемом средств платежа и использованием кассового и иного оборудования</span>
+												</button>
+												<div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-bs-parent="#accordionTaxControl">
+													111
+												</div>
+											</div>
+											<div id="heading-2" class="p-md-4 p-2 mb-4">
+												<button id="2" class="item-block__title item-block__title_accordion collapsed h4 w-100 d-flex text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+													<i class="_icon-chevron-down-circle mt-1 me-2"></i>
+													<span>Контроль за отдельными группами товаров</span>
+												</button>
+												<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#accordionTaxControl">
+													222
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		<!-- @@include('_popup.html',{}) -->
+		@@include('_js.html',{})
+	</body>
+</html>

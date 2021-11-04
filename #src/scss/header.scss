@@ -568,75 +568,77 @@
 		display: none;
 	}
 
-	> li {
+	li {
 		margin: 0px 20px 0px 0px;
 
 		@media (max-width: 1350px) {
 			margin: 0px 5px 0px 0px;
 		}
-		
 
 		&:last-child {
 			margin: 0px 0px 0px 0px;
 		}
-
-		&:hover {
-			.submenu  {
-				opacity: 1;
-				visibility: visible;
-			}
-
-			.menu__link {
-				color: $color-white;
-				background-color: $color-green;
-
-				&:after {
-					width: 100%;
-				}
-			}
-		}
 	}
 	
-
 	&__link {
-		border-radius: 10px;
-		background-color: transparent;
-		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: top;
+		perspective: 900px;
+		perspective-origin: 50% 50%;
 
-		&:after {
-			content:'';
-			width: 0;
-			height: 10px;
+		&:hover span {
+			color: $color-white;
+			background: $color-green-light;
+			transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+		}
+		// &:before {
+		// 	content:'';
+		// 	height: 100%;
+		// 	width: 0%;
+		// 	background-color: $color-green-light;
+		// 	border-radius: 10px;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	transition: all 0.3s ease 0s;
+		// }
+
+		// &:hover {
+
+		// 	&:before {
+		// 		width: 100%;
+		// 	}
+
+		// 	span {
+		// 		color: $color-white;
+		// 	}
+		// }
+		span {
+			display: block;
+			position: relative;
+			padding: 8px;
 			border-radius: 10px;
-			background-color: $color-green-light;
-			position: absolute;
-			left: 0;
-			bottom: -44px;
-			transition: all 0.3s ease 0s;
-			z-index: 6;
+
+			transition: all 0.4s ease 0s;
+			transform-origin: 50% 0%;
+			transform-style: preserve-3d;
+
+			&:after {
+				content: attr(data-title);
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				padding: 8px;
+				border-radius: 10px;
+				color: $color-white;
+				background: $color-green-light;
+				transform-origin: 50% 0%;
+				transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+			}
 		}
 	}
-}
-.submenu {
-	width: 100%;
-	padding: 40px 0px 0px 0px;
-	position: absolute;
- 	top: 65px;
-	left: 12px;
-	z-index: 5;
-	opacity: 0;
-	visibility: hidden;
-
-	&__body {
-		padding: 30px;
-		background-color: $color-green;
-		width: 100%;
-	}
-
-	ul	li {
-		border-bottom: 3px solid $color-green-light;
-	}
-	
 }
 .header-marquee {
 	padding: 15px 0;

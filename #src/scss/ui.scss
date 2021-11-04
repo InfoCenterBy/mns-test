@@ -50,6 +50,9 @@
 .bg-color-green {
 	background-color: $color-green;
 }
+a:hover {
+	color: $color-green-light;
+}
 .ordered-list {
 	li { list-style-type: none; }
 	ol { counter-reset: list1; }
