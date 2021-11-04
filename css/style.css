@@ -1127,52 +1127,12 @@ a:hover {
 }
 
 .menu__link {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: top;
-  -webkit-perspective: 900px;
-          perspective: 900px;
-  -webkit-perspective-origin: 50% 50%;
-          perspective-origin: 50% 50%;
+  border-radius: 10px;
 }
 
-.menu__link:hover span {
+.menu__link:hover {
   color: #FAFAFA;
   background: #007A65;
-  -webkit-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
-          transform: translate3d(0px, 0px, -30px) rotateX(90deg);
-}
-
-.menu__link span {
-  display: block;
-  position: relative;
-  padding: 8px;
-  border-radius: 10px;
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-  -webkit-transform-origin: 50% 0%;
-      -ms-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.menu__link span:after {
-  content: attr(data-title);
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 8px;
-  border-radius: 10px;
-  color: #FAFAFA;
-  background: #007A65;
-  -webkit-transform-origin: 50% 0%;
-      -ms-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-          transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
 }
 
 .header-marquee {
@@ -1253,32 +1213,6 @@ a:hover {
 
 .form-search-inspectorate__button {
   margin: 0px 0px 30px 0px;
-}
-
-.item-inspectorate {
-  margin: 0px 0px 30px 0px;
-}
-
-.item-inspectorate__item {
-  height: 100%;
-  padding: 30px;
-  background-color: #EBEBEB;
-  border-radius: 10px;
-}
-
-.item-inspectorate p {
-  font-size: 18px;
-  margin: 0px 0px 15px 0px;
-}
-
-.item-inspectorate a {
-  color: #1A1A1A;
-  font-weight: 600;
-}
-
-.item-inspectorate a:hover {
-  color: #007A65;
-  text-decoration: underline;
 }
 
 .item-content {
@@ -7847,6 +7781,12 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 
   .inspectorate-nav-tab__link {
     color: #1A1A1A;
+  }
+
+  .menu-inspectorate__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 
   .menu-inspectorate__link {
