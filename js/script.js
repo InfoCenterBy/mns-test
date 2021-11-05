@@ -2695,7 +2695,7 @@ ibg();
 		});
 	};
   
-// 	Toggle will appear on size 991px
+// 	Toggle will appear on size 767px
 	$('.nav-tab').tabConvert({
 			activeClass: "active",
 			screenSize: 767,
@@ -2738,4 +2738,17 @@ $(".item-block__title, .accordion-btn").click(function(){
 	$('html, body').animate({
 		scrollTop: $(this).offset().top
 	}, 300);
-});;
+});
+
+  //hide all tabs first
+  $('.select-tab-content').hide();
+  //show the first tab content
+  $('#select-tab-1').show();
+  
+  $('#select-tab-box').change(function () {
+	  dropdown = $('#select-tab-box').val();
+	 //first hide all tabs again when a new option is selected
+	 $('.select-tab-content').hide();
+	 //then show the tab content of whatever option value was selected
+	 $('#' + "select-tab-" + dropdown).show(); 
+  });;
