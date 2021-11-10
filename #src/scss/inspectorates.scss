@@ -166,6 +166,10 @@
 		@media (max-width: $md2+px) {
 			flex: 0 1 50%;
 		}
+
+		@media (max-width: $md3+px) {
+			flex: 0 1 100%;
+		}
 	}
 	&__link {
 		padding: 30px 20px;

@@ -52,12 +52,26 @@
 				}
 			}
 	
-			.header-special__all-links {
+			.link {
 				color: $color-white;
 		
 				&:hover {
-					color: $color-green-light;
+					&:before {
+						background-color: $color-white;
+					}
 				}
+			}
+
+			.selected-tab {
+				background-color: $color-black;
+				color: $color-white;
+
+				&:after {
+					border-color: $color-white;
+				}
+			}
+			.converted-tab {
+				background-color: $color-black;
 			}
 		}
 	}
@@ -90,6 +104,11 @@
 		}
 	}
 
+	&__nav-tab {
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
 
 	&__nav-link {
 		margin: 0px 30px 30px 0px;
@@ -106,10 +125,13 @@
 		}
 
 		@media (max-width: $md3+px) {
-			margin: 0px 20px 10px 0px;
+			margin: 0px;
+			width: 100%;
+    		padding: 10px 35px 10px 15px;
+			 font-weight: 400;
 
 			&:last-child {
-				margin: 0px 0px 10px 0px;
+				margin: 0px;
 			}
 		}
 	}
@@ -581,62 +603,11 @@
 	}
 	
 	&__link {
-		display: inline-block;
-		overflow: hidden;
-		vertical-align: top;
-		perspective: 900px;
-		perspective-origin: 50% 50%;
+		border-radius: 10px;
 
-		&:hover span {
+		&:hover {
 			color: $color-white;
 			background: $color-green-light;
-			transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
-		}
-		// &:before {
-		// 	content:'';
-		// 	height: 100%;
-		// 	width: 0%;
-		// 	background-color: $color-green-light;
-		// 	border-radius: 10px;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	transition: all 0.3s ease 0s;
-		// }
-
-		// &:hover {
-
-		// 	&:before {
-		// 		width: 100%;
-		// 	}
-
-		// 	span {
-		// 		color: $color-white;
-		// 	}
-		// }
-		span {
-			display: block;
-			position: relative;
-			padding: 8px;
-			border-radius: 10px;
-
-			transition: all 0.4s ease 0s;
-			transform-origin: 50% 0%;
-			transform-style: preserve-3d;
-
-			&:after {
-				content: attr(data-title);
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				top: 0;
-				padding: 8px;
-				border-radius: 10px;
-				color: $color-white;
-				background: $color-green-light;
-				transform-origin: 50% 0%;
-				transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
-			}
 		}
 	}
 }

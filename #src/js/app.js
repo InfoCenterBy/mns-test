@@ -1,10 +1,22 @@
+'use strict';
+// ==================  polyfill for method Closest  ================================
+(function(ELEMENT) {
+	ELEMENT.matches = ELEMENT.matches || ELEMENT.mozMatchesSelector || ELEMENT.msMatchesSelector || ELEMENT.oMatchesSelector || ELEMENT.webkitMatchesSelector;
+	ELEMENT.closest = ELEMENT.closest || function closest(selector) {
+		if (!this) return null;
+		if (this.matches(selector)) return this;
+		if (!this.parentElement) {return null}
+			else return this.parentElement.closest(selector)
+		};
+}(Element.prototype));
 
+// ===================  Toggle block menu  ========================================
 const btnShowBlock = document.querySelectorAll('._btn-toggle');
 const closeBlock = document.querySelector('.header-special__btn_close');
 const body = document.querySelector('body');
 const overlay = document.querySelector('.header__overlay');
 
-btnShowBlock.forEach(item => {
+Array.prototype.slice.call(btnShowBlock).forEach(function(item) {
 	item.addEventListener('click', function (){
 		if (item.classList.contains("_show-block")) {
 			item.classList.remove('_show-block');
@@ -16,18 +28,18 @@ btnShowBlock.forEach(item => {
 })
 
 function addClass(currentItem) {
-	btnShowBlock.forEach((item) => {
+	Array.prototype.slice.call(btnShowBlock).forEach(function(item) {
 		item.classList.remove('_show-block');
 		overlay.classList.remove('_active');
+		item = currentItem;
+		item.classList.add('_show-block');
+		overlay.classList.add('_active');
 	})
-	item = currentItem;
-	item.classList.add('_show-block');
-	overlay.classList.add('_active');
 }
 
 document.addEventListener('click', function(e){
 	if (!e.target.closest('.hidden-block, ._btn-toggle')) {
-		btnShowBlock.forEach(item => {
+		Array.prototype.slice.call(btnShowBlock).forEach(function(item) {
 			if (item.classList.contains('_show-block')) {
 				item.classList.remove('_show-block');
 			}
@@ -37,12 +49,11 @@ document.addEventListener('click', function(e){
 })
 
 closeBlock.addEventListener('click', function(e){
-	btnShowBlock.forEach((item) => {
+	Array.prototype.slice.call(btnShowBlock).forEach(function(item) {
 		item.classList.remove('_show-block');
 	})
 	overlay.classList.remove('_active');
 })
-
 
 // ===========  Toggle theme nav-header ===========================
 $('.nav-header__toggle-theme').click(function (){
@@ -76,7 +87,7 @@ $(function(){
 	})
 });
 
-// =============Function ibg  ====================================================
+// =============  Function ibg  ====================================================
 function ibg() {
 	let ibg = document.querySelectorAll("._ibg");
 	for (var i = 0; i < ibg.length; i++) {
@@ -105,7 +116,6 @@ ibg();
 			currentItem.addClass('converted-tab');
 			container.prepend(toggler);
 			
-			// function to slide dropdown
 			function tabConvert_toggle(){
 				currentItem.parent().find('.converted-tab').slideToggle(0);
 			}
@@ -123,7 +133,6 @@ ibg();
 				}
 			});
 			
-			//Remove toggle if screen size is bigger than defined screen size
 			function resize_function(){
 				var windowWidth = window.innerWidth;
 				if( settings.screenSize >= windowWidth){
@@ -143,7 +152,7 @@ ibg();
 		});
 	};
   
-// 	Toggle will appear on size 991px
+// 	Toggle will appear on size 767px
 	$('.nav-tab').tabConvert({
 			activeClass: "active",
 			screenSize: 767,
@@ -165,18 +174,18 @@ if (sidebarBlock) {
 const linksTab = document.querySelectorAll(".link-nav-tab")
 const linksEntries = document.querySelectorAll(".link-entries")
 
-linksTab.forEach((linkTab) => {
-	linkTab.addEventListener("click", function (e){
-		if (e.target.classList.contains("company") || e.target.parentNode.classList.contains("company") || e.target.parentNode.parentNode.classList.contains("company")) {
-			linksEntries.forEach((link => link.classList.add('hidden')))
-		} else {
-			linksEntries.forEach((link => link.classList.remove('hidden')))
-		}
-	})
-})
+// linksTab.forEach((linkTab) => {
+// 	linkTab.addEventListener("click", function (e){
+// 		if (e.target.classList.contains("company") || e.target.parentNode.classList.contains("company") || e.target.parentNode.parentNode.classList.contains("company")) {
+// 			linksEntries.forEach((link => link.classList.add('hidden')))
+// 		} else {
+// 			linksEntries.forEach((link => link.classList.remove('hidden')))
+// 		}
+// 	})
+// })
 
 // ===========  Tooltips ===========================
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
@@ -187,3 +196,16 @@ $(".item-block__title, .accordion-btn").click(function(){
 		scrollTop: $(this).offset().top
 	}, 300);
 });
+
+  //hide all tabs first
+  $('.select-tab-content').hide();
+  //show the first tab content
+  $('#select-tab-1').show();
+  
+  $('#select-tab-box').change(function () {
+	  dropdown = $('#select-tab-box').val();
+	 //first hide all tabs again when a new option is selected
+	 $('.select-tab-content').hide();
+	 //then show the tab content of whatever option value was selected
+	 $('#' + "select-tab-" + dropdown).show(); 
+  });

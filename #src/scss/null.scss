@@ -78,8 +78,13 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
-ol ul {
+ol,
+ul {
 	list-style-type: disc;
+	padding-left: 2rem;
+}
+button {
+	text-align: left;
 }
 //-webkit-overflow-scrolling: touch;
 //animation-play-state: paused !important;

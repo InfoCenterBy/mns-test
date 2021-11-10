@@ -1,4 +1,4 @@
-@@include('files/sliders.js', {});
+
 @@include('files/dynamic_adapt.js', {});
 @@include('libs/ResizeSensor.js', {});
 @@include('libs/sticky-sidebar.js', {});
