@@ -178,9 +178,12 @@ h6 {
   font-size: inherit;
 }
 
-ol,
 ul {
   list-style-type: disc;
+}
+
+ol,
+ul {
   padding-left: 2rem;
 }
 
@@ -6021,12 +6024,6 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   color: #FAFAFA;
 }
 
-.main-menu__text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
 .services {
   padding: 0px 0px 80px 0px;
 }
@@ -6295,6 +6292,10 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 .partners {
   padding: 50px 0;
   background-color: #ffffff;
+}
+
+.partners__slide {
+  margin: 0 10px;
 }
 
 .partners__slide:hover img {

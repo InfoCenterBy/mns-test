@@ -130,7 +130,7 @@ body {
 	}
 
 	&__text {
-		flex: 1 1 auto;
+		// flex: 1 1 auto;
 	}
 }
 .services {
@@ -447,7 +447,6 @@ body {
 		padding: 60% 0px 0px 0px;
 	}
 }
-
 .ref-info {
 	background-color: $color-green;
 
@@ -469,6 +468,7 @@ body {
 	background-color: #ffffff;
 
 	&__slide {
+		margin: 0 10px;
 		
 		&:hover img {
 			filter: grayscale(0%);

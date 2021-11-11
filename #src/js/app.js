@@ -170,19 +170,23 @@ if (sidebarBlock) {
 	sidebar.updateSticky();
 }
 
-// ===========  Page personal-area toggle link entries ===========================
+// ===========  Page personal-area, toggle link entries ===========================
 const linksTab = document.querySelectorAll(".link-nav-tab")
 const linksEntries = document.querySelectorAll(".link-entries")
 
-// linksTab.forEach((linkTab) => {
-// 	linkTab.addEventListener("click", function (e){
-// 		if (e.target.classList.contains("company") || e.target.parentNode.classList.contains("company") || e.target.parentNode.parentNode.classList.contains("company")) {
-// 			linksEntries.forEach((link => link.classList.add('hidden')))
-// 		} else {
-// 			linksEntries.forEach((link => link.classList.remove('hidden')))
-// 		}
-// 	})
-// })
+Array.prototype.slice.call(linksTab).forEach(function(linkTab) {
+	linkTab.addEventListener("click", function (e){
+		if (e.target.classList.contains("company") || e.target.parentNode.classList.contains("company") || e.target.parentNode.parentNode.classList.contains("company")) {
+			Array.prototype.slice.call(linksEntries).forEach(function(link) {
+				link.classList.add('hidden');
+			})
+		} else {
+			Array.prototype.slice.call(linksEntries).forEach(function(link) {
+				link.classList.remove('hidden');
+			})
+		}
+	})
+})
 
 // ===========  Tooltips ===========================
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
@@ -209,3 +213,40 @@ $(".item-block__title, .accordion-btn").click(function(){
 	 //then show the tab content of whatever option value was selected
 	 $('#' + "select-tab-" + dropdown).show(); 
   });
+
+  // =============  Main Slider   =================================
+  $('.partners').slick({
+	infinite: true,
+	slidesToShow: 11,
+	slidesToScroll: 1,
+	arrows: false,
+	autoplay: true,
+	autoplaySpeed: 3000,
+	dots: false,
+	responsive: [
+		{
+			breakpoint: 1250,
+			settings: {
+				slidesToShow: 4
+			}
+		},
+		{
+			breakpoint: 1000,
+			settings: {
+				slidesToShow: 3
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2
+			}
+		},
+		{
+			breakpoint: 565,
+			settings: {
+				slidesToShow: 1
+			}
+		}
+	]
+});
