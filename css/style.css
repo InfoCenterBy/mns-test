@@ -1178,21 +1178,68 @@ a:hover {
           align-items: center;
 }
 
-.menu li {
+.menu > li {
   margin: 0px 20px 0px 0px;
 }
 
-.menu li:last-child {
+.menu > li:last-child {
   margin: 0px 0px 0px 0px;
+}
+
+.menu > li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > li:hover .menu__link {
+  color: #FAFAFA;
+  background-color: #00654D;
+}
+
+.menu > li:hover .menu__link:after {
+  width: 100%;
 }
 
 .menu__link {
   border-radius: 10px;
+  background-color: transparent;
+  position: relative;
 }
 
-.menu__link:hover {
-  color: #FAFAFA;
-  background: #007A65;
+.menu__link:after {
+  content: '';
+  width: 0;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #007A65;
+  position: absolute;
+  left: 0;
+  bottom: -44px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: 6;
+}
+
+.submenu {
+  width: 100%;
+  padding: 40px 0px 0px 0px;
+  position: absolute;
+  top: 65px;
+  left: 12px;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu__body {
+  padding: 30px;
+  background-color: #00654D;
+  width: 100%;
+}
+
+.submenu ul li {
+  border-bottom: 3px solid #007A65;
 }
 
 .header-marquee {
@@ -7624,7 +7671,7 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 @media (max-width: 1350px) {
-  .menu li {
+  .menu > li {
     margin: 0px 5px 0px 0px;
   }
 }
