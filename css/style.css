@@ -597,16 +597,32 @@ a:hover {
           box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
 }
 
-.select {
-  padding: 10px 15px;
-  border: 1px solid #EBEBEB;
+.item-card-download {
   background-color: #EBEBEB;
   border-radius: 10px;
-  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.select:focus {
-  border: 1px solid #007A65;
+.item-card-download .bi-download {
+  color: #007A65;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.item-card-download:hover {
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+}
+
+.item-card-download:hover .bi-download {
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 .nav-tab-mns {
@@ -639,6 +655,114 @@ a:hover {
 
 .select-tab__box:hover {
   border: 1px solid #727270;
+}
+
+.analitics-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.analitics-form__left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0px 60px 0px 0px;
+}
+
+.analitics-form__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 215px;
+          flex: 0 0 215px;
+}
+
+.select {
+  position: relative;
+}
+
+.select__item {
+  position: relative;
+}
+
+.select__title {
+  border: 1px solid #727270;
+  background-color: #FAFAFA;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.select__value {
+  padding: 25px 60px 25px 18px;
+  font-size: 18px;
+  color: #1A1A1A;
+  font-weight: 600;
+}
+
+.select__value:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-bottom: 2px solid #727270;
+  border-left: 2px solid #727270;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 20px;
+}
+
+.select__input {
+  width: 100%;
+  background-color: transparent;
+  height: 100%;
+}
+
+.select__options {
+  padding: 10px 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  min-width: 100%;
+  left: 0;
+  background-color: #FAFAFA;
+  border: 1px solid #EBEBEB;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.select__option {
+  padding: 16px;
+  color: #1A1A1A;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.select__option:hover {
+  background: #EBEBEB;
+  color: #007A65;
+}
+
+.select._active {
+  z-index: 5;
+}
+
+.select._active .select__value:before {
+  -webkit-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  top: calc(65% - 15px);
+}
+
+.select._active .select__options {
+  display: block;
 }
 
 .header-top {
@@ -7636,6 +7760,12 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   }
 }
 
+@media (max-width: 1460px) {
+  .analitics-form__left {
+    margin: 0px 30px 0px 0px;
+  }
+}
+
 @media (max-width: 1440px) {
   .header-inspectorate__title {
     font-size: calc(22px + 4 * ((100vw - 320px) / 1120));
@@ -7909,6 +8039,36 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
     display: block;
     border: none;
     margin: 0;
+  }
+
+  .analitics-form {
+    display: block;
+  }
+
+  .analitics-form__left {
+    margin: 0px 0px 16px 0px;
+  }
+
+  .analitics-form__right {
+    width: 215px;
+  }
+
+  .select__value {
+    padding: 15px 60px 16px 12px;
+  }
+
+  .select__value:before {
+    width: 12px;
+    height: 12px;
+    top: calc(50% - 10px);
+  }
+
+  .select__option {
+    padding: 8px;
+  }
+
+  .select._active .select__value:before {
+    top: calc(65% - 10px);
   }
 
   .header-special__nav-tab {
