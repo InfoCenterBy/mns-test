@@ -313,16 +313,35 @@ a:hover {
 	border-radius: 10px;
 	box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
 }
-.select {
-	padding: 10px 15px;
-	border: 1px solid $color-gray-light;
+.item-card-download {
 	background-color: $color-gray-light;
 	border-radius: 10px;
-	cursor: pointer;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+	transition: all 0.3s ease 0s;
 
-	&:focus {
-		border: 1px solid $color-green-light;
+	.bi-download {
+		color: $color-green-light;
+		transition: all 0.3s ease 0s;
 	}
+
+	&:hover {
+		box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+
+		.bi-download {
+			transform: translateY(3px);
+		}
+	}
+}
+.select {
+	// padding: 10px 15px;
+	// border: 1px solid $color-gray-light;
+	// background-color: $color-gray-light;
+	// border-radius: 10px;
+	// cursor: pointer;
+
+	// &:focus {
+	// 	border: 1px solid $color-green-light;
+	// }
 }
 @media only screen and (max-width: 767px) {
    .tab-to-dropdown {
