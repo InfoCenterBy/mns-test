@@ -265,6 +265,14 @@ body._lock {
   font-size: 16px;
 }
 
+.color-black {
+  color: #1A1A1A;
+}
+
+.color-white {
+  color: #FAFAFA;
+}
+
 .color-green {
   color: #007A65;
 }
@@ -361,17 +369,6 @@ a:hover {
 
 .btn-accord_white:hover {
   color: #FAFAFA;
-}
-
-.title {
-  font-size: 20px;
-  color: #FAFAFA;
-  font-weight: 700;
-}
-
-.title:hover {
-  color: #FAFAFA;
-  opacity: 0.7;
 }
 
 .hidden-block {
@@ -6172,7 +6169,7 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 .main-menu {
-  padding: 30px 0px;
+  padding: 30px 0px 50px;
 }
 
 .main-menu__item {
@@ -6195,57 +6192,103 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   padding: 0px 0px 80px 0px;
 }
 
-.services .btn-accord {
-  opacity: 0.7;
-  margin: 0px 24px 24px 0px;
-}
-
-.services .btn-accord i:before {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-.services .btn-accord.active {
-  opacity: 1;
-}
-
-.services .btn-accord.active i:before {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.item-services,
-.item-actual,
-.item-clarifications {
+.item-services {
   background-color: #EBEBEB;
   border-radius: 10px;
 }
 
-.item-services img,
-.item-actual img,
-.item-clarifications img {
+.item-services img {
   min-width: 65px;
 }
 
-.item-services:hover,
-.item-actual:hover,
-.item-clarifications:hover {
-  color: #FAFAFA;
-  background-color: #007A65;
+.item-services:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.item-services:hover .h5,
-.item-actual:hover .h5,
-.item-clarifications:hover .h5 {
-  color: #FAFAFA;
+.main-info {
+  padding: 60px 0px 50px;
 }
 
-.item-services__date,
-.item-actual__date,
-.item-clarifications__date {
-  font-size: 12px;
+.main-info__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -5px 10px;
+}
+
+.actual {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  padding: 0 5px;
+}
+
+.actual__row {
+  background-color: #EBEBEB;
+}
+
+.actual__item:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.clarifications {
+  padding: 0 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.clarifications__row {
+  background-color: #EBEBEB;
+}
+
+.clarifications__nav li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.clarifications__nav-link {
+  height: 20px;
+  position: relative;
+}
+
+.clarifications__nav-link:before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #9D9F9E;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+}
+
+.clarifications__nav-link.active:before {
+  background-color: #00654D;
+}
+
+.clarifications__link i:before {
+  font-size: 26px;
+  color: #007A65;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.clarifications__link:hover .clarifications__date {
+  color: #007A65;
+}
+
+.clarifications__link:hover i:before {
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.clarifications__date {
+  color: #727270;
 }
 
 .tax-inspectorates {
@@ -7840,6 +7883,37 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
     padding: 15px;
   }
 
+  .main-info__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .main-info__body__left {
+    padding: 0 5px 10px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .main-info__body__right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .actual {
+    margin: 0px 0px 48px 0px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .clarifications {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
   .main-news__wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -8401,9 +8475,7 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
     margin: 0px 0px 0px 10px;
   }
 
-  .item-services img,
-  .item-actual img,
-  .item-clarifications img {
+  .item-services img {
     min-width: auto;
     max-width: 40px;
   }

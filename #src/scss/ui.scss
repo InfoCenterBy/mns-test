@@ -35,6 +35,12 @@
 .h6 {
 	font-size: 16px;
 }
+.color-black {
+	color: $color-black;
+}
+.color-white {
+	color: $color-white;
+}
 .color-green {
 	color: $color-green-light;
 }
@@ -110,16 +116,6 @@ a:hover {
 		&:hover {
 			color: $color-white;
 		}
-	}
-}
-.title {
-	font-size: 20px;
-	color: $color-white;
-	font-weight: 700;
-
-	&:hover {
-		color: $color-white;
-		opacity: 0.7;
 	}
 }
 .hidden-block {
