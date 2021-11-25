@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Ставка пеней"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page page__decor">
+				<div class="content">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Ставка пеней</li>
+							</ol>
+						</div>
+					 </nav>
+					<div class="item-content">
+						<div class='container'>
+							<div class="item-block px-md-4 px-2 py-4">
+								<div class="mb-4">
+									<div class="panalty-rate">
+										<select name="form[]" class="show">
+											<option value="1" selected="selected">2021</option>
+											<option value="2">2020</option>
+											<option value="3">2019</option>
+											<option value="4">2018</option>
+											<option value="5">2017</option>
+										</select>
+									</div>
+								</div>
+								<div class="table-mns-data">
+									<table>
+										<thead>
+											<tr>
+											  <th>Дата начала действия ставки пеней
+											</th>
+											  <th>Размер ставки рефинансирования Национального банка Республики Беларусь, процент годовых</th>
+											  <th>Процентная ставка пеней</th>
+											</tr>
+										 </thead>
+										 <tbody>
+											<tr>
+											  <td>21.07.2021</td>
+											  <td>9,25</td>
+											  <td>0,0257</td>
+											</tr>
+											<tr>
+											  <td>21.04.2021</td>
+											  <td>8,5</td>
+											  <td>0,02136</td>
+											</tr>
+											<tr>
+											  <td>21.07.2021</td>
+											  <td>9,25</td>
+											  <td>0,0257</td>
+											</tr>
+											<tr>
+											  <td>21.04.2021</td>
+											  <td>8,5</td>
+											  <td>0,02136</td>
+											</tr>
+											<tr>
+											  <td>21.07.2021</td>
+											  <td>9,25</td>
+											  <td>0,0257</td>
+											</tr>
+											<tr>
+											  <td>21.04.2021</td>
+											  <td>8,5</td>
+											  <td>0,02136</td>
+											</tr>
+										 </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		<!-- @@include('_popup.html',{}) -->
+		@@include('_js.html',{})
+	</body>
+</html>

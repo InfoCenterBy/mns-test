@@ -75,3 +75,46 @@
 		}
 	}
 }
+.table-mns-data {
+   overflow-x: auto;
+
+	table {
+		width: 100%;
+		border: 1px solid $color-gray-light;
+	}
+	thead tr th {
+		font-size: 18px;
+		font-weight: 700;
+		color: $color-white;
+		border: 1px solid $color-gray-light;
+		background-color: $color-green-light;
+	}
+
+	tbody tr {
+		background-color: $color-white;
+
+		&:first-child {
+			color: $color-green-light;
+			font-weight: 700;
+		}
+		
+		td {
+			border: 1px solid $color-gray-light;
+		}
+	}
+
+	tbody tr:hover {
+		background-color: $color-gray-light;
+	}
+
+	th, td {
+      padding: 20px;
+   }
+
+   @media (max-width: 1200px) {
+      th,
+      td {
+         padding: 15px;
+      }
+   }
+}

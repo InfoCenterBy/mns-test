@@ -573,7 +573,7 @@
 	}
 
 	&__label {
-		color: #727270;
+		color: $color-gray-dark;
 		font-size: 14px;
 		margin: 0px 0px 5px 0px;
 	}
@@ -611,32 +611,13 @@
 			.menu__link {
 				color: $color-white;
 				background-color: $color-green;
-
-				&:after {
-					width: 100%;
-				}
 			}
 		}
 	}
 	
-
 	&__link {
 		border-radius: 10px;
 		background-color: transparent;
-		position: relative;
-
-		&:after {
-			content:'';
-			width: 0;
-			height: 10px;
-			border-radius: 10px;
-			background-color: $color-green-light;
-			position: absolute;
-			left: 0;
-			bottom: -44px;
-			transition: all 0.3s ease 0s;
-			z-index: 6;
-		}
 	}
 }
 .submenu {
