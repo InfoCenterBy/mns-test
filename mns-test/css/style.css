@@ -681,90 +681,48 @@ a:hover {
           flex: 0 0 215px;
 }
 
-.select {
-  position: relative;
+.form-label {
+  font-size: 18px;
+  color: #727270;
 }
 
-.select__item {
-  position: relative;
-}
-
-.select__title {
-  border: 1px solid #727270;
-  background-color: #FAFAFA;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-.select__value {
-  padding: 25px 60px 25px 18px;
+.form-select {
+  width: 100%;
+  padding: 20px 60px 20px 18px;
   font-size: 18px;
   color: #1A1A1A;
   font-weight: 600;
-}
-
-.select__value:before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  border-bottom: 2px solid #727270;
-  border-left: 2px solid #727270;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: absolute;
-  top: calc(50% - 15px);
-  right: 20px;
-}
-
-.select__input {
-  width: 100%;
-  background-color: transparent;
-  height: 100%;
-}
-
-.select__options {
-  padding: 10px 0;
-  display: none;
-  position: absolute;
-  top: 100%;
-  min-width: 100%;
-  left: 0;
+  border: 1px solid #727270;
   background-color: #FAFAFA;
-  border: 1px solid #EBEBEB;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.2);
-}
-
-.select__option {
-  padding: 16px;
-  color: #1A1A1A;
-  font-size: 16px;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../img/icons/chevron-down.svg") no-repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: 30px;
 }
 
-.select__option:hover {
-  background: #EBEBEB;
+.form-select:hover {
   color: #007A65;
 }
 
-.select._active {
-  z-index: 5;
+.form-select:focus {
+  color: #007A65;
+  background-color: #FAFAFA;
+  border-color: #007A65;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
 }
 
-.select._active .select__value:before {
-  -webkit-transform: rotate(-225deg);
-      -ms-transform: rotate(-225deg);
-          transform: rotate(-225deg);
-  top: calc(65% - 15px);
+.form-select option {
+  color: #1A1A1A;
 }
 
-.select._active .select__options {
-  display: block;
+.form-select::-ms-expand {
+  display: none;
 }
 
 .header-top {
@@ -8422,22 +8380,9 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
     width: 215px;
   }
 
-  .select__value {
-    padding: 15px 60px 16px 12px;
-  }
-
-  .select__value:before {
-    width: 12px;
-    height: 12px;
-    top: calc(50% - 10px);
-  }
-
-  .select__option {
-    padding: 8px;
-  }
-
-  .select._active .select__value:before {
-    top: calc(65% - 10px);
+  .form-select {
+    padding: 15px 40px 15px 10px;
+    background-size: 20px;
   }
 
   .header-special__nav-tab {
