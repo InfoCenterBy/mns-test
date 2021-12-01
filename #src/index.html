@@ -11,13 +11,13 @@
 					<div class="main-menu">
 						<div class='container'>
 							<div class="row justify-content-center mx-n2 mt-n2">
-								<div class="col-md-12 col-xl-4 px-2 pt-3">
+								<div class="col-xl-4 px-2 pt-3">
 									<a href="personal-area.html" class="main-menu__item p-3 p-xl-4 d-flex flex-column align-items-center justify-content-center text-center h-100">
 										<img class="img-fluid mb-3" src="./img/main/icon-01.svg" alt="">
 										<div>Личный кабинет плательщика</div>
 									</a>
 								</div>
-								<div class="col-md-12 col-xl-8 px-2 pt-xl-3">
+								<div class="col-xl-8 px-2 pt-xl-3">
 									<div class="row justify-content-center mx-n2 h-100">
 										<div class="col-md-4 col-xl-4 px-2 pt-3 pt-xl-0">
 											<a href="individuals.html" class="main-menu__item p-3 p-xl-4 d-flex flex-column align-items-center justify-content-center text-center h-100">
@@ -175,25 +175,25 @@
 									<div class="actual__row px-2 py-4 mb-4 border-radius-10 flex-grow-1">
 										<div class="row mt-n3 mx-n2">
 											<div class="col-md-4 px-2 pt-3">
-												<a href="#" class="actual__item h-100 p-3 text-center border-radius-10 d-flex flex-column">
-													<div class="mb-4 flex-grow-1">
-														<img class="img-fluid" src="./img/services/07.svg" alt="">
+												<a href="#" class="actual__item h-100 p-3 text-center border-radius-10 d-block">
+													<div class="mb-4">
+														<img class="img-fluid" src="./img/actual/01.svg" alt="">
 													</div>
 													<div class="h6">Транспортный налог</div>
 												</a>
 											</div>
 											<div class="col-md-4 px-2 pt-3">
-												<a href="#" class="actual__item h-100 p-3 text-center border-radius-10 d-flex flex-column">
-													<div class="mb-4 flex-grow-1">
-														<img class="img-fluid" src="./img/services/08.svg" alt="">
+												<a href="#" class="actual__item h-100 p-3 text-center border-radius-10 d-block">
+													<div class="mb-4">
+														<img class="img-fluid" src="./img/actual/05.svg" alt="">
 													</div>
 													<div class="h6">Прослеживаемость товаров</div>
 												</a>
 											</div>
 											<div class="col-md-4 px-2 pt-3">
-												<a href="#" class="actual__item h-100 p-3 text-center border-radius-10 d-flex flex-column">
-													<div class="mb-4 flex-grow-1">
-														<img class="img-fluid" src="./img/services/09.svg" alt="">
+												<a href="#" class="actual__item h-100 p-3 text-center border-radius-10 d-block">
+													<div class="mb-4">
+														<img class="img-fluid" src="./img/actual/04.svg" alt="">
 													</div>
 													<div class="h6">Налоги 2021</div>
 												</a>
@@ -201,7 +201,7 @@
 										</div>
 									</div>
 									<div>
-										<a href="#" class="h5 link link_black">Все актуальное<i class="bi bi-arrow-right ml-2"></i></a>
+										<a href="actual.html" class="h5 link link_black">Все актуальное<i class="bi bi-arrow-right ml-2"></i></a>
 									</div>
 								</div>
 								<div class="main-info__column d-flex flex-column clarifications">
@@ -249,7 +249,7 @@
 										 </ul>
 									</div>
 									<div>
-										<a href="#" class="h5 link link_black">Все разъяснения<i class="bi bi-arrow-right ml-2"></i></a>
+										<a href="clarifications.html" class="h5 link link_black">Все разъяснения<i class="bi bi-arrow-right ml-2"></i></a>
 									</div>
 								</div>
 							</div>
@@ -463,6 +463,22 @@
 			</main>
 			@@include('_footer.html',{})
 		</div>
+		<div class="modal fade" id="browserUnsupport" tabindex="-1" aria-labelledby="ModalBrowserUnsupport" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content flex-row align-items-center p-4">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+				  </button>
+				  <div class="icon mr-4">
+					  <img class="img-fluid" src="./img/icons/icon-attention.svg" alt="">
+				  </div>
+					<div class="pr-3">
+						<div class="mb-3 h4">К сожалению, ваш браузер не поддерживается.</div>
+						<div class="h5">Если информация отображена некорректно, попробуйте скачать новую версию или запустите другой браузер.</div>
+					</div>
+			  </div>
+			</div>
+		 </div>
 		@@include('_js.html',{})
 	</body>
 </html>
