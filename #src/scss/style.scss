@@ -125,13 +125,13 @@ body {
 		font-size: 18px;
 		
 		&:hover {
-			background-color: $color-green;
-			color: $color-white;
+			background-color: #ffffff;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		}
 	}
 
-	&__text {
-		// flex: 1 1 auto;
+	img {
+		max-width: 180px;
 	}
 }
 .services {
@@ -159,15 +159,11 @@ body {
 	border-radius: 10px;
 
 	img {
-		min-width: 65px;
-
-		@media (max-width: $md4+px) {
-			min-width: auto;
-			max-width: 40px;
-		}
+		width: 85px;
 	}
 
 	&:hover {
+		background-color: #ffffff;
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	}
 }
@@ -208,7 +204,12 @@ body {
 
 	&__item {
 		&:hover {
+			background-color: #ffffff;
 			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		img {
+			height: 150px;
 		}
 	}
 }
@@ -271,7 +272,6 @@ body {
 		color: $color-gray-dark;
 	}
 }
-
 .tax-inspectorates {
 	background-color: $color-gray-light;
 

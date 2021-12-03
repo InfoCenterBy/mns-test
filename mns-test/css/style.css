@@ -6731,8 +6731,13 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 .main-menu__item:hover {
-  background-color: #00654D;
-  color: #FAFAFA;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main-menu img {
+  max-width: 180px;
 }
 
 .services {
@@ -6745,10 +6750,11 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 .item-services img {
-  min-width: 65px;
+  width: 85px;
 }
 
 .item-services:hover {
+  background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -6776,8 +6782,13 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 .actual__item:hover {
+  background-color: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.actual__item img {
+  height: 150px;
 }
 
 .clarifications {
@@ -9124,11 +9135,6 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 
   html body .bvi-body .bvi-panel-close {
     margin: 0px 0px 0px 10px;
-  }
-
-  .item-services img {
-    min-width: auto;
-    max-width: 40px;
   }
 
   .tax-inspectorates__body {
