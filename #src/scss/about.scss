@@ -445,8 +445,6 @@
 		min-height: 48px;
 	}
 }
-
-
 .composition {
 
 	&__head {
@@ -485,24 +483,6 @@
 	max-width: 300px;
 }
 // ================================================================================
-.item-registration {
-	background-color: $color-gray-light;
-	font-weight: 600;
-
-	i.first {
-		transition: transform 0.3s ease 0s;
-		transform: translateX(17px);
-	}
-
-	&:hover {
-		background-color: $color-green-light;
-		color: $color-yellow;
-
-		i.first {
-			transform: translateX(27px);
-		}
-	}
-}
 .payable-taxes-item {
 
 	&__icon {
