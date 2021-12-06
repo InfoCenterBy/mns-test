@@ -2606,20 +2606,16 @@ $('.item-block__title, .accordion-btn').click(function () {
 
 // ==================  Select Tab   ===================================
 
-//hide all tabs first
 $('.select-tab-content').hide();
-//show the first tab content
 $('#select-tab-1').show();
 
 $('#select-tab-box').change(function () {
    var dropdown = $('#select-tab-box').val();
-   //first hide all tabs again when a new option is selected
    $('.select-tab-content').hide();
-   //then show the tab content of whatever option value was selected
    $('#' + 'select-tab-' + dropdown).show();
 });
 
-// ==================  Select Tab administrative-procedures  ===================================
+// ==================  Select Tab administrative-procedures ( Tab 2 )  ===================================
 
 $('.select-tab-content-01').hide();
 $('#select-tab-101').show();

@@ -1046,6 +1046,15 @@ a:hover {
   display: none;
 }
 
+.search__input {
+  padding: 32px 16px 16px 16px;
+  border-bottom: 1px solid #ebebeb;
+  cursor: pointer;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
 .header-top {
   background-color: #014A37;
   z-index: 5;
