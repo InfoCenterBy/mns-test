@@ -238,7 +238,7 @@ $('.item-block__title, .accordion-btn').click(function () {
    );
 });
 
-// ================================================================================
+// ==================  Select Tab   ===================================
 
 //hide all tabs first
 $('.select-tab-content').hide();
@@ -250,6 +250,17 @@ $('#select-tab-box').change(function () {
    //first hide all tabs again when a new option is selected
    $('.select-tab-content').hide();
    //then show the tab content of whatever option value was selected
+   $('#' + 'select-tab-' + dropdown).show();
+});
+
+// ==================  Select Tab administrative-procedures  ===================================
+
+$('.select-tab-content-01').hide();
+$('#select-tab-101').show();
+
+$('#select-tab-box-01').change(function () {
+   var dropdown = $('#select-tab-box-01').val();
+   $('.select-tab-content-01').hide();
    $('#' + 'select-tab-' + dropdown).show();
 });
 
