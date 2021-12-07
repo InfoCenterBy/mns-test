@@ -2548,10 +2548,9 @@ ibg();
 
 // ===========  Sticky Sidebar ===========================
 const sidebarBlock = document.querySelector('.sidebar');
-if (sidebarBlock) {
+if (sidebarBlock && $(window).width() > 992) {
    var sidebar = new StickySidebar(sidebarBlock, {
       topSpacing: 20,
-      bottomSpacing: 20,
    });
    sidebar.updateSticky();
 }
