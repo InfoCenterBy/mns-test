@@ -342,6 +342,7 @@ a:hover {
   background-color: #007A65;
   border-radius: 10px;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -355,6 +356,16 @@ a:hover {
 
 .button_green:hover {
   background-color: #014A37;
+}
+
+.button_white {
+  background-color: #FAFAFA;
+  color: #007A65;
+}
+
+.button_white:hover {
+  color: #007A65;
+  background-color: #e6e6e6;
 }
 
 .btn-accord {
@@ -1044,6 +1055,39 @@ a:hover {
 
 .form-select::-ms-expand {
   display: none;
+}
+
+.search__row {
+  position: relative;
+}
+
+.search__row i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.search__input,
+.search__date {
+  width: 100%;
+  padding: 8px 40px 8px 8px;
+  border: 1px solid #FAFAFA;
+  border-radius: 4px;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+
+.search__input:focus,
+.search__date:focus {
+  border: 1px solid #9D9F9E;
+}
+
+.search__date {
+  padding: 8px 8px 8px 8px;
 }
 
 .header-top {
@@ -6724,6 +6768,15 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   left: 0;
 }
 
+.page-404 {
+  padding: 60px 0px;
+}
+
+.page-404 img {
+  width: 100%;
+  max-width: 730px;
+}
+
 .content {
   position: relative;
   z-index: 1;
@@ -8993,6 +9046,10 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 
   .structura__department:before {
     display: none;
+  }
+
+  .page-404 {
+    padding: 30px 0px;
   }
 
   .services .selected-tab {
