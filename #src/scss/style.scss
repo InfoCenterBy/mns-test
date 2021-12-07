@@ -107,6 +107,18 @@ body {
 		}
 	}
 }
+.page-404 {
+	padding: 60px 0px;
+
+	img {
+		width: 100%;
+		max-width: 730px;
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 30px 0px;
+	}
+}
 .content {
 	position: relative;
 	z-index: 1;

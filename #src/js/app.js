@@ -316,3 +316,4 @@ $('.partners').slick({
 $(window).on('load', function () {
    $('#browserUnsupport').modal('show');
 });
+

@@ -75,10 +75,43 @@
 
 .search {
 
-	&__input {
-		padding: 32px 16px 16px 16px;
-		border-bottom: 1px solid #ebebeb;
-    	cursor: pointer;
-    	transition: all .3s ease 0s;
+	&__row {
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+		}
 	}
+
+	&__input,
+	&__date {
+		width: 100%;
+		padding: 8px 40px 8px 8px;
+		border: 1px solid $color-white;	
+		border-radius: 4px;
+		transition: all .3s ease 0s;
+		
+		&:focus {
+			border: 1px solid $color-gray;	
+		}
+	}
+
+	&__date {
+		padding: 8px 8px 8px 8px;
+	}
+
+	// &__label {
+	// 	padding: 8px;
+	// 	height: 80%;
+	// 	width: 70%;
+	// 	background-color: #fff;
+	// 	border-radius: 10px;
+	// 	position: absolute;
+	// 	top: 10%;
+	// 	left: 2px;
+	// 	z-index: 2;
+	// }
 }
