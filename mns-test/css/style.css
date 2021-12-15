@@ -2979,10 +2979,6 @@ a:hover {
   pointer-events: none;
 }
 
-.mobile-app__text {
-  width: 130px;
-}
-
 .function-services__number {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32px;
@@ -6878,7 +6874,7 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 .item-services img {
-  width: 85px;
+  max-width: 85px;
 }
 
 .item-services:hover {
@@ -6916,7 +6912,7 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 .actual__item img {
-  height: 150px;
+  max-height: 150px;
 }
 
 .clarifications {
@@ -7184,6 +7180,75 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   -webkit-box-flex: 0;
       -ms-flex: 0 0 45px;
           flex: 0 0 45px;
+}
+
+.children-about-taxes {
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #007A65;
+}
+
+.children-about-taxes__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35px;
+          flex: 0 0 35px;
+  height: 35px;
+  background: url("../img/icons/icon-magic-book.svg") 0 0 no-repeat;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.children-about-taxes__read {
+  font-weight: normal;
+  color: #9D9F9E;
+}
+
+.children-about-taxes:hover {
+  color: #FBC469;
+  background-color: #007A65;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.children-about-taxes:hover .children-about-taxes__icon {
+  background: url("../img/icons/icon-magic-book-yellow.svg") 0 0 no-repeat;
+}
+
+.children-about-taxes:hover .children-about-taxes__read {
+  color: #FBC469;
+}
+
+.children-about-taxes-video {
+  padding: 56.25% 0 0 0;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.children-about-taxes-video iframe {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+figure audio {
+  width: 100%;
+}
+
+.item-tale__date {
+  font-size: 14px;
+  color: #9D9F9E;
+}
+
+.item-tale__author {
+  font-size: 14px;
+  color: #9D9F9E;
 }
 
 @media (min-width: 576px) {
@@ -9111,21 +9176,6 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 
   .page-404 {
     padding: 30px 0px;
-  }
-
-  .services .selected-tab {
-    background-color: transparent;
-  }
-
-  .services .btn-accord {
-    margin: 0;
-    padding: 10px 35px 10px 15px;
-    font-size: 18px;
-    font-weight: 400;
-  }
-
-  .services .btn-accord i {
-    display: none;
   }
 
   .item-main-news {
