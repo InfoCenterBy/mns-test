@@ -1,4 +1,5 @@
 
+@@include('libs/slick.min.js', {});
 @@include('files/dynamic_adapt.js', {});
 @@include('libs/ResizeSensor.js', {});
 @@include('libs/sticky-sidebar.js', {});
