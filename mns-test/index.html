@@ -478,7 +478,7 @@
 					<div class="main-info">
 						<div class='container'>
 							<div class="main-info__body">
-								<div class="main-info__column d-flex flex-column actual">
+								<div class="d-flex flex-column actual">
 									<h4 class="h4 color-black fw-bold mb-4">Актуальное</h4>
 									<div class="actual__row px-2 py-4 mb-4 border-radius-10 flex-grow-1">
 										<div class="row mt-n3 mx-n2">
@@ -512,49 +512,41 @@
 										<a href="actual.html" class="h5 link link_black">Все актуальное<i class="bi bi-arrow-right ml-2"></i></a>
 									</div>
 								</div>
-								<div class="main-info__column d-flex flex-column clarifications">
+								<div class="d-flex flex-column clarifications">
 									<h4 class="h4 color-black fw-bold mb-4">Разъяснения</h4>
-									<div class="clarifications__row px-2 px-sm-2 py-4 mb-4 border-radius-10 flex-grow-1 d-flex flex-column">
-										<div class="tab-content flex-grow-1" id="myTabContent">
-											<div class="tab-pane fade show active px-4" id="tab-01" role="tabpanel" aria-labelledby="01-tab">
-												<a href="#" class="clarifications__link d-flex align-items-end" download>
-													<i class="bi bi-download mr-3 mr-sm-5"></i>
-													<div>
-														<div class="clarifications__date mb-3">16.11.2021</div>
-														<div class="">Об уплате экологического налога за захоронение отходов при изоляции слоев отходов и рекультивации нарушенных земель</div>
-													</div>
-												</a>
+									<div class="slider-clarifications flex-grow-1 mb-4">
+										<div data-slider="clarifications" class="slider-clarifications__body">
+											<div class="slider-clarifications__item text-center px-5 pt-4 pb-5">
+												<div class="slider-clarifications__icon mx-auto mb-3">
+													<img class="img-fluid" src="./img/illustrations/Разъяснение.svg" alt="">
+												</div>
+												<div class="slider-clarifications__date mb-3">16.11.2021</div>
+												<a href="#" class="h6 slider-clarifications__link" download>Об уплате экологического налога за захоронение отходов при изоляции слоев отходов и рекультивации нарушенных земель</a>
 											</div>
-											<div class="tab-pane fade px-2 px-sm-4" id="tab-02" role="tabpanel" aria-labelledby="02-tab">
-												<a href="#" class="clarifications__link d-flex align-items-end" download>
-													<i class="bi bi-download mr-3 mr-sm-5"></i>
-													<div>
-														<div class="clarifications__date mb-3">11.11.2021</div>
-														<div class="">Письмо МНС от 08.11.2021 №3-1-9/02460 "О повторном разъяснении законодательства"</div>
-													</div>
-												</a>
+											<div class="slider-clarifications__item text-center px-5 pt-4 pb-5">
+												<div class="slider-clarifications__icon mx-auto mb-3">
+													<img class="img-fluid" src="./img/illustrations/Разъяснение.svg" alt="">
+												</div>
+												<div class="slider-clarifications__date mb-3">20.11.2020</div>
+												<a href="#" class="h6 slider-clarifications__link" download>Об уплате экологического налога за захоронение отходов при изоляции слоев отходов</a>
 											</div>
-											<div class="tab-pane fade px-2 px-sm-4" id="tab-03" role="tabpanel" aria-labelledby="03-tab">
-												<a href="#" class="clarifications__link d-flex align-items-end" download>
-													<i class="bi bi-download mr-3 mr-sm-5"></i>
-													<div>
-														<div class="clarifications__date mb-3">10.10.2021</div>
-														<div class="">О налогообложении НДС незарегистрированных медицинских изделий</div>
-													</div>
-												</a>
+											<div class="slider-clarifications__item text-center px-5 pt-4 pb-5">
+												<div class="slider-clarifications__icon mx-auto mb-3">
+													<img class="img-fluid" src="./img/illustrations/Разъяснение.svg" alt="">
+												</div>
+												<div class="slider-clarifications__date mb-3">20.11.2019</div>
+												<a href="#" class="h6 slider-clarifications__link" download>Об уплате экологического налога за захоронение отходов при изоляции слоев отходов и рекультивации нарушенных земель и рекультивации нарушенных земель</a>
+											</div>
+											<div class="slider-clarifications__item text-center px-5 pt-4 pb-5">
+												<div class="slider-clarifications__icon mx-auto mb-3">
+													<img class="img-fluid" src="./img/illustrations/Разъяснение.svg" alt="">
+												</div>
+												<div class="slider-clarifications__date mb-3">20.11.2019</div>
+												<a href="#" class="h6 slider-clarifications__link" download>Об уплате экологического налога за захоронение отходов при изоляции слоев отходов и рекультивации нарушенных земель и рекультивации нарушенных земель</a>
 											</div>
 										</div>
-										<ul class="nav d-flex clarifications__nav mt-4 flex-nowrap" id="clarifications" role="tablist">
-											<li class="p-3" role="presentation">
-											  <a class="clarifications__nav-link d-block active" id="01-tab" data-toggle="tab" href="#tab-01" role="tab" aria-controls="01" aria-selected="true"></a>
-											</li>
-											<li class="p-3" role="presentation">
-											  <a class="clarifications__nav-link d-block" id="02-tab" data-toggle="tab" href="#tab-02" role="tab" aria-controls="02" aria-selected="false"></a>
-											</li>
-											<li class="p-3" role="presentation">
-											  <a class="clarifications__nav-link d-block" id="03-tab" data-toggle="tab" href="#tab-03" role="tab" aria-controls="03" aria-selected="false"></a>
-											</li>
-										 </ul>
+										<button class="clarifications-button clarifications-button_prev slickPrev"><i class="bi bi-arrow-left"></i></button>
+										<button class="clarifications-button clarifications-button_next slickNext"><i class="bi bi-arrow-right"></i></button>
 									</div>
 									<div>
 										<a href="clarifications.html" class="h5 link link_black">Все разъяснения<i class="bi bi-arrow-right ml-2"></i></a>
@@ -793,7 +785,7 @@
 	</div>
 </footer>
 		</div>
-		<div class="modal fade" id="browserUnsupport" tabindex="-1" aria-labelledby="ModalBrowserUnsupport" aria-hidden="true">
+		<!-- <div class="modal fade" id="browserUnsupport" tabindex="-1" aria-labelledby="ModalBrowserUnsupport" aria-hidden="true">
 			<div class="modal-dialog">
 			  <div class="modal-content flex-row align-items-center p-4">
 				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -808,9 +800,8 @@
 					</div>
 			  </div>
 			</div>
-		 </div>
+		 </div> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 

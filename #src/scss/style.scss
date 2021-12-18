@@ -163,26 +163,16 @@ body {
 	}
 }
 .main-info {
-	padding: 60px 0px 50px;
+	padding: 50px 0px 50px;
 
 	&__body {
 		display: flex;
 		margin: 0 -5px 10px;
 
 		@media (max-width: 1200px) {
-			flex-wrap: wrap;
-	
-			&__left {
-				padding: 0 5px 10px;
-				flex: 0 1 100%;
-			}
-			
-			&__right {
-				flex: 0 1 100%;
-			}
+			display: block;
 		}
 	}
-
 }
 .actual {
 	flex: 0 1 60%;
@@ -190,7 +180,7 @@ body {
 
 	@media (max-width: 1200px) {
 		margin: 0px 0px 48px 0px;
-		flex: 0 1 100%;
+		width: 100%;
 	}
 
 	&__row {
@@ -199,7 +189,7 @@ body {
 
 	&__item {
 		&:hover {
-			background-color: #ffffff;
+			background-color: $color-white;
 			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		}
 
@@ -211,60 +201,93 @@ body {
 .clarifications {
 	padding: 0 5px;
 	flex: 0 1 40%;
+	overflow: hidden;
 
 	@media (max-width: 1200px) {
-		flex: 0 1 100%;
+		width: 100%;
 	}
-
-	&__row {
-		background-color: $color-gray-light;
+}
+.slider-clarifications {
+	background-color: $color-gray-light;
+	border-radius: 10px;
+	position: relative;
+	
+	&__icon {
+		width: 70px;
 	}
-
-	&__nav li {
-		flex: 0 1 33.333%;
-	}
-
-	&__nav-link {
-		height: 20px;
-		position: relative;
-
-		&:before {
-			content:'';
-			width: 100%;
-			height: 3px;
-			background-color: $color-gray;
-			position: absolute;
-			top: calc(50% - 1px);
-			left: 0;
-		}
-
-		&.active {
-			&:before {
-				background-color: $color-green;
-			}
-		}
+	
+	&__date {
+		font-size: 12px;
+		color: $color-gray-dark;
 	}
 
 	&__link {
-		i:before {
-			font-size: 26px;
-			color: $color-green-light;
-			transition: all 0.3s ease 0s;
-		}
 
 		&:hover {
-			.clarifications__date {
-				color: $color-green-light;
-			}
+			color: $color-green-light;
+		}
+	}
 
-			i:before {
-				transform: translateY(3px);
+	.slick-dots {
+		padding: 0;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		bottom: 0px;
+		transform: translateX(-50%);
+
+		button {
+			font-size: 0;
+		}
+
+		li {
+			margin: 4px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: transparent;
+			border: 1px solid $color-green-light;
+			cursor: pointer;
+
+			&.slick-active {
+				background-color: $color-green-light;
 			}
 		}
 	}
 
-	&__date {
-		color: $color-gray-dark;
+	.slick-arrow {
+		display: none !important;
+	}
+}
+.clarifications-button {
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	i {
+		font-size: 28px;
+		color: $color-green-light;
+	}
+
+	&_prev {
+		left: 20px;
+	}
+
+	&_next {
+		right: 20px;
+	}
+
+	&:hover {
+		i {
+			color: $color-green-dark;
+		}
+	}
+
+	@media (max-width: $md4+px) {
+		display: none;
 	}
 }
 .tax-inspectorates {
@@ -648,3 +671,4 @@ figure audio {
 		}
 	}
 }
+

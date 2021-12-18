@@ -220,6 +220,11 @@ a:hover {
 		bottom: 0;
 		transition: all 0.3s ease 0s;
 	}
+
+	
+	i:before {
+		transition: transform 0.3s ease 0.1s;
+	}
 	
 	&:hover {
 		color: $color-white;
@@ -227,6 +232,10 @@ a:hover {
 		
 		&:before {
 			width: 100%;
+		}
+
+		i:before {
+			transform: translateX(20px);
 		}
 	}
 
@@ -237,17 +246,9 @@ a:hover {
 			background-color: $color-black;
 		}
 
-		i:before {
-			transition: transform 0.3s ease 0.1s;
-		}
-
 		&:hover {
 			color: $color-black;
 			opacity: 0.7;
-
-			i:before {
-				transform: translateX(20px);
-			}
 		}
 	}
 }
