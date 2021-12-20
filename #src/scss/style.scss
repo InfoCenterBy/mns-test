@@ -584,40 +584,6 @@ figure audio {
 	width: 100%;
 }
 
-.item-vacancies {
-	background-color: $color-gray-light;
-	border-radius: 10px;
-
-	i:before {
-		color: $color-green-light;
-	}
-
-	&:hover {
-		background-color: #ffffff;
-		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-		// color: $color-yellow;
-
-		.h6 {
-			transition: all 0.3s ease 0s;
-			// color: $color-white;
-		}
-
-		.item-vacancies__btn {
-			// color: $color-yellow;
-
-			i::before {
-				transform: translateX(5px);
-				// color: $color-yellow;
-			}
-		}
-	}
-
-	&__btn {
-		color: $color-green-light;
-		font-size: 14px;
-		transition: all 0.3s ease 0s;
-	}
-}
 .vacancies {
 	margin: 100px -24px -24px;
 
@@ -671,4 +637,5 @@ figure audio {
 		}
 	}
 }
+
 

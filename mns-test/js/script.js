@@ -2647,22 +2647,7 @@ $('.slider-clarifications__body').slick({
    infinite: true,
    slidesToShow: 1,
    arrows: true,
-   dots: true,
-   // responsive: [
-   //    {
-   //       breakpoint: 1200,
-   //       settings: {
-	// 			slidesToShow: 2,
-   //          slidesToScroll: 2,
-   //       },
-   //    },
-   //    {
-   //       breakpoint: 768,
-   //       settings: {
-   //          slidesToShow: 1,
-   //       },
-   //    },
-   // ],
+   dots: true
 });
 
 $(".slickPrev").on("click", function (e) {
