@@ -2642,6 +2642,30 @@ $(".nav-accordion-link").click(function () {
 	}
 });
 
+// =============  clarifications Slider   =================================
+$('.slider-clarifications__body').slick({
+   infinite: true,
+   slidesToShow: 1,
+   arrows: true,
+   dots: true
+});
+
+$(".slickPrev").on("click", function (e) {
+	e.preventDefault();
+   let currentSlider = $(this)
+      .parents(".slider-clarifications")
+      .find('[data-slider="clarifications"]');
+   currentSlider.slick("slickPrev");
+});
+
+$(".slickNext").on("click", function (e) {
+   e.preventDefault();
+   let currentSlider = $(this)
+      .parents(".slider-clarifications")
+      .find('[data-slider="clarifications"]');
+   currentSlider.slick("slickNext");
+});
+
 // =============  Main Slider   =================================
 $('.partners').slick({
    infinite: true,
