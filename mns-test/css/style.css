@@ -293,6 +293,10 @@ body._lock {
   background-color: #00654D;
 }
 
+.bg-color-gray-light {
+  background-color: #EBEBEB;
+}
+
 .date {
   font-size: 12px;
   color: #9D9F9E;
