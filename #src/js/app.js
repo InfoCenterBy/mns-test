@@ -128,7 +128,7 @@ ibg();
             value = $(this)
                .find('.' + settings.activeClass)
                .text(),
-            toggler = '<button class="selected-tab">' + value + '</button>';
+            toggler = '<div class="selected-tab">' + value + '</div>';
          currentItem.addClass('converted-tab');
          container.prepend(toggler);
 
@@ -338,5 +338,18 @@ $('.partners').slick({
 // =============  Modal for IE-11   =================================
 $(window).on('load', function () {
    $('#browserUnsupport').modal('show');
+});
+
+// =============  Form    =================================
+$(function () {
+   $('#phone1').mask('+375 (99) 999-99-99');
+   $('#phone2').mask('+375 (99) 999-99-99');
+   $('#phone3').mask('+375 (99) 999-99-99');
+   $('#date1').mask('9999');
+   $('#date2').mask('9999');
+   $('#date3').mask('9999');
+   $('#date4').mask('9999');
+   $('#date5').mask('9999');
+   $('#date6').mask('9999');
 });
 
