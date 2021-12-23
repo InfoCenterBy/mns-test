@@ -21,9 +21,8 @@
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center position-relative">
 				<div class="d-flex align-items-center">
-					<a href="#" class="header-top__logo ml-lg-5 mr-2 img"><img src="./img/logo-gray.png" alt=""/></a>
 					<div class="header-special">
-						<button class="header-special__button mr-2 mr-sm-3 mr-md-5 d-block _btn-toggle"><i class="bi bi-chevron-down"></i></button>
+						<button class="header-special__button mr-2 mr-sm-3 mr-md-5 d-flex align-items-center _btn-toggle"><i class="bi bi-collection-play h2 h2_white pr-2"></i><i class="bi bi-chevron-down"></i></button>
 						<div class="header-special__wrapper container hidden-block">
 							<div class="d-flex align-items-center mb-3">
 								<div class="h2 mr-auto">Специальные проекты</div>
@@ -261,15 +260,14 @@
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center position-relative">
 				<a href="index.html" class="d-flex align-items-center my-3">
-					<img class="logo" src="./img/coat-of-arms.png" alt="Лого" />
+					<img class="logo" src="./img/coat-of-arms.png" alt="Герб" />
+					<img class="logo" src="./img/heraldry.png" alt="Лого" />
 					<div class="header-bottom__name">
-						<div class="header-bottom__label">Официальный сайт</div>
-						<div class="h6">
-							Министерство по налогам и сборам Республики Беларусь
-						</div>
+						<div class="header-bottom__subtitle">Официальный сайт</div>
+						<div class="header-bottom__title">Министерство по налогам и сборам Республики Беларусь</div>
 					</div>
 				</a>
-				<ul class="menu m-0 p-0">
+				<ul class="menu mb-0 mr-n2 p-0">
 					<li>
 						<a href="about.html" class="menu__link h6 p-2">О Министерстве</a>
 						<div class="submenu">
@@ -879,23 +877,46 @@
 			</main>
 			<footer class="footer py-4">
 	<div class="container">
-		<div class="row gx-4 gy-5">
-			<div class="col">
-				<a href="index.html" class="footer__logo d-flex align-items-center mb-4">
-					<img src="./img/logo.png" alt="">
-					<div class="ml-3">Министерство по налогам и сборам Республики Беларусь</div>
+		<div class="footer__body">
+			<div>
+				<a href="index.html" class="d-flex align-items-center">
+					<img class="footer__heraldry" src="./img/heraldry.png" alt="Логотип">
+					<div class="footer__title ml-3">Министерство по налогам и сборам Республики Беларусь</div>
 				</a>
-				<div class="ml-md-5 mb-2"><i class="bi bi-geo-alt mr-3"></i>УНП 100582333, 220010, г. Минск, ул. Советская, 9</div>
-				<div><a href="mailto:gnk@mail.belpak.by" class="link ml-md-5"><i class="bi bi-envelope mr-3"></i>e-mail: gnk@mail.belpak.by (кроме обращений)</a></div>
-				
 			</div>
-		</div>
-		<div class="row gx-4 gy-3 mt-3">
-			<div class="col-md-6">
-				<div class="border-top pt-2">Разработка сайта: <a href="https://info-center.by" class="link link-author" target="_blank">«Информационно-издательский центр по налогам и сборам»</a></div>
-			</div>
-			<div class="col-md-6">
-				<a href="#" class="link mt-2 d-inline-block fw-bold">Вернуться к старой версии</a>
+			<div class="footer__content">
+				<div class="d-md-flex align-items-end justify-content-between pb-4">
+					<div class="mb-4 mb-md-0">
+						<div class="mb-2"><i class="bi bi-geo-alt mr-3"></i>УНП 100582333, 220010, г. Минск, ул. Советская, 9</div>
+						<div><i class="bi bi-envelope mr-3"></i>e-mail: <a href="mailto:gnk@mail.belpak.by">gnk@mail.belpak.by</a> (кроме обращений)</div>
+					</div>
+					<div class="d-flex">
+						<a href="https://www.instagram.com/mns_belarus/" class="footer__link-social">
+							<img src="./img/social-icons/instagram.svg" alt="instagram">
+						</a>
+						<a href="https://www.facebook.com/profile.php?id=506915966150496" class="footer__link-social">
+							<img src="./img/social-icons/facebook.svg" alt="facebook">
+						</a>
+						<a href="http://vk.com/ministryfortaxesrb" class="footer__link-social">
+							<img src="./img/social-icons/vk.svg" alt="vk">
+						</a>
+						<a href="#" class="footer__link-social">
+							<img src="./img/social-icons/youtube.svg" alt="youtube">
+						</a>
+						<a href="https://telegram.me/mnsrb" class="footer__link-social">
+							<img src="./img/social-icons/telegram.svg" alt="telegram">
+						</a>
+						<a href="https://invite.viber.com/?g2=AQA4k8V8Y0TJC0k3E5iZ1T6MYxLxAnsACem0WlAqkw%2Fzkd93lG3KLC0HXseoX2XO" class="footer__link-social">
+							<img src="./img/social-icons/viber.svg" alt="viber">
+						</a>
+						<a href="https://twitter.com/nalog_gov_by" class="footer__link-social">
+							<img src="./img/social-icons/twitter.svg" alt="twitter">
+						</a>
+					</div>
+				</div>
+				<div>
+					<div class="border-top pt-4">Разработка сайта: <a href="https://info-center.by" class="link-author" target="_blank">«Информационно-издательский центр по налогам и сборам»</a></div>
+				</div>
 			</div>
 		</div>
 	</div>

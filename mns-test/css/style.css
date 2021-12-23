@@ -1369,11 +1369,6 @@ input:-webkit-autofill:active {
   z-index: 5;
 }
 
-.header-top__logo {
-  width: 35px;
-  height: 35px;
-}
-
 .header-special__wrapper {
   width: 100%;
   padding: 30px 75px;
@@ -1439,7 +1434,7 @@ input:-webkit-autofill:active {
   color: #FAFAFA;
 }
 
-.header-special__button._show-block i:before {
+.header-special__button._show-block i.bi-chevron-down:before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -1873,19 +1868,24 @@ input:-webkit-autofill:active {
 }
 
 .header-bottom .logo {
-  width: 73px;
-  height: 73px;
-  margin: 0px 5px 0px 0px;
+  max-width: 50px;
+  margin: 0px 12px 0px 0px;
 }
 
 .header-bottom__name {
-  max-width: 300px;
+  max-width: 260px;
 }
 
-.header-bottom__label {
+.header-bottom__subtitle {
   color: #727270;
+  font-size: 12px;
+  margin: 0px 0px 3px 0px;
+}
+
+.header-bottom__title {
+  color: #1A1A1A;
   font-size: 14px;
-  margin: 0px 0px 5px 0px;
+  font-weight: 600;
 }
 
 .header-bottom ul li {
@@ -1965,9 +1965,48 @@ input:-webkit-autofill:active {
   color: #FAFAFA;
 }
 
-.footer__logo:hover {
+.footer a:hover {
   color: #FAFAFA;
   opacity: 0.7;
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__heraldry {
+  max-width: 90px;
+}
+
+.footer__title {
+  font-size: 24px;
+  margin: 0px 70px 0px 0px;
+  max-width: 340px;
+}
+
+.footer__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.footer__link-social {
+  margin: 0px 0px 0px 12px;
+}
+
+.footer__link-social:first-child {
+  margin: 0;
+}
+
+.footer__link-social:hover img {
+  -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .footer .link-author {
@@ -8899,6 +8938,19 @@ figure audio {
 }
 
 @media (max-width: 1300px) {
+  .footer__body {
+    display: block;
+  }
+
+  .footer__title {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .footer__content {
+    margin: 24px 0px 0px 0px;
+  }
+
   .inspectorate-nav-tab__link {
     padding: 10px;
   }
@@ -9227,6 +9279,10 @@ figure audio {
     background-size: 20px;
   }
 
+  .header-special {
+    margin: 0px 35px 0px 0px;
+  }
+
   .header-special__nav-tab {
     display: none;
   }
@@ -9248,6 +9304,14 @@ figure audio {
 
   .inspectorates__list {
     top: 50px;
+  }
+
+  .footer__heraldry {
+    max-width: 50px;
+  }
+
+  .footer__title {
+    font-size: 16px;
   }
 
   .nav-tab-contacts {
@@ -9634,7 +9698,7 @@ figure audio {
 
 @media (max-width: 479.98px) {
   .inspectorates__list {
-    left: -75px;
+    left: -65px;
   }
 
   .nav-header__nav {
