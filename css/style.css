@@ -7562,6 +7562,13 @@ figure audio {
   right: 75px;
 }
 
+.mobile-app__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 242px;
+          flex: 0 0 242px;
+  margin: 0px 70px 0px 20px;
+}
+
 @media (min-width: 576px) {
   html body .bvi-panel .bvi-container {
     max-width: 540px;
@@ -9089,6 +9096,10 @@ figure audio {
   .inspectorate-nav-tab__icon {
     display: none;
   }
+
+  .mobile-app__icon {
+    margin: 0px 00px 0px 20px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -9530,6 +9541,10 @@ figure audio {
     position: absolute;
     bottom: 0;
     right: 35px;
+  }
+
+  .mobile-app__icon {
+    display: none;
   }
 }
 
