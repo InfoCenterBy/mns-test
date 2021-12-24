@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Сервисы"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page page__decor">
+				<div class="content">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="services.html">Сервисы<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Мобильное приложение</li>
+							</ol>
+						</div>
+					 </nav>
+					 <div class="item-content">
+						<div class='container'>
+							<div class="item-block px-md-4 px-2 py-4">
+								<h4 class="item-block__title h4">Мобильное приложение</h4>
+								<div class="d-flex align-items-center mb-4">
+									<div class="">
+										<p>Для физических лиц доступно официальное мобильное приложение <b>MNS Mobile</b>.</p>
+										<p>Приложение предназначено для физических лиц, имеющих "Личный кабинет" на портале Министерства по налогам и сборам Республики Беларусь.</p>
+										<p>Сервисы, доступные в мобильном приложении:</p>
+										<ul>
+											<li class="mb-3">подача заявки на получение документов из учетной системы налоговых органов;</li>
+											<li class="mb-3">запись на личный прием к руководству инспекций МНС и просмотр личной истории записей;</li>
+											<li class="mb-3">получение извещений на уплату земельного налога и (или) налога на недвижимость, подоходного налога;</li>
+											<li class="mb-3">получение информации по объектам налогообложения земельным налогом и налогом на недвижимость физических лиц;</li>
+											<li class="mb-3">просмотр документов, поступивших в адрес плательщика от налоговых органов; + оценка приложения;</li>
+											<li class="mb-3">налоговый калькулятор.</li>
+										</ul>
+									</div>
+									<div class="mobile-app__icon">
+											<img class="img-fluid" src="./img/icons/icon-mobile-app.svg" alt="">
+									</div>
+								</div>
+								<div class="d-md-flex">
+									<div class="d-flex align-items-center mb-4 mb-md-0 mr-0 mr-md-5">
+										<a href="https://play.google.com/store/apps/details?id=com.mnsmobileapp"><img src="./img/google-play.png" alt="google-play"></a>
+										<div class="ml-2">Для ОС Android ver. 5.0 и выше</div>
+									</div>
+									<div class="d-flex align-items-center">
+										<a href="https://itunes.apple.com/by/app/mns-mobile/id1439459614?mt=8"><img src="./img//app-store.png" alt="app-store"></a>
+										<div class="ml-2">Для iOS ver. 11.0 и выше</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_js.html',{})
+	</body>
+</html>
