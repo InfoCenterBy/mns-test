@@ -20,7 +20,7 @@
 
 // ===================  Toggle block menu  ========================================
 const btnShowBlock = document.querySelectorAll('._btn-toggle');
-const closeBlock = document.querySelector('.header-special__btn_close');
+const closeBlock = document.querySelector('.header-special__btn-close');
 const body = document.querySelector('body');
 const overlay = document.querySelector('.header__overlay');
 
@@ -61,16 +61,6 @@ closeBlock.addEventListener('click', function (e) {
       item.classList.remove('_show-block');
    });
    overlay.classList.remove('_active');
-});
-
-// ===========  Toggle theme nav-header ===========================
-$('.nav-header__toggle-theme').click(function () {
-   $('.nav-header__nav').toggleClass('_black');
-});
-
-// ===========  Toggle theme header-special =======================
-$('.header-special__btn_toggle-theme').click(function () {
-   $('.header-special__wrapper').toggleClass('_black');
 });
 
 // ===========  Toggle language ===========================
