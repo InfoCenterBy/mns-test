@@ -289,11 +289,15 @@
 	}
 
 	&__body {
-		p, ul {
-			width: 100%;
-			max-width: 800px;
-			margin: 16px auto 16px;
-			line-height: 1.7;
+		line-height: 1.7;
+
+		div, p {
+			margin: 16px 0;
+		}
+
+		ol, ul {
+			margin: 16px 0;
+			padding-left: 24px;
 		}
 
 		a {

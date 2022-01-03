@@ -26,14 +26,14 @@
 								<p>Поля, отмеченные звездочкой, обязательны для заполнения.</p>
 								<form id="questionnaire" action="">
 									<nav class="nav nav-tab questionnaire" id="nav-tab" role="tablist">
-										<a href="#nav-tab-1" class="questionnaire__nav-link active" id="nav-tab-1-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-1" aria-selected="true">1. Налоговый орган</a>
-										<a href="#nav-tab-2" class="questionnaire__nav-link" id="nav-tab-2-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-2" aria-selected="false">2. Личные данные</a>
+										<a href="#nav-tab-1" class="questionnaire__nav-link" id="nav-tab-1-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-1" aria-selected="true">1. Налоговый орган</a>
+										<a href="#nav-tab-2" class="questionnaire__nav-link active" id="nav-tab-2-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-2" aria-selected="false">2. Личные данные</a>
 										<a href="#nav-tab-3" class="questionnaire__nav-link" id="nav-tab-3-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-3" aria-selected="false">3. Образование</a>
 										<a href="#nav-tab-4" class="questionnaire__nav-link" id="nav-tab-4-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-4" aria-selected="false">4. Место работы</a>
 										<a href="#nav-tab-5" class="questionnaire__nav-link" id="nav-tab-5-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-5" aria-selected="false">5. Общие вопросы</a>
 									</nav>
 									<div class="tab-content py-4" id="nav-tabContent">
-										<div class="tab-pane fade show active" id="nav-tab-1" role="tabpanel" aria-labelledby="nav-tab-1-tab">
+										<div class="tab-pane fade" id="nav-tab-1" role="tabpanel" aria-labelledby="nav-tab-1-tab">
 											<div class="row">
 												<div class="col-md-12 col-lg-6">
 													<div class="form-questionnaire__line">
@@ -92,7 +92,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="tab-pane fade" id="nav-tab-2" role="tabpanel" aria-labelledby="nav-tab-2-tab">
+										<div class="tab-pane fade show active" id="nav-tab-2" role="tabpanel" aria-labelledby="nav-tab-2-tab">
 											<h5 class="h5 pb-2 border-bottom-gray">Личные данные</h5>
 											<div class="row mb-5">
 												<div class="col-md-12 col-lg-4 pt-5">
@@ -147,10 +147,17 @@
 												</div>
 												<div class="col-md-12 col-lg-8 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="file" class="form-questionnaire__file-input" id="file-input">
-														<label for="file-input" class="form-questionnaire__file-label">
-															<span>Фотография * (не более 5Мб, расширения JPG, JPEG, JPE, GIF, BMP)</span>
-															<i class="bi bi-download mt-3"></i>
+														<input type="file" accept=".jpg,.jpeg,.png" class="file-input" id="file-input">
+														<label for="file-input" class="file-input__label">
+															<span class="file-input__block file-input__block_title">
+																<span>Фотография * (не более 5Мб, расширения JPG, JPEG, JPE, GIF, BMP)</span>
+																<i class="bi bi-download mt-3"></i>
+															</span>
+															<span class="file-input__block file-input__block_name d-none">
+																<i class="bi bi-check2-circle h1 mb-2 color-green"></i>
+																<span>{{ photo.name }}</span>
+																<button class="file-input__btn-remove" type="button" @click="remove(form.photo.indexOf(photo))" title="Remove file"><i class="bi bi-x"></i></button>
+															</span>
 														</label>
 													</div>
 												</div>
