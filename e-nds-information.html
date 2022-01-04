@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	 <head>
-	<title>Поиск инспекции</title>
+	<title>Информация</title>
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -324,30 +324,61 @@
 					<nav aria-label="breadcrumb">
 						<div class='container'>
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Главная<i class="bi-chevron-right"></i></a></li>
-								<li class="breadcrumb-item"><a href="#">Налоговые инспекции<i class="bi-chevron-right"></i></a></li>
-								<li class="breadcrumb-item active" aria-current="page">Поиск инспекции</li>
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="e-nds.html">е-НДС иностранной организации<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Информация</li>
 							</ol>
 						</div>
 					 </nav>
-					<div class="search-inspectorate">
+					<div class="item-content">
 						<div class='container'>
-							<div class="search-inspectorate__title title title_white">Введите данные для поиска</div>
-							<form class="form-search-inspectorate">
-								<div class="form-search-inspectorate__line">
-									<label class="form-search-inspectorate__label h4" for="city">Город</label>
-									<input id="city" type="text" class="form-search-inspectorate__input">
+							<div class="item-block px-md-4 px-2 py-4">
+								<h4 class="item-block__title h4">Информация</h4>
+								<div class="mb-5">
+                           <h5 class="h5 pb-2 mb-4 border-bottom-gray">Часто задаваемые вопросы</h5>
+									<a href="e-nds-answers.html" class="link-external mb-4">
+										<span>О подаче налоговой декларации</span>
+										<span class="d-flex">
+											<i class="bi bi-chevron-right first"></i>
+											<i class="bi bi-chevron-right"></i>
+										</span>
+									</a>
 								</div>
-								<div class="form-search-inspectorate__line">
-									<label class="form-search-inspectorate__label h4" for="street">Улица</label>
-									<input id="street" type="text" class="form-search-inspectorate__input">
-								</div>
-								<div class="form-search-inspectorate__line">
-									<label class="form-search-inspectorate__label h4" for="number">Номер дома</label>
-									<input id="number" type="text" class="form-search-inspectorate__input">
-								</div>
-								<button class="form-search-inspectorate__button button" type="submit">Поиск</button>
-							</form>
+								<div class="mb-5">
+                           <h5 class="h5 pb-2 mb-4 border-bottom-gray">Формы PDF</h5>
+                           <div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+										<div class="d-flex align-items-center mb-3 mb-sm-0 mr-sm-3">
+											<i class="bi bi-file-earmark-text-fill h2 mr-2"></i>
+											<div>Форма заявления о постановке на учет в налоговом органе иностранной организации, оказывающей услуги в электронной форме для физических лиц</div>
+										</div>
+										<a href="#" class="button" download>Скачать</a>
+									</div>
+                           <div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+										<div class="d-flex align-items-center mb-3 mb-sm-0 mr-sm-3">
+											<i class="bi bi-file-earmark-text-fill h2 mr-2"></i>
+											<div>Форма налоговой декларации (расчета) по НДС иностранной организации, оказывающей услуги в электронной форме для физических лиц (2019, 2020, 2021)</div>
+										</div>
+										<a href="#" class="button" download>Скачать</a>
+									</div>
+                           <div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+										<div class="d-flex align-items-center mb-3 mb-sm-0 mr-sm-3">
+											<i class="bi bi-file-earmark-text-fill h2 mr-2"></i>
+											<div>Информация, содержащая сведения по оборотам по реализации услуг и исчисленной сумме НДС, подлежащей уплате (2019, 2020, 2021)</div>
+										</div>
+										<a href="#" class="button" download>Скачать</a>
+									</div>
+                        </div>
+								<div class="mb-5">
+                           <h5 class="h5 pb-2 mb-4 border-bottom-gray">Нормативные правовые акты</h5>
+                           <div class="d-flex align-items-center justify-content-center justify-content-sm-between flex-wrap flex-sm-nowrap mb-4">
+										<div class="d-flex align-items-center mb-3 mb-sm-0 mr-sm-3">
+											<i class="bi bi-file-earmark-text-fill h2 mr-2"></i>
+											<div>Налоговый кодекс Республики Беларусь (с изм. и доп., вступившими в силу с 01.01.2019, извлечение)</div>
+										</div>
+										<a href="#" class="button" download>Скачать</a>
+									</div>
+                        </div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -399,7 +430,6 @@
 	</div>
 </footer>
 		</div>
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>

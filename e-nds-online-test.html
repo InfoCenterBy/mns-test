@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	 <head>
-	<title>Сервисы</title>
+	<title>Онлайн-тест</title>
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -26,10 +26,7 @@
 						<div class="header-special__wrapper container hidden-block">
 							<div class="d-flex align-items-center mb-3">
 								<div class="h2 mr-auto">Специальные проекты</div>
-								<button class="header-special__btn ml-2 header-special__btn_toggle-theme btn-accord">
-									<i class="bi bi-moon"></i>
-								</button>
-								<button class="header-special__btn header-special__btn_close btn-accord ml-2 ml-sm-4">
+								<button class="header-special__btn-close btn-accord ml-2 ml-sm-4">
 									<i class="bi bi-x"></i>
 								</button>
 							</div>
@@ -232,9 +229,6 @@
 							<span></span>
 						</button>
 						<nav class="nav-header__nav hidden-block">
-							<div class="text-right mb-2 mb-sm-4">
-								<button class="nav-header__toggle-theme btn-accord"><i class="bi bi-moon"></i></button>
-							</div>
 							<ul class="nav-header__list">
 								<li class="nav-header__tablet-link"><a href="about.html" class="link-nav link-nav_black">О Министерстве</a></li>
 								<li class="nav-header__tablet-link"><a href="forms-of-documents.html" class="link-nav link-nav_black">Формы деклараций</a></li>
@@ -331,142 +325,106 @@
 						<div class='container'>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
-								<li class="breadcrumb-item active" aria-current="page">Сервисы</li>
+								<li class="breadcrumb-item mr-3"><a href="e-nds.html">е-НДС иностранной организации<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Онлайн-тест</li>
 							</ol>
 						</div>
 					 </nav>
-					 <div class="item-content">
+					<div class="item-content">
 						<div class='container'>
 							<div class="item-block px-md-4 px-2 py-4">
-								<h4 class="item-block__title h4">Сервисы</h4>
-								<div class="row mt-n3 mx-n2 mb-4">
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/13 е-НДС иностранной организации.svg" alt="">
-											<span class="h5">е-НДС</span>
-										</a>
+								<h4 class="item-block__title h4">Онлайн-тест</h4>
+								<div class="h5 mb-3">Является ли ваша организация плательщиком НДС в Республике Беларусь?</div>
+								<div class="h5 mb-4">Сомневаетесь? Ответьте на несколько вопросов</div>
+								<div id="accordionMns" class="ends-online-test">
+									<div id="heading-1" class="item-block mb-5">
+										<button class="accordion-btn collapsed h5 w-100 d-flex align-items-center text-start" type="button" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+											<div class="flex-grow-1 d-flex align-items-center">
+												<img class="mr-3" src="./img/illustrations/Ваша организация является нерезидентом Республики Беларусь.svg" alt="">
+												<span>Ваша организация является нерезидентом Республики Беларусь?</span> 
+											</div>
+											<i class="_icon-chevron-down-circle mt-1 ml-2"></i>
+										</button>
+										<div id="collapse-1" class="accordion-collapse collapse" aria-labelledby="heading-1" data-parent="#accordionMns">
+											<div>Нерезидент – организация, местом нахождения которой не является Республика Беларусь.</div>
+										</div>
 									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/14 Сведения о задолженности по налоговым платежам в бюджет.svg" alt="">
-											<span class="h5">Сведения о задолженности по налоговым платежам в бюджет</span>
-										</a>
+									<div id="heading-2" class="item-block mb-5">
+										<button class="accordion-btn collapsed h5 w-100 d-flex align-items-center text-start" type="button" data-toggle="collapse" data-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+											<div class="flex-grow-1 d-flex align-items-center">
+												<img class="mr-3" src="./img/illustrations/Ваша организация оказывает услуги в электронной форме.svg" alt="">
+												<span>Ваша организация оказывает услуги в электронной форме?</span> 
+											</div>
+											<i class="_icon-chevron-down-circle mt-1 ml-2"></i> 
+										</button>
+										<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-parent="#accordionMns">
+											<p>Услуги в электронной форме - услуги, оказанные через сеть Интернет автоматизированно с использованием информационных технологий.</p>
+											<p>К организациям, оказывающим услуги в электронной форме, относятся иностранные организации,</p>
+											<ul class="m-0">
+												<li class="mb-3">оказывающие услуги в электронной форме и осуществляющие расчеты с покупателями за эти услуги;</li>
+												<li>осуществляющие посредническую деятельность на основании договоров с иностранными организациями, оказывающими услуги в электронной форме (посредник в расчетах).</li>
+											</ul>
+										</div>
 									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/15 Проверка электронного сертификата налогового резидентства, выданного в Республике Беларусь.svg" alt="">
-											<span class="h5">Проверка электронного сертификата налогового резидентства, выданного в Республике Беларусь</span>
-										</a>
+									<div id="heading-3" class="item-block mb-5">
+										<button class="accordion-btn collapsed h5 w-100 d-flex align-items-center text-start" type="button" data-toggle="collapse" data-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+											<div class="flex-grow-1 d-flex align-items-center">
+												<img class="mr-3" src="./img/illustrations/Услуги входят в установленный перечень.svg" alt="">
+												<span>Услуги входят в установленный перечень?</span> 
+											</div>
+											<i class="_icon-chevron-down-circle mt-1 ml-2"></i> 
+										</button>
+										<div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-parent="#accordionMns">
+											<p>К услугам в электронной форме относятся:</p>
+											<ul class="m-0">
+												<li class="mb-3">предоставление прав на использование программного обеспечения (включая компьютерные игры), баз данных, их обновлений и дополнительных функциональных возможностей через сеть Интернет, в том числе путем предоставления удаленного доступа к ним, а также электронных книг (изданий) и других электронных публикаций, информационных, образовательных материалов, графических изображений, музыкальных произведений с текстом или без текста, аудиовизуальных произведений через сеть Интернет, в том числе путем предоставления удаленного доступа к ним для просмотра и (или) прослушивания через сеть Интернет;</li>
+												<li class="mb-3">рекламные услуги в сети Интернет, в том числе с использованием программ для электронно-вычислительных машин и баз данных, функционирующих в сети Интернет, а также предоставление места и времени для рекламы в сети Интернет;</li>
+												<li class="mb-3">услуги по размещению предложений о приобретении (реализации) товаров (работ, услуг), имущественных прав в сети Интернет;</li>
+												<li class="mb-3">услуги, осуществляемые автоматическим способом через сеть Интернет, при вводе данных покупателем услуг, автоматизированные услуги по поиску данных, их отбору и сортировке по запросам, предоставлению указанных данных пользователям через информационно-телекоммуникационные сети (в том числе сводки фондовой биржи в режиме реального времени, осуществление в режиме реального времени автоматизированного перевода);</li>
+												<li class="mb-3">услуги по поиску и (или) представлению заказчику информации о потенциальных покупателях;</li>
+												<li class="mb-3">услуги по предоставлению через сеть Интернет технических, организационных, информационных и иных возможностей, осуществляемых с использованием информационных технологий и систем, для установления контактов и заключения сделок между продавцами и покупателями (включая предоставление торговой площадки, функционирующей в сети Интернет в режиме реального времени, на которой потенциальные покупатели предлагают свою цену посредством автоматизированной процедуры и стороны извещаются о продаже путем отправляемого автоматически создаваемого сообщения);</li>
+												<li class="mb-3">обеспечение и (или) поддержание присутствия в сети Интернет для личных целей или в целях осуществления предпринимательской деятельности, поддержка электронных ресурсов пользователей (сайтов и (или) страниц сайтов в сети Интернет), обеспечение доступа к ним других пользователей сети Интернет, предоставление пользователям возможности их модификации, оказание услуг по администрированию информационных систем;</li>
+												<li class="mb-3">хранение и обработка информации при условии, что лицо, представившее эту информацию, имеет к ней доступ через сеть Интернет;</li>
+												<li class="mb-3">предоставление в режиме реального времени вычислительной мощности для размещения информации в информационной системе;</li>
+												<li class="mb-3">предоставление доменных имен, оказание услуг хостинга;</li>
+												<li class="mb-3">предоставление доступа к поисковым системам в сети Интернет;</li>
+												<li>ведение статистики на сайтах в сети Интернет.</li>
+											</ul>
+										</div>
 									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/16 Мобильное приложение.svg" alt="">
-											<span class="h5">Мобильное приложение</span>
-										</a>
+									<div id="heading-4" class="item-block mb-5">
+										<button class="accordion-btn collapsed h5 w-100 d-flex align-items-center text-start" type="button" data-toggle="collapse" data-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
+											<div class="flex-grow-1 d-flex align-items-center">
+												<img class="mr-3" src="./img/illustrations/Услуги в электронной форме оказываются физическим лицам.svg" alt="">
+												<span>Услуги в электронной форме оказываются физическим лицам?</span> 
+											</div>
+											<i class="_icon-chevron-down-circle mt-1 ml-2"></i> 
+										</button>
+										<div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-parent="#accordionMns">
+											<div>Физическое лицо – лицо, которое не является представителем организации. К физическим лицам относятся в том числе индивидуальные предприниматели Республики Беларус</div>
+										</div>
 									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/17 Государственный реестр плательщиков.svg" alt="">
-											<span class="h5">Государственный реестр плательщиков</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/18 Узнать о ходе рассмотрения электронного обращения.svg" alt="">
-											<span class="h5">Узнать о ходе рассмотрения электронного обращения</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/13 е-НДС иностранной организации.svg" alt="">
-											<span class="h5">Предварительная регистрация (электронная очередь)</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/20 База данных контролирующих (надзорных) органов.svg" alt="">
-											<span class="h5">База данных контролирующих (надзорных) органов</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/21 Реестр коммерческих организаций и индивидуальных предпринимателей с повышенным риском совершения .svg" alt="">
-											<span class="h5">Реестр коммерческих организаций и индивидуальных предпринимателей с повышенным риском совершения нарушений в экономической сфере</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/22 Заявка на доступ к личному кабинету.svg" alt="">
-											<span class="h5">Заявка на доступ к личному кабинету</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/23 Система контроля торговых автоматов.svg" alt="">
-											<span class="h5">Система контроля торговых автоматов</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/24 Поиск заявления в базе данных МНС Республики Беларусь (ЕАЭС).svg" alt="">
-											<span class="h5">Поиск заявления в базе данных МНС Республики Беларусь (ЕАЭС)</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/25 Налоговый калькулятор.svg" alt="">
-											<span class="h5">Налоговый калькулятор</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/26 Сервис для поиска информации о ставках.svg" alt="">
-											<span class="h5">Сервис для поиска информации о ставках</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/27 Представление нотариусами сообщений о выдаче свидетельств о праве на наследство и об удостоверени.svg" alt="">
-											<span class="h5">Представление нотариусами сообщений о выдаче свидетельств о праве на наследство и об удостоверении договоров отчуждения (дарения, мены, купли-продажи, ренты)</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/28 Предоставление заявлений в электронном виде на лицензию по игорному бизнесу.svg" alt="">
-											<span class="h5">Предоставление заявлений в электронном виде на лицензию по игорному бизнесу</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/29 Нормативные и методические материалы налоговых органов для организаций и ИП.svg" alt="">
-											<span class="h5">Нормативные и методические материалы налоговых органов для организаций и ИП</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/30 Создай свой бизнес.svg" alt="">
-											<span class="h5">Создай свой бизнес</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/31 Налогообложение физических лиц и ответы на актуальные вопросы налогоплательщиков.svg" alt="">
-											<span>Налогообложение физических лиц и ответы на актуальные вопросы налогоплательщиков</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/32 Бюджетные счета.svg" alt="">
-											<span class="h5">Бюджетные счета</span>
-										</a>
-									</div>
-									<div class="col-md-6 col-xl-4 px-2 pt-3">
-										<a href="#" class="item-services h-100 p-3 d-flex align-items-center flex-column flex-sm-row text-center text-sm-left">
-											<img class="mr-sm-4" src="./img/illustrations/33 Личный прием руководством инспекций.svg" alt="">
-											<span class="h5">Личный прием руководством инспекций</span>
-										</a>
+									<div id="heading-5" class="item-block mb-5">
+										<button class="accordion-btn collapsed h5 w-100 d-flex align-items-center text-start" type="button" data-toggle="collapse" data-target="#collapse-5" aria-expanded="true" aria-controls="collapse-3">
+											<div class="flex-grow-1 d-flex align-items-center">
+												<img class="mr-3" src="./img/illustrations/Местом оказания электронных услуг является Республика Беларусь.svg" alt="">
+												<span>Местом оказания электронных услуг является Республика Беларусь?</span> 
+											</div>
+											<i class="_icon-chevron-down-circle mt-1 ml-2"></i> 
+										</button>
+										<div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-parent="#accordionMns">
+											<p>Местом оказания услуг является территория Республики Беларусь, если выполняется хотя бы одно из условий:</p>
+											<ul class="m-0">
+												<li class="mb-3">местом фактического нахождения физического лица является Республика Беларусь;</li>
+												<li class="mb-3">местом нахождения банка, в котором открыт счет, используемый физическим лицом для оплаты услуг, или оператора электронных денежных средств, через которого осуществляется физическим лицом оплата услуг, является территория Республики Беларусь;</li>
+												<li class="mb-3">сетевой (IP) адрес устройства, использованного покупателем при приобретении услуг в электронной форме, зарегистрирован в Республике Беларусь (относится к адресному пространству Республики Беларусь);</li>
+												<li>международный код страны телефонного номера, используемого для приобретения или оплаты услуг, присвоен Республике Беларусь</li>
+											</ul>
+										</div>
 									</div>
 								</div>
+								<p>Если все ответы положительные, вашей организации необходимо встать на учет в белорусских налоговых органах и уплачивать НДС</p>
+								<a href="https://portal.gov.by/PortalGovBy/faces/oracle/webcenter/portalapp/pages/registration/registration.jspx?_afrLoop=41347978533760&_afrWindowMode=0&_afrWindowId=a81lf8z43_1#@?_afrWindowId=a81lf8z43_1&_afrLoop=41347978533760&_afrWindowMode=0&_" class="button" target="_blank">Встать на учёт сейчас</a>
 							</div>
 						</div>
 					</div>
