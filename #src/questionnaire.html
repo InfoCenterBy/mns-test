@@ -24,16 +24,16 @@
 								<p>Для участия в конкурсе на замещение вакантных должностей в Министерстве по налогам и сборам Республики Беларусь заполните форму-анкету на сайте.</p>
 								<p>Конфиденциальность информации, представленной в анкете, гарантируется.</p>
 								<p>Поля, отмеченные звездочкой, обязательны для заполнения.</p>
-								<form id="questionnaire" action="">
+								<form id="form-questionnaire" class="form-questionnaire" action="">
 									<nav class="nav nav-tab questionnaire" id="nav-tab" role="tablist">
-										<a href="#nav-tab-1" class="questionnaire__nav-link" id="nav-tab-1-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-1" aria-selected="true">1. Налоговый орган</a>
-										<a href="#nav-tab-2" class="questionnaire__nav-link active" id="nav-tab-2-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-2" aria-selected="false">2. Личные данные</a>
+										<a href="#nav-tab-1" class="questionnaire__nav-link active" id="nav-tab-1-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-1" aria-selected="true">1. Налоговый орган</a>
+										<a href="#nav-tab-2" class="questionnaire__nav-link" id="nav-tab-2-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-2" aria-selected="false">2. Личные данные</a>
 										<a href="#nav-tab-3" class="questionnaire__nav-link" id="nav-tab-3-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-3" aria-selected="false">3. Образование</a>
 										<a href="#nav-tab-4" class="questionnaire__nav-link" id="nav-tab-4-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-4" aria-selected="false">4. Место работы</a>
 										<a href="#nav-tab-5" class="questionnaire__nav-link" id="nav-tab-5-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tab-5" aria-selected="false">5. Общие вопросы</a>
 									</nav>
 									<div class="tab-content py-4" id="nav-tabContent">
-										<div class="tab-pane fade" id="nav-tab-1" role="tabpanel" aria-labelledby="nav-tab-1-tab">
+										<div class="tab-pane fade show active" id="nav-tab-1" role="tabpanel" aria-labelledby="nav-tab-1-tab">
 											<div class="row">
 												<div class="col-md-12 col-lg-6">
 													<div class="form-questionnaire__line">
@@ -51,60 +51,63 @@
 												</div>
 												<div class="col-md-12 col-lg-6 pt-5 pt-lg-0">
 													<div class="form-questionnaire__line">
-														<select class="form-questionnaire__select">
+														<select class="form-questionnaire__select _required">
 															<option disabled selected>Должность *</option>
-															<option value="">Начальник инспекции</options>
-															<option value="">Первый заместитель начальника инспекции</options>
-															<option value="">Заместитель начальника инспекции</options>
-															<option value="">Начальник управления (отдела)</options>
-															<option value="">Заместитель начальника управления (отдела)</options>
-															<option value="">Заведующий сектором</options>
-															<option value="">Начальник службы (отделения)</options>
-															<option value="">Заместитель начальника службы (отделения)</options>
-															<option value="">Заведующий группой</options>
-															<option value="">Главный государственный налоговый инспектор</options>
-															<option value="">Старший государственный налоговый инспектор</options>
-															<option value="">Государственный налоговый инспектор</options>
-															<option value="">Главный специалист</options>
-															<option value="">Ведущий специалист</options>
-															<option value="">Юрисконсульт</options>
-															<option value="">Ведущий референт</options>
-															<option value="">Референт</options>
-															<option value="">Главный бухгалтер</options>
-															<option value="">Ведущий бухгалтер</options>
-															<option value="">Бухгалтер</options>
-															<option value="">Старший инспектор, инспектор (служба делопроизводства)</options>
-															<option value="">Делопроизводитель</options>
-															<option value="">Секретарь приемной</options>
-															<option value="">Ведущий администратор баз данных</options>
-															<option value="">Администратор баз данных</options>
-															<option value="">Ведущий администратор сетей</options>
-															<option value="">Администратор сетей</options>
-															<option value="">Ведущий специалист по сопровождению программного обеспечения</options>
-															<option value="">Специалист по сопровождению программного обеспечения</options>
-															<option value="">Водитель автомобиля</options>
-															<option value="">Уборщик помещений</options>
-															<option value="">Дворник</options>
-															<option value="">Сторож</options>
-															<option value="">Рабочий по комплексному обслуживанию и ремонту зданий и сооружений  5 разряда</options>
+															<option value="Начальник инспекции">Начальник инспекции</options>
+															<option value="Первый заместитель начальника инспекции">Первый заместитель начальника инспекции</options>
+															<option value="Заместитель начальника инспекции">Заместитель начальника инспекции</options>
+															<option value="Начальник управления (отдела)">Начальник управления (отдела)</options>
+															<option value="Заместитель начальника управления (отдела)">Заместитель начальника управления (отдела)</options>
+															<option value="Заведующий сектором">Заведующий сектором</options>
+															<option value="Начальник службы (отделения)">Начальник службы (отделения)</options>
+															<option value="Заместитель начальника службы (отделения)">Заместитель начальника службы (отделения)</options>
+															<option value="Заведующий группой">Заведующий группой</options>
+															<option value="Главный государственный налоговый инспектор">Главный государственный налоговый инспектор</options>
+															<option value="Старший государственный налоговый инспектор">Старший государственный налоговый инспектор</options>
+															<option value="Государственный налоговый инспектор">Государственный налоговый инспектор</options>
+															<option value="Главный специалист">Главный специалист</options>
+															<option value="Ведущий специалист">Ведущий специалист</options>
+															<option value="Юрисконсульт">Юрисконсульт</options>
+															<option value="Ведущий референт">Ведущий референт</options>
+															<option value="Референт">Референт</options>
+															<option value="Главный бухгалтер">Главный бухгалтер</options>
+															<option value="Ведущий бухгалтер">Ведущий бухгалтер</options>
+															<option value="Бухгалтер">Бухгалтер</options>
+															<option value="Старший инспектор, инспектор (служба делопроизводства)">Старший инспектор, инспектор (служба делопроизводства)</options>
+															<option value="Делопроизводитель">Делопроизводитель</options>
+															<option value="Секретарь приемной">Секретарь приемной</options>
+															<option value="Ведущий администратор баз данных">Ведущий администратор баз данных</options>
+															<option value="Администратор баз данных">Администратор баз данных</options>
+															<option value="Ведущий администратор сетей">Ведущий администратор сетей</options>
+															<option value="Администратор сетей">Администратор сетей</options>
+															<option value="Ведущий специалист по сопровождению программного обеспечения">Ведущий специалист по сопровождению программного обеспечения</options>
+															<option value="Специалист по сопровождению программного обеспечения">Специалист по сопровождению программного обеспечения</options>
+															<option value="Водитель автомобиля">Водитель автомобиля</options>
+															<option value="Уборщик помещений">Уборщик помещений</options>
+															<option value="Дворник">Дворник</options>
+															<option value="Сторож">Сторож</options>
+															<option value="Рабочий по комплексному обслуживанию и ремонту зданий и сооружений  5 разряда">Рабочий по комплексному обслуживанию и ремонту зданий и сооружений  5 разряда</options>
 														</select>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="tab-pane fade show active" id="nav-tab-2" role="tabpanel" aria-labelledby="nav-tab-2-tab">
+										<div class="tab-pane fade" id="nav-tab-2" role="tabpanel" aria-labelledby="nav-tab-2-tab">
 											<h5 class="h5 pb-2 border-bottom-gray">Личные данные</h5>
 											<div class="row mb-5">
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Фамилия *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Фамилия *">
 														<label class="form-questionnaire__label">Фамилия *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Имя *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Имя *">
 														<label class="form-questionnaire__label">Имя *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
@@ -126,23 +129,25 @@
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Гражданство *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Гражданство *">
 														<label for="" class="form-questionnaire__label">Гражданство *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<select class="form-questionnaire__select">
+														<select class="form-questionnaire__select _required">
 															<option disabled selected>Семейное положение *</option>
-															<option value="">Холост</options>
-															<option value="">Не замужем</options>
-															<option value="">Женат</options>
-															<option value="">Замужем</options>
-															<option value="">Разведен</options>
-															<option value="">Разведена</options>
-															<option value="">Вдовец</options>
-															<option value="">Вдова</options>
+															<option value="Холост">Холост</options>
+															<option value="Не замужем">Не замужем</options>
+															<option value="Женат">Женат</options>
+															<option value="Замужем">Замужем</options>
+															<option value="Разведен">Разведен</options>
+															<option value="Разведена">Разведена</options>
+															<option value="Вдовец">Вдовец</options>
+															<option value="Вдова">Вдова</options>
 														</select>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-8 pt-5">
@@ -166,13 +171,14 @@
 											<div class="row mb-5">
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="tel" id="phone1" class="form-questionnaire__input" placeholder="Телефон мобильный *">
+														<input type="tel" data-tel="tel" class="form-questionnaire__input _required" placeholder="Телефон мобильный *">
 														<label class="form-questionnaire__label">Телефон мобильный *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="tel" id="phone2" class="form-questionnaire__input" placeholder="Телефон рабочий">
+														<input type="tel" data-tel="tel" class="form-questionnaire__input" placeholder="Телефон рабочий">
 														<label class="form-questionnaire__label">Телефон рабочий</label>
 													</div>
 												</div>
@@ -188,22 +194,24 @@
 											<h5 class="h5 pb-2 border-bottom-gray">Образование</h5>
 											<div class="my-5">
 												<div class="form-questionnaire__line">
-													<select class="form-questionnaire__select">
+													<select class="form-questionnaire__select _required">
 														<option disabled selected>Образование *</option>
-														<option value="">Базовое</options>
-														<option value="">Среднее</options>
-														<option value="">Среднее специальное</options>
-														<option value="">Профессионально-техническое</options>
-														<option value="">Высшее</options>
+														<option value="Базовое">Базовое</options>
+														<option value="Среднее">Среднее</options>
+														<option value="Среднее специальное">Среднее специальное</options>
+														<option value="Профессионально-техническое">Профессионально-техническое</options>
+														<option value="Высшее">Высшее</options>
 													</select>
+													<div class="form-questionnaire__text-error">Обязательное поле</div>
 												</div>
 											</div>
 											<h5 class="h5 pb-2 border-bottom-gray">Учреждение образования</h5>
 											<div class="row mb-5">
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Наименование *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Наименование *">
 														<label for="" class="form-questionnaire__label">Наименование *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
@@ -214,36 +222,41 @@
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Специальность *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Специальность *">
 														<label for="" class="form-questionnaire__label">Специальность *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Квалификация *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Квалификация *">
 														<label for="" class="form-questionnaire__label">Квалификация *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="phone" id="date1" class="form-questionnaire__input" placeholder="Период обучения: c *">
+														<input type="phone" data-date='date' class="form-questionnaire__input _required" placeholder="Период обучения: c *">
 														<label for="" class="form-questionnaire__label">Период обучения: c *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="phone" id="date2" class="form-questionnaire__input" placeholder="Период обучения: по *">
+														<input type="phone" data-date='date' class="form-questionnaire__input _required" placeholder="Период обучения: по *">
 														<label for="" class="form-questionnaire__label">Период обучения: по *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<select class="form-questionnaire__select">
+														<select class="form-questionnaire__select _required">
 															<option disabled selected>Форма обучения *</option>
-															<option value="">Дневная</options>
-															<option value="">Заочная</options>
-															<option value="">Дистанционная</options>
+															<option value="Дневная">Дневная</options>
+															<option value="Заочная">Заочная</options>
+															<option value="Дистанционная">Дистанционная</options>
 														</select>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 											</div>
@@ -252,17 +265,19 @@
 											<div class="row mb-5">
 												<div class="col-12 pt-5">
 													<div class="form-questionnaire__line">
-														<select class="form-questionnaire__select">
+														<select class="form-questionnaire__select _required">
 															<option disabled selected>Последующее образование *</option>
-															<option value="">Подготовка</options>
-															<option value="">Переподготовка</options>
+															<option value="Подготовка">Подготовка</options>
+															<option value="Переподготовка">Переподготовка</options>
 														</select>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Наименование *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Наименование *">
 														<label for="" class="form-questionnaire__label">Наименование *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
@@ -273,32 +288,37 @@
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Специальность *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Специальность *">
 														<label for="" class="form-questionnaire__label">Специальность *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Квалификация *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Квалификация *">
 														<label for="" class="form-questionnaire__label">Квалификация *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="phone" id="date3" class="form-questionnaire__input" placeholder="Период обучения: c *">
+														<input type="phone" data-date='date' class="form-questionnaire__input _required" placeholder="Период обучения: c *">
 														<label for="" class="form-questionnaire__label">Период обучения: c *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="phone" id="date2" class="form-questionnaire__input" placeholder="Период обучения: по *">
+														<input type="phone" data-date='date' class="form-questionnaire__input _required" placeholder="Период обучения: по *">
 														<label for="" class="form-questionnaire__label">Период обучения: по *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="phone" id="date4" class="form-questionnaire__input" placeholder="Ученая степень, звание *">
+														<input type="phone" class="form-questionnaire__input _required" placeholder="Ученая степень, звание *">
 														<label for="" class="form-questionnaire__label">Ученая степень, звание *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 											</div>
@@ -309,8 +329,8 @@
 													<div class="form-questionnaire__line">
 														<select class="form-questionnaire__select">
 															<option disabled selected>Дополнительное профессиональное обучение</option>
-															<option value="">Подготовка</options>
-															<option value="">Переподготовка</options>
+															<option value="Подготовка">Подготовка</options>
+															<option value="Переподготовка">Переподготовка</options>
 														</select>
 													</div>
 												</div>
@@ -328,13 +348,13 @@
 												</div>
 												<div class="col-md-12 col-lg-6 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="date" id="date5" class="form-questionnaire__input">
+														<input type="date" class="form-questionnaire__input">
 														<label class="form-questionnaire__label">Период обучения: c</label>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-6 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="date" id="date6" class="form-questionnaire__input">
+														<input type="date" class="form-questionnaire__input">
 														<label class="form-questionnaire__label">Период обучения: по</label>
 													</div>
 												</div>
@@ -352,10 +372,10 @@
 													<div class="form-questionnaire__line">
 														<select class="form-questionnaire__select">
 															<option disabled selected>Уровень знания</option>
-															<option value="">Базовый</options>
-															<option value="">Средний</options>
-															<option value="">Продвинутый</options>
-															<option value="">Cвободное владение</options>
+															<option value="Базовый">Базовый</options>
+															<option value="Средний">Средний</options>
+															<option value="Продвинутый">Продвинутый</options>
+															<option value="Cвободное владение">Cвободное владение</options>
 														</select>
 													</div>
 												</div>
@@ -379,9 +399,9 @@
 													<div class="form-questionnaire__line">
 														<select class="form-questionnaire__select">
 															<option disabled selected>Уровень знания</option>
-															<option value="">Базовый</options>
-															<option value="">Средний</options>
-															<option value="">Продвинутый</options>
+															<option value="Базовый">Базовый</options>
+															<option value="Средний">Средний</options>
+															<option value="Продвинутый">Продвинутый</options>
 														</select>
 													</div>
 												</div>
@@ -399,20 +419,23 @@
 											<div class="row mb-5">
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Организация *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Организация *">
 														<label class="form-questionnaire__label">Организация *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Должность *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Должность *">
 														<label class="form-questionnaire__label">Должность *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Период работы *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Период работы *">
 														<label class="form-questionnaire__label">Период работы *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 pt-5">
@@ -427,14 +450,16 @@
 											<div class="row mb-5">
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Стаж государственной службы *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Стаж государственной службы *">
 														<label class="form-questionnaire__label">Стаж государственной службы *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="text" class="form-questionnaire__input" placeholder="Стаж работы в налоговых органах *">
+														<input type="text" class="form-questionnaire__input _required" placeholder="Стаж работы в налоговых органах *">
 														<label class="form-questionnaire__label">Стаж работы в налоговых органах *</label>
+														<div class="form-questionnaire__text-error">Обязательное поле</div>
 													</div>
 												</div>
 												<div class="col-md-12 col-lg-4 pt-5">
@@ -505,15 +530,15 @@
 												</div>
 												<div class="col-md-12 col-lg-6 pt-5">
 													<div class="form-questionnaire__line">
-														<input type="tel" id="phone3" class="form-questionnaire__input" placeholder="Контактный телефон">
+														<input type="tel" data-tel="tel" class="form-questionnaire__input" placeholder="Контактный телефон">
 														<label class="form-questionnaire__label">Контактный телефон</label>
 													</div>
 												</div>
 											</div>
-											<button class="button mb-5">Добавить еще одного рекомендателя</button>
+											<button class="button form-questionnaire__button mb-5">Добавить еще одного рекомендателя</button>
 											<div class="d-flex mb-5">
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox">
+												<label class="checkbox form-questionnaire__line">
+													<input class="checkbox__input _required" type="checkbox">
 													<span class="checkbox__text"></span>
 												</label>
 												<div>Подтверждаю свое согласие на проверку сведений, изложенных мною в анкете. Удостоверяю, что все данные, приведенные мной в настоящей анкете, соответствуют действительности и изложены полно. Мною принято к сведению, что любое несоответствующее действительности утверждение или предоставленная информация дают основание для отмены предложения о трудоустройстве или расторжения заключенного трудового договора.</div>

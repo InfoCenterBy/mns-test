@@ -332,14 +332,131 @@ $(window).on('load', function () {
 
 // =============  Form    =================================
 $(function () {
-   $('#phone1').mask('+375 (99) 999-99-99');
-   $('#phone2').mask('+375 (99) 999-99-99');
-   $('#phone3').mask('+375 (99) 999-99-99');
-   $('#date1').mask('9999');
-   $('#date2').mask('9999');
-   $('#date3').mask('9999');
-   $('#date4').mask('9999');
-   $('#date5').mask('9999');
-   $('#date6').mask('9999');
+	$("input[data-tel='tel']").mask('+375 (99) 999-99-99');
+	$("input[data-date='date']").mask('9999');
 });
 
+function formAddError(input) {
+	input.parentElement.classList.add('_error');
+	input.classList.add('_error');
+}
+
+function formRemoveError(input) {
+	input.parentElement.classList.remove('_error');
+	input.classList.remove('_error');
+}
+
+function emailTest(input) {
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(
+		input.value
+	);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+   let form = document.getElementById('form-questionnaire');
+
+   form.addEventListener('submit', formSend);
+
+   async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(form);
+
+		let formData = new FormData(form);
+
+      if (error === 0) {
+         let response = await fetch('index.php', {
+            method: 'POST',
+            body: formData,
+         });
+         if (response.ok) {
+            let result = await response.json();
+            alert(result.message);
+            formData.reset();
+         } else {
+				alert('Ошибка')
+			}
+      }
+
+      function formValidate(form) {
+         let error = 0;
+         let formRequired = document.querySelectorAll('._required');
+
+         for (let i = 0; i < formRequired.length; i++) {
+            const input = formRequired[i];
+            formRemoveError(input);
+            if (input.classList.contains('_email')) {
+               if (emailTest(input)) {
+                  formAddError(input);
+                  error++;
+               }
+            } else if (
+               input.getAttribute('type') === 'checkbox' &&
+               input.checked === false
+            ) {
+               formAddError(input);
+               error++;
+            } else if (
+               input.selectedIndex === 0
+            ) {
+               formAddError(input);
+               error++;
+            } else {
+               if (input.value === '') {
+                  formAddError(input);
+                  error++;
+               }
+            }
+         }
+         return error;
+      } 
+   }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+   let form = document.getElementById('form-ends');
+
+   form.addEventListener('submit', formSend);
+
+   async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(form);
+
+		let formData = new FormData(form);
+
+      if (error === 0) {
+         let response = await fetch('index.php', {
+            method: 'POST',
+            body: formData,
+         });
+         if (response.ok) {
+            let result = await response.json();
+            alert(result.message);
+            formData.reset();
+         } else {
+				alert('Ошибка')
+			}
+      }
+
+      function formValidate(form) {
+         let error = 0;
+         let formRequired = document.querySelectorAll('._required');
+
+         for (let i = 0; i < formRequired.length; i++) {
+            const input = formRequired[i];
+            formRemoveError(input);
+				if (input.classList.contains('_email')) {
+               if (emailTest(input)) {
+                  formAddError(input);
+                  error++;
+               }
+            } else if (input.value === '') {
+					formAddError(input);
+					error++;
+				}
+         }
+         return error;
+      }
+   }
+});
