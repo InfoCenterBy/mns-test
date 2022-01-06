@@ -8,31 +8,6 @@
   font-style: normal;
 }
 
-[class^=_icon-]:before,
-[class*=" _icon-"]:before {
-  font-family: "icons";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^=_icon-]:before,
-[class*=" _icon-"]:before {
-  display: block;
-}
-
-._icon-files:before {
-  content: "\e901";
-}
-
-._icon-chevron-down-circle:before {
-  content: "\e900";
-}
-
 .arrow {
   position: relative;
   cursor: pointer;
@@ -1434,6 +1409,21 @@ input:-webkit-autofill:active {
   -webkit-transform: rotate(180deg) scale(1.2);
       -ms-transform: rotate(180deg) scale(1.2);
           transform: rotate(180deg) scale(1.2);
+}
+
+.block-form-questionnaire {
+  position: relative;
+}
+
+.block-form-questionnaire__btn-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 2;
+}
+
+.block-form-questionnaire__btn-close:hover {
+  color: #00654D;
 }
 
 .e-nds-form {
