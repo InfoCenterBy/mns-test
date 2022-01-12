@@ -256,13 +256,14 @@ $(".nav-accordion-link").click(function () {
 		$("#" + d_activeTab).removeClass("active show");
 		$(this).removeClass("d_active");
 	} else {
-		$(".tab-pane .accordion").removeClass("active show");
+		$(".content-accordion").removeClass("active show");
 		$(".nav-accordion-link").removeClass("d_active");
 		var d_activeTab = $(this).attr("rel");
 		$("#" + d_activeTab).addClass("active show");
 		$(this).addClass("d_active");
 	}
 });
+
 
 // =============  clarifications Slider   =================================
 $('.slider-clarifications__body').slick({
