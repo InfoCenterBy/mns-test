@@ -373,6 +373,21 @@ input:-webkit-autofill:active {
 		}
 	}
 }
+.block-form-questionnaire {
+	position: relative;
+
+	&__btn-close {
+		color: $color-gray;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		z-index: 2;
+
+		&:hover {
+			color: $color-green;
+		}
+	}
+}
 .e-nds-form {
 	display: flex;
 	flex-wrap: wrap;

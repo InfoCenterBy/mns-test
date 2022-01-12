@@ -1436,6 +1436,22 @@ input:-webkit-autofill:active {
           transform: rotate(180deg) scale(1.2);
 }
 
+.block-form-questionnaire {
+  position: relative;
+}
+
+.block-form-questionnaire__btn-close {
+  color: #9D9F9E;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 2;
+}
+
+.block-form-questionnaire__btn-close:hover {
+  color: #00654D;
+}
+
 .e-nds-form {
   display: -webkit-box;
   display: -ms-flexbox;
