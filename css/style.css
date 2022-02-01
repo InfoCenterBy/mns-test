@@ -7702,7 +7702,7 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
 }
 
 .partners {
-  padding: 50px 0;
+  padding: 50px;
   background-color: #ffffff;
 }
 
@@ -7725,6 +7725,35 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   opacity: 0.5;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+.partners .slick-arrow {
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+  border-top: 3px solid #EBEBEB;
+  border-left: 3px solid #EBEBEB;
+  position: absolute;
+  top: 50%;
+  margin: -15px 0px 0px 0px;
+}
+
+.partners .slick-arrow:hover {
+  border-color: #9D9F9E;
+}
+
+.partners .slick-prev {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 25px;
+}
+
+.partners .slick-next {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  right: 25px;
 }
 
 #browserUnsupport .modal-dialog {
