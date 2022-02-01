@@ -1030,6 +1030,53 @@ a:hover {
   padding: 40px 30px 10px;
 }
 
+.accordion-btn-read-more {
+  color: #007A65;
+}
+
+.accordion-btn-read-more:hover {
+  text-decoration: underline;
+}
+
+.accordion-btn-read-more__more {
+  display: none;
+}
+
+.accordion-btn-read-more__hidden:hover i:before {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.accordion-btn-read-more.collapsed .accordion-btn-read-more__more {
+  display: block;
+}
+
+.accordion-btn-read-more.collapsed .accordion-btn-read-more__more:hover i:before {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.accordion-btn-read-more.collapsed .accordion-btn-read-more__hidden {
+  display: none;
+}
+
+.accordion-btn-read-more.collapsed .accordion-btn-read-more__hidden:hover i:before {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

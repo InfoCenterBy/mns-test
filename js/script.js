@@ -2548,13 +2548,6 @@ if (sidebarBlock && $(window).width() > 992) {
    });
    sidebar.updateSticky();
 }
-const navTabBlock = document.querySelector('.nav-tab-vertical__sticky');
-if (navTabBlock && $(window).width() > 768) {
-   var sidebar = new StickySidebar(navTabBlock, {
-      topSpacing: 20,
-   });
-   sidebar.updateSticky();
-}
 
 // ===========  Page personal-area, toggle link entries ===========================
 const linksTab = document.querySelectorAll('.link-nav-tab');
