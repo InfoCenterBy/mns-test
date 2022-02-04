@@ -294,6 +294,9 @@
 		div, p {
 			margin: 16px 0;
 		}
+		div.item-news__video {
+			margin: 30px 0;
+		}
 
 		ol, ul {
 			margin: 16px 0;
@@ -317,10 +320,8 @@
 
 	&__video {
 		width: 100%;
-		max-width: 800px;
-		margin: 30px auto;
-		padding: 41% 0 0 0;
-
+		padding: 56.25% 0 0 0;
+	
 		iframe {
 			object-fit: cover;
 			width: 100%;
@@ -328,10 +329,6 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-		}
-
-		@media (max-width: 880px) {
-			padding: 56.25% 0 0 0;
 		}
 	}
 

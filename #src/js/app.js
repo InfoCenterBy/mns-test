@@ -179,6 +179,16 @@ if (sidebarBlock && $(window).width() > 992) {
    sidebar.updateSticky();
 }
 
+
+// ===========  Sticky nav-tab-vertical ===========================
+const navTabVerticalBlock = document.querySelector('.nav-tab-vertical__sticky');
+if (navTabVerticalBlock && $(window).width() > 768) {
+   var sidebar = new StickySidebar(navTabVerticalBlock, {
+      topSpacing: 20,
+   });
+   sidebar.updateSticky();
+}
+
 // ===========  Page personal-area, toggle link entries ===========================
 const linksTab = document.querySelectorAll('.link-nav-tab');
 const linksEntries = document.querySelectorAll('.link-entries');
@@ -292,33 +302,45 @@ $(".slickNext").on("click", function (e) {
 // =============  Main Slider   =================================
 $('.partners').slick({
    infinite: true,
-   slidesToShow: 11,
+   slidesToShow: 9,
    slidesToScroll: 1,
-   arrows: false,
+   arrows: true,
    autoplay: true,
    autoplaySpeed: 3000,
    dots: false,
    responsive: [
       {
-         breakpoint: 1250,
+         breakpoint: 1350,
+         settings: {
+            slidesToShow: 7,
+         },
+      },
+      {
+         breakpoint: 1100,
+         settings: {
+            slidesToShow: 5,
+         },
+      },
+      {
+         breakpoint: 992,
          settings: {
             slidesToShow: 4,
          },
       },
       {
-         breakpoint: 1000,
+         breakpoint: 768,
          settings: {
             slidesToShow: 3,
          },
       },
       {
-         breakpoint: 768,
+         breakpoint: 565,
          settings: {
             slidesToShow: 2,
          },
       },
       {
-         breakpoint: 565,
+         breakpoint: 450,
          settings: {
             slidesToShow: 1,
          },

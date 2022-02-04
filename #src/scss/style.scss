@@ -488,7 +488,7 @@ body {
 	width: 215px;
 }
 .partners {
-	padding: 50px 0;
+	padding: 50px;
 	background-color: #ffffff;
 
 	&__slide {
@@ -506,6 +506,31 @@ body {
 			opacity: 0.5;
 			filter: grayscale(100%);
 		}
+	}
+
+	.slick-arrow {
+		font-size: 0;
+		width: 30px;
+		height: 30px;
+		border-top: 3px solid $color-gray-light;
+		border-left: 3px solid $color-gray-light;
+		position: absolute;
+		top: 50%;
+		margin: -15px 0px 0px 0px;
+
+		&:hover {
+			border-color: $color-gray;
+		}
+	}
+
+	.slick-prev {
+		transform: rotate(-45deg);
+		left: 25px;
+	}
+
+	.slick-next {
+		transform: rotate(135deg);
+		right: 25px;
 	}
 }
 #browserUnsupport {
