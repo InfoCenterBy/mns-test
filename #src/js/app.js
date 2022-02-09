@@ -378,108 +378,113 @@ function emailTest(input) {
 document.addEventListener('DOMContentLoaded', function () {
    let form = document.getElementById('form-questionnaire');
 
-   form.addEventListener('submit', formSend);
+	if (form) {
 
-   async function formSend(e) {
-      e.preventDefault();
-
-      let error = formValidate(form);
-
-		let formData = new FormData(form);
-
-      if (error === 0) {
-         let response = await fetch('index.php', {
-            method: 'POST',
-            body: formData,
-         });
-         if (response.ok) {
-            let result = await response.json();
-            alert(result.message);
-            formData.reset();
-         } else {
-				alert('Ошибка')
+		form.addEventListener('submit', formSend);
+	
+		async function formSend(e) {
+			e.preventDefault();
+	
+			let error = formValidate(form);
+	
+			let formData = new FormData(form);
+	
+			if (error === 0) {
+				let response = await fetch('index.php', {
+					method: 'POST',
+					body: formData,
+				});
+				if (response.ok) {
+					let result = await response.json();
+					alert(result.message);
+					formData.reset();
+				} else {
+					alert('Ошибка')
+				}
 			}
-      }
+	
+			function formValidate(form) {
+				let error = 0;
+				let formRequired = document.querySelectorAll('._required');
+	
+				for (let i = 0; i < formRequired.length; i++) {
+					const input = formRequired[i];
+					formRemoveError(input);
+					if (input.classList.contains('_email')) {
+						if (emailTest(input)) {
+							formAddError(input);
+							error++;
+						}
+					} else if (
+						input.getAttribute('type') === 'checkbox' &&
+						input.checked === false
+					) {
+						formAddError(input);
+						error++;
+					} else if (
+						input.selectedIndex === 0
+					) {
+						formAddError(input);
+						error++;
+					} else {
+						if (input.value === '') {
+							formAddError(input);
+							error++;
+						}
+					}
+				}
+				return error;
+			} 
+		}
+	}
 
-      function formValidate(form) {
-         let error = 0;
-         let formRequired = document.querySelectorAll('._required');
-
-         for (let i = 0; i < formRequired.length; i++) {
-            const input = formRequired[i];
-            formRemoveError(input);
-            if (input.classList.contains('_email')) {
-               if (emailTest(input)) {
-                  formAddError(input);
-                  error++;
-               }
-            } else if (
-               input.getAttribute('type') === 'checkbox' &&
-               input.checked === false
-            ) {
-               formAddError(input);
-               error++;
-            } else if (
-               input.selectedIndex === 0
-            ) {
-               formAddError(input);
-               error++;
-            } else {
-               if (input.value === '') {
-                  formAddError(input);
-                  error++;
-               }
-            }
-         }
-         return error;
-      } 
-   }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
    let form = document.getElementById('form-ends');
+	if (form) {
+		form.addEventListener('submit', formSend);
 
-   form.addEventListener('submit', formSend);
+		async function formSend(e) {
+			e.preventDefault();
 
-   async function formSend(e) {
-      e.preventDefault();
+			let error = formValidate(form);
 
-      let error = formValidate(form);
+			let formData = new FormData(form);
 
-		let formData = new FormData(form);
-
-      if (error === 0) {
-         let response = await fetch('index.php', {
-            method: 'POST',
-            body: formData,
-         });
-         if (response.ok) {
-            let result = await response.json();
-            alert(result.message);
-            formData.reset();
-         } else {
-				alert('Ошибка')
-			}
-      }
-
-      function formValidate(form) {
-         let error = 0;
-         let formRequired = document.querySelectorAll('._required');
-
-         for (let i = 0; i < formRequired.length; i++) {
-            const input = formRequired[i];
-            formRemoveError(input);
-				if (input.classList.contains('_email')) {
-               if (emailTest(input)) {
-                  formAddError(input);
-                  error++;
-               }
-            } else if (input.value === '') {
-					formAddError(input);
-					error++;
+			if (error === 0) {
+				let response = await fetch('index.php', {
+					method: 'POST',
+					body: formData,
+				});
+				if (response.ok) {
+					let result = await response.json();
+					alert(result.message);
+					formData.reset();
+				} else {
+					alert('Ошибка')
 				}
-         }
-         return error;
-      }
-   }
+			}
+
+			function formValidate(form) {
+				let error = 0;
+				let formRequired = document.querySelectorAll('._required');
+
+				for (let i = 0; i < formRequired.length; i++) {
+					const input = formRequired[i];
+					formRemoveError(input);
+					if (input.classList.contains('_email')) {
+						if (emailTest(input)) {
+							formAddError(input);
+							error++;
+						}
+					} else if (input.value === '') {
+						formAddError(input);
+						error++;
+					}
+				}
+				return error;
+			}
+		}
+	}
 });

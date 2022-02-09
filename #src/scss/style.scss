@@ -81,6 +81,7 @@ body {
 // @import "home";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 @import "search-inspectorate";
+@import "tax-calc";
 @import "about";
 @import "news";
 @import "inspectorates";
@@ -532,6 +533,9 @@ body {
 		transform: rotate(135deg);
 		right: 25px;
 	}
+}
+.modal.show {
+	background-color: rgba(0, 0, 0, 0.493);
 }
 #browserUnsupport {
 	.modal-dialog {
