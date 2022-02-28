@@ -8414,6 +8414,86 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
           flex: 0 0 45px;
 }
 
+.notification {
+  padding: 25px;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  right: 0;
+  bottom: -200%;
+  z-index: 1000;
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.notification.open {
+  opacity: 1;
+  visibility: visible;
+  bottom: 0;
+}
+
+.notification__body {
+  width: 100%;
+  max-width: 620px;
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -6px -6px 4px rgba(9, 47, 40, 0.21);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -6px -6px 4px rgba(9, 47, 40, 0.21);
+  padding: 20px 40px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+
+.notification__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.notification__close i:before {
+  font-size: 30px;
+  color: #00654D;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.notification__close:hover i:before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.notification__info {
+  margin: 0px 55px 0px 0px;
+  font-weight: 600;
+}
+
+.notification__link {
+  position: relative;
+}
+
+.notification__link img {
+  width: 110px;
+  height: 203px;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  -webkit-transform: translateX(-40%);
+      -ms-transform: translateX(-40%);
+          transform: translateX(-40%);
+}
+
 .children-about-taxes {
   background-color: #EBEBEB;
   border-radius: 10px;
@@ -10727,6 +10807,23 @@ figure audio {
 
   .item-main-news {
     padding: 60% 0px 0px 0px;
+  }
+
+  .notification {
+    padding: 15px;
+  }
+
+  .notification__body {
+    padding: 15px 40px 15px 15px;
+    display: block;
+  }
+
+  .notification__info {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .notification__link img {
+    display: none;
   }
 }
 

@@ -353,6 +353,21 @@ $(window).on('load', function () {
    $('#browserUnsupport').modal('show');
 });
 
+// =============  Notification   =================================
+
+const blockNotification = document.querySelector('.notification');
+const closeBlockNotification = document.querySelector('.notification__close');
+
+(function showBlock () {
+	setTimeout (() => {
+		blockNotification.classList.add('open')
+	}, 3000)
+})()
+
+closeBlockNotification.addEventListener('click', function () {
+	blockNotification.classList.remove('open')
+})
+
 // =============  Form    =================================
 $(function () {
 	$("input[data-tel='tel']").mask('+375 (99) 999-99-99');
