@@ -5964,7 +5964,7 @@ const blockNotification = document.querySelector('.notification');
 const closeBlockNotification = document.querySelector('.notification__close');
 
 (function showBlock () {
-	setTimeout (() => {
+	setTimeout (function () {
 		blockNotification.classList.add('open')
 	}, 3000)
 })()
