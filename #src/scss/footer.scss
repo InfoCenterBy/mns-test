@@ -2,48 +2,29 @@
 	background-color: $color-green-dark;
 	color: $color-white;
 
-	a:hover {
+	a {
+		font-size: 14px;
+
+
+		&:hover {
+			color: $color-white;
+			opacity: 0.7;
+		}
+	}
+
+	a.footer__link-icon {
+		font-size: 18px;
 		color: $color-white;
-		opacity: 0.7;
+		font-weight: 600;
 	}
 
-	&__body {
-		display: flex;
-		align-items: center;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
 
-		@media (max-width: 1300px) {
-			display: block;
-		}
-	}
-
-	&__heraldry {
-		max-width: 90px;
-
-		@media (max-width: $md3+px) {
-			max-width: 50px;
-		}
-	}
-
-	&__title {
-		font-size: 24px;
-		margin: 0px 70px 0px 0px;
-		max-width: 340px;
-
-		@media (max-width: 1300px) {
-			margin: 0;
-			max-width: 100%;
-		}
-
-		@media (max-width: $md3+px) {
-			font-size: 16px;
-		}
-	}
-
-	&__content {
-		flex: 1 1 auto;
-
-		@media (max-width: 1300px) {
-			margin: 24px 0px 0px 0px;
+		li:not(:last-child) {
+			margin: 0px 0px 12px 0px;
 		}
 	}
 
@@ -61,8 +42,14 @@
 		}
 	}
 
-	.link-author {
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		font-size: 14px;
+
+		@media (max-width: $md3+px) {
+			display: block;
+		}
 	}
 }
-

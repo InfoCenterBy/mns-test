@@ -111,7 +111,7 @@ a:hover {
 	&_white {
 		background-color: $color-white;
 		color: $color-green-light;
-		
+
 		&:hover {
 			color: $color-green-light;
 			background-color: #e6e6e6;
@@ -169,7 +169,7 @@ a:hover {
 	color: $color-white;
 	position: relative;
 	transition: all 0.3s ease 0s;
-	
+
 	&:before {
 		content:'';
 		width: 4px;
@@ -211,7 +211,7 @@ a:hover {
 	font-size: 18px;
 	color: $color-white;
 	position: relative;
-	
+
 	&:before {
 		content:'';
 		width: 0%;
@@ -224,15 +224,15 @@ a:hover {
 		transition: all 0.3s ease 0s;
 	}
 
-	
+
 	i:before {
 		transition: transform 0.3s ease 0.1s;
 	}
-	
+
 	&:hover {
 		color: $color-white;
 		opacity: 0.7;
-		
+
 		&:before {
 			width: 100%;
 		}
@@ -400,7 +400,7 @@ a:hover {
 		&:before {
 			display: none;
 		}
-		
+
 		a {
 			color: $color-white;
 			font-size: 14px;
@@ -433,7 +433,7 @@ a:hover {
 	background-color: $color-gray-light;
 	border-radius: 10px;
 	filter: drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
-	
+
 	i {
 		font-size: 40px;
 		color: $color-green-light;
@@ -463,6 +463,19 @@ a:hover {
 	background-color: $color-gray-light;
 	border-radius: 10px;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+
+	&_clarification {
+
+		.item-card-download__icon {
+			max-width: 110px;
+
+			@media (max-width: $md4+px) {
+				display: none;
+			}
+		}
+
+
+	}
 	transition: all 0.3s ease 0s;
 
 	.bi-download {
@@ -476,6 +489,17 @@ a:hover {
 		.bi-download {
 			transform: translateY(3px);
 		}
+	}
+}
+.tag-link {
+	padding: 8px;
+	font-size: 14px;
+	color: $color-black;
+	border: 1px solid $color-green-light;
+	border-radius: 4px;
+
+	&:hover {
+		border-color: $color-black;
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -566,7 +590,7 @@ a:hover {
 			text-align: center;
 			margin-bottom: 4px;
 			z-index: 1;
-			
+
 			&.active {
 				z-index: 2;
 				font-weight: 600;
@@ -606,7 +630,7 @@ a:hover {
             color: $color-white;
          }
       }
-		
+
 		@media (min-width: $md3+px) {
 			display: flex;
 			flex-direction: column;
@@ -669,14 +693,14 @@ a:hover {
 
 .nav-tab-vertical {
 	flex-wrap: nowrap;
-	
+
 	&__nav-list {
 		display: flex;
 		flex-direction: column;
 		background-color: $color-gray-light;
 		border-radius: 10px;
 	}
-	
+
 	&__link {
 		flex: 0 0 100%;
 		background-color: $color-gray-light;
@@ -742,7 +766,7 @@ a:hover {
 	margin: 0px 0px 60px 0px;
 
 	&__nav-tab {
-		
+
 	}
 
 	&__nav-link {
@@ -786,12 +810,12 @@ a:hover {
 		i {
 			font-size: 20px;
 			margin-left: 10px;
-			
+
 			&:before {
 				transition: all 0.3s ease 0s;
 			}
 		}
-		
+
 		&.d_active {
 			color: #2B9140;
 
@@ -810,5 +834,80 @@ a:hover {
 		}
 	}
 }
+.accordion-question {
+	background-color: $color-gray-light;
+	border-radius: 10px;
+	margin: 0px 0px 24px 0px;
 
+	&:last-child {
+		margin: 0px 0px 0px 0px;
+	}
 
+   &__btn {
+		width: 100%;
+		font-size: 16px;
+		color: $color-green-light;
+		display: flex;
+		align-items: center;
+      padding: 24px 36px;
+
+		i {
+			font-size: 20px;
+			transition: all 0.3s ease 0s;
+		}
+
+		&.collapsed {
+			margin: 0;
+
+			i.bi-chevron-down {
+				transform: rotate(-90deg);
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 16px;
+		}
+   }
+
+	&__wrapper {
+		padding: 0 16px 16px;
+	}
+
+	&__body {
+		padding: 24px;
+		background-color: $color-white;
+		border-radius: 10px;
+		position: relative;
+
+		&:before {
+			content:'';
+			width: 0;
+			height: 0;
+			border-left: 9px solid transparent;
+			border-right: 9px solid transparent;
+			border-bottom: 16px solid $color-white;
+			position: absolute;
+			left: 65px;
+			top: -16px;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 16px;
+
+			&:before {
+				left: 25px;
+			}
+		}
+	}
+
+	&__row {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+
+		i {
+			color: $color-green-light;
+			font-size: 30px;
+		}
+	}
+}
