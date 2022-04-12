@@ -784,6 +784,10 @@ a:hover {
   transition: all 0.3s ease 0s;
 }
 
+.item-card-download_clarification .item-card-download__icon {
+  max-width: 110px;
+}
+
 .item-card-download .bi-download {
   color: #007A65;
   -webkit-transition: all 0.3s ease 0s;
@@ -800,6 +804,18 @@ a:hover {
   -webkit-transform: translateY(3px);
       -ms-transform: translateY(3px);
           transform: translateY(3px);
+}
+
+.tag-link {
+  padding: 8px;
+  font-size: 14px;
+  color: #1A1A1A;
+  border: 1px solid #007A65;
+  border-radius: 4px;
+}
+
+.tag-link:hover {
+  border-color: #1A1A1A;
 }
 
 .nav-tab-mns {
@@ -1028,6 +1044,86 @@ a:hover {
 .requisites .tab-pane {
   background-color: #FAFAFA;
   padding: 40px 30px 10px;
+}
+
+.accordion-question {
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  margin: 0px 0px 24px 0px;
+}
+
+.accordion-question:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.accordion-question__btn {
+  width: 100%;
+  font-size: 16px;
+  color: #007A65;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 36px;
+}
+
+.accordion-question__btn i {
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.accordion-question__btn.collapsed {
+  margin: 0;
+}
+
+.accordion-question__btn.collapsed i.bi-chevron-down {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.accordion-question__wrapper {
+  padding: 0 16px 16px;
+}
+
+.accordion-question__body {
+  padding: 24px;
+  background-color: #FAFAFA;
+  border-radius: 10px;
+  position: relative;
+}
+
+.accordion-question__body:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 16px solid #FAFAFA;
+  position: absolute;
+  left: 65px;
+  top: -16px;
+}
+
+.accordion-question__row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accordion-question__row i {
+  color: #007A65;
+  font-size: 30px;
 }
 
 input:-webkit-autofill,
@@ -2135,34 +2231,29 @@ input:-webkit-autofill:active {
   color: #FAFAFA;
 }
 
+.footer a {
+  font-size: 14px;
+}
+
 .footer a:hover {
   color: #FAFAFA;
   opacity: 0.7;
 }
 
-.footer__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.footer a.footer__link-icon {
+  font-size: 18px;
+  color: #FAFAFA;
+  font-weight: 600;
 }
 
-.footer__heraldry {
-  max-width: 90px;
+.footer ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
-.footer__title {
-  font-size: 24px;
-  margin: 0px 70px 0px 0px;
-  max-width: 340px;
-}
-
-.footer__content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+.footer ul li:not(:last-child) {
+  margin: 0px 0px 12px 0px;
 }
 
 .footer__link-social {
@@ -2179,7 +2270,16 @@ input:-webkit-autofill:active {
           transform: translateY(-3px);
 }
 
-.footer .link-author {
+.footer__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 14px;
 }
 
@@ -9985,19 +10085,6 @@ figure audio {
             flex: 0 0 300px;
   }
 
-  .footer__body {
-    display: block;
-  }
-
-  .footer__title {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  .footer__content {
-    margin: 24px 0px 0px 0px;
-  }
-
   .inspectorate-nav-tab__link {
     padding: 10px;
   }
@@ -10394,12 +10481,8 @@ figure audio {
     top: 50px;
   }
 
-  .footer__heraldry {
-    max-width: 50px;
-  }
-
-  .footer__title {
-    font-size: 16px;
+  .footer__footer {
+    display: block;
   }
 
   .nav-tab-contacts {
@@ -10724,8 +10807,24 @@ figure audio {
             align-items: center;
   }
 
+  .item-card-download_clarification .item-card-download__icon {
+    display: none;
+  }
+
   .requisites .tab-pane {
     padding: 30px 20px 10px;
+  }
+
+  .accordion-question__btn {
+    padding: 16px;
+  }
+
+  .accordion-question__body {
+    padding: 16px;
+  }
+
+  .accordion-question__body:before {
+    left: 25px;
   }
 
   .phone-header {

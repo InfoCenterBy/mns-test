@@ -5833,7 +5833,7 @@ $('#accordionMns').on('shown.bs.collapse', function (event) {
       400
    );
 });
-$('.item-block__title, .accordion-btn').click(function () {
+$('.item-block__title, .accordion-btn, .accordion-question__btn').click(function () {
    $('html, body').animate(
       {
          scrollTop: $(this).offset().top,
@@ -6001,14 +6001,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (form) {
 
 		form.addEventListener('submit', formSend);
-	
+
 		async function formSend(e) {
 			e.preventDefault();
-	
+
 			let error = formValidate(form);
-	
+
 			let formData = new FormData(form);
-	
+
 			if (error === 0) {
 				let response = await fetch('index.php', {
 					method: 'POST',
@@ -6022,11 +6022,11 @@ document.addEventListener('DOMContentLoaded', function () {
 					alert('Ошибка')
 				}
 			}
-	
+
 			function formValidate(form) {
 				let error = 0;
 				let formRequired = document.querySelectorAll('._required');
-	
+
 				for (let i = 0; i < formRequired.length; i++) {
 					const input = formRequired[i];
 					formRemoveError(input);
@@ -6054,7 +6054,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					}
 				}
 				return error;
-			} 
+			}
 		}
 	}
 
