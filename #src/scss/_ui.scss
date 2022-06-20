@@ -909,5 +909,16 @@ a:hover {
 			color: $color-green-light;
 			font-size: 30px;
 		}
+
+		img {
+			max-width: 60px;
+			height: auto;
+			margin-right: 24px;
+
+			@media (max-width: 480px) {
+				max-width: 45px;
+				margin-right: 12px;
+			}
+		}
 	}
 }

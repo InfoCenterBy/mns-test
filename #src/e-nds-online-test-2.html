@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Являетесь ли вы плательщиком НДС в Республике Беларусь по электронной дистанционной продаже товаров?"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page page__decor">
+				<div class="content">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="e-nds.html">е-НДС иностранной организации<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="e-nds.html">Онлайн-тесте<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Являетесь ли вы плательщиком НДС в Республике Беларусь по электронной дистанционной продаже товаров?</li>
+							</ol>
+						</div>
+					 </nav>
+					<div class="item-content">
+						<div class='container'>
+							<div class="item-block px-md-4 px-2 py-4">
+								<h4 class="item-block__title h4">Онлайн-тест (с 1 июля 2022 г.)</h4>
+								<div class="h5 mb-3">Является ли ваша организация плательщиком НДС в Республике Беларусь?</div>
+								<div class="h5 mb-4">Сомневаетесь? Ответьте на несколько вопросов</div>
+								<div id="accordionMns">
+									<div id="heading-1" class="accordion-question">
+										<button class="accordion-question__btn" type="button" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+											<div class="accordion-question__row">
+												<img src="./img/illustrations/10%20Индивидуальные%20предприниматели.svg" alt="">
+												<div>Являетесь ли вы организацией или индивидуальным предпринимателем?</div>
+											</div>
+											<i class="bi bi-chevron-down ml-3"></i>
+										</button>
+										<div id="collapse-1" class="collapse show" aria-labelledby="heading-1" data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="accordion-question__row mb-2">
+														<i class="bi bi-exclamation-circle mr-2 mr-sm-4"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>Если вы являетесь организацией или индивидуальным предпринимателем, переходите к следующему вопросу.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="heading-2" class="accordion-question">
+										<button class="accordion-question__btn collapsed" type="button" data-toggle="collapse" data-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+											<div class="accordion-question__row">
+												<img src="./img/illustrations/Your_organization_is_a_non-resident_of_the_Republic_of_Belarus.svg" alt="">
+												<div>Являетесь ли вы нерезидентом Республики Беларусь?</div>
+											</div>
+											<i class="bi bi-chevron-down ml-3"></i>
+										</button>
+										<div id="collapse-2" class="collapse" aria-labelledby="heading-2" data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="accordion-question__row mb-2">
+														<i class="bi bi-exclamation-circle mr-2 mr-sm-4"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>Иностранной организацией признается организация, местом нахождения которой не является Республика Беларусь.</div>
+													<div>Иностранным индивидуальным предпринимателем признается физическое лицо, зарегистрированное в качестве индивидуального предпринимателя за пределами Республики Беларусь.</div>
+													<div>Иностранные организации и иностранные индивидуальные предприниматели не являются налоговыми резидентами Республики Беларусь.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="heading-3" class="accordion-question">
+										<button class="accordion-question__btn collapsed" type="button" data-toggle="collapse" data-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+											<div class="accordion-question__row">
+												<img src="./img/illustrations/Your_organization_is_a_non-resident_of_the_Republic_of_Belarus.svg" alt="">
+												<div>Осуществляете ли вы электронную дистанционную продажу товаров?</div>
+											</div>
+											<i class="bi bi-chevron-down ml-3"></i>
+										</button>
+										<div id="collapse-3" class="collapse" aria-labelledby="heading-3" data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="accordion-question__row mb-2">
+														<i class="bi bi-exclamation-circle mr-2 mr-sm-4"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>Электронная дистанционная продажа товаров - реализация товаров покупателю при наступлении следующих условий:</div>
+													<ul>
+														<li>заказ товаров и оплата производятся покупателем посредством сервисов, доступных на электронной торговой площадке;</li>
+														<li>доставка товаров покупателю организуется (полностью или частично) посредством электронной торговой площадки.</li>
+													</ul>
+													<div>К организациям, индивидуальным предпринимателям, осуществляющим электронную дистанционную продажу товаров, относятся:</div>
+													<ul>
+														<li>иностранные организации, иностранные индивидуальные предприниматели, осуществляющие электронную дистанционную продажу товаров и осуществляющие расчеты с покупателями за поставленные товары;</li>
+														<li>иностранные организации, иностранные индивидуальные предприниматели, которые от имени (в интересах) иностранной организации (иностранного индивидуального предпринимателя), осуществляющей электронную дистанционную продажу товаров, получают заказы, организуют доставку товаров, организуют расчеты непосредственно с покупателями Республики Беларусь за приобретение таких товаров на основании договоров комиссии, поручения или иных аналогичных гражданско-правовых договоров, заключенных с таким иностранным лицом (иностранный посредник в расчетах при электронной дистанционной продаже товаров).</li>
+													</ul>
+													<div>К организациям, индивидуальным предпринимателям, осуществляющим электронную дистанционную продажу товаров, не относится иностранный посредник в расчетах при электронной дистанционной продаже товаров, если иностранная организация (иностранный индивидуальный предприниматель), осуществляющая электронную дистанционную продажу товаров, указана в качестве поставщика товара в:</div>
+													<ul>
+														<li>договоре с покупателем товаров Республики Беларусь;</li>
+														<li>и счете, выставленном покупателю товаров Республики Беларусь за реализованные товары.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="heading-4" class="accordion-question">
+										<button class="accordion-question__btn collapsed" type="button" data-toggle="collapse" data-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
+											<div class="accordion-question__row">
+												<img src="./img/illustrations/Your_organization_provides_services_in_electronic_form.svg" alt="">
+												<div>Товары реализуются покупателям Республики Беларусь? </div>
+											</div>
+											<i class="bi bi-chevron-down ml-3"></i>
+										</button>
+										<div id="collapse-4" class="collapse" aria-labelledby="heading-4" data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="accordion-question__row mb-2">
+														<i class="bi bi-exclamation-circle mr-2 mr-sm-4"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>Покупателями Республики Беларусь, приобретающими товары при электронной дистанционной продаже товаров, могут быть:</div>
+													<ul>
+														<li>физические лица (в т.ч. индивидуальные предприниматели);</li>
+														<li>организации.</li>
+													</ul>
+													<div>Физическое лицо (в т.ч. индивидуальный предприниматель) определяется покупателем Республики Беларусь, если местом жительства физического лица является Республика Беларусь, что подтверждается его почтовым адресом (физическое лицо имеет почтовый адрес в Республике Беларусь).</div>
+													<div>Помимо данного критерия (например, если место жительства физического лица не известно) могут использоваться следующие условия определения физических лиц покупателями Республики Беларусь:</div>
+													<ul>
+														<li>местом нахождения банка, в котором открыт счет, используемый физическим лицом, или оператора электронных денежных средств, используемого физическим лицом, является территория Республики Беларусь;</li>
+														<li>или сетевой (IP) адрес устройства, использованного физическим лицом зарегистрирован в Республике Беларусь;</li>
+														<li>или международный код страны телефонного номера, используемого физическим лицом, присвоен Республике Беларусь.</li>
+														<li></li>
+													</ul>
+													<div>Организация определяется покупателем Республики Беларусь, если местом государственной регистрации организации является Республика Беларусь.</div>
+													<div>Для определения организации в качестве покупателя Республики Беларусь могут также использоваться следующие критерии (например, когда не известно место государственной регистрации организации):</div>
+													<ul>
+														<li>местом нахождения банка, в котором открыт счет, используемый организацией, или оператора электронных денежных средств, используемого организацией, является территория Республики Беларусь;</li>
+														<li>сетевой (IP) адрес устройства, использованного организацией, зарегистрирован в Республике;</li>
+														<li>международный код страны телефонного номера, международный почтовый индекс, международный код страны, использованные организацией для приобретения или оплаты таких товаров, присвоены Республике Беларусь.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="heading-5" class="accordion-question">
+										<button class="accordion-question__btn collapsed" type="button" data-toggle="collapse" data-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">
+											<div class="accordion-question__row">
+												<img src="./img/illustrations/Services_in_electronic_form_are_provided_to_individuals.svg" alt="иконка">
+												<div>Превышает ли сумма оборота по реализации товаров при электронной дистанционной продаже товаров покупателям Республики Беларусь 10 000 евро в календарном году?</div>
+											</div>
+											<i class="bi bi-chevron-down ml-3"></i>
+										</button>
+										<div id="collapse-5" class="collapse" aria-labelledby="heading-5" data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="accordion-question__row mb-2">
+														<i class="bi bi-exclamation-circle mr-2 mr-sm-4"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>Пороговое значение в размере 10 000 евро (без учета налога на добавленную стоимость) установлено для целей определения обязанности постановки на учет. Если сумма оборота по реализации товаров в году составила 10 000 евро или более, продавец обязан встать на учет в налоговом органе Республики Беларусь. После постановки на учет в последующие годы отслеживание данного порогового значения не осуществляется. НДС уплачивается независимо от суммы выручки.</div>
+													<div>Пороговое значение определяется исходя из курса центрального банка государства по месту государственной регистрации иностранной организации, иностранного индивидуального предпринимателя на последнее число последнего месяца квартала, в котором товары были реализованы покупателю товаров Республики Беларусь.</div>
+													<div>Если все ответы положительные, вам необходимо встать на учет в белорусских налоговых органах и уплачивать НДС по электронной дистанционной продаже товаров.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_js.html',{})
+	</body>
+</html>
