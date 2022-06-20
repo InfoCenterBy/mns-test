@@ -1126,6 +1126,12 @@ a:hover {
   font-size: 30px;
 }
 
+.accordion-question__row img {
+  max-width: 60px;
+  height: auto;
+  margin-right: 24px;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -8577,6 +8583,42 @@ figure audio {
   margin: 0px 70px 0px 20px;
 }
 
+.link-online-test {
+  height: 100%;
+  padding: 32px;
+  border-radius: 10px;
+  border: 1px solid #9D9F9E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.link-online-test:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.link-online-test:hover i.bi-arrow-right {
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.link-online-test__img {
+  text-align: center;
+}
+
+.link-online-test i.bi-arrow-right {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  display: inline-block;
+}
+
 @media (min-width: 576px) {
   .ends-popup-links .modal-dialog {
     max-width: 1360px;
@@ -10751,6 +10793,13 @@ figure audio {
 
   .notification__link img {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-question__row img {
+    max-width: 45px;
+    margin-right: 12px;
   }
 }
 

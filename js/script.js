@@ -5784,7 +5784,6 @@ if (sidebarBlock && $(window).width() > 992) {
    sidebar.updateSticky();
 }
 
-
 // ===========  Sticky nav-tab-vertical ===========================
 const navTabVerticalBlock = document.querySelector('.nav-tab-vertical__sticky');
 if (navTabVerticalBlock && $(window).width() > 768) {
@@ -5833,14 +5832,16 @@ $('#accordionMns').on('shown.bs.collapse', function (event) {
       400
    );
 });
-$('.item-block__title, .accordion-btn, .accordion-question__btn').click(function () {
-   $('html, body').animate(
-      {
-         scrollTop: $(this).offset().top,
-      },
-      300
-   );
-});
+$('.item-block__title, .accordion-btn, .accordion-question__btn').click(
+   function () {
+      $('html, body').animate(
+         {
+            scrollTop: $(this).offset().top,
+         },
+         300
+      );
+   }
+);
 
 // ==================  Select Tab   ===================================
 
@@ -5865,43 +5866,42 @@ $('#select-tab-box-01').change(function () {
 });
 
 // ============  tab to accordion  ========================================================
-$(".nav-accordion-link").click(function () {
-	if ($(this).hasClass("d_active")) {
-		var d_activeTab = $(this).attr("rel");
-		$("#" + d_activeTab).removeClass("active show");
-		$(this).removeClass("d_active");
-	} else {
-		$(".content-accordion").removeClass("active show");
-		$(".nav-accordion-link").removeClass("d_active");
-		var d_activeTab = $(this).attr("rel");
-		$("#" + d_activeTab).addClass("active show");
-		$(this).addClass("d_active");
-	}
+$('.nav-accordion-link').click(function () {
+   if ($(this).hasClass('d_active')) {
+      var d_activeTab = $(this).attr('rel');
+      $('#' + d_activeTab).removeClass('active show');
+      $(this).removeClass('d_active');
+   } else {
+      $('.content-accordion').removeClass('active show');
+      $('.nav-accordion-link').removeClass('d_active');
+      var d_activeTab = $(this).attr('rel');
+      $('#' + d_activeTab).addClass('active show');
+      $(this).addClass('d_active');
+   }
 });
-
 
 // =============  clarifications Slider   =================================
 $('.slider-clarifications__body').slick({
    infinite: true,
    slidesToShow: 1,
    arrows: true,
-   dots: true
+   dots: true,
 });
 
-$(".slickPrev").on("click", function (e) {
-	e.preventDefault();
-   let currentSlider = $(this)
-      .parents(".slider-clarifications")
-      .find('[data-slider="clarifications"]');
-   currentSlider.slick("slickPrev");
-});
-
-$(".slickNext").on("click", function (e) {
+$('.slickPrev').on('click', function (e) {
    e.preventDefault();
    let currentSlider = $(this)
-      .parents(".slider-clarifications")
+      .parents('.slider-clarifications')
       .find('[data-slider="clarifications"]');
-   currentSlider.slick("slickNext");
+   currentSlider.slick('slickPrev');
+});
+
+$('.slickNext').on('click', function (e) {
+   e.preventDefault();
+   let currentSlider = $(this)
+      .parents('.slider-clarifications')
+      .find('[data-slider="clarifications"]');
+   currentSlider.slick('slickNext');
 });
 
 // =============  Main Slider   =================================
@@ -5962,149 +5962,179 @@ $(window).on('load', function () {
 
 const blockNotification = document.querySelector('.notification');
 const closeBlockNotification = document.querySelector('.notification__close');
+if (blockNotification) {
+	(function showBlock() {
+		setTimeout(function () {
+			blockNotification.classList.add('open');
+		}, 3000);
+	})();
 
-(function showBlock () {
-	setTimeout (function () {
-		blockNotification.classList.add('open')
-	}, 3000)
-})()
+	closeBlockNotification.addEventListener('click', function () {
+		blockNotification.classList.remove('open');
+	});
+}
 
-closeBlockNotification.addEventListener('click', function () {
-	blockNotification.classList.remove('open')
-})
 
 // =============  Form    =================================
 $(function () {
-	$("input[data-tel='tel']").mask('+375 (99) 999-99-99');
-	$("input[data-date='date']").mask('9999');
+   $("input[data-tel='tel']").mask('+375 (99) 999-99-99');
+   $("input[data-date='date']").mask('9999');
 });
 
 function formAddError(input) {
-	input.parentElement.classList.add('_error');
-	input.classList.add('_error');
+   input.parentElement.classList.add('_error');
+   input.classList.add('_error');
 }
 
 function formRemoveError(input) {
-	input.parentElement.classList.remove('_error');
-	input.classList.remove('_error');
+   input.parentElement.classList.remove('_error');
+   input.classList.remove('_error');
 }
 
 function emailTest(input) {
-	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(
-		input.value
-	);
+   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
    let form = document.getElementById('form-questionnaire');
 
-	if (form) {
+   if (form) {
+      form.addEventListener('submit', formSend);
 
-		form.addEventListener('submit', formSend);
+      async function formSend(e) {
+         e.preventDefault();
 
-		async function formSend(e) {
-			e.preventDefault();
+         let error = formValidate(form);
 
-			let error = formValidate(form);
+         let formData = new FormData(form);
 
-			let formData = new FormData(form);
+         if (error === 0) {
+            let response = await fetch('index.php', {
+               method: 'POST',
+               body: formData,
+            });
+            if (response.ok) {
+               let result = await response.json();
+               alert(result.message);
+               formData.reset();
+            } else {
+               alert('Ошибка');
+            }
+         }
 
-			if (error === 0) {
-				let response = await fetch('index.php', {
-					method: 'POST',
-					body: formData,
-				});
-				if (response.ok) {
-					let result = await response.json();
-					alert(result.message);
-					formData.reset();
-				} else {
-					alert('Ошибка')
-				}
-			}
+         function formValidate(form) {
+            let error = 0;
+            let formRequired = document.querySelectorAll('._required');
 
-			function formValidate(form) {
-				let error = 0;
-				let formRequired = document.querySelectorAll('._required');
-
-				for (let i = 0; i < formRequired.length; i++) {
-					const input = formRequired[i];
-					formRemoveError(input);
-					if (input.classList.contains('_email')) {
-						if (emailTest(input)) {
-							formAddError(input);
-							error++;
-						}
-					} else if (
-						input.getAttribute('type') === 'checkbox' &&
-						input.checked === false
-					) {
-						formAddError(input);
-						error++;
-					} else if (
-						input.selectedIndex === 0
-					) {
-						formAddError(input);
-						error++;
-					} else {
-						if (input.value === '') {
-							formAddError(input);
-							error++;
-						}
-					}
-				}
-				return error;
-			}
-		}
-	}
-
+            for (let i = 0; i < formRequired.length; i++) {
+               const input = formRequired[i];
+               formRemoveError(input);
+               if (input.classList.contains('_email')) {
+                  if (emailTest(input)) {
+                     formAddError(input);
+                     error++;
+                  }
+               } else if (
+                  input.getAttribute('type') === 'checkbox' &&
+                  input.checked === false
+               ) {
+                  formAddError(input);
+                  error++;
+               } else if (input.selectedIndex === 0) {
+                  formAddError(input);
+                  error++;
+               } else {
+                  if (input.value === '') {
+                     formAddError(input);
+                     error++;
+                  }
+               }
+            }
+            return error;
+         }
+      }
+   }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
    let form = document.getElementById('form-ends');
-	if (form) {
-		form.addEventListener('submit', formSend);
+   if (form) {
+      form.addEventListener('submit', formSend);
 
-		async function formSend(e) {
-			e.preventDefault();
+      async function formSend(e) {
+         e.preventDefault();
 
-			let error = formValidate(form);
+         let error = formValidate(form);
 
-			let formData = new FormData(form);
+         let formData = new FormData(form);
 
-			if (error === 0) {
-				let response = await fetch('index.php', {
-					method: 'POST',
-					body: formData,
-				});
-				if (response.ok) {
-					let result = await response.json();
-					alert(result.message);
-					formData.reset();
-				} else {
-					alert('Ошибка')
-				}
-			}
+         if (error === 0) {
+            let response = await fetch('index.php', {
+               method: 'POST',
+               body: formData,
+            });
+            if (response.ok) {
+               let result = await response.json();
+               alert(result.message);
+               formData.reset();
+            } else {
+               alert('Ошибка');
+            }
+         }
 
-			function formValidate(form) {
-				let error = 0;
-				let formRequired = document.querySelectorAll('._required');
+         function formValidate(form) {
+            let error = 0;
+            let formRequired = document.querySelectorAll('._required');
 
-				for (let i = 0; i < formRequired.length; i++) {
-					const input = formRequired[i];
-					formRemoveError(input);
-					if (input.classList.contains('_email')) {
-						if (emailTest(input)) {
-							formAddError(input);
-							error++;
-						}
-					} else if (input.value === '') {
-						formAddError(input);
-						error++;
-					}
-				}
-				return error;
-			}
-		}
-	}
-});;
+            for (let i = 0; i < formRequired.length; i++) {
+               const input = formRequired[i];
+               formRemoveError(input);
+               if (input.classList.contains('_email')) {
+                  if (emailTest(input)) {
+                     formAddError(input);
+                     error++;
+                  }
+               } else if (input.value === '') {
+                  formAddError(input);
+                  error++;
+               }
+            }
+            return error;
+         }
+      }
+   }
+});
+
+
+/// =============    Lazy load via iframe     ===========================
+document.addEventListener('DOMContentLoaded', function () {
+	const iframesLazy = document.querySelectorAll(
+		'iframe.iframe-lazy-video'
+	);
+   if ('IntersectionObserver' in window) {
+      const iframeObserver = new IntersectionObserver(function (
+         entries,
+         observer
+      ) {
+         entries.forEach(function (entry) {
+            if (entry.isIntersecting && entry.target.src.length == 0) {
+               entry.target.src = entry.target.dataset.src;
+               iframeObserver.unobserve(entry.target);
+            }
+         });
+      });
+      iframesLazy.forEach(function (iframe) {
+         iframeObserver.observe(iframe);
+      });
+   } else {
+      for (let i = 0; i < iframesLazy.length; i++) {
+         if (lazyVids[i].getAttribute('data-src')) {
+            lazyVids[i].setAttribute(
+               'src',
+               lazyVids[i].getAttribute('data-src')
+            );
+         }
+      }
+   }
+});
+;
