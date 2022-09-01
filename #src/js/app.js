@@ -302,7 +302,7 @@ $('.slickNext').on('click', function (e) {
 // =============  Main Slider   =================================
 $('.partners').slick({
    infinite: true,
-   slidesToShow: 9,
+   slidesToShow: 8,
    slidesToScroll: 1,
    arrows: true,
    autoplay: true,
@@ -310,13 +310,19 @@ $('.partners').slick({
    dots: false,
    responsive: [
       {
-         breakpoint: 1350,
+         breakpoint: 1600,
          settings: {
             slidesToShow: 7,
          },
       },
       {
-         breakpoint: 1100,
+         breakpoint: 1400,
+         settings: {
+            slidesToShow: 6,
+         },
+      },
+      {
+         breakpoint: 1200,
          settings: {
             slidesToShow: 5,
          },
