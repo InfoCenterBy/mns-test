@@ -56,12 +56,14 @@ document.addEventListener('click', function (e) {
    }
 });
 
-closeBlock.addEventListener('click', function (e) {
-   Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
-      item.classList.remove('_show-block');
+if (closeBlock) {
+   closeBlock.addEventListener('click', function (e) {
+      Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
+         item.classList.remove('_show-block');
+      });
+      overlay.classList.remove('_active');
    });
-   overlay.classList.remove('_active');
-});
+}
 
 // ===========  Toggle language ===========================
 $(function () {
@@ -538,3 +540,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    }
 });
+
