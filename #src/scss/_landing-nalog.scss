@@ -205,7 +205,6 @@ body.lock {
 
 	// .preview__img
 	&__img {
-		margin: 0px 0px 0px 32px;
 	}
 	@media (max-width: $md3+px) {
 		&__img {
@@ -297,7 +296,7 @@ body.lock {
 		background-color: $color-white;
 		min-height: 200px;
 
-		@media (max-width: $md1+px) {
+		@media (max-width: 1200px) {
 			padding: 20px 25px;
 			min-height: auto;
 		}
@@ -409,7 +408,7 @@ body.lock {
 	&__content {
 		flex: 0 1 50%;
 		
-		@media (max-width: $md1+px) {
+		@media (max-width: $md2+px) {
 		    flex: 1 1 100%;
 		}
 	}

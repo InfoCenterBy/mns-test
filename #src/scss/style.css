@@ -8534,9 +8534,6 @@ body.lock {
   color: #FAFAFA;
   background-color: #00654D;
 }
-.preview__img {
-  margin: 0px 0px 0px 32px;
-}
 @media (max-width: 767.98px) {
   .preview__img {
     display: none;
@@ -8616,7 +8613,7 @@ body.lock {
   background-color: #FAFAFA;
   min-height: 200px;
 }
-@media (max-width: 1460px) {
+@media (max-width: 1200px) {
   .item-whatIsIt__front {
     padding: 20px 25px;
     min-height: auto;
@@ -8709,7 +8706,7 @@ body.lock {
 .payment-terms__content {
   flex: 0 1 50%;
 }
-@media (max-width: 1460px) {
+@media (max-width: 991.98px) {
   .payment-terms__content {
     flex: 1 1 100%;
   }
