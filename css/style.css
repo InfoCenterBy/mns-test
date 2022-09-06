@@ -8156,6 +8156,10 @@ body.lock {
   background-color: #00654D;
 }
 
+.preview__img {
+  max-width: 500px;
+}
+
 .whatIsIt {
   padding: 24px;
   background-color: #EBEBEB;
