@@ -8050,6 +8050,16 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   background-color: #ffffff !important;
 }
 
+.landing-nalog .link-download {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.landing-nalog .link-download:hover {
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -8123,7 +8133,7 @@ body.lock {
 
 .preview__info {
   width: 100%;
-  max-width: 820px;
+  max-width: 825px;
 }
 
 .preview__label {
@@ -8157,7 +8167,7 @@ body.lock {
 }
 
 .preview__img {
-  max-width: 500px;
+  max-width: 335px;
 }
 
 .whatIsIt {
