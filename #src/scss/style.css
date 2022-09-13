@@ -8360,8 +8360,11 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   background-color: #ffffff !important;
 }
 
-.link-download {
+.landing-nalog .link-download {
   box-shadow: none;
+}
+.landing-nalog .link-download:hover {
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
 }
 
 body.lock {
