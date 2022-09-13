@@ -8360,6 +8360,10 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   background-color: #ffffff !important;
 }
 
+.link-download {
+  box-shadow: none;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -8510,7 +8514,7 @@ body.lock {
 
 .preview__info {
   width: 100%;
-  max-width: 820px;
+  max-width: 825px;
 }
 .preview__label {
   margin: 0px 0px 35px 0px;
@@ -8533,6 +8537,9 @@ body.lock {
 .preview__button:hover {
   color: #FAFAFA;
   background-color: #00654D;
+}
+.preview__img {
+  max-width: 335px;
 }
 @media (max-width: 767.98px) {
   .preview__img {

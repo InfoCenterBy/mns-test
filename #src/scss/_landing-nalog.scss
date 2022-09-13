@@ -1,3 +1,7 @@
+.link-download {
+	box-shadow: none;
+}
+
 body.lock {
 	overflow: hidden;
 }
@@ -172,7 +176,7 @@ body.lock {
 	// .preview__info
 	&__info {
 		width: 100%;
-		max-width: 820px;
+		max-width: 825px;
 	}
 
 	// .preview__label
@@ -205,6 +209,7 @@ body.lock {
 
 	// .preview__img
 	&__img {
+		max-width: 335px;
 	}
 	@media (max-width: $md3+px) {
 		&__img {
