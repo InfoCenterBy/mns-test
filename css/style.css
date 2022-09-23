@@ -8259,6 +8259,7 @@ body.lock {
   top: 0;
   left: 0;
   bottom: 0;
+  right: 0;
   z-index: 2;
   -webkit-transform: translateY(165px);
       -ms-transform: translateY(165px);
@@ -8450,7 +8451,7 @@ body.lock {
 }
 
 .question-landing .accordion-question__btn,
-.question-landing .accordion-question__row i {
+.question-landing .accordion-question__row i.bi-question-circle {
   color: #FAFAFA;
 }
 
