@@ -8360,11 +8360,10 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   background-color: #ffffff !important;
 }
 
-.landing-nalog .link-download {
-  box-shadow: none;
-}
-.landing-nalog .link-download:hover {
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+@media (max-width: 767.98px) {
+  .landing-nalog .h2 {
+    font-size: 22px;
+  }
 }
 
 body.lock {
@@ -8373,6 +8372,11 @@ body.lock {
 
 .section-landing {
   margin: 0px 0px 70px 0px;
+}
+@media (max-width: 564.98px) {
+  .section-landing {
+    margin: 0px 0px 50px 0px;
+  }
 }
 
 .fz-14 {
@@ -8454,11 +8458,14 @@ body.lock {
   max-width: 335px;
 }
 @media (max-width: 767.98px) {
+  .preview {
+    padding-top: 40px;
+  }
   .preview__img {
     display: none;
   }
   .preview .h1 {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 
@@ -8547,6 +8554,7 @@ body.lock {
   top: 0;
   left: 0;
   bottom: 0;
+  right: 0;
   z-index: 2;
   transform: translateY(165px);
   transition: all 0.6s ease 0s;
@@ -8587,6 +8595,14 @@ body.lock {
     border-radius: 0px 0px 100px 0px;
   }
 }
+@media (max-width: 767.98px) {
+  .quote {
+    border-radius: 0px 0px 50px 0px;
+  }
+  .quote__exclamation {
+    font-size: 50px;
+  }
+}
 
 .payments__info {
   width: 100%;
@@ -8607,6 +8623,12 @@ body.lock {
   color: #FAFAFA;
   background-color: #00654D;
   border-radius: 0px 200px 0px 0px;
+}
+@media (max-width: 767.98px) {
+  .item-tax-rates {
+    padding: 0px 16px 8px;
+    border-radius: 0px 100px 0px 0px;
+  }
 }
 .item-tax-rates__count {
   font-size: 64px;
@@ -8656,6 +8678,14 @@ body.lock {
   position: absolute;
   left: -18px;
   top: 13px;
+}
+@media (max-width: 767.98px) {
+  .item-tax-benefits {
+    padding: 16px 30px;
+  }
+  .item-tax-benefits__title {
+    font-size: 18px;
+  }
 }
 
 .item-become-payer {
@@ -8718,7 +8748,7 @@ body.lock {
   border-radius: 0px 10px 10px 10px;
   background-color: #007A65;
 }
-.question-landing .accordion-question__btn, .question-landing .accordion-question__row i {
+.question-landing .accordion-question__btn, .question-landing .accordion-question__row i.bi-question-circle {
   color: #FAFAFA;
 }
 

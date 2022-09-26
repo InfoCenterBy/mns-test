@@ -1,8 +1,8 @@
-.landing-nalog .link-download {
-	box-shadow: none;
-
-	&:hover {
-		box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+.landing-nalog {
+	@media (max-width: $md3+px) {
+	    .h2 {
+			font-size: 22px;
+		}
 	}
 }
 
@@ -11,6 +11,10 @@ body.lock {
 }
 .section-landing {
 	margin: 0px 0px 70px 0px;
+
+	@media (max-width: $md4+px) {
+		margin: 0px 0px 50px 0px;
+	}
 }
 
 .fz-14 {
@@ -104,11 +108,14 @@ body.lock {
 		max-width: 335px;
 	}
 	@media (max-width: $md3+px) {
+		padding-top: 40px;
+
 		&__img {
 			display: none;
 		}
+
 		.h1 {
-			font-size: 26px;
+			font-size: 22px;
 		}
 	}
 }
@@ -223,6 +230,7 @@ body.lock {
 		top: 0;
 		left: 0;
 		bottom: 0;
+		right: 0;
 		z-index: 2;
 		transform: translateY(165px);
 		transition: all 0.6s ease 0s;
@@ -271,6 +279,15 @@ body.lock {
 	@media (max-width: $md2+px) {
 		border-radius: 0px 0px 100px 0px;
 	}
+	
+	@media (max-width: $md3+px) {
+		border-radius: 0px 0px 50px 0px;
+
+		&__exclamation {
+			font-size: 50px;
+		}
+	}
+
 }
 
 .payments {
@@ -297,6 +314,11 @@ body.lock {
 	color: $color-white;
 	background-color: $color-green;
 	border-radius: 0px 200px 0px 0px;
+	
+	@media (max-width: $md3+px) {
+		padding: 0px 16px 8px;
+		border-radius: 0px 100px 0px 0px;
+	}
 
 	// .item-tax-rates__count
 	&__count {
@@ -356,6 +378,14 @@ body.lock {
 			position: absolute;
 			left: -18px;
 			top: 13px;
+		}
+	}
+	
+	@media (max-width: $md3+px) {
+		padding: 16px 30px;
+
+		&__title {
+			font-size: 18px;
 		}
 	}
 }
@@ -442,7 +472,7 @@ body.lock {
 		background-color: $color-green-light;
 
 		&__btn,
-		&__row i{
+		&__row i.bi-question-circle {
 			color: $color-white;
 		}
 	}
