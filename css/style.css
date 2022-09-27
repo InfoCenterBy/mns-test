@@ -8050,16 +8050,6 @@ html body .bvi-body[data-bvi-theme=black] .header-search__input:-moz-read-write 
   background-color: #ffffff !important;
 }
 
-.landing-nalog .link-download {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.landing-nalog .link-download:hover {
-  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
-          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
-}
-
 body.lock {
   overflow: hidden;
 }
@@ -8210,15 +8200,10 @@ body.lock {
 }
 
 .item-advantage {
+  height: 100%;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-}
-
-.item-advantage:hover .item-advantage__back {
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
 }
 
 .item-advantage__front {
@@ -8230,7 +8215,6 @@ body.lock {
           justify-content: center;
   padding: 45px 0px;
   background-color: #ffffff;
-  min-height: 265px;
 }
 
 .item-advantage__icon {
@@ -8255,21 +8239,10 @@ body.lock {
   color: #FAFAFA;
   text-align: center;
   background-color: #00654D;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  -webkit-transform: translateY(165px);
-      -ms-transform: translateY(165px);
-          transform: translateY(165px);
-  -webkit-transition: all 0.6s ease 0s;
-  -o-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
 }
 
 .item-advantage__text {
+  padding: 16px 28px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -11015,16 +10988,45 @@ figure audio {
     display: none;
   }
 
+  .landing-nalog .h2 {
+    font-size: 22px;
+  }
+
+  .preview {
+    padding-top: 40px;
+  }
+
   .preview__img {
     display: none;
   }
 
   .preview .h1 {
-    font-size: 26px;
+    font-size: 22px;
+  }
+
+  .quote {
+    border-radius: 0px 0px 50px 0px;
+  }
+
+  .quote__exclamation {
+    font-size: 50px;
   }
 
   .payments__img {
     display: none;
+  }
+
+  .item-tax-rates {
+    padding: 0px 16px 8px;
+    border-radius: 0px 100px 0px 0px;
+  }
+
+  .item-tax-benefits {
+    padding: 16px 30px;
+  }
+
+  .item-tax-benefits__title {
+    font-size: 18px;
   }
 
   .page-404 {
@@ -11230,6 +11232,10 @@ figure audio {
     margin: 0px 0px 0px 10px;
   }
 
+  .section-landing {
+    margin: 0px 0px 50px 0px;
+  }
+
   .header-landing {
     padding: 12px 0;
   }
@@ -11410,5 +11416,32 @@ figure audio {
     height: 34px;
     line-height: 34px;
     padding: 0 9px;
+  }
+}
+
+@media (hover: hover) {
+  .item-advantage:hover .item-advantage__back {
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+
+  .item-advantage__front {
+    min-height: 265px;
+  }
+
+  .item-advantage__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    -webkit-transform: translateY(165px);
+        -ms-transform: translateY(165px);
+            transform: translateY(165px);
+    -webkit-transition: all 0.6s ease 0s;
+    -o-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
   }
 }
