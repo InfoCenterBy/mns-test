@@ -180,13 +180,17 @@ body.lock {
 }
 
 .item-advantage {
+	height: 100%;
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
 
-	&:hover {
-		.item-advantage__back {
-			transform: translateY(0%);
+
+	@media (hover: hover) {
+		&:hover {
+			.item-advantage__back {
+				transform: translateY(0%);
+			}
 		}
 	}
 
@@ -196,14 +200,9 @@ body.lock {
 		justify-content: center;
 		padding: 45px 0px;
 		background-color: #ffffff;
-		min-height: 265px;
 
-		@media (max-width: 1200px) {
-
-		}
-
-		@media (max-width: $md4+px) {
-			//display: block;
+		@media (hover: hover) {
+			min-height: 265px;
 		}
 	}
 
@@ -226,23 +225,26 @@ body.lock {
 		color: $color-white;
 		text-align: center;
 		background-color: $color-green;
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		z-index: 2;
-		transform: translateY(165px);
-		transition: all 0.6s ease 0s;
+
+		@media (hover: hover) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 2;
+			transform: translateY(165px);
+			transition: all 0.6s ease 0s;
+		}
 	}
 
 	// .item-advantage__text
 	&__text {
+		padding: 16px 28px;
 		flex: 1 1 auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 	}
 }
 

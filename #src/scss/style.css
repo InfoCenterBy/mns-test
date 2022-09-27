@@ -8519,19 +8519,26 @@ body.lock {
 }
 
 .item-advantage {
+  height: 100%;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
-.item-advantage:hover .item-advantage__back {
-  transform: translateY(0%);
+@media (hover: hover) {
+  .item-advantage:hover .item-advantage__back {
+    transform: translateY(0%);
+  }
 }
 .item-advantage__front {
   display: flex;
   justify-content: center;
   padding: 45px 0px;
   background-color: #ffffff;
-  min-height: 265px;
+}
+@media (hover: hover) {
+  .item-advantage__front {
+    min-height: 265px;
+  }
 }
 .item-advantage__icon {
   width: 80px;
@@ -8550,16 +8557,21 @@ body.lock {
   color: #FAFAFA;
   text-align: center;
   background-color: #00654D;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  transform: translateY(165px);
-  transition: all 0.6s ease 0s;
+}
+@media (hover: hover) {
+  .item-advantage__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    transform: translateY(165px);
+    transition: all 0.6s ease 0s;
+  }
 }
 .item-advantage__text {
+  padding: 16px 28px;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
