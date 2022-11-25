@@ -39,7 +39,7 @@
 }
 
 .arrow:before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   border-top: 2px solid #FAFAFA;
@@ -438,7 +438,7 @@ a:hover {
 }
 
 .link-nav:before {
-  content: '';
+  content: "";
   width: 4px;
   height: 4px;
   border-radius: 3px;
@@ -481,7 +481,7 @@ a:hover {
 }
 
 .link:before {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background-color: #FAFAFA;
@@ -1115,7 +1115,7 @@ a:hover {
 }
 
 .accordion-question__body:before {
-  content: '';
+  content: "";
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
@@ -1147,6 +1147,39 @@ a:hover {
   max-width: 60px;
   height: auto;
   margin-right: 24px;
+}
+
+.vid-wrapper {
+  max-width: 437px;
+  background: #FFFFFF;
+  min-width: 280px;
+  border: 1px solid #CDCDCD;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 10px;
+}
+
+.vid-wrapper .vid-placeholder {
+  max-width: 405px;
+  width: 100%;
+  height: 263px;
+  max-height: 263px;
+  border-radius: 10px;
+  margin-bottom: 19px;
+  background-color: #007A65;
+}
+
+.vid-wrapper .vid-placeholder iframe,
+.vid-wrapper .vid-placeholder video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 input:-webkit-autofill,
@@ -1197,7 +1230,7 @@ input:-webkit-autofill:active {
      -moz-appearance: none;
           appearance: none;
   background: url("../img/icons/chevron-down.svg") no-repeat;
-  background-position: right .7em top 50%, 0 0;
+  background-position: right 0.7em top 50%, 0 0;
   background-size: 30px;
 }
 
@@ -1241,9 +1274,9 @@ input:-webkit-autofill:active {
   padding: 8px 40px 8px 8px;
   border: 1px solid #FAFAFA;
   border-radius: 4px;
-  -webkit-transition: all .3s ease 0s;
-  -o-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .search__input:focus,
@@ -1295,7 +1328,7 @@ input:-webkit-autofill:active {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  line-height: calc(22 / 16);
+  line-height: 1.375;
   cursor: pointer;
 }
 
@@ -1352,7 +1385,7 @@ input:-webkit-autofill:active {
 .form-questionnaire__line._error .checkbox__text:before {
   -webkit-box-shadow: 0 0 2px red;
           box-shadow: 0 0 2px red;
-  border-color: #f54444;
+  border-color: rgb(245, 68, 68);
 }
 
 .form-questionnaire__input,
@@ -1380,7 +1413,7 @@ input:-webkit-autofill:active {
 .form-questionnaire__select._error {
   -webkit-box-shadow: 0 0 2px red;
           box-shadow: 0 0 2px red;
-  border-color: #f54444;
+  border-color: rgb(245, 68, 68);
 }
 
 .form-questionnaire__select {
@@ -1441,7 +1474,7 @@ input:-webkit-autofill:active {
      -moz-appearance: none;
           appearance: none;
   background: url("../img/icons/chevron-down.svg") no-repeat;
-  background-position: right .7em top 50%, 0 0;
+  background-position: right 0.7em top 50%, 0 0;
   background-size: 20px;
 }
 
@@ -1632,7 +1665,7 @@ input:-webkit-autofill:active {
 .e-nds-form__textarea._error {
   -webkit-box-shadow: 0 0 2px red;
           box-shadow: 0 0 2px red;
-  border-color: #f54444;
+  border-color: rgb(245, 68, 68);
 }
 
 .e-nds-form__text-error {
@@ -2926,7 +2959,7 @@ input:-webkit-autofill:active {
           justify-content: space-between;
 }
 
-#calculatorModal input[type="text"] {
+#calculatorModal input[type=text] {
   padding: 1px 2px;
 }
 
@@ -3269,7 +3302,7 @@ input:-webkit-autofill:active {
 }
 
 .general-information-tabs__link:before {
-  content: '';
+  content: "";
   width: 250px;
   height: 50px;
   background: url("../img/icons/tab-02.png") 0 0 no-repeat;
@@ -3420,7 +3453,7 @@ input:-webkit-autofill:active {
 }
 
 .payable-taxes-item__icon:after {
-  content: '';
+  content: "";
   width: 80px;
   height: 80px;
   background-color: #FBC469;
@@ -3855,7 +3888,7 @@ input:-webkit-autofill:active {
 }
 
 .address-inspectorate.region:before {
-  content: '';
+  content: "";
   width: 1px;
   height: 80%;
   background-color: #007A65;
@@ -4008,7 +4041,7 @@ input:-webkit-autofill:active {
 }
 
 .news-inspectorate__title:before {
-  content: '';
+  content: "";
   width: 164px;
   height: 2px;
   background-color: #FAFAFA;
@@ -4066,7 +4099,7 @@ input:-webkit-autofill:active {
 }
 
 .about-inspectorate__subtitle:before {
-  content: '';
+  content: "";
   width: 255px;
   height: 1px;
   background-color: #EBEBEB;
@@ -4162,7 +4195,7 @@ input:-webkit-autofill:active {
 }
 
 .structura__row:before {
-  content: '';
+  content: "";
   width: 1px;
   height: 100%;
   border-left: 1px dashed #727270;
@@ -4184,7 +4217,7 @@ input:-webkit-autofill:active {
 }
 
 .structura__row_long:after {
-  content: '';
+  content: "";
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -4208,7 +4241,7 @@ input:-webkit-autofill:active {
 
 .structura__directorate:before,
 .structura__directorate:after {
-  content: '';
+  content: "";
   position: absolute;
 }
 
@@ -4293,7 +4326,7 @@ input:-webkit-autofill:active {
 }
 
 .structura__content:before {
-  content: '';
+  content: "";
   width: 90px;
   height: 1px;
   border-top: 1px dashed #727270;
@@ -4303,7 +4336,7 @@ input:-webkit-autofill:active {
 }
 
 .structura__content:after {
-  content: '';
+  content: "";
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -4319,7 +4352,7 @@ input:-webkit-autofill:active {
 }
 
 .structura__description:before {
-  content: '';
+  content: "";
   width: 1px;
   height: calc(100% - 120px);
   border-left: 1px dashed #727270;
@@ -4347,7 +4380,7 @@ input:-webkit-autofill:active {
 }
 
 .structura__department:before {
-  content: '';
+  content: "";
   width: 45px;
   height: 1px;
   border-top: 1px dashed #9D9F9E;
@@ -5696,16 +5729,16 @@ html body .bvi-body[data-bvi-theme=black] a.bvi-background-image.bvi-panel-close
   background-color: #3a3a3a !important;
 }
 
-html body .bvi-body[data-bvi-images="false"] .bvi-background-image.bvi-panel-close {
+html body .bvi-body[data-bvi-images=false] .bvi-background-image.bvi-panel-close {
   background: url("../img/icons/handicapped-line.svg") 0 0 no-repeat !important;
 }
 
-html body .bvi-body[data-bvi-images="false"] .header-top__logo {
+html body .bvi-body[data-bvi-images=false] .header-top__logo {
   position: relative;
   background: #ffffff !important;
 }
 
-html body .bvi-body[data-bvi-images="false"] .header-top__logo:before {
+html body .bvi-body[data-bvi-images=false] .header-top__logo:before {
   content: "Главная";
   font-size: 9px;
   color: #000 !important;
@@ -8072,7 +8105,11 @@ body.lock {
 }
 
 .section-landing {
-  margin: 0px 0px 70px 0px;
+  margin: 0px 0px 80px 0px;
+}
+
+.section-landing .preview__img {
+  min-width: 259px;
 }
 
 .fz-14 {
@@ -8175,7 +8212,7 @@ body.lock {
 }
 
 .advantages-slider .slick-arrow:before {
-  content: '';
+  content: "";
   width: 14px;
   height: 14px;
   border-top: 3px solid #FBC469;
@@ -8445,6 +8482,31 @@ body.lock {
   color: #FAFAFA;
 }
 
+.mobile-prev {
+  max-width: 202px;
+}
+
+.section-landing {
+  margin: 0px 0px 80px 0px;
+}
+
+.section-landing .preview__img {
+  min-width: 259px;
+}
+
+.sidebar-mobile {
+  margin-left: 0px;
+}
+
+.mobile-ul {
+  width: 100%;
+  max-width: 100%;
+}
+
+.mobile-landing:has(.tab-content) ul {
+  list-style-type: none;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -8457,7 +8519,7 @@ body.lock {
 }
 
 .page__decor:before {
-  content: '';
+  content: "";
   width: 100%;
   height: 214px;
   background-color: #007A65;
@@ -9734,7 +9796,7 @@ figure audio {
   .item-become-payer:before {
     width: 167px;
     height: 32px;
-    content: '';
+    content: "";
     position: absolute;
     z-index: 2;
   }
@@ -9759,8 +9821,8 @@ figure audio {
 
   .news-inspectorate__news {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(((100vw - 24px ) * 0.7) + 12px);
-            flex: 0 0 calc(((100vw - 24px ) * 0.7) + 12px);
+        -ms-flex: 0 0 calc((100vw - 24px) * 0.7 + 12px);
+            flex: 0 0 calc((100vw - 24px) * 0.7 + 12px);
     -webkit-transform: translate(-100%, 0);
         -ms-transform: translate(-100%, 0);
             transform: translate(-100%, 0);
@@ -10381,8 +10443,8 @@ figure audio {
 
   .news-inspectorate__news {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50vw - (0.4 - 0.5) * (1440px - 24px));
-            flex: 0 0 calc(50vw - (0.4 - 0.5) * (1440px - 24px));
+        -ms-flex: 0 0 calc(50vw + 141.6px);
+            flex: 0 0 calc(50vw + 141.6px);
   }
 }
 
@@ -10415,6 +10477,18 @@ figure audio {
 
   .item-news-inspectorate__title {
     font-size: calc(20px + 8 * ((100vw - 320px) / 1120));
+  }
+
+  .section-landing .preview__img {
+    min-width: calc(150px + 109 * ((100vw - 320px) / 1120));
+  }
+
+  .mobile-prev {
+    max-width: calc(10px + 192 * ((100vw - 320px) / 1120));
+  }
+
+  .section-landing .preview__img {
+    min-width: calc(150px + 109 * ((100vw - 320px) / 1120));
   }
 }
 
@@ -10533,6 +10607,15 @@ figure audio {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .section-landing > .d-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media (max-width: 1100px) {
   .e-nds-form__column {
     -webkit-box-flex: 1;
@@ -10570,7 +10653,19 @@ figure audio {
   }
 
   .mobile-app__icon {
-    margin: 0px 00px 0px 20px;
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .mobile-prev {
+    max-width: 202px;
+  }
+}
+
+@media screen and (max-width: 995px) and (max-width: 1440px) {
+  .mobile-prev {
+    max-width: calc(50px + 152 * ((100vw - 320px) / 1120));
   }
 }
 
@@ -10700,7 +10795,7 @@ figure audio {
 
   .selected-tab:after {
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     top: calc(50% - 8px);
     right: 15px;
@@ -10734,7 +10829,7 @@ figure audio {
   }
 
   .nav-tab a.active:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 35%;
     right: 15px;
@@ -11265,6 +11360,10 @@ figure audio {
 
   .item-advantage__icon {
     margin: 0px 0px 16px 0px;
+  }
+
+  .section-landing {
+    margin: 0px 0px 50px 0px;
   }
 
   .clarifications-button {
