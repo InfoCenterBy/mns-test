@@ -10,12 +10,18 @@ body.lock {
 	overflow: hidden;
 }
 .section-landing {
-	margin: 0px 0px 70px 0px;
+	margin: 0px 0px 80px 0px;
 
 	@media (max-width: $md4+px) {
 		margin: 0px 0px 50px 0px;
 	}
+
+	.preview__img{
+		@include adaptiv-value("min-width", 259, 150, 1);
+	}
 }
+
+
 
 .fz-14 {
 	font-size: 14px;
@@ -47,7 +53,7 @@ body.lock {
 
 	// .header-landing__link
 	&__link {
-		font-size: 18px;
+		font-size: 16px;
 		color: $color-green;
 		font-weight: 600;
 

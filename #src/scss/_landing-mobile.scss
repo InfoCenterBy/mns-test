@@ -1,19 +1,10 @@
-@media screen and (max-width: 1200px) {
-	.section-landing > .d-flex{
-		flex-direction: column;
-	}
-}
+
 
 .mobile-prev{
-     // width: 100%;
-     @include adaptiv-value("max-width", 202, 10, 1);
+     max-width: 207px;
+	margin-bottom: 10px;
 }
 
-@media screen and (max-width: 995px) {
-     .mobile-prev{
-          @include adaptiv-value("max-width", 202, 50, 1);
-     }
-}
 
 .section-landing {
 	margin: 0px 0px 80px 0px;
@@ -30,14 +21,6 @@
 .sidebar-mobile{
      margin-left: 0px;
 }
-
-// main{
-//      *{outline: 1px solid red;}
-// }
-
-// .container {
-//      max-width: 1500px !important;
-// }
 
 .mobile-ul{
      width: 100%;
