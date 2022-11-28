@@ -1182,6 +1182,12 @@ a:hover {
   border-radius: 10px;
 }
 
+.divider {
+  width: 100%;
+  background: #007A65;
+  height: 7px;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -8506,6 +8512,35 @@ body.lock {
 
 .mobile-landing:has(.tab-content) ul {
   list-style-type: none;
+}
+
+.content .container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+}
+
+.list-active {
+  width: 100%;
+  padding: 24px;
+}
+
+.list-active ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+.list-active li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
+.list-active .list-ol {
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.list-active .footnote {
+  color: #757575;
 }
 
 .page {
