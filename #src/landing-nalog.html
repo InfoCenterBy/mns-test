@@ -118,17 +118,17 @@
 										</a>
 									</li>
 								</ul>
-								<a href="#"
+								<a type="button" data-toggle="modal" data-target="#download-app"
 									class="sidebar__link-block p-3 d-flex align-items-center justify-content-between mb-4">
 									<span>Скачать приложение из App Store</span>
 									<i class="bi bi-apple ml-4"></i>
 								</a>
-								<a href="#"
+								<a type="button" data-toggle="modal" data-target="#download-app"
 									class="sidebar__link-block p-3 d-flex align-items-center justify-content-between mb-4">
 									<span>Скачать приложение из Google Play</span>
 									<i class="bi bi-android2 ml-4"></i>
 								</a>
-								<a href="#"
+								<a type="button" data-toggle="modal" data-target="#download-app"
 									class="sidebar__link-block p-3 d-flex align-items-center justify-content-between mb-4">
 									<span>Использовать веб-версию</span>
 									<i class="bi bi-globe2 ml-4"></i>
@@ -137,6 +137,9 @@
 						</aside>
 						<div class="col-lg-8 px-2 pt-3">
 							<div class="item-block px-md-4 px-3">
+								<!-- modal poup -->
+								@@include('_download-app.html',{})
+								<!-- modal poup -->
 								<section class="preview section-landing">
 									<div class="d-flex align-items-center justify-content-between">
 										<div class="preview__info mb-5">

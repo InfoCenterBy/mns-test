@@ -65,7 +65,7 @@ body.lock {
 
 .header-logo {
 	position: relative;
-	z-index: 5;
+	z-index: 0;
 
 	img {
 		max-width: 50px;
@@ -485,5 +485,6 @@ body.lock {
 		}
 	}
 }
+
 
 
