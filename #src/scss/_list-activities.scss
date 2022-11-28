@@ -1,0 +1,33 @@
+
+
+.content .container{
+     width: 100%;
+     max-width: 1440px;
+     padding: 0;
+     // min-width: 320px;
+}
+
+.list-active{
+     width: 100%;
+     // max-width: 1440px;
+     padding: 24px;
+     // *{
+     //      outline: 1px solid red;
+     // }
+
+     ol {
+          list-style: none;
+          counter-reset: li;
+          // margin: 12px 0 6px 0;
+     }
+     li:before {
+          counter-increment: li;
+          content: counters(li, ".") ". ";
+     }
+     .list-ol{
+          border-bottom: 1px solid $color-gray-light;
+     }
+     .footnote{
+          color: #757575;
+     }
+}
