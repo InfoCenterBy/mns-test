@@ -541,3 +541,15 @@ document.addEventListener('DOMContentLoaded', function () {
    }
 });
 
+document.querySelectorAll("#app-popup").forEach(el=>{
+   el.addEventListener("click", function(){
+      let text = document.querySelector("#download-app-text")
+      if(this.getAttribute("web-version") === "true"){
+         text.innerHTML = "Будет доступно для использования с 1 января 2023 года."
+      }
+      else{
+         text.innerHTML = "Приложение «Налог на профессиональный доход» будет доступно для скачивания с 1 января 2023 года"
+      }
+   })
+})
+

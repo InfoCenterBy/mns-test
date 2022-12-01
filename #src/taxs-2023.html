@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Налоги 2023"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page page__decor">
+			<div class="content">
+				<nav aria-label="breadcrumb">
+					<div class='container'>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i
+										class="bi-chevron-right ml-2"></i></a></li>
+							<li class="breadcrumb-item mr-3"><a href="actual.html">Актуальное<i
+										class="bi-chevron-right ml-2"></i></a></li>
+							<li class="breadcrumb-item active" aria-current="page">Налоги 2023</li>
+						</ol>
+					</div>
+				</nav>
+				<div class="item-content">
+					<div class='container'>
+						<div class="item-block px-md-4 px-2 py-4">
+							<h4 class="item-block__title h4">Налоги 2023</h4>
+							<div class="my-4">
+								<div class="attention d-flex align-items-center mb-4 p-3 p-sm-4">
+									<i class="bi bi-info-circle-fill mr-3 mr-sm-4"></i>
+									<div>
+										Информация об изменении налогового законодательства в 2023 году будет
+										дополнена после официального опубликования Закона Республики Беларусь,
+										которым вносятся изменения и дополнения в Налоговый кодекс Республики
+										Беларусь.
+									</div>
+								</div>
+								<div class="d-md-flex flex-md-row flex-sm-column flex-lg-row">
+									<a href="/actual/taxes2023/corporate_taxes_2023/"
+										class="nav-tab-personal-area__link link-nav-tab col-md-4 d-flex flex-column text-center align-items-center justify-content-center mt-sm-3"
+										id="corporate_taxes_2023">
+										<span
+											class="nav-tab-personal-area__icon rounded-circle d-flex justify-content-center align-items-center">
+											<i class="bi bi-building"></i>
+										</span>
+										<span class="h6 mt-2">Налоги юридических лиц</span>
+									</a>
+									<a href="/actual/taxes2023/taxes_of_individual_entrepreneurs_2023/"
+										class="nav-tab-personal-area__link link-nav-tab col-md-4 d-flex flex-column text-center align-items-center justify-content-center mt-sm-3"
+										id="taxes_of_individual_entrepreneurs_2023">
+										<span
+											class="nav-tab-personal-area__icon rounded-circle d-flex justify-content-center align-items-center">
+											<i class="bi bi-briefcase"></i>
+										</span>
+										<span class="h6 mt-2">Налоги индивидуальных предпринимателей</span>
+									</a>
+									<a href="/actual/taxes2023/taxes_of_individual_entrepreneurs_2023/"
+										class="nav-tab-personal-area__link link-nav-tab col-md-4 d-flex flex-column text-center align-items-center justify-content-center mt-sm-3"
+										id="taxes_of_individual_entrepreneurs_2023">
+										<span
+											class="nav-tab-personal-area__icon rounded-circle d-flex justify-content-center align-items-center">
+											<i class="bi bi-briefcase"></i>
+										</span>
+										<span class="h6 mt-2">Налоги индивидуальных предпринимателей</span>
+									</a>
+								</div>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	<!-- @@include('_popup.html',{}) -->
+	@@include('_js.html',{})
+</body>
+
+</html>
