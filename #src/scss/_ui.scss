@@ -971,8 +971,7 @@ a:hover {
 	background: $color-green-light;
 	height: 7px;
 }
-
-.download-app .show{
+.download-app > .show{
 	backdrop-filter: blur(5px);
 	background: rgba(0, 0, 0, 0.25) !important;
 	.modal-header{
