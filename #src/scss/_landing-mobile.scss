@@ -36,3 +36,11 @@
 a{
 	cursor: pointer;
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	#tabAccordion{
+		button{
+			max-width: 370px;
+		}
+	}
+}

@@ -941,16 +941,21 @@ a:hover {
 .vid-wrapper{
 	// @include adaptiv-value("max-width", 447, 300, 1);
 	// width: 447px;
-	max-width: 437px;
+	max-width: 447px;
+	// @include adaptiv-value("max-width", 405, 310, 1);
+	width: 100%;
 	background: #FFFFFF;
-	min-width: 280px;
+	// min-width: 407px;
+	// @include adaptiv-value("max-width", 447, 400, 1);
 	border: 1px solid #CDCDCD;
 	border-radius: 24px;
 	display: flex;
 	flex-direction: column;
 	margin: 10px 10px;
+	// @include adaptiv-value("margin-right")
 	.vid-placeholder{
-		max-width: 405px;
+		// max-width: 405px;
+		// @include adaptiv-value("max-width", 360, 310, 1);
 		width: 100%;
 		// outline: 1px solid red;
 		height: 263px;
@@ -965,10 +970,14 @@ a:hover {
 		}
 	}
 }
+.vid-wrapper:nth-child(2n){
+	// outline: 1px solid red;
+	// margin-left: 5px;
+}
 
 .divider{
 	width: 100%;
-	background: $color-green-light;
+	// background: $color-green-light;
 	height: 7px;
 }
 .download-app > .show{
