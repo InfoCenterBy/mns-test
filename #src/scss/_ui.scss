@@ -999,3 +999,16 @@ a:hover {
 		width: 24px;
 	}
 }
+.landing-uns{
+	.list-check-icon {
+		.bi-x-circle{
+			color: #E30613;
+		}
+	}
+	.item-tax-benefits{
+		i:not(.bi-check2-circle){
+			font-size: 20px;
+			margin-right: 20px;
+		}
+	}
+}

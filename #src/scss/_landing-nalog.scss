@@ -30,6 +30,9 @@ body.lock {
 .color-yellow {
 	color: $color-yellow;
 }
+.color-red{
+	color: #E30613;
+}
 
 .color-gray {
 	color: $color-gray;
@@ -365,6 +368,14 @@ body.lock {
 
 		ul li:before {
 			background-color: $color-black;
+		}
+	}
+	&__white{
+		color: $color-black;
+		background-color: $color-white;
+		border: 1px solid #C4C4C4;
+		p{
+		color: #4F4F4F;
 		}
 	}
 }
