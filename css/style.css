@@ -1212,6 +1212,96 @@ a:hover {
   width: 24px;
 }
 
+.landing-uns .list-check-icon .bi-x-circle {
+  color: #E30613;
+}
+
+.landing-uns .item-tax-benefits i:not(.bi-check2-circle) {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.landing-uns .preview__info {
+  background: #007A65;
+  border-radius: 0px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 41px 15px 32px 25px;
+  color: #FAFAFA;
+  width: 100%;
+  max-width: 567px;
+  height: 329px;
+  margin: 0 !important;
+}
+
+.landing-uns .preview__info h1 {
+  max-width: 500px;
+  color: #FAFAFA;
+  font-size: 30px;
+}
+
+.landing-uns .preview__info .preview__text {
+  max-width: 500px;
+  font-size: 16px;
+}
+
+.landing-uns .preview__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 348px;
+  height: 329px;
+  margin: 0 !important;
+  background: #C4C4C4;
+  border-radius: 100px 0;
+  padding: 42px 30px 32px 40px;
+}
+
+.landing-uns .preview__img img {
+  max-width: 287px;
+  width: 100%;
+}
+
+.landing-uns .item-tax-benefits-usn {
+  max-height: 155px;
+  height: 100%;
+}
+
+.landing-uns .list-check-icon-yellow .bi-check2-circle {
+  color: #FCC466;
+}
+
+.landing-uns .link_black {
+  color: #007A65;
+}
+
+.landing-uns .link_black:before {
+  background-color: #007A65;
+}
+
+.landing-uns .link_black:hover {
+  color: #007A65;
+  opacity: 0.7;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -8150,6 +8240,10 @@ body.lock {
   color: #FBC469;
 }
 
+.color-red {
+  color: #E30613;
+}
+
 .color-gray {
   color: #9D9F9E;
 }
@@ -8428,6 +8522,24 @@ body.lock {
 
 .item-tax-rates_yellow ul li:before {
   background-color: #1A1A1A;
+}
+
+.item-tax-rates__white {
+  color: #1A1A1A;
+  background-color: #FAFAFA;
+  border: 1px solid #C4C4C4;
+}
+
+.item-tax-rates__white p {
+  color: #4F4F4F;
+}
+
+.item-tax-rates__white .item-tax-rates__count s {
+  color: #E30613;
+}
+
+.item-tax-rates__white .item-tax-rates__count s span {
+  color: #1A1A1A;
 }
 
 .item-tax-benefits {
@@ -10519,6 +10631,14 @@ figure audio {
 }
 
 @media (max-width: 1440px) {
+  .landing-uns .preview__info h1 {
+    font-size: calc(22px + 8 * ((100vw - 320px) / 1120));
+  }
+
+  .landing-uns .preview__info .preview__text {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
+  }
+
   .latest-news__title {
     font-size: calc(20px + 12 * ((100vw - 320px) / 1120));
   }
@@ -11427,6 +11547,12 @@ figure audio {
   }
 
   .notification__link img {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .landing-uns .preview__img {
     display: none;
   }
 }
