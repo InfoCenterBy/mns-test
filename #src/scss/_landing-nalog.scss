@@ -377,6 +377,14 @@ body.lock {
 		p{
 		color: #4F4F4F;
 		}
+		.item-tax-rates__count{
+			s{
+				color:#E30613;
+				span{
+					color: $color-black;
+				}
+			}
+		}
 	}
 }
 

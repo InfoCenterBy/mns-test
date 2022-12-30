@@ -1011,4 +1011,74 @@ a:hover {
 			margin-right: 20px;
 		}
 	}
+	.preview__info{
+		background: #007A65;
+		border-radius: 0px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 41px 15px 32px 25px;
+		color: $color-white;
+		// height: 100% !important;
+		// min-height: 100%;
+		width: 100%;
+		max-width: 567px;
+		// max-height: 329px;
+		height: 329px;
+		margin: 0 !important;
+		h1{
+			max-width: 500px;
+			color: $color-white;
+			@include adaptiv-value("font-size", 30, 22, 1);
+		}
+		.preview__text{
+			max-width: 500px;
+			@include adaptiv-value("font-size", 16, 14, 1);
+		}
+	}
+	.preview__img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		// height: 100% !important;
+		// min-height: 100%;
+		max-width: 348px;
+		height: 329px;
+		// height: 393px !important;
+		margin: 0 !important;
+		background: #C4C4C4;
+		border-radius: 100px 0;
+		padding: 42px 30px 32px 40px;
+		img{
+			max-width: 287px;
+			width: 100%;
+		}
+		&{
+			@media (max-width: 550px) {
+				display: none;
+			}
+		}
+	}
+	.item-tax-benefits-usn{
+		max-height: 155px;
+		height: 100%;
+	}
+	.list-check-icon-yellow{
+		.bi-check2-circle{
+			color: #FCC466;
+		}
+	}
+	.link_black{
+		color: $color-green-light;
+		&:before {
+			background-color: $color-green-light;
+		}
+
+		&:hover {
+			color: $color-green-light;
+			opacity: 0.7;
+		}
+	}
 }
