@@ -1281,8 +1281,11 @@ a:hover {
 }
 
 .landing-uns .item-tax-benefits-usn {
-  max-height: 155px;
   height: 100%;
+}
+
+.landing-uns .item-tax-benefits-usn .color-green {
+  font-size: 18px;
 }
 
 .landing-uns .list-check-icon-yellow .bi-check2-circle {
