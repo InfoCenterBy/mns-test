@@ -1,0 +1,55 @@
+.landing-faq{
+	.pagination{
+		.page-link:not(.page-link-back){
+               border-radius: 50%;
+               width: 40px;
+               height: 40px;
+               background: $color-gray-light;
+          }
+          .page-link-back{
+               border-radius: 20px;
+               margin: 0 10px 0 10px;
+               background: $color-white;
+          }
+          .page-link{
+               margin: 0 5px 0 5px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               text-align: center;
+               color: $color-black;
+               @include adaptiv-value("font-size", 16, 13, 1);
+          }
+          .page-item.active .page-link{
+               background: $color-green;
+               color: $color-white;
+               border: 1px solid $color-white;
+          }
+          .page-item:not(.page-item.disabled):hover .page-link{
+               background: $color-green;
+               color: $color-white;
+               border: 1px solid $color-white;
+          }
+          .page-item.disabled .page-link{
+               color: $color-gray;
+          }
+          .page-link:focus{
+               box-shadow: 0 0 0 0.2rem rgb(0 122 101 / 20%);
+          }
+	}
+	&__select{
+          width: 100%;
+		padding: 8px 40px 8px 8px;
+		border: 1px solid $color-white;	
+		border-radius: 4px;
+		transition: all .3s ease 0s;
+		
+		&:focus {
+			border: 1px solid $color-gray;	
+		}
+          &:hover{
+               border: 1px solid transparent;	
+               outline: none;
+          }
+     }
+}

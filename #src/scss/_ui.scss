@@ -1085,3 +1085,126 @@ a:hover {
 		}
 	}
 }
+
+.popular-tags-wrapper {
+	// display: grid;
+	// row-gap: 10px;
+	// column-gap: 12px;
+	// grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+	&__tag, &__tag-input {
+		@include adaptiv-value("font-size", 14, 10, 1);
+		font-weight: 600;
+		padding: 8px 16px;
+		background: $color-gray-light;
+		border-radius: 10px;
+		margin-right: 12px;
+		margin-top: 10px;
+		max-height: 35px;
+		cursor: pointer;
+		transition: all ease-in .2s;
+		color: $color-green;
+		user-select: none;
+		&:hover{
+			background: $color-green;
+			color: $color-white;
+		}
+	}
+	input[type="radio"]{
+		width: 0.1px;
+		height: 0.1px;
+		display: none;
+	}
+	input[type="radio"]:checked + label {
+		background: $color-green;
+		color: $color-white;
+	}
+
+	&__text {
+		max-width: 100%;
+		margin-left: 4px;
+	}
+}
+
+.faq-block-tags-wrapper {
+	width: 100%;
+	max-width: 100%;
+
+	.faq-block-tags {
+	&:not(:nth-child(1)){
+		margin-top: 16px;
+	}
+	border-radius: 10px;
+	padding-bottom: 12px;
+	background: $color-gray-light;
+	&__content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		color: $color-green;
+		font-weight: 400;
+		@include adaptiv-value("font-size", 16, 14, 1);
+		@include adaptiv-value("line-height", 22, 18, 1);
+		margin-bottom: 30px;
+		padding: 30px 30px 0px 30px;
+		&{
+			@media (max-width:480px) {
+			padding: 10px 15px 0px 15px;
+			}
+		}
+		p{
+			margin: 0 30px 0 30px;
+			&{
+				@media (max-width: 480px) {
+					margin: 0 15px 0 0;
+				}
+			}
+			// color: $color-green;
+		}
+	}
+	&__footer {
+		padding: 10px 30px 0px 30px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		font-weight: 400;
+		@include adaptiv-value("font-size", 12, 10, 1);
+		@include adaptiv-value("line-height", 16, 14, 1);
+		color: #828282;
+		&{
+			@media (max-width:480px) {
+			padding: 10px 15px 0px 15px;
+			}
+		}
+	}
+	&__scope{
+		span{
+			margin-right: 20px;
+		}
+	}
+	hr{
+		border: 0.2px solid #C5C7C6;
+		margin: 0;
+	}
+}
+	.bi {
+	}
+	.bi-question-circle {
+		font-size: 30px;
+		&{
+			@media (max-width: 480px) {
+				display: none;
+			}
+		}
+	}
+	.bi-chevron-right {
+		font-size: 18px;
+	}
+}
+
+
+
+
