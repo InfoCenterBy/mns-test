@@ -1062,8 +1062,11 @@ a:hover {
 		}
 	}
 	.item-tax-benefits-usn{
-		max-height: 155px;
+		// max-height: 155px;
 		height: 100%;
+		.color-green{
+			font-size: 18px;
+		}
 	}
 	.list-check-icon-yellow{
 		.bi-check2-circle{
