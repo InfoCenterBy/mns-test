@@ -858,13 +858,12 @@ a:hover {
 		margin: 0px 0px 0px 0px;
 	}
 
-   &__btn {
+   &__btn, &__btn-tags-content {
 		width: 100%;
 		font-size: 16px;
 		color: $color-green-light;
 		display: flex;
 		align-items: center;
-      padding: 24px 36px;
 
 		i {
 			font-size: 20px;
@@ -882,6 +881,10 @@ a:hover {
 		@media (max-width: $md4+px) {
 			padding: 16px;
 		}
+   }
+   &__btn{
+	padding: 24px 36px;
+
    }
 
 	&__wrapper {
@@ -1111,6 +1114,9 @@ a:hover {
 			background: $color-green;
 			color: $color-white;
 		}
+		@media (max-width: 480px) {
+			margin-top: 6px;
+		}
 	}
 	input[type="radio"]{
 		width: 0.1px;
@@ -1183,7 +1189,11 @@ a:hover {
 	&__scope{
 		span{
 			margin-right: 20px;
+			&:hover{
+				color: $color-green-light;
+			}
 		}
+		
 	}
 	hr{
 		border: 0.2px solid #C5C7C6;
@@ -1203,6 +1213,51 @@ a:hover {
 	.bi-chevron-right {
 		font-size: 18px;
 	}
+}
+
+.faq-block-tags-wrapper{
+	.accordion-question__btn.accordion-question__btn-tags{
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+	.accordion-question__btn-tags{
+		.faq-block-tags__footer{
+			width: 100%;
+			padding: 10px 30px 12px 30px;
+			.faq-block-tags__date{
+				text-align: right;
+			}
+			@media (max-width: 480px) {
+				padding: 10px 14px 12px 14px;
+			}
+		}
+	}
+	.accordion-question__btn-tags{
+		.divider{
+			border-top: 1px solid #C5C7C6;
+		}
+	}
+	.accordion-question__btn-tags-content{
+		padding: 24px 36px;
+		@media (max-width: 480px) {
+			padding: 10px 14px;
+		}
+	}
+	.accordion-question__wrapper{
+		padding-top: 16px;
+	}
+	@media (max-width: 480px) {
+		.bi-question-circle{
+			display: none;
+		}
+	}
+	
+	// .accordion-question__body{
+	// 	&:before {
+	// 		top: -12px;
+	// 	}
+	// }
 }
 
 
