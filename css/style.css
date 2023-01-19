@@ -1476,6 +1476,18 @@ a:hover {
   padding-top: 16px;
 }
 
+.landing-sdfl .preview__info {
+  background: transparent;
+}
+
+.landing-sdfl .preview__info h1 {
+  color: #263238;
+}
+
+.landing-sdfl .divider {
+  border-top: 1px solid #EBEBEB;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
