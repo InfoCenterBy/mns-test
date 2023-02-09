@@ -1156,6 +1156,17 @@ a:hover {
   margin-right: 24px;
 }
 
+.accordion-question__header {
+  font-size: 14px;
+  line-height: 19px;
+  color: #828282;
+  padding: 15px 27px 0px 30px;
+}
+
+.accordion-question__scope {
+  width: 100%;
+}
+
 .vid-wrapper {
   max-width: 447px;
   width: 100%;
@@ -1359,6 +1370,11 @@ a:hover {
   color: #FAFAFA;
 }
 
+.popular-tags-wrapper .tag-checked {
+  background: #00654D;
+  color: #FAFAFA;
+}
+
 .popular-tags-wrapper__text {
   max-width: 100%;
   margin-left: 4px;
@@ -1453,6 +1469,9 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .faq-block-tags-wrapper .accordion-question__btn-tags .faq-block-tags__footer {
@@ -11839,6 +11858,11 @@ figure audio {
 @media (max-width: 550px) {
   .landing-uns .preview__img {
     display: none;
+  }
+
+  .landing-sdfl .preview__info {
+    padding: 0;
+    height: auto;
   }
 }
 
