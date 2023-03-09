@@ -939,6 +939,16 @@ a:hover {
 			}
 		}
 	}
+
+	&__header{
+		font-size: 14px;
+		line-height: 19px;
+		color: #828282;
+		padding: 15px 27px 0px 30px;
+	}
+	&__scope{
+		width: 100%;
+	}
 }
 
 .vid-wrapper{
@@ -1039,6 +1049,7 @@ a:hover {
 			max-width: 500px;
 			@include adaptiv-value("font-size", 16, 14, 1);
 		}
+		
 	}
 	.preview__img{
 		display: flex;
@@ -1124,6 +1135,10 @@ a:hover {
 		display: none;
 	}
 	input[type="radio"]:checked + label {
+		background: $color-green;
+		color: $color-white;
+	}
+	.tag-checked{
 		background: $color-green;
 		color: $color-white;
 	}
@@ -1220,6 +1235,7 @@ a:hover {
 		display: flex;
 		flex-direction: column;
 		padding: 0;
+		align-items: flex-start;
 	}
 	.accordion-question__btn-tags{
 		.faq-block-tags__footer{
@@ -1266,6 +1282,12 @@ a:hover {
 		background: transparent;
 		h1{
 			color: $color-black-text;
+		}
+		&{
+			@media (max-width: 550px) {
+				padding: 0;
+				height: auto;
+			}
 		}
 	}
 	.divider{
