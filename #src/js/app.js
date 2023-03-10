@@ -174,12 +174,21 @@ ibg();
 
 // ===========  Sticky Sidebar ===========================
 const sidebarBlock = document.querySelector('.sidebar');
-if (sidebarBlock && $(window).width() > 992) {
-   var sidebar = new StickySidebar(sidebarBlock, {
-      topSpacing: 20,
-   });
-   sidebar.updateSticky();
-}
+
+$(window).bind('DOMContentLoaded load resize', function () {
+   if ($(window).innerWidth() >= 992) {
+      if (sidebarBlock && $(window).width() >= 992) {
+         var sidebar = new StickySidebar(sidebarBlock, {
+            topSpacing: 20,
+         });
+         sidebar.updateSticky();
+      }
+      
+   }
+});
+
+
+
 
 // ===========  Sticky nav-tab-vertical ===========================
 const navTabVerticalBlock = document.querySelector('.nav-tab-vertical__sticky');
