@@ -5778,12 +5778,25 @@ ibg();
 
 // ===========  Sticky Sidebar ===========================
 const sidebarBlock = document.querySelector('.sidebar');
-if (sidebarBlock && $(window).width() > 992) {
+// window.addEventListener("load", ()=>{
+//    $( ".sidebar" ).addClass( "sidebar-mob" );
+// })
+// $(window).bind('DOMContentLoaded load resize', function () {
+//    if ($(window).innerWidth() >= 992) {
+//      $(sidebarBlock).toggleClass('sidebar-mob');
+//      console.log("$(sidebarBlock).toggleClass('sidebar'); YES")
+//    }
+// });
+
+const sideBarMob = document.querySelector('.sidebar-mob')
+if (sidebarBlock && $(window).width() >= 992) {
    var sidebar = new StickySidebar(sidebarBlock, {
       topSpacing: 20,
    });
    sidebar.updateSticky();
 }
+
+
 
 // ===========  Sticky nav-tab-vertical ===========================
 const navTabVerticalBlock = document.querySelector('.nav-tab-vertical__sticky');
