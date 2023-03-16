@@ -8961,6 +8961,27 @@ a {
   outline: none;
 }
 
+.landing-exp .form-check-input:checked {
+  background-color: #00654D;
+  border-color: #00654D;
+}
+
+.landing-exp .form-check-input:focus {
+  border-color: #007A65;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 122, 101, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(0, 122, 101, 0.25);
+}
+
+.landing-exp .form-check-input {
+  width: 21px;
+  height: 21px;
+  border: 1.5px solid #1A1A1A;
+}
+
+.landing-exp .accordion-question__btn-tags-content {
+  padding-bottom: 15px;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
