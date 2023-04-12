@@ -683,3 +683,21 @@ figure audio {
 	}
 
 }
+
+.individuals-new{
+	.vacancies{
+		margin: 0;
+		&__img{
+			max-width: 270px;
+		}
+		&__content{
+			p{
+				max-width: 460px;
+			}
+		}
+	}
+	.item-block__subtitle{
+		font-size: 18px;
+		line-height: 25px;
+	}
+}

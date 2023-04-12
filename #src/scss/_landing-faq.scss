@@ -52,4 +52,24 @@
                outline: none;
           }
      }
+     
+}
+
+.landing-exp{
+     .form-check-input:checked {
+          background-color: $color-green;
+          border-color: $color-green;
+     }
+     .form-check-input:focus {
+          border-color: $color-green-light;
+          box-shadow: 0 0 0 .25rem rgba(0, 122, 101,.25);
+     }
+     .form-check-input{
+          width: 21px;
+          height: 21px;
+          border: 1.5px solid $color-black;
+     }
+     .accordion-question__btn-tags-content{
+          padding-bottom: 15px;
+     }
 }
