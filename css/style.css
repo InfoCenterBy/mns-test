@@ -9594,6 +9594,14 @@ figure audio {
   border-radius: 10px 10px 10px 0px;
 }
 
+.border-round-left-top {
+  border-radius: 0px 10px 10px 10px;
+}
+
+.bg-color-white-clear {
+  background-color: #FFFFFF;
+}
+
 .tab-content {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
