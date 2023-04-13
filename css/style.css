@@ -9606,7 +9606,7 @@ figure audio {
   padding: 0;
 }
 
-#tabs .nav-tabs li {
+#tabs .nav-tabs a {
   color: #000000;
   cursor: pointer;
 }
