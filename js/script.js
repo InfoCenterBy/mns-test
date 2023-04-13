@@ -5779,18 +5779,12 @@ ibg();
 // ===========  Sticky Sidebar ===========================
 const sidebarBlock = document.querySelector('.sidebar');
 
-$(window).bind('DOMContentLoaded load resize', function () {
-   if ($(window).innerWidth() >= 992) {
-      if (sidebarBlock && $(window).width() >= 992) {
-         var sidebar = new StickySidebar(sidebarBlock, {
-            topSpacing: 20,
-         });
-         sidebar.updateSticky();
-      }
-      
-   }
-});
-
+if (sidebarBlock && $(window).width() > 992) {
+   var sidebar = new StickySidebar(sidebarBlock, {
+      topSpacing: 20,
+   });
+   sidebar.updateSticky();
+}
 
 
 
@@ -6166,3 +6160,30 @@ document.querySelectorAll("#app-popup").forEach(el=>{
    })
 })
 
+
+$('.popover-dismiss').popover({
+   trigger: 'focus',
+   animation: true
+})
+
+// $("#user-nav-tabs li").on('click', function(e) {
+//    var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);
+
+//    var content_map = {
+//          content1: "#tabs-content1",
+//          content2: "#tabs-content2",
+//          content3: "#tabs-content3",   
+//          content4: "#tabs-content4"
+//    }
+
+//    $(e.currentTarget).siblings().removeClass("active");
+
+//    $.each(content_map, function(hash, elid) {
+//       if (hash == targetLink) {
+//             $(elid).show();
+//             $(e.currentTarget).addClass("active");
+//       } else {
+//             $(elid).hide();
+//       }
+//    });
+// });

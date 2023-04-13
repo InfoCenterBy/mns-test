@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<title>Вопрос-ответ “Налог на профессиональный доход”</title>
+	<head>
+	<title>Налоговые вычеты</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 		integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
@@ -16,10 +18,9 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<body>
-     <div class="wrapper ">
-          <header>
+	<body>
+		<div class="wrapper individuals-new">
+			<header>
 	<div class="header-top py-3 position-relative">
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center position-relative">
@@ -322,237 +323,332 @@
 	</div>
 	<div class="header__overlay"></div>
 </header>
-
-          <main class="page page__decor landing-faq">
-               <div class="content my-5">
-                    <nav aria-label="breadcrumb">
-                         <div class="container">
-                              <ol class="breadcrumb">
-                                   <li class="breadcrumb-item mr-3">
-                                        <a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a>
-                                   </li>
-                                   <li class="breadcrumb-item mr-3">
-                                        <a href="landing-faq.html">Вопрос-ответ по теме “Налог на профессиональный
-                                             доход”</a>
-                                   </li>
-                              </ol>
-                         </div>
-                    </nav>
-                    <div class='container'>
-                         <div class="row mx-n2 mt-n3">
-                              <aside class="col-lg-4 order-lg-2 px-2 pt-3">
-                                   <div class="border-radius-10 sidebar__list px-2 px-md-3 py-3 py-md-4">
-
-                                        <label for="" class="h5 mb-4">Искать по тексту вопроса:</label>
-                                        <div class="search__row mb-4">
-                                             <input type="text" class="search__input">
-                                             <i class="bi bi-search"></i>
-                                        </div>
-                                        <label for="" class="h5 mb-4">Период:</label>
-                                        <div class="row mt-n3 mx-n2 mb-5">
-                                             <div class="col-sm-6 px-2 pt-3">
-                                                  <div class="search__row">
-                                                       <input type="date" class="search__date">
-                                                  </div>
-                                             </div>
-                                             <div class="col-sm-6 px-2 pt-3">
-                                                  <div class="search__row">
-                                                       <input type="date" class="search__date">
-                                                  </div>
-                                             </div>
-                                        </div>
-
-                                        <div
-                                             class="d-flex justify-content-between align-items-sm-end flex-sm-row flex-column flex-wrap">
-                                             <button class="button mr-sm-2">Применить</button>
-                                             <button class="button button_white mt-4">Сбросить</button>
-                                        </div>
-                                   </div>
-                              </aside>
-
-                              <div class="col-lg-8 px-2 pt-3">
-                                   <section class="item-block p-md-4 p-2">
-                                        <div>
-                                             <h4 class="item-block__title h4 mb-4 color-green">
-                                                  <strong>Вопрос-ответ по теме “Налог на профессиональный
-                                                       доход”</strong>
-                                             </h4>
-                                             <p class="mb-2">
-                                                  Топ-10 наиболее популярных тегов:
-                                             </p>
-                                             <div class="popular-tags-wrapper">
-                                                  <input type="radio" name="popular-tags" id="tag-1">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-1">
-                                                       # Сдача имущества в аренду
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-2">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-2">
-                                                       # Виды деятельности
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-3">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-3">
-                                                       # Срок уплаты
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-4">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-4">
-                                                       # Ремесленный сбор
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-5">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-5">
-                                                       # IT-услуги
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-6">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-6">
-                                                       # Индивидуальные
-                                                       предприниматели
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-7">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-7">
-                                                       # Корректировка данных
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-8">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-8">
-                                                       # Репетиторство
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-9">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-9">
-                                                       # Подмена трудовых отношений
-                                                  </label>
-
-                                                  <input type="radio" name="popular-tags" id="tag-10">
-                                                  <label class="popular-tags-wrapper__tag-input" for="tag-10">
-                                                       # Налоговый вычет
-                                                  </label>
-
-                                             </div>
-                                        </div>
-
-                                        <div class="mt-4"></div>
-                                        <div id="accordionMns">
-                                             <div id="heading-111" class="accordion-question faq-block-tags-wrapper">
-                                                  <button
-                                                       class="accordion-question__btn accordion-question__btn-tags collapsed"
-                                                       type="button" data-toggle="collapse" data-target="#collapse-111"
-                                                       aria-expanded="false" aria-controls="collapse-111">
-                                                       <div class="accordion-question__header">
-                                                            <span>Физическим лицам</span><span>|</span><span>Налог
-                                                                 на профессиональный доход</span>
-                                                       </div>
-                                                       <div class="accordion-question__scope">
-                                                            <div class="accordion-question__btn-tags-content">
-                                                                 <div class="accordion-question__row">
-                                                                      <i class="bi bi-question-circle mr-2 mr-sm-4"></i>
-                                                                      <div>Налогообложение иностранных организаций</div>
-                                                                 </div>
-                                                                 <i class="bi bi-chevron-down ml-3"></i>
-                                                            </div>
-                                                            <div class="divider"></div>
-                                                            <div class="faq-block-tags__footer">
-                                                                 <div class="faq-block-tags__scope">
-                                                                      <span># Сдача имущества в аренду</span>
-                                                                 </div>
-                                                                 <span class="faq-block-tags__date">Опубликован:
-                                                                      12.01.2023</span>
-                                                            </div>
-                                                       </div>
-
-                                                  </button>
-                                                  <div id="collapse-111" class="collapse" aria-labelledby="heading-111"
-                                                       data-parent="#accordionMns" style="">
-                                                       <div class="accordion-question__wrapper">
-                                                            <div class="accordion-question__body">
-                                                                 <div class="accordion-question__row mb-2">
-                                                                      <i
-                                                                           class="bi bi-exclamation-circle mr-2 mr-sm-4"></i>
-                                                                      <div class="font-weight-bold">Ответ</div>
-                                                                 </div>
-                                                                 <div>Да можете, при условии ведения раздельного учета
-                                                                      доходов, полученных от осуществления деятельности
-                                                                      по
-                                                                      оказанию услуг в сфере агроэкотуризма, и доходов,
-                                                                      полученных от осуществления предпринимательской
-                                                                      деятельности.</div>
-                                                            </div>
-                                                       </div>
-                                                  </div>
-                                             </div>
-
-                                             <div id="heading-112" class="accordion-question faq-block-tags-wrapper">
-                                                  <button
-                                                       class="accordion-question__btn accordion-question__btn-tags collapsed"
-                                                       type="button" data-toggle="collapse" data-target="#collapse-112"
-                                                       aria-expanded="false" aria-controls="collapse-112">
-                                                       <div class="accordion-question__btn-tags-content">
-
-                                                            <div class="accordion-question__row">
-                                                                 <i class="bi bi-question-circle mr-2 mr-sm-4"></i>
-                                                                 <div>Налогообложение иностранных организаций</div>
-                                                            </div>
-                                                            <i class="bi bi-chevron-down ml-3"></i>
-                                                       </div>
-                                                       <div class="divider"></div>
-                                                       <div class="faq-block-tags__footer">
-                                                            <div class="faq-block-tags__scope">
-                                                                 <span># Сдача имущества в аренду</span>
-                                                                 <span># Сдача имущества в аренду</span>
-                                                                 <span># Сдача имущества в аренду</span>
-                                                            </div>
-                                                            <span class="faq-block-tags__date">Опубликован:
-                                                                 12.01.2023</span>
-                                                       </div>
-                                                  </button>
-                                                  <div id="collapse-112" class="collapse" aria-labelledby="heading-112"
-                                                       data-parent="#accordionMns" style="">
-                                                       <div class="accordion-question__wrapper">
-                                                            <div class="accordion-question__body">
-                                                                 <div class="accordion-question__row mb-2">
-                                                                      <i
-                                                                           class="bi bi-exclamation-circle mr-2 mr-sm-4"></i>
-                                                                      <div class="font-weight-bold">Ответ</div>
-                                                                 </div>
-                                                                 <div>Да можете, при условии ведения раздельного учета
-                                                                      доходов, полученных от осуществления деятельности
-                                                                      по
-                                                                      оказанию услуг в сфере агроэкотуризма, и доходов,
-                                                                      полученных от осуществления предпринимательской
-                                                                      деятельности.</div>
-                                                            </div>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-
-                                        <nav class="mt-5">
-                                             <ul class="pagination justify-content-center align-items-center">
-                                                  <li class="page-item disabled">
-                                                       <a class="page-link page-link-back" href="#" tabindex="-1"
-                                                            aria-disabled="true">Назад</a>
-                                                  </li>
-                                                  <li class="page-item active"><a class="page-link" href="#">1</a>
-                                                  </li>
-                                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                  <li class="page-item">
-                                                       <a class="page-link page-link-back" href="#">Вперед</a>
-                                                  </li>
-                                             </ul>
-                                        </nav>
-                                   </section>
-
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </main>
-          <footer class="footer pt-4 pt-md-5 pb-3 pb-md-4">
+			<main class="page page__decor">
+				<div class="content">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="individuals-new.html">Индивидуальным предпринимателям<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Налоговые вычеты</li>
+							</ol>
+						</div>
+					</nav>
+					<div class="item-content">
+						<div class='container'>
+							<div class="row mx-n2 mt-n3">
+								<aside class="col-lg-4 order-lg-2 px-2 pt-3">
+									<div class="sidebar">
+										<ul class="sidebar__list px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
+											<li>
+												<a href="./individuals-new-personal.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Общая информация о подоходном налоге для ИП</span>
+												</a>
+											</li>
+											<li>
+												<a href="./individuals-new-incomeTaxBase.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Налоговая база подоходного налога</span>
+												</a>
+											</li>
+											<li>
+												<a href="./individuals-new-taxCredit.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span class="color-green">Налоговые вычеты</span>
+												</a>
+											</li>
+											<li>
+												<a href="#4" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Учет доходов и расходов ИП</span>
+												</a>
+											</li>
+											<li>
+												<a href="#5" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Оплата налога и представление отчётности</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</aside>
+								<div class="col-lg-8 px-2 pt-3">
+									<div class="item-block px-md-4 px-2 py-4">
+										<div class="mb-5" id="1" >
+											<div class="item-block__title h4">Налоговые вычеты</div>
+											<p>
+												ИП при определении налоговой базы подоходного налога вправе применить:
+											</p>
+											<ul class="list-check-icon pl-0 pl-sm-3">
+												<li class="mb-3 d-flex">
+													<i class="bi bi-check2-circle mr-3"></i>
+													<span class="pt-2">
+														стандартные налоговые вычеты <span class="color-gray">(ст. 209 НК)</span>;
+													</span>
+												</li>
+												<li class="mb-3 d-flex">
+													<i class="bi bi-check2-circle mr-3"></i>
+													<span class="pt-2">
+														социальные налоговые вычеты <span class="color-gray">(ст. 210 НК)</span>;
+													</span>
+												</li>
+												<li class="mb-3 d-flex">
+													<i class="bi bi-check2-circle mr-3"></i>
+													<span class="pt-2">
+														имущественные налоговые вычеты <span class="color-gray">(ст. 211 НК)</span>.
+													</span>
+												</li>
+											</ul>
+											<p>
+												Такие вычеты применяются последовательно.
+											</p>
+										</div>
+										
+										<div class="mb-5 row" id="3">
+											<h5 class="h5 fw-bold">Стандартный налоговый вычет</h5>
+											<hr class="mt-1">
+											<p>
+												Стандартные налоговые вычеты предоставляются ИП в соответствии со статьей 209 НК в следующих размерах.
+											</p>
+											<div class="">
+												<div id="tabs">
+													<ul class="nav nav-tabs" role="tablist">
+														<li class="nav-item py-4">
+															<a href="#tab1" data-toggle="tab" class="nav-link active" role="tab">На самого ИП</a>
+														</li>
+														<li class="nav-item py-4">
+															<a href="#tab2" data-toggle="tab" class="nav-link" role="tab">
+																На детей и (или) иждивенцев</a>
+														</li>
+													</ul>
+												</div>
+												<div class="tab-content">
+													<div class="tab-pane active" id="tab1">
+														<ul class="list-check-icon pl-0 pl-sm-3">
+															<li class="mb-3 d-flex">
+																<i class="bi bi-check2-circle mr-3"></i>
+																<span class="pt-2">
+																	156 белорусских рублей за каждый 
+																	месяц отчетного квартала - если 
+																	размер доходов, подлежащих налогообложению, 
+																	уменьшенных на сумму расходов, 
+																	предусмотренных статьей 205 НК, не 
+																	превышает в соответствующем календарном квартале 2835 белорусских рублей;
+																</span>
+															</li>
+															<li class="mb-3 d-flex">
+																<i class="bi bi-check2-circle mr-3"></i>
+																<span class="pt-2">
+																	220 белорусских рублей в месяц - для 
+																	отдельных категорий ИП, перечисленных в подпункте 1.3 пункта 1 статьи 209 НК.
+																	<i tabindex="1" 
+																	class="bi bi-info-circle-fill popover-dismiss color-green" 
+																	style="font-size: 16px;"
+																	data-placement="bottom" role="button" data-toggle="popover" 
+																	data-trigger="focus" data-content="К таким категориям, 
+																	например, относятся: инвалиды I и II группы независимо от 
+																	причин инвалидности, физические лица, принимавшие участие 
+																	в работах по ликвидации последствий катастрофы на Чернобыльской 
+																	АЭС в 1986-1987 гг., лица, имеющие право на льготное 
+																	налогообложение в соответствии с Законом Республики Беларусь 
+																	от 17 апреля 1992 г., № 1594-XII «О ветеранах» и др."></i>
+																</span>
+															</li>
+															
+														</ul>
+													</div>
+													<div class="tab-pane"  id="tab2">
+														<p>
+															На детей и (или) иждивенцев стандартный налоговый 
+															вычет предоставляется в размере <strong>46 руб. </strong>
+															или <strong>87 руб.</strong> в месяц <span class="color-gray">(подп. 1.2 п. 1 ст. 209 НК)</span>.
+														</p>
+														<p>
+															В размере <strong>87 руб.</strong> в месяц вычет предоставляется ИП, которые являются:
+														</p>
+														<ul class="list-check-icon pl-0 pl-sm-3">
+															<li class="mb-3 d-flex">
+																<i class="bi bi-check2-circle mr-3"></i>
+																<span class="pt-2">
+																	вдовами (вдовцами), одинокими родителями, 
+																	приемными родителями, опекунами или 
+																	попечителями - на каждого ребенка до 18 лет и (или) каждого иждивенца;
+																</span>
+															</li>
+															<li class="mb-3 d-flex">
+																<i class="bi bi-check2-circle mr-3"></i>
+																<span class="pt-2">
+																	родителями, имеющими двух и 
+																	более детей в возрасте до 18 
+																	лет или детей-инвалидов в возрасте до 18 лет, - на каждого такого ребенка.
+																</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<p class="mt-3">
+												Стандартные налоговые вычеты применяются 
+												ИП за те календарные месяцы отчетного 
+												(налогового) периода, в которых у него 
+												отсутствовало место основной работы 
+												(службы, учебы) <span class="color-gray">(ч. 2 п. 5 ст. 209 НК)</span>.
+											</p>
+											<p>
+												Основанием для предоставления 
+												стандартных налоговых вычетов являются 
+												документы, указанные в п. 3 и 4 ст. 209 НК. 
+												ИП представляют эти документы в налоговый 
+												орган при подаче налоговой декларации (расчета) 
+												за первый отчетный период налогового периода, в 
+												котором применяются такие налоговые вычеты <span class="color-gray">(ч. 2 п. 5 ст. 209 НК)</span>.
+											</p>
+										</div>
+										<div class="mb-5" id="4">
+											<h5 class="h5 fw-bold">Социальный налоговый вычет</h5>
+											<hr class="mt-1">
+											<p>
+												ИП вправе применить социальные налоговые вычеты, установленные статьей 210 НК:
+											</p>
+											<div id="tabs">
+												<ul class="nav nav-tabs" id="user-nav-tabs">
+													<li role="presentation" class="nav-link active py-4"><a href="#content3">На обучение</a></li>
+													<li role="presentation" class="nav-link py-4"><a href="#content4">На страхование</a></li>
+												</ul>
+											</div>
+											<div id="tabs-content">
+												<div id="tabs-content3">
+													<p>
+														Для предоставления социального налогового 
+														вычета на обучение должны выполняться 
+														следующие условия (<span class="color-gray">подп. 1.1 п. 1 ст. 210 НК</span>):
+													</p>
+													<ul class="list-check-icon pl-0 pl-sm-3">
+														<li class="mb-3 d-flex">
+															<i class="bi bi-check2-circle mr-3"></i>
+															<span class="pt-2">
+																ИП несет расходы на свое обучение, на обучение лиц, 
+																состоящих с ним в отношениях близкого родства, на 
+																обучение своих подопечных (в том числе бывших 
+																подопечных, достигших 18-летнего возраста);
+															</span>
+														</li>
+														<li class="mb-3 d-flex">
+															<i class="bi bi-check2-circle mr-3"></i>
+															<span class="pt-2">
+																обучение осуществляется в учреждениях образования Республики Беларусь;
+															</span>
+														</li>
+														<li class="mb-3 d-flex">
+															<i class="bi bi-check2-circle mr-3"></i>
+															<span class="pt-2">
+																ИП, его близкие родственники, подопечные 
+																(бывшие подопечные, достигшие 18-летнего возраста) 
+																получают первое высшее, первое среднее специальное 
+																или первое профессионально-техническое образование.
+															</span>
+														</li>
+													</ul>
+													<p>
+														Социальный налоговый вычет на обучение предоставляется на основании документов, указанных в п. 3 ст. 210 НК.
+													</p>
+												</div>
+												<div id="tabs-content4">
+													<p>
+														Право на социальный налоговый вычет на страхование имеют ИП, 
+														уплатившие страховым организациям Республики Беларусь страховые взносы (<span class="color-gray">ч. 1 подп. 1.2 ст. 210 НК</span>):
+													</p>
+													<ul class="list-check-icon pl-0 pl-sm-3">
+														<li class="mb-3 d-flex">
+															<i class="bi bi-check2-circle mr-3"></i>
+															<span class="pt-2">
+																по договору добровольного страхования жизни и дополнительной пенсии, заключенным на срок не менее 3 лет;
+															</span>
+														</li>
+														<li class="mb-3 d-flex">
+															<i class="bi bi-check2-circle mr-3"></i>
+															<span class="pt-2">
+																по договору добровольного страхования медицинских расходов.
+															</span>
+														</li>
+													</ul>
+													<p>
+														При этом ИП может застраховать не только себя. Такие договоры страхования могут быть заключены им:
+													</p>
+													<ul class="list-check-icon pl-0 pl-sm-3">
+														<li class="mb-3 d-flex">
+															<i class="bi bi-check2-circle mr-3"></i>
+															<span class="pt-2">
+																в интересах лиц, состоящих с ним в отношениях близкого родства;
+															</span>
+														</li>
+														<li class="mb-3 d-flex">
+															<i class="bi bi-check2-circle mr-3"></i>
+															<span class="pt-2">
+																в интересах своих подопечных, в том числе бывших подопечных, достигших 18-летнего возраста.
+															</span>
+														</li>
+													</ul>
+													<p>
+														Социальный налоговый вычет на страхование предоставляется на основании документов, указанных в п. 4 ст. 210 НК.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="mb-5" id="4">
+											<h5 class="h5 fw-bold">Имущественный налоговый вычет</h5>
+											<hr class="mt-1">
+											<p>
+												Имущественный налоговый вычет <strong>при строительстве</strong> 
+												либо <strong>приобретении жилья</strong> предоставляется ИП, если 
+												выполняются следующие условия <span class="color-gray">(ч. 1 подп. 1.1 ст. 211 НК)</span>:
+											</p>
+											<ul class="list-check-icon pl-0 pl-sm-3">
+												<li class="mb-3 d-flex">
+													<i class="bi bi-check2-circle mr-3"></i>
+													<span class="pt-2">
+														несет расходы на строительство либо приобретение на 
+														территории Республики Беларусь одноквартирного жилого 
+														дома или квартиры (далее - жилье), на погашение 
+														кредитов банков, займов (включая проценты по ним, за 
+														исключением процентов, уплаченных за несвоевременное 
+														погашение (возврат) кредитов, займов и (или) за 
+														несвоевременную уплату процентов по кредитам, займам), 
+														полученных от белорусских организаций и иных белорусских ИП, 
+														фактически израсходованных ими на такое строительство (приобретение) жилья;
+													</span>
+												</li>
+												<li class="mb-3 d-flex">
+													<i class="bi bi-check2-circle mr-3"></i>
+													<span class="pt-2">
+														состоит на учете нуждающихся в улучшении жилищных 
+														условий по основаниям, установленным ст. 36 ЖК, или 
+														состоял на таком учете на момент заключения договора 
+														купли-продажи, предусматривающего оплату цены жилья в 
+														рассрочку, кредитного договора или договора займа.
+													</span>
+												</li>
+											</ul>
+											<p>
+												Имущественный вычет при строительстве либо приобретении 
+												жилья предоставляется на основании документов, поименованных в п. 2 ст. 211 НК.
+											</p>
+											<p>
+												Имущественные налоговые вычеты вправе применить ИП только 
+												в случае отсутствия места основной работы (службы, учебы) 
+												в течение всего отчетного или налогового периода.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer pt-4 pt-md-5 pb-3 pb-md-4">
 	<div class="container">
 		<div class="row mt-n3 mx-n2 mb-sm-2 mb-xl-4">
 			<div class="col-sm-6 col-xl-3 px-2 pt-3 mb-4">
@@ -641,21 +737,12 @@
 		</div>
 	</div>
 </footer>
-     </div>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+		</div>
+		<div class="calc-warning-popup"></div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 
-     <script>
-
-          $(function () {
-               $('a[href^="#"]').click(function (event) {
-                    var target = $(this).attr('href');
-                    $('html, body').animate({ scrollTop: $(target).offset().top - 10 }, 800);
-                    return false;
-               });
-          });
-     </script>
-</body>
-
+	</body>
 </html>

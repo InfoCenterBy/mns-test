@@ -3852,6 +3852,9 @@ input:-webkit-autofill:active {
 
 .list-check-icon li i {
   font-size: 30px;
+}
+
+.list-check-icon li i.bi-check2-circle {
   color: #007A65;
 }
 
@@ -9570,6 +9573,56 @@ figure audio {
   display: inline-block;
 }
 
+.individuals-new .vacancies {
+  margin: 0;
+}
+
+.individuals-new .vacancies__img {
+  max-width: 270px;
+}
+
+.individuals-new .vacancies__content p {
+  max-width: 460px;
+}
+
+.individuals-new .item-block__subtitle {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.border-round-left-bottom {
+  border-radius: 10px 10px 10px 0px;
+}
+
+.tab-content {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  padding: 34px;
+}
+
+#tabs {
+  padding: 0;
+}
+
+#tabs .nav-tabs li {
+  color: #000000;
+  cursor: pointer;
+}
+
+.calc-block {
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  padding: 32px 24px;
+}
+
+.calc-block strong {
+  font-size: 16px;
+  max-width: 245px;
+}
+
 @media (min-width: 576px) {
   .ends-popup-links .modal-dialog {
     max-width: 1360px;
@@ -10994,6 +11047,10 @@ figure audio {
   .landing-faq .pagination .page-link {
     font-size: calc(13px + 3 * ((100vw - 320px) / 1120));
   }
+
+  .calc-block strong {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
+  }
 }
 
 @media (max-width: 1432px) {
@@ -11255,6 +11312,14 @@ figure audio {
 @media (max-width: 768px) {
   .header-logo__name {
     display: none;
+  }
+
+  .calc-block {
+    text-align: center;
+  }
+
+  .calc-block strong {
+    max-width: none;
   }
 }
 
