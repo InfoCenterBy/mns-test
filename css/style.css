@@ -9632,9 +9632,7 @@ figure audio {
 }
 
 .new-news {
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 345px));
+  margin: 0 -12px 0 -12px;
 }
 
 .new-news-block {
@@ -11786,10 +11784,6 @@ figure audio {
 }
 
 @media (max-width: 720px) {
-  .new-news {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  }
-
   .new-news-block__text {
     max-width: 100%;
   }
