@@ -574,7 +574,9 @@
 
 		i {
 			font-size: 30px;
-			color: $color-green-light;
 		}
+      i.bi-check2-circle{
+			color: $color-green-light;
+      }
 	}
 }

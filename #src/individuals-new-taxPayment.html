@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Оплата налога и представление отчётности"
+	})
+	<body>
+		<div class="wrapper individuals-new">
+			@@include('_header.html',{})
+			<main class="page page__decor">
+				<div class="content">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="individuals-new.html">Индивидуальным предпринимателям<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Оплата налога и представление отчётности</li>
+							</ol>
+						</div>
+					</nav>
+					<div class="item-content">
+						<div class='container'>
+							<div class="row mx-n2 mt-n3">
+								<aside class="col-lg-4 order-lg-2 px-2 pt-3">
+									<div class="sidebar">
+										<ul class="sidebar__list px-2 px-md-3 py-3 py-md-4 mb-3 mb-lg-4">
+											<li>
+												<a href="./individuals-new-personal.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Общая информация о подоходном налоге для ИП</span>
+												</a>
+											</li>
+											<li>
+												<a href="./individuals-new-incomeTaxBase.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Налоговая база подоходного налога</span>
+												</a>
+											</li>
+											<li>
+												<a href="./individuals-new-taxCredit.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Налоговые вычеты</span>
+												</a>
+											</li>
+											<li>
+												<a href="./individuals-new-accountingIncome.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Учет доходов и расходов ИП</span>
+												</a>
+											</li>
+											<li>
+												<a href="./individuals-new-taxPayment.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span class="color-green">Оплата налога и представление отчётности</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</aside>
+								<div class="col-lg-8 px-2 pt-3">
+									<div class="item-block px-md-4 px-2 py-4">
+										<div class="mb-5" id="1" >
+											<div class="item-block__title h4">Оплата налога и представление отчётности</div>
+											
+										</div>
+										<div class="mb-5">
+											<p>
+												На основе данных учета доходов и 
+												расходов ИП определяют налоговую базу 
+												подоходного налога <strong>нарастающим итогом по 
+													результатам каждого отчетного (налогового) 
+													периода </strong>(<span class="color-gray">п. 37 ст. 205 НК</span>).
+											</p>
+											<p>
+												Расчет налоговой базы 
+												подоходного налога за отчетный (налоговый) 
+												период производится в <strong>налоговой декларации 
+													(расчете)</strong> по подоходному налогу с физических 
+												лиц индивидуального предпринимателя (нотариуса, 
+												осуществляющего нотариальную деятельность в 
+												нотариальном бюро) (далее – налоговая декларация) (<span class="color-gray">п. 37 ст. 205 НК</span>).
+											</p>
+											<div class="w-100 row">
+												<div class="col-md-6 d-flex flex-row align-items-start my-3">
+													<div class="border-round-left-bottom bg-yellow py-2 px-3 me-3">
+														<i class="bi bi-bell h1 color-white"></i>
+													</div>
+													<div class="d-flex flex-column h-100 justify-content-between">
+														<div class="d-flex flex-column">
+															<strong>Срок подачи налоговой декларации:</strong>
+															<strong class="color-green mt-2">не позднее 20-го числа месяца,</strong>
+															<span class="color-green mt-1">следующего за истекшим отчетным периодом</span>
+														</div>
+														<span class="color-gray mt-3">п. 3 ст. 217 НК.</span>
+													</div>
+												</div>
+												<div class="col-md-6 d-flex flex-row align-items-start my-3">
+													<div class="border-round-left-bottom bg-yellow py-2 px-3 me-3">
+														<i class="bi bi-calendar h1 color-white"></i>
+													</div>
+													<div class="d-flex flex-column h-100 justify-content-between">
+														<div class="d-flex flex-column">
+															<strong>Срок уплаты налога:</strong>
+															<strong class="color-green mt-2">не позднее 22-го числа месяца,</strong>
+															<span class="color-green mt-1">следующего за истекшим отчетным периодом</span>
+														</div>
+														<span class="color-gray mt-3">п. 4 ст. 217 НК.</span>
+													</div>
+												</div>
+											</div>
+											<div class="attention d-flex align-items-center mb-4 p-3 p-sm-4">
+												<i class="bi bi-info-circle-fill mr-3 mr-sm-4"></i>
+												<div>
+													Если последний день срока представления налоговой декларации (расчета) по подоходному налогу или уплаты подоходного налога приходится на выходной или праздничный день, то днем окончания срока считается ближайший следующий за ним рабочий день.
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		<div class="calc-warning-popup"></div>
+		<!-- @@include('_popup.html',{}) -->
+		@@include('_js.html',{})
+	</body>
+</html>
