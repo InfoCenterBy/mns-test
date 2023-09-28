@@ -9084,6 +9084,9 @@ a {
 
 .actual__row {
   background-color: #EBEBEB;
+}
+
+.actual__row * {
   -webkit-transition: all ease-out 0.3s;
   -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
@@ -9093,6 +9096,10 @@ a {
   background-color: #FAFAFA;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.actual__row:hover * {
+  color: #007A65;
 }
 
 .actual__row img {
