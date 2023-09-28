@@ -270,7 +270,7 @@ body._lock {
 }
 
 .color-white {
-  color: #FAFAFA;
+  color: #FAFAFA !important;
 }
 
 .color-green {
@@ -9084,16 +9084,22 @@ a {
 
 .actual__row {
   background-color: #EBEBEB;
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
 
-.actual__item:hover {
+.actual__row:hover {
   background-color: #FAFAFA;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.actual__item img {
-  max-height: 150px;
+.actual__row img {
+  width: 100%;
+  min-width: 85px;
+  max-height: 85px;
+  max-height: 85px;
 }
 
 .clarifications {
@@ -9104,8 +9110,12 @@ a {
   overflow: hidden;
 }
 
-.slider-clarifications {
+.slider-clarifications-back {
   background-color: #EBEBEB;
+  margin-bottom: 36px;
+}
+
+.slider-clarifications {
   border-radius: 10px;
   position: relative;
 }
@@ -9115,8 +9125,14 @@ a {
 }
 
 .slider-clarifications__date {
-  font-size: 12px;
-  color: #727270;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.slider-clarifications__date span {
+  border-radius: 5px;
+  padding: 6px 12px;
+  background-color: #007A65;
 }
 
 .slider-clarifications__link:hover {
