@@ -9086,7 +9086,8 @@ a {
   background-color: #EBEBEB;
 }
 
-.actual__row * {
+.actual__row *,
+.actual__row {
   -webkit-transition: all ease-out 0.3s;
   -o-transition: all ease-out 0.3s;
   transition: all ease-out 0.3s;
