@@ -39,7 +39,7 @@
 	color: $color-black;
 }
 .color-white {
-	color: $color-white;
+	color: $color-white !important;
 }
 .color-green {
 	color: $color-green-light;
@@ -1298,6 +1298,119 @@ a:hover {
 	}
 }
 
+.quote-new {
+	width: 100%;
+	border-radius: 20px 20px 400px 20px;
+	background: $color-green;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-right: 16px;
+	&__text {
+		color: $color-white;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin: 24px 0;
+	}
+	.quote-circle-wrapper{
+		position: relative;
+		height: 100px;
+		width: 140px;
+		min-width: 130px;
+		margin: 0 18px;
+	}
+	.quote-circle {
+		position: absolute;
+		background-color: $color-white;
+		border: 8px solid $color-green;
+		border-radius: 50%;
+		color: $color-red;
+		display: grid;
+		place-items: center;
+		top: -15px;
+		flex-grow: 1;
+		flex-shrink: 1;
+		@include adaptiv-value("font-size", 110, 80, 1);
+		@include adaptiv-value("line-height", 100,70, 1);
+		@include adaptiv-value("width", 140, 100, 1);
+		@include adaptiv-value("height", 140, 100, 1);
+		@include adaptiv-value("top", -20, 2.5, 1);
+	}
+	
+	@media (max-width: 960px) {
+		border-radius: 10px 10px 10px 10px;
+		.quote-circle-wrapper{
+			position: relative;
+			height: auto;
+			width: auto;
+			margin: 0 12px;
+			min-width: auto;
+		}
+		.quote-circle {
+			position: static;
+			background-color: transparent;
+			border: 0px solid transparent;
+			border-radius: 0;
+			color: $color-white;
+			font-size: 50px;
+			line-height: 54px;
+			top: 0px;
+			width: auto;
+			height: auto;
+		}
+		&__text {
+			font-size: 16px;
+			margin: 12px 0;
+		}
+	}
+}
+
+.contact-link {
+	background-color: $color-green;
+	border-radius: 25px 25px 25px 0px;
+	color: $color-white;
+	padding: 16px 42px 16px 24px;
+	display: flex;
+	flex-direction: row;
+	transition: all ease-out .3s;
+	align-items: center;
+	&:hover{
+		color: $color-yellow;
+	}
+		&__icon {
+			font-size: 30px;
+		}
+
+		&__text {
+			margin-left: 36px;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: normal;
+		}
+	@media (max-width: 960px) {
+		padding: 16px 20px 16px 20px;
+		&__text {
+			margin-left: 18px;
+			font-size: 16px;
+		}
+	}
+	@media (max-width:650px) {
+		&__icon {
+			font-size: 20px;
+		}
+		&__text {
+			margin-left: 8px;
+			font-size: 14px;
+		}
+	}
+}
+
+.contact-link-wrapper{
+	border-radius: 0px 10px 10px 10px;
+	border: 1px solid #E0E0E0;
+}
 
 
 

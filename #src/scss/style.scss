@@ -191,17 +191,27 @@ body {
 
 	&__row {
 		background-color: $color-gray-light;
-	}
-
-	&__item {
+		*, &{
+			transition: all ease-out .3s;
+		}
 		&:hover {
 			background-color: $color-white;
 			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			*{
+				color: $color-green-light
+			}
 		}
 
 		img {
-			max-height: 150px;
+			width: 100%;
+			min-width: 85px;
+			max-height: 85px;
+			max-height: 85px;
 		}
+	}
+
+	&__item {
+		
 	}
 }
 .clarifications {
@@ -213,8 +223,11 @@ body {
 		width: 100%;
 	}
 }
-.slider-clarifications {
+.slider-clarifications-back{
 	background-color: $color-gray-light;
+	margin-bottom: 36px;
+}
+.slider-clarifications {
 	border-radius: 10px;
 	position: relative;
 
@@ -223,8 +236,13 @@ body {
 	}
 
 	&__date {
-		font-size: 12px;
-		color: $color-gray-dark;
+		font-size: 16px;
+		font-weight: 400;
+		span{
+			border-radius: 5px;
+			padding: 6px 12px;
+			background-color: $color-green-light;
+		}
 	}
 
 	&__link {
@@ -916,3 +934,10 @@ figure audio {
 }
 
 
+.fs-18{
+	font-size: 18px;
+}
+
+.fw-6{
+	font-weight: 600;
+}
