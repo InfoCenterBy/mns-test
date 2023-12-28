@@ -1606,6 +1606,106 @@ a:hover {
   border: 1px solid #E0E0E0;
 }
 
+.alert-new {
+  border-radius: 10px;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
+  padding: 22px 16px;
+}
+
+.alert-new .bi {
+  color: #00654D;
+  font-size: 28px;
+}
+
+.alert-new__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.alert-new__toggle {
+  color: #00654D;
+  font-weight: 600;
+}
+
+.alert-new-modal .modal-header {
+  border-bottom: 0;
+}
+
+.alert-new-modal .modal-footer {
+  border-top: 0;
+}
+
+.alert-new-modal .input-file {
+  width: 100%;
+}
+
+.alert-new-modal .input-file input {
+  display: none;
+}
+
+.alert-new-modal .input-file input + label {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  color: #1A1A1A;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.alert-new-modal .input-file input + label svg {
+  margin-right: 8px;
+}
+
+.alert-new-modal .input-file input:focus + label,
+.alert-new-modal .input-file input + label:hover {
+  color: #00654D;
+}
+
+.alert-new-modal .input-file input:focus + label svg path,
+.alert-new-modal .input-file input + label:hover svg path {
+  fill: #00654D;
+}
+
+.alert-new-modal .input-file input + label {
+  cursor: pointer;
+}
+
+.alert-new-modal .attention {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.alert-new-modal .form-control:focus {
+  color: #1A1A1A;
+  border-color: #00654D;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 101, 77, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(0, 101, 77, 0.25);
+}
+
+.alert-new-modal textarea {
+  min-height: 140px;
+}
+
+.modal.alert-new-modal {
+  --bs-modal-width: 560px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
