@@ -1412,5 +1412,93 @@ a:hover {
 	border: 1px solid #E0E0E0;
 }
 
+.alert-new {
+	border-radius: 10px;
+	background-color: $color-white;
+	color: $color-black;
+	padding: 22px 16px;
+	.bi{
+		color: $color-green;
+		font-size: 28px;
+	}
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: normal;
+	}
+	&__toggle{
+		color: $color-green;
+		font-weight: 600;
+	}
+}
 
+.alert-new-modal{
+	.modal-header{
+		border-bottom: 0;
+	}
+	.modal-footer{
+		border-top: 0;
+	}
+	.input-file{
+		width: 100%;
+		input {
+			display: none;
+		}
+		input + label {
+			background: transparent;
+			display: flex;
+			justify-content: start;
+			align-items: center;
+			font-style: normal;
+			color: $color-black;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: normal;
+			svg{
+				margin-right: 8px;
+			}
+		}	
+		input:focus + label,
+		input + label:hover {
+			color: $color-green;
+		}
+		input:focus + label svg path, input + label:hover svg path{
+			fill: $color-green;
+		}
+		input + label {
+			cursor: pointer;
+		}
+	}
+	.attention{
+		filter: none
+	}
+	.form-control:focus {
+		color: $color-black;
+		border-color: $color-green;
+		outline: 0;
+		box-shadow: 0 0 0 .25rem rgba(0, 101, 77,.25);
+	}
+	textarea{
+		min-height: 140px;
+	}
+}
 
+.modal.alert-new-modal{
+	--bs-modal-width: 560px;
+}
+
+.fs-16{
+	font-size: 16px;
+}
+
+@import './_cookie.scss';
+
+.button-empty{
+	background-color: transparent;
+	border: 1px solid $color-green-light;
+	color: $color-green-light;
+	&:hover{
+		background-color: $color-green-light;
+		color: $color-white;
+	}
+}
