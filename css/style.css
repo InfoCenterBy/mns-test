@@ -1,5 +1,120 @@
 @charset "UTF-8";
 
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mr-3 {
+  margin-right: 1rem !important;
+}
+
+.mr-4 {
+  margin-right: 1.5rem !important;
+}
+
+.mr-5 {
+  margin-right: 3rem !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+/* Margin left (ml-*) */
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.ml-1 {
+  margin-left: 0.25rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.ml-3 {
+  margin-left: 1rem !important;
+}
+
+.ml-4 {
+  margin-left: 1.5rem !important;
+}
+
+.ml-5 {
+  margin-left: 3rem !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+/* Padding right (pr-*) */
+
+.pr-0 {
+  padding-right: 0 !important;
+}
+
+.pr-1 {
+  padding-right: 0.25rem !important;
+}
+
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+
+.pr-3 {
+  padding-right: 1rem !important;
+}
+
+.pr-4 {
+  padding-right: 1.5rem !important;
+}
+
+.pr-5 {
+  padding-right: 3rem !important;
+}
+
+/* Padding left (pl-*) */
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 0.25rem !important;
+}
+
+.pl-2 {
+  padding-left: 0.5rem !important;
+}
+
+.pl-3 {
+  padding-left: 1rem !important;
+}
+
+.pl-4 {
+  padding-left: 1.5rem !important;
+}
+
+.pl-5 {
+  padding-left: 3rem !important;
+}
+
+.container {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 @font-face {
   font-family: "icons";
   font-display: swap;
@@ -425,14 +540,6 @@ button {
 
 .fs-24 {
   font-size: 1.5rem !important;
-}
-
-.border-10 {
-  border: 10px;
-}
-
-.after-no::after {
-  content: none;
 }
 
 body {
@@ -9543,6 +9650,93 @@ a {
 
 .landing-exp .accordion-question__btn-tags-content {
   padding-bottom: 15px;
+}
+
+.bx-pagination {
+  margin: 10px 0;
+}
+
+.bx-pagination .bx-pagination-container {
+  text-align: center;
+  position: relative;
+}
+
+.bx-pagination .bx-pagination-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.bx-pagination .bx-pagination-container ul li {
+  display: inline-block;
+  margin: 0 2px 15px 2px;
+}
+
+.bx-pagination .bx-pagination-container ul li span {
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  -o-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  background: #eff0f1;
+  padding: 0 8px;
+  display: block;
+  height: 32px;
+  min-width: 32px;
+  line-height: 32px;
+  color: #444;
+  font-size: 14px;
+  border-radius: 16px;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bx-pagination .bx-pagination-container ul li a {
+  text-decoration: none;
+  display: block;
+  border-radius: 16px;
+  height: 32px;
+  min-width: 32px;
+  line-height: 32px;
+  color: #444;
+  vertical-align: middle;
+}
+
+.bx-pagination .bx-pagination-container ul li a:hover span {
+  background: #DADADA;
+}
+
+.bx-pagination .bx-pagination-container ul li.bx-active span {
+  background: #007A65;
+  color: #fff;
+}
+
+.bx-pagination .bx-pagination-container ul li.bx-pag-all a span,
+.bx-pagination .bx-pagination-container ul li.bx-pag-prev a span,
+.bx-pagination .bx-pagination-container ul li.bx-pag-next a span {
+  background: #fff;
+  border: 2px solid #eff0f1;
+  line-height: 28px;
+  padding: 0 18px;
+  color: #444;
+}
+
+.bx-pagination .bx-pagination-container ul li.bx-pag-all span,
+.bx-pagination .bx-pagination-container ul li.bx-pag-prev span,
+.bx-pagination .bx-pagination-container ul li.bx-pag-next span {
+  color: #aab1b4;
+  background: #fff;
+  border: 2px solid #eff0f1;
+  line-height: 28px;
+  padding: 0 18px;
+}
+
+.bx-pagination .bx-pagination-container ul li.bx-pag-all a:hover span,
+.bx-pagination .bx-pagination-container ul li.bx-pag-prev a:hover span,
+.bx-pagination .bx-pagination-container ul li.bx-pag-next a:hover span {
+  background: #fff;
+  border-color: #DADADA;
+  color: #000;
 }
 
 .page {
