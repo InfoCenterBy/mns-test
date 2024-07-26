@@ -1,4 +1,5 @@
 @@include('files/mns-tax-calc.min.js', {})
+@@include('files/select-sidebar-elem.js', {})
 @@include('libs/slick.min.js', {})
 @@include('files/dynamic_adapt.js', {})
 @@include('libs/ResizeSensor.js', {})

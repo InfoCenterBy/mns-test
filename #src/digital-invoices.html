@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Электронные счета-фактуры"
+})
+
+<body>
+<div class="wrapper">
+    @@include('_header.html',{})
+    <main class="page page__decor">
+        <div class="content px-2">
+            <nav aria-label="breadcrumb">
+                <div class='container'>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item mr-3"><a href="index.html">Главная<i
+                                class="bi-chevron-right ml-2"></i></a></li>
+                        <li class="breadcrumb-item mr-3"><a href="actual.html">Актуальное<i
+                                class="bi-chevron-right ml-2"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Электронные счета-фактуры</li>
+                    </ol>
+                </div>
+            </nav>
+            <div class="item-content">
+                <div class='container'>
+                    <div class="item-block px-md-4 px-2 py-4">
+                        <h4 class="item-block__title h4">Электронные счета-фактуры</h4>
+                        <div class="row mx-n2 mt-4">
+                            <div class="col-sm-6 col-md-3 px-2 pt-4">
+                                <a class="payable-taxes-item d-flex flex-column align-items-center" href="http://vat.gov.by/mainPage/" target="_blank">
+                                <span class="payable-taxes-item__icon mb-3 d-flex align-items-center justify-content-center rounded-circle">
+                                    <img src="./img/icons/digital-invoices.svg" alt="icon-2643">
+                                </span>
+                                    <span class="h6 text-center">Электронные счета-фактуры</span>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-3 px-2 pt-4">
+                                <a class="payable-taxes-item d-flex flex-column align-items-center" href="#">
+                                <span class="payable-taxes-item__icon mb-3 d-flex align-items-center justify-content-center rounded-circle">
+                                    <img src="./img/icons/phone.svg" alt="icon-2643">
+                                </span>
+                                    <span class="h6 text-center">
+                                        Телефоны «Горячих линий по ЭСЧФ» инспекций МНС по областям, городам, районам, районам в городах
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-3 px-2 pt-4">
+                                <a class="payable-taxes-item d-flex flex-column align-items-center" href="digital-invoices-documents.html">
+                                <span class="payable-taxes-item__icon mb-3 d-flex align-items-center justify-content-center rounded-circle">
+                                    <img src="./img/icons/documents.svg" alt="icon-2643">
+                                </span>
+                                    <span class="h6 text-center">
+                                        Документы
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-3 px-2 pt-4">
+                                <a class="payable-taxes-item d-flex flex-column align-items-center" href="international-invoices.html">
+                                <span class="payable-taxes-item__icon mb-3 d-flex align-items-center justify-content-center rounded-circle">
+                                    <img src="./img/icons/international-invoices.svg" alt="icon-2643">
+                                </span>
+                                    <span class="h6 text-center">
+                                        Международный опыт функционирования ЭСЧФ
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('_footer.html',{})
+</div>
+<!-- @@include('_popup.html',{}) -->
+@@include('_js.html',{})
+</body>
+
+</html>

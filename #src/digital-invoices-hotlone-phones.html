@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+@@include('_head.html',{
+"title":"Документы"
+})
+<style>
+    .custom-select {
+        cursor: pointer;
+        position: relative;
+    }
+    .custom-select div {
+        border: 1px solid #ced4da;
+        padding: 10px;
+        border-radius: 0.25rem;
+    }
+    .custom-select .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: none;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    .custom-select .dropdown-menu.show {
+        display: block;
+    }
+    .custom-select .dropdown-item {
+        cursor: pointer;
+    }
+    .custom-select .dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
+    #inspectionDetails {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+<div class="wrapper">
+    @@include('_header.html',{})
+    <main class="page page__decor">
+        <div class="content px-2">
+
+            <nav aria-label="breadcrumb">
+                <div class="container">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item mr-3">
+                            <a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a>
+                        </li>
+                        <li class="breadcrumb-item mr-3">
+                            <a href="actual.html">Актуальное
+                                <i class="bi-chevron-right ml-2"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item mr-3">
+                            <a href="digital-invoices.html">Электронные счета-фактуры
+                                <i class="bi-chevron-right ml-2"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Документы
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+
+            <div class="item-content">
+                <div class="container">
+                    <section class="item-block px-md-4 px-2 py-4">
+                        <h4 class="item-block__title h4 mb-4">
+                            Документы
+                        </h4>
+                        <div class="container mt-5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="regionSelect">Выберите область</label>
+                                    <select id="regionSelect" class="form-control select">
+                                        <option value="">-- Выберите область --</option>
+                                        <option value="minsk">Минск</option>
+                                        <option value="vitebsk">Витебск</option>
+                                        <option value="gomel">Гомель</option>
+                                        <!-- Добавьте остальные области -->
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inspectionSelect">Выберите инспекцию</label>
+                                    <select id="inspectionSelect" class="form-control">
+                                        <option value="">-- Сначала выберите область --</option>
+                                        <!-- Сюда будут добавляться опции инспекций на основе выбора области -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <div id="inspectionDetails" class="border p-3">
+                                        <h5>Выберите инспекцию, чтобы увидеть информацию</h5>
+                                        <!-- Контент инспекции будет здесь -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('_footer.html', {})
+</div>
+@@include('_js.html',{})
+<script>
+    const inspectionsData = {
+        minsk: [
+            { value: 'zavodskoy', text: 'Инспекция МНС по Заводскому району г. Минска', details: 'Информация о Заводском районе: ...', phone: '8 (017) 123-45-67' },
+            { value: 'sovetskiy', text: 'Инспекция МНС по Советскому району г. Минска', details: 'Информация о Советском районе: ...', phone: '8 (017) 765-43-21' }
+        ],
+        vitebsk: [
+            { value: 'central', text: 'Инспекция МНС по Центральному району г. Витебска', details: 'Информация о Центральном районе Витебска: ...', phone: '8 (0212) 987-65-43' },
+            { value: 'pobed', text: 'Инспекция МНС по Пограничному району г. Витебска', details: 'Информация о Пограничном районе Витебска: ...', phone: '8 (0212) 654-32-10' }
+        ],
+        gomel: [
+            { value: 'sovetskiy-gomel', text: 'Инспекция МНС по Советскому району г. Гомеля', details: 'Информация о Советском районе Гомеля: ...', phone: '8 (0232) 123-45-67' },
+            { value: 'central-gomel', text: 'Инспекция МНС по Центральному району г. Гомеля', details: 'Информация о Центральном районе Гомеля: ...', phone: '8 (0232) 765-43-21' }
+        ]
+
+    };
+
+
+    function updateInspectionSelect(region) {
+        const inspectionSelect = document.getElementById('inspectionSelect');
+        inspectionSelect.innerHTML = '';
+
+        if (region in inspectionsData) {
+            inspectionsData[region].forEach(inspection => {
+                const option = document.createElement('option');
+                option.value = inspection.value;
+                option.textContent = inspection.text;
+                inspectionSelect.appendChild(option);
+            });
+            updateInspectionDetails(inspectionSelect.value);
+        } else {
+            const option = document.createElement('option');
+            option.textContent = '-- Сначала выберите область --';
+            inspectionSelect.appendChild(option);
+            updateInspectionDetails(null);
+        }
+    }
+
+    function updateInspectionDetails(inspectionValue) {
+        const detailsDiv = document.getElementById('inspectionDetails');
+        detailsDiv.innerHTML = '';
+
+        if (inspectionValue) {
+            for (const region in inspectionsData) {
+                const inspection = inspectionsData[region].find(item => item.value === inspectionValue);
+                if (inspection) {
+                    detailsDiv.innerHTML = `<h5>${inspection.text}</h5>
+                                <p>${inspection.details}</p>
+                                <p><i class="bi bi-telephone-fill"></i> ${inspection.phone}</p>`;
+                    break;
+                }
+            }
+        } else {
+            detailsDiv.innerHTML = '<h5>Выберите инспекцию, чтобы увидеть информацию</h5>';
+        }
+    }
+
+    document.getElementById('regionSelect').addEventListener('change', function() {
+        updateInspectionSelect(this.value);
+    });
+
+    document.getElementById('inspectionSelect').addEventListener('change', function() {
+        updateInspectionDetails(this.value);
+    });
+</script>
+
+</body>
+</html>
