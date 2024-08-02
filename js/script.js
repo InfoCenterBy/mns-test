@@ -5850,7 +5850,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 $('#accordionMns').on('shown.bs.collapse', function (event) {
      $('html, body').animate(
           {
-               scrollTop: $(event.target).parent().offset().top,
+               // scrollTop: $(event.target).parent().offset().top,
           },
           400
      );
@@ -5859,7 +5859,7 @@ $('.item-block__title, .accordion-btn, .accordion-question__btn').click(
      function () {
           $('html, body').animate(
                {
-                    scrollTop: $(this).offset().top,
+                    // scrollTop: $(this).offset().top,
                },
                300
           );

@@ -537,6 +537,14 @@ button {
   font-size: 1.5rem !important;
 }
 
+.border-10 {
+  border: 10px;
+}
+
+.after-no::after {
+  content: none;
+}
+
 body {
   color: #1A1A1A;
   font-size: 16px;
@@ -2171,6 +2179,10 @@ a:hover {
 .button-empty:hover {
   background-color: #007A65;
   color: #FAFAFA;
+}
+
+.fs-48 {
+  font-size: 48px;
 }
 
 input:-webkit-autofill,
@@ -4518,6 +4530,10 @@ input:-webkit-autofill:active {
 
 .list-check-icon li i.bi-check2-circle {
   color: #007A65;
+}
+
+.list-check-icon li i.bi-x-circle {
+  color: #E31E25;
 }
 
 .main-news {
