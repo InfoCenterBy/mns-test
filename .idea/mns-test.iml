@@ -8,5 +8,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="vuex" level="application" />
+    <orderEntry type="library" name="vue" level="application" />
+    <orderEntry type="library" name="vue-router" level="application" />
+    <orderEntry type="library" name="@vuepic" level="application" />
+    <orderEntry type="library" name="@vuepic/vue-datepicker" level="application" />
   </component>
 </module>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Cделки, не подлежащие контролю"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page page__decor">
+				<div class="content px-2">
+					<nav aria-label="breadcrumb">
+						<div class='container'>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="organizations.html">Организациям<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item mr-3"><a href="organizations.html">Трансфертное ценообразование<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Cделки, не подлежащие контролю</li>
+							</ol>
+						</div>
+					 </nav>
+					<div class="item-content">
+						<div class='container'>
+							<div class="row mx-n2 mt-n3">
+								<aside class="col-lg-4 order-lg-2 pt-3">
+									<div class="sidebar">
+										<ul class="sidebar__list px-2 px-md-3 py-3 py-md-4">
+											<li>
+												<a href="controlled-transactions.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Kонтролируемые сделки</span>
+												</a>
+											</li>
+											<li>
+												<a href="non-controlled-transactions.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Cделки, не подлежащие контролю</span>
+												</a>
+											</li>
+											<li>
+												<a href="controlled-transactions-2012-2018.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Контролируемые сделки в 2012-2018 годах</span>
+												</a>
+											</li>
+											<li>
+												<a href="interdependent-persons.html" class="d-flex">
+													<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
+													<span>Взаимозависимые лица</span>
+												</a>
+											</li>
+										</ul>
+										<a href="#" class="sidebar__link-block p-3 d-flex align-items-center justify-content-between">
+											<span>Вход в личный кабинет</span><i class="bi bi-lock"></i>
+										</a>
+										<a href="#" class=" mt-3 sidebar__link-block p-3 d-flex align-items-center justify-content-between">
+											<span>Проверить данные об организации</span><i class="bi bi-search"></i>
+										</a>
+									</div>
+								</aside>
+								<div class="col-lg-8 pt-3">
+									<section class="item-block px-md-4 px-2 py-4">
+
+										<h4 class="item-block__title h4 mb-4">
+											Cделки, не подлежащие контролю
+										</h4>
+				
+										<p class="fw-semibold mb-4" >Не подлежат контролю соответствия рыночным ценам следующие сделки:</p>
+
+                    <ol class="pl-3">
+
+                      <li class="mb-4">сделки по реализации или приобретению товаров (работ, услуг), имущественных прав, если цена (стоимость)
+                         сделки определена в международном договоре Республики Беларусь;
+                      </li>
+
+                      <li class="mb-4">
+                        отчуждение банку ранее переданного в залог недвижимого имущества в целях обеспечения его требований о погашении кредиторской задолженности;
+                      </li>
+                    
+                      
+                      <li class="mb-4">операция с ценными бумагами, финансовыми инструментами срочных сделок, обращающимися на организованном рынке ценных бумаг,
+                          за исключением сделок, совершенным со взаимозависимым лицом, с плательщиком, применяющим особые режимы налогообложения, по реализации или 
+                          приобретению недвижимого имущества (его части), в том числе сделки, в результате которых происходит передача дольщику объекта долевого 
+                          строительства, владельцу жилищных облигаций жилого и (или) нежилого помещения, жилищных облигаций в процессе их обращения 
+                          (за исключением операций эмитентов с облигациями собственной эмиссии), совершенные после государственной регистрации создания объекта строительства;
+                      </li>
+               
+                     
+                      <li class="mb-4">сделки, заключенные организациями Республики Беларусь с операторами платежных систем на основе использования банковских 
+                        платежных карточек VISA, MasterCard, American Express, зарегистрированными в оффшорных зонах;
+                      </li>
+
+                      <li class="mb-4">
+                        межбанковские кредиты (депозиты) со сроком до семи календарных дней (включительно);
+                      </li>
+
+                      <li>
+                        кредиты (займы), предоставленные организациям, включенным в перечень сельскохозяйственных организаций, подлежащих досудебному оздоровлению, 
+                        либо в перечень сельскохозяйственных организаций, в отношении которых необходимо проведение процедур несостоятельности или банкротства, 
+                        утверждаемые Советом Министров Республики Беларусь, а также в перечни неплатежеспособных сельскохозяйственных организаций, подлежащих 
+                        финансовому оздоровлению, утверждаемые областными исполнительными комитетами в порядке, установленном Советом Министров Республики Беларусь.
+                      </li>
+                    </ol>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		<!-- @@include('_popup.html',{}) -->
+		@@include('_js.html',{})
+	</body>
+</html>

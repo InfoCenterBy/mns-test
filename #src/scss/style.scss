@@ -18,7 +18,15 @@ $fontFamily: 'Open Sans', sans-serif;
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
+.sidebar{
+	will-change: auto;
+}
 
+.sidebar__inner{
+	transform: translate(0, 0); /* For browsers don't support translate3d. */
+	//transform: translate3d(0, 0, 0);
+	will-change: position, transform;
+}
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minWidth: 320px;
 $maxWidth: 1920;
@@ -95,6 +103,7 @@ body {
 @import "list-activities";
 @import "landing-faq";
 @import "pagination";
+@import "cigarettes";
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
