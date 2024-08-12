@@ -190,6 +190,18 @@
           transform: rotate(45deg);
 }
 
+.sidebar {
+  will-change: auto;
+}
+
+.sidebar__inner {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  /* For browsers don't support translate3d. */
+  will-change: position, transform;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -9748,6 +9760,222 @@ a {
   background: #fff;
   border-color: #DADADA;
   color: #000;
+}
+
+.cigarettes {
+  position: relative;
+}
+
+.cigarettes__label {
+  font-weight: 600;
+}
+
+.cigarettes__input-container {
+  position: relative;
+}
+
+.cigarettes__input {
+  padding: 10px 15px;
+  border: 1px solid #EBEBEB;
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.cigarettes__input--with-icon::after {
+  content: "";
+  background: url("../img/icons/calendar.svg");
+  position: absolute;
+  right: 10px;
+  top: 17px;
+  width: 24px;
+  height: 24px;
+}
+
+.cigarettes__month-picker {
+  position: absolute;
+  top: 75px;
+  left: 20px;
+}
+
+.cigarettes__table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cigarettes__table {
+  margin-top: 48px;
+  width: 100%;
+}
+
+.month-picker {
+  background: white;
+  border: 1px solid #ccc;
+  padding-inline: 10px;
+  padding-bottom: 10px;
+  z-index: 100;
+  width: 350px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.month-picker__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+  padding-block: 10px;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.month-picker__year {
+  background-color: #EBEBEB;
+  border-radius: 10px;
+  padding-block: 6px;
+  padding-inline: 10px;
+  font-size: 14px;
+  color: #727270;
+}
+
+.month-picker__close-icon {
+  padding: 2px;
+  cursor: pointer;
+  color: #727270;
+}
+
+.month-picker label {
+  text-align: center;
+  display: block;
+  width: calc(33.333% - 14px);
+  border-radius: 10px;
+  padding-block: 5px;
+  cursor: pointer;
+  background-color: #EBEBEB;
+  color: #727270;
+}
+
+.month-picker label.checked {
+  background-color: #007A65;
+  color: #FAFAFA;
+}
+
+.month-picker input {
+  display: none;
+}
+
+.calendar-input {
+  padding-right: 40px;
+}
+
+.row-gray {
+  background-color: #EBEBEB;
+}
+
+.row-no-data {
+  text-align: center;
+}
+
+.organization-row {
+  table-layout: fixed;
+  background-color: #AFCEC6;
+  font-weight: bold;
+  text-align: left;
+  color: #1A1A1A;
+}
+
+.type-row {
+  background-color: #00654D;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+}
+
+table {
+  overflow-y: scroll;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 16px;
+  border-collapse: collapse;
+}
+
+.bg-gray {
+  background-color: lightgray;
+}
+
+.brand {
+  min-width: 300px;
+}
+
+.table-header {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.month-picker label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #00654D;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+[v-cloak] {
+  display: none;
 }
 
 .page {
