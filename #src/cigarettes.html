@@ -7,15 +7,14 @@
     <div class="container mt-5">
         <div class="row cigarettes">
             <div class="col-md-4 mb-3">
-                <div class="d-inline-flex flex-column w-100">
+                <div class="d-inline-flex flex-column w-100" >
                     <label class="cigarettes__label">Выберите период</label>
-                    <div class="cigarettes__input-container cigarettes__input--with-icon">
+                    <div class="cigarettes__input-container cigarettes__input--with-icon" @click.stop="handleOpen">
                         <input class="cigarettes__input calendar-input" 
-                               type="text" 
-                               v-model="period" 
-                               @focus="showMonthPicker = true" 
-                               readonly 
-                               @click.stop />
+                            type="text" 
+                            v-model="period" 
+                            readonly 
+                            />
                     </div>
                     <span class="color-gray-dark fs-14 mt-1">Цены актуальны на 1 число каждого месяца</span>
                 </div>
@@ -25,8 +24,7 @@
                         <span class="month-picker__close-icon" @click="handleClose">&#10006;</span>
                     </div>
 
-
-                    <label class="month-picker__label col-4" 
+                    <label class="month-picker__label"
                            v-for="month in monthOptions" 
                            :key="month.value" 
                            :class="{ 'checked': selectedMonths.includes(month.value) }">
@@ -56,7 +54,15 @@
                     <label class="cigarettes__label" for="producerSelect">Организация</label>
                     <select class="cigarettes__input " id="producerSelect" v-model="selectedProducer">
                         <option value="all">Все</option>
-                        <option v-for="producer in producers" :key="producer" :value="producer">{{ producer }}</option>
+                        <template v-if="selectedType === 'produced'">
+                            <option v-for="producer in localProducers" :value="producer" :key="producer">{{ producer }}</option>
+                        </template>
+                        <template v-if="selectedType === 'imported'">
+                            <option v-for="producer in importedProducers" :value="producer" :key="producer">{{ producer }}</option>
+                        </template>
+                        <template v-if="selectedType === 'all'">
+                            <option v-for="producer in producers" :value="producer" :key="producer">{{ producer }}</option>
+                        </template>
                     </select>
                 </div>
             </div>
@@ -292,6 +298,16 @@
                     ...imported.map(item => item.producer)
                 ];
             },
+
+            getImportedProducers: (state) => () => {
+                const imported = state.data.imported ?? []
+                return [...imported.map(item => item.producer)]
+            },
+
+            getLocalProducers: (state) => () => {
+                const local = state.data.produced ?? []
+                return [...local.map(item => item.producer)]
+            }
         }
     });
 
@@ -318,7 +334,7 @@
             const searchQuery = ref('')
             const selectedType = ref("all");
             const selectedProducer = ref("all")
-            const showMonthPicker = ref(false);
+            let showMonthPicker = ref(false);
             const monthPicker = ref(null);
             const period = ref("");
             let loading = ref(false);
@@ -326,8 +342,6 @@
             const year = new Date().getFullYear();
 
             const updatePeriod = () => {
-                
-         
                 const periods = selectedMonths.value.map(month => monthOptions.find(monthObject => monthObject.value === month)?.label)
                     .filter(label => label !== undefined)
                     .join(', ');
@@ -345,6 +359,10 @@
                 showMonthPicker.value = false
             }
 
+            const handleOpen = () => {
+                showMonthPicker.value = true;
+            }
+
             onMounted(() => {
                 document.addEventListener('click', handleClickOutside);
                 loading = false
@@ -359,10 +377,9 @@
                 updatePeriod()
             })
 
-            const producedData = computed(() => store.state.data.produced);
-            const importedData = computed(() => store.state.data.imported);
-
             const producers = computed(() => store.getters.getUniqueProducers())
+            const importedProducers = computed(() => store.getters.getImportedProducers())
+            const localProducers = computed(() => store.getters.getLocalProducers())
 
 
             const getMonthLabel = (month) => {
@@ -371,7 +388,6 @@
             };
 
             const filteredProducedData = computed(() => {
-                loading = true
                 return store.state.data.produced
                     .filter(producerData => 
                         (selectedProducer.value === 'all' || producerData.producer === selectedProducer.value))
@@ -384,10 +400,8 @@
                     .filter(producerData => producerData.cigarettes.length > 0);     
             });
 
-           
 
             const filteredImportedData = computed(() => {
-                loading = true
                 return store.state.data.imported
                     .filter(producerData => 
                         (selectedProducer.value === 'all' || producerData.producer === selectedProducer.value))
@@ -413,8 +427,6 @@
                 monthOptions,
                 selectedMonths,
                 getMonthLabel,
-                producedData,
-                importedData,
                 producers,
                 filteredProducedData,
                 filteredImportedData,
@@ -428,7 +440,10 @@
                 monthPicker,
                 updatePeriod,
                 handleClose,
-                loading
+                loading,
+                handleOpen,
+                importedProducers,
+                localProducers
             };
         }
     }).use(store).mount('#app');
