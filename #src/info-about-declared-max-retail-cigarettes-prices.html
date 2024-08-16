@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('_head.html',{
-  "title":"Информация о заявленных максимальных розничных ценах за одну пачку сигарет с фильтром и соответствии этих цен одной из двух ценовых групп, а также о дате начала их применения"
-  })
+  @@include('_head.html',
+  { "title":"Информация о заявленных максимальных розничных ценах за одну пачку сигарет с фильтром и соответствии этих цен одной из двух ценовых групп, а также о дате начала их применения" })
   <body>
   <div class="wrapper" id="app">
       @@include('_header.html',{})
-
       <main class="page page__decor">
         <div class="content px-2">
   
@@ -34,7 +32,6 @@
                         <h4 class="item-block__title h4 mb-4">
                           Информация о заявленных максимальных розничных ценах за одну пачку сигарет с фильтром и соответствии этих цен одной из двух ценовых групп, а также о дате начала их применения
                         </h4>
-
                         <div class="row mx-n2 mt-4 cigarettes__menu">
                           <div class="col-sm-6 col-md-4 px-2 pt-4 d-flex align-items-center cigarettes__menu-item">
                             <a class="d-flex align-items-center" href="info-about-applicable-max-retail-cigarettes-prices.html">
@@ -80,7 +77,6 @@
                                   <div class="d-inline-flex flex-column w-100" >
                                       <label class="cigarettes__label">Выберите период</label>
 
-                                      
                                       <div class="cigarettes__input-container cigarettes__input--with-icon" @click.stop="handleOpen">
                                           <input class="cigarettes__input calendar-input" 
                                               type="text" 
@@ -161,18 +157,18 @@
                           <div class="cigarettes__table-container">
                               <table class="cigarettes__table table-header" >
                                   <thead class="table-header">
-                                      <tr class="row-gray table-header">
+                                      <tr class="row-gray table-header__item">
                                         <th rowspan="2">Марка (наименование) сигарет</th>
                                         <th v-for="month in selectedMonths" :key="month" colspan="2">
                                           {{ getMonthLabel(month) }}
                                         </th>
                                       </tr>
-                                      <tr class="row-gray table-header">
+                                      <tr class="row-gray table-header__item">
                                         <template v-for="month in selectedMonths" :key="month">
-                                          <th class="fs-14">
+                                          <th class="table-header__price fs-14 ">
                                             Максимальные розничные цены
                                           </th>
-                                          <th class="fs-14">
+                                          <th class="table-header__group fs-14">
                                             Ценовая группа
                                           </th>
                                         </template>                   
@@ -257,119 +253,116 @@
                   {
                       "produced": [
                       {
-                          "producer": "ОАО 'Гродненская табачная фабрика 'Неман'",
+                          "producer": "ОАО 'Гродненская табачная фабрика 'Неман123'",
                           "cigarettes": [
                               {
-                                "name": "МАНГАТ, МАНГАТ 2",
+                                "name": "МАНГАТ, МАНГАТ 22222",
                                 "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
                                 "group": "I"
                               },
                               {
                                 "name": "МАНГАТ, МАНГАТ 7",
                                 "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
                                   "group": "II"  
                               },
                               {
                                 "name": "ФЭСТ MS",
                                 "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
                                   "group": "I" 
                               },
                               {
                                   "name": "МАНГАТ, МАНГАТ 4",
                                   "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
-                                      "group": "I"
-                         
+                                  "group": "I"
                               },
                               
                           ]
                       },
                       {
-                          "producer": "ОАО 'Табак'",
+                          "producer": "ОАО 'Табак 44'",
                           "cigarettes": [
                               {
                                   "name": "МИНСК, МИНСК 17",
                                   "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
-                                      "group": "II"
-     
+                                  "group": "II"
                               },
                               {
                                 "name": "МАНГАТ, МАНГАТ 27",
                                 "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
-                                    "group": "II"
-                         
+                                "group": "II"
                               },
                               {
                                 "name": "МАНГАТ, МАНГАТ 7",
                                 "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
                                 "group": "I"
                           
@@ -377,59 +370,59 @@
                               {
                                 "name": "МАНГАТ, МАНГАТ 7",
                                 "prices": {
-                                  "01": 3.25,
-                                  "02": 3.25,
-                                  "03": 3.25,
-                                  "04": 3.25,
-                                  "05": 3.25,
-                                  "06": 3.25,
-                                  "07": 3.25,
-                                  "08": 3.25,
-                                  "09": 3.25
+                                  "1": 3.25,
+                                  "2": 3.25,
+                                  "3": 3.25,
+                                  "4": 3.25,
+                                  "5": 3.25,
+                                  "6": 3.25,
+                                  "7": 3.25,
+                                  "8": 3.25,
+                                  "9": 3.25
                                 },
-                                  "group": "II"
+                                "group": "II"
                               },
                           ]
                       },
                   ],
-                      "imported": [
-                          {
-                              "producer": "Государственное Государственное предприятие 'Беларусьторг'",
-                              "cigarettes": [
-                                  {
-                                    "name": "CHAPMAN Компакт Браун",
-                                      "prices": {
-                                        "01": 3.25,
-                                        "02": 3.25,
-                                        "03": 3.25,
-                                        "04": 3.25,
-                                        "05": 3.25,
-                                        "06": 3.25,
-                                        "07": 3.25,
-                                        "08": 3.25,
-                                        "09": 3.25
-                                      },
-                                      "group": "II"
-                                    },
-                                  {
-                                    "name": "Dove PLATINUM  COMPACT",
-                                    "prices": {
-                                      "01": 3.25,
-                                      "02": 3.25,
-                                      "03": 3.25,
-                                      "04": 3.25,
-                                      "05": 3.25,
-                                      "06": 3.25,
-                                      "07": 3.25,
-                                      "08": 3.25,
-                                      "09": 3.25
-                                    },
-                                      "group": "II"
+                    "imported": [
+                      {
+                        "producer": "Государственное Государственное предприятие 'Беларусьторг'",
+                        "cigarettes": [
+                            {
+                              "name": "CHAPMAN Компакт Браун",
+                              "prices": {
+                                "1": 3.25,
+                                "2": 3.25,
+                                "3": 3.25,
+                                "4": 3.25,
+                                "5": 3.25,
+                                "6": 3.25,
+                                "7": 3.25,
+                                "8": 3.25,
+                                "9": 3.25
+                              },
+                              "group": "II"
+                              },
+                            {
+                              "name": "Dove PLATINUM  COMPACT",
+                              "prices": {
+                                "1": 3.25,
+                                "2": 3.25,
+                                "3": 3.25,
+                                "4": 3.25,
+                                "5": 3.25,
+                                "6": 3.25,
+                                "7": 3.25,
+                                "8": 3.25,
+                                "9": 3.25
+                              },
+                                "group": "II"
 
-                                  },
-                              ]
-                          },
-                      ]
+                            },
+                          ]
+                      },
+                    ]
                   }
           },
           getters: {
@@ -480,21 +473,21 @@
               const currentYear = new Date().getFullYear();
   
               const monthOptions = [
-                { label: 'Январь', value: '01' },
-                { label: 'Февраль', value: '02' },
-                { label: 'Март', value: '03' },
-                { label: 'Апрель', value: '04' },
-                { label: 'Май', value: '05' },
-                { label: 'Июнь', value: '06' },
-                { label: 'Июль', value: '07' },
-                { label: 'Август', value: '08' },
-                { label: 'Сентябрь', value: '09' },
+                { label: 'Январь', value: '1' },
+                { label: 'Февраль', value: '2' },
+                { label: 'Март', value: '3' },
+                { label: 'Апрель', value: '4' },
+                { label: 'Май', value: '5' },
+                { label: 'Июнь', value: '6' },
+                { label: 'Июль', value: '7' },
+                { label: 'Август', value: '8' },
+                { label: 'Сентябрь', value: '9' },
                 { label: 'Октябрь', value: '10' },
                 { label: 'Ноябрь', value: '11' },
                 { label: 'Декабрь', value: '12' }
               ];
   
-              const selectedMonths = ref(['01','02', '03']);
+              const selectedMonths = ref(['1','2', '3']);
               const searchQuery = ref('')
               const selectedType = ref("all");
               const selectedProducer = ref("all")
@@ -547,7 +540,6 @@
               const firstCategoryCigarettes = computed(() => store.getters.getFirstCategoryCigarettes())
               const secondCategoryCigarettes = computed(() => store.getters.getSecondCategoryCigarettes())
   
-  
               const getMonthLabel = (month) => {
                   const monthOption = monthOptions.find(option => option.value === month);
                   return monthOption ? monthOption.label : '';
@@ -562,8 +554,8 @@
                       cigarettes: producerData.cigarettes.filter(cigarette => {
                         const matchesSearchQuery = cigarette.name.toLowerCase().includes(searchQuery.value.toLowerCase());
                         const matchesGroup = selectedGroup.value === 'all' || 
-                                            (selectedGroup.value === 'first' && cigarette.info.group === 'I') || 
-                                            (selectedGroup.value === 'second' && cigarette.info.group === 'II');
+                                            (selectedGroup.value === 'first' && cigarette.group === 'I') || 
+                                            (selectedGroup.value === 'second' && cigarette.group === 'II');
                         return matchesSearchQuery && matchesGroup;
                       })
                   }))
@@ -571,7 +563,7 @@
               });
 
             const filteredImportedData = computed(() => {
-              return store.state.data.produced
+              return store.state.data.imported
                 .filter(producerData => 
                     (selectedProducer.value === 'all' || producerData.producer === selectedProducer.value))
                 .map(producerData => ({
@@ -579,8 +571,8 @@
                     cigarettes: producerData.cigarettes.filter(cigarette => {
                       const matchesSearchQuery = cigarette.name.toLowerCase().includes(searchQuery.value.toLowerCase());
                       const matchesGroup = selectedGroup.value === 'all' || 
-                                          (selectedGroup.value === 'first' && cigarette.info.group === 'I') || 
-                                          (selectedGroup.value === 'second' && cigarette.info.group === 'II');
+                                          (selectedGroup.value === 'first' && cigarette.group === 'I') || 
+                                          (selectedGroup.value === 'second' && cigarette.group === 'II');
                       return matchesSearchQuery && matchesGroup;
                     })
                 }))
