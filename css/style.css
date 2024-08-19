@@ -9792,6 +9792,7 @@ a {
   top: 17px;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 .cigarettes__month-picker {
@@ -9808,6 +9809,26 @@ a {
 .cigarettes__table {
   margin-top: 48px;
   width: 100%;
+}
+
+.cigarettes__menu-item a.active .h6 {
+  color: #007A65;
+}
+
+.cigarettes__menu-item a.active .rounded-circle {
+  background-color: #FBC469;
+}
+
+.table-header th {
+  border: 1px solid #ffffff;
+}
+
+.table-header {
+  border-collapse: collapse;
+}
+
+.table-header th:last-child {
+  border-right: none;
 }
 
 .month-picker {

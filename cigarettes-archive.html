@@ -1,5 +1,7 @@
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-	<title>Максимальные розничные цены на сигареты с фильтром</title>
+	<title>Архив документов</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -16,9 +18,9 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-<div class="wrapper" id="app">
-    <header>
+  <body>
+  <div class="wrapper" id="app">
+      <header>
 	<div class="header-top py-3 position-relative">
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center position-relative">
@@ -321,131 +323,133 @@
 	</div>
 	<div class="header__overlay"></div>
 </header>
-    <div class="container mt-5">
-        <div class="row cigarettes">
-            <div class="col-md-4 mb-3">
-                <div class="d-inline-flex flex-column w-100" >
-                    <label class="cigarettes__label">Выберите период</label>
-                    <div class="cigarettes__input-container cigarettes__input--with-icon" @click.stop="handleOpen">
-                        <input class="cigarettes__input calendar-input" 
-                            type="text" 
-                            v-model="period" 
-                            readonly 
-                            />
-                    </div>
-                    <span class="color-gray-dark fs-14 mt-1">Цены актуальны на 1 число каждого месяца</span>
-                </div>
-                <div class="cigarettes__month-picker month-picker row" v-if="showMonthPicker" ref="monthPicker" v-cloak>
-                    <div class="month-picker__header">
-                        <span class="month-picker__year">{{ currentYear }} год</span>
-                        <span class="month-picker__close-icon" @click="handleClose">&#10006;</span>
-                    </div>
 
-                    <label class="month-picker__label"
-                           v-for="month in monthOptions" 
-                           :key="month.value" 
-                           :class="{ 'checked': selectedMonths.includes(month.value) }">
-                        <input class="month-picker__input" 
-                               type="checkbox" 
-                               :value="month.value" 
-                               v-model="selectedMonths" 
-                               @change="updatePeriod" />
-                        {{ month.label }}
-                    </label>
+      <main class="page page__decor">
+        <div class="content px-2">
+  
+            <nav aria-label="breadcrumb">
+                <div class="container">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item mr-3">
+                            <a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a>
+                        </li>
+                        <li class="breadcrumb-item mr-3">
+                            <a href="actual.html">Актуальное
+                                <i class="bi-chevron-right ml-2"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                          Архив документов
+                        </li>
+                    </ol>
                 </div>
-            </div>
-        
-            <div class="col-md-4 mb-3">
-                <div class="d-inline-flex flex-column w-100">
-                    <label class="cigarettes__label" for="typeSelect">Производство сигарет</label>
-                    <select class="cigarettes__input " id="typeSelect" v-model="selectedType">
-                        <option selected="selected" value="all">Все</option>
-                        <option value="produced">Производимые</option>
-                        <option value="imported">Ввозимые</option>
-                    </select>
-                </div>
-            </div>
-        
-            <div class="col-md-4 mb-3">
-                <div class="d-inline-flex flex-column w-100">
-                    <label class="cigarettes__label" for="producerSelect">Организация</label>
-                    <select class="cigarettes__input " id="producerSelect" v-model="selectedProducer">
-                        <option value="all">Все</option>
-                        <template v-if="selectedType === 'produced'">
-                            <option v-for="producer in localProducers" :value="producer" :key="producer">{{ producer }}</option>
-                        </template>
-                        <template v-if="selectedType === 'imported'">
-                            <option v-for="producer in importedProducers" :value="producer" :key="producer">{{ producer }}</option>
-                        </template>
-                        <template v-if="selectedType === 'all'">
-                            <option v-for="producer in producers" :value="producer" :key="producer">{{ producer }}</option>
-                        </template>
-                    </select>
-                </div>
-            </div>
-        
-            <div class="col-md-4 mb-3">
-                <div class="d-inline-flex flex-column w-100">
-                    <label class="cigarettes__label" for="searchInput">Марка (наименование)</label>
-                    <input class="cigarettes__input " id="searchInput" v-model="searchQuery" type="text" placeholder="Введите наименование" />
-                </div>
-            </div>
-        </div>       
+            </nav>
+  
+            <div class="item-content">
+                <div class="container">
+                  <section class="item-block px-md-4 px-2 py-4">
+                      <h4 class="item-block__title h4 mb-4">
+                        Архив документов
+                      </h4>
 
-        <div class="cigarettes__table-container">
-            <table class="cigarettes__table table-header" >
-                <thead class="table-header">
-                    <tr class="row-gray table-header">
-                        <th>Марка (наименование) сигарет</th>
-                        <th v-for="month in selectedMonths" :key="month" v-cloak>
-                            {{ getMonthLabel(month) }}
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-if="(selectedType === 'produced'  || selectedType === 'all') && hasProducedData" class="type-row">
-                        <td colspan="13">Сигареты с фильтром, производимые на территории Республики Беларусь</td>
-                    </tr>
-                    <template v-if="(selectedType === 'produced' || selectedType === 'all')" v-for="data in filteredProducedData" :key="data.producer">
-                        <tr class="organization-row">
-                            <td colspan="13">{{data.producer}}</td>
-                        </tr>
-                        <tr v-for="(cigarett, index) in data.cigarettes" :key="cigarett.name" :class="{'row-gray' : index % 2 !== 0}">
-                            <td>{{cigarett.name}}</td>
-                            <td v-for="month in selectedMonths" :key="month">
-                                <span v-if="selectedMonths.includes(month)">
-                                    {{ cigarett.prices[month] || '-' }}
-                                </span>
-                            </td>
-                        </tr>
-                    </template>
-                    <tr v-if="(selectedType === 'imported'  || selectedType === 'all') && hasImportedData" class="type-row">
-                        <td colspan="13">Сигареты с фильтром, ввозимые на территорию Республики Беларусь</td>
-                    </tr>
-                    <template v-if="(selectedType === 'imported' || selectedType === 'all')" v-for="data in filteredImportedData" :key="data.producer">
-                        <tr class="organization-row">
-                            <td colspan="13">{{data.producer}}</td>
-                        </tr>
-                        <tr v-for="(cigarett, index) in data.cigarettes" :key="cigarett.name" :class="{'row-gray' : index % 2 !== 0}">
-                            <td>{{cigarett.name}}</td>
-                            <td v-for="month in selectedMonths" :key="month">
-                                <span v-if="selectedMonths.includes(month)">
-                                    {{ cigarett.prices[month] || '-' }}
-                                </span>
-                            </td>
-                        </tr>
-                    </template>
-                    <tr v-if="loading" class="row-no-data">
-                        <td colspan="13"><span class="loader"></span></td>
-                    </tr>
-                    <tr v-if="!hasProducedData && !hasImportedData" class="row-no-data">
-                        <td colspan="13">Данные не найдены</td>
-                    </tr>
-                </tbody> 
-            </table>
+                      <div class="row mx-n2 mt-4 cigarettes__menu">
+                          <div class="col-sm-6 col-md-4 px-2 pt-4 d-flex align-items-center cigarettes__menu-item">
+                            <a class="d-flex align-items-center" href="info-about-applicable-max-retail-cigarettes-prices.html">
+                                <div class="d-flex align-items-center">
+                                    <span class="d-flex align-items-center justify-content-center rounded-circle pl-3">
+                                        <img src="./img/icons/decret.svg" alt="icon-2643">
+                                    </span>
+                                    <p class="h6 text-left ml-2">
+                                        Информация о применяемых максимальных розничных ценах за одну пачку сигарет с фильтром
+                                    </p>
+                                </div>
+                            </a>
+                          </div>
+                          <div class="col-sm-6 col-md-4 px-2 pt-4 d-flex align-items-center cigarettes__menu-item">
+                            <a class="d-flex align-items-center border-end border-start border-success" href="info-about-declared-max-retail-cigarettes-prices.html">
+                                <div class="d-flex align-items-center px-2">
+                                    <span class="d-flex align-items-center justify-content-center rounded-circle pl-3">
+                                        <img src="./img/icons/apply.svg" alt="icon-2643">
+                                    </span>
+                                    <p class="h6 text-left ml-2">
+                                        Информация о заявленных максимальных розничных ценах за одну пачку сигарет с фильтром и соответствии этих цен одной из двух ценовых групп, а также о дате начала их применения
+                                    </p>
+                                </div>
+                            </a>
+                          </div>
+                          <div class="col-sm-6 col-md-4 px-2 pt-4 d-flex align-items-center cigarettes__menu-item">
+                              <a class="d-flex align-items-center " href="cigarettes-archive.html">
+                                  <div class="d-flex align-items-center">
+                                      <span class="d-flex align-items-center justify-content-center rounded-circle p-3">
+                                          <img src="./img/icons/archive.svg" alt="icon-2643">
+                                      </span>
+                                      <p class="h6 text-left ml-2">
+                                          Архив документов
+                                      </p>
+                                  </div>
+                              </a>
+                          </div>
+                        </div>
+
+                      <div class="container mt-5">
+                        <div class="row cigarettes">
+                            <div class="col-md-4 mb-3">
+
+                              <div class="d-inline-flex flex-column w-100" >
+                                <label class="cigarettes__label">Выберите период</label>
+
+                              <div class="cigarettes__input-container cigarettes__input--with-icon" @click.stop="handleOpen">
+                                  <input class="cigarettes__input calendar-input" 
+                                    type="text" 
+                                    v-model="period" 
+                                    readonly 
+                                    />
+                              </div>
+                                
+                              </div>
+                                <div class="cigarettes__month-picker month-picker row" v-if="showMonthPicker" ref="monthPicker" v-cloak>
+                                  <div class="month-picker__header">
+                                    <select class="month-picker__year-select" v-model="selectedYear">
+                                      <option v-for="year in yearOptions" :key="year" :value="year">{{ year }}</option>
+                                    </select>
+                                    <span class="month-picker__close-icon" @click="handleClose">&#10006;</span>
+                                  </div>
+                
+                                  <label class="month-picker__label"
+                                        v-for="month in monthOptions" 
+                                        :key="month.value" 
+                                        :class="{ 'checked': selectedMonths.includes(month.value) }">
+                                      <input class="month-picker__input" 
+                                            type="checkbox"
+                                            :value="month.value" 
+                                            v-model="selectedMonths" 
+                                            @change="updatePeriod" />
+                                      {{ month.label }}
+                                  </label>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-4 mb-3">
+                                <div class="d-inline-flex flex-column w-100">
+                                    <label class="cigarettes__label" for="typeSelect">Тип информации</label>
+                                    <select class="cigarettes__input " id="typeSelect" v-model="selectedType">
+                                        <option selected="selected" value="all">Все</option>
+                                        <option value="produced">Заявленные максимальные розничные цены</option>
+                                        <option value="imported">Применяемые максимальные розничные цены</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                    </div>  
+                      
+                  </section>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="modal fade alert-new-modal" id="alertNew" tabindex="-1" aria-labelledby="alertNewLabel" aria-hidden="true">
+    </main>
+      
+      <div class="modal fade alert-new-modal" id="alertNew" tabindex="-1" aria-labelledby="alertNewLabel" aria-hidden="true">
 	<div class="modal-dialog  modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -605,170 +609,216 @@
 		</div>
 	</div>
 </footer>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 
-<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-<script src="https://unpkg.com/vuex@4.1.0/dist/vuex.global.js"></script>
-
-<script>
-    const { createApp, ref, computed, onMounted, onBeforeUnmount, onBeforeMount } = Vue;
-
-    const store = Vuex.createStore({
-        state: {
-            data: 
-                {
-                    "produced": [
-                    {
-                        "producer": "ОАО 'Гродненская табачная фабрика 'Неман'",
-                        "cigarettes": [
-                            {
-                                "name": "МАНГАТ, МАНГАТ 2",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25,
-                                    "08": 3.25,
-                                    "09": 3.25
-                                }
-                            },
-                            {
-                                "name": "МАНГАТ, МАНГАТ 7",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25
-                                }
-                            },
-                            {
-                                "name": "ФЭСТ MS",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25
-                                }
-                            },
-                            {
-                                "name": "МАНГАТ, МАНГАТ 4",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25
-                                }
-                            },
-                            
-                        ]
-                    },
-                    {
-                        "producer": "ОАО 'Табак'",
-                        "cigarettes": [
-                            {
-                                "name": "МИНСК, МИНСК 17",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25
-                                }
-                            },
-                            {
-                                "name": "МАНГАТ, МАНГАТ 27",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25
-                                }
-                            },
-                            {
-                                "name": "МАНГАТ, МАНГАТ 7",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25
-                                }
-                            },
-                            {
-                                "name": "МАНГАТ, МАНГАТ 7",
-                                "prices": {
-                                    "01": 3.25,
-                                    "02": 3.25,
-                                    "03": 3.25,
-                                    "04": 3.25,
-                                    "05": 3.25,
-                                    "06": 3.25,
-                                    "07": 3.25
-                                }
-                            },
-                            
-                        ]
-                    },
-                ],
-                    "imported": [
-                        {
-                            "producer": "Государственное Государственное предприятие 'Беларусьторг'",
-                            "cigarettes": [
-                                {
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vuex@4.1.0/dist/vuex.global.js"></script>
+  
+  <script>
+      const { createApp, ref, computed, onMounted, onBeforeUnmount, onBeforeMount } = Vue;
+  
+      const store = Vuex.createStore({
+          state: {
+              data: 
+                  {
+                      "produced": [
+                      {
+                          "producer": "ОАО 'Гродненская табачная фабрика 'Неман'",
+                          "cigarettes": [
+                              {
+                                  "name": "МАНГАТ, МАНГАТ 2",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                    "group": "I"
+                                  }   
+                              },
+                              {
+                                  "name": "МАНГАТ, МАНГАТ 7",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "II"
+                                  }   
+                              },
+                              {
+                                  "name": "ФЭСТ MS",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "I"
+                                  }   
+                              },
+                              {
+                                  "name": "МАНГАТ, МАНГАТ 4",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "I"
+                                  }   
+                              },
+                              
+                          ]
+                      },
+                      {
+                          "producer": "ОАО 'Табак'",
+                          "cigarettes": [
+                              {
+                                  "name": "МИНСК, МИНСК 17",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "II"
+                                  }   
+                              },
+                              {
+                                  "name": "МАНГАТ, МАНГАТ 27",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "II"
+                                  }   
+                              },
+                              {
+                                  "name": "МАНГАТ, МАНГАТ 7",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "I"
+                                  }   
+                              },
+                              {
+                                  "name": "МАНГАТ, МАНГАТ 7",
+                                  "info":  {
+                                    "prices": {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "II"
+                                  }   
+                              },
+                              
+                          ]
+                      },
+                  ],
+                      "imported": [
+                          {
+                              "producer": "Государственное Государственное предприятие 'Беларусьторг'",
+                              "cigarettes": [
+                                  {
                                     "name": "CHAPMAN Компакт Браун",
-                                    "prices": {
-                                        "01": 7.50,
-                                        "02": 7.50,
-                                        "03": 7.50,
-                                        "04": 7.50,
-                                        "05": 7.50,
-                                        "06": 7.50,
-                                        "07": 7.50
-                                    }
-                                },
-                                {
+                                    "info":  {
+                                      "prices": {
+                                        "01": 3.25,
+                                        "02": 3.25,
+                                        "03": 3.25,
+                                        "04": 3.25,
+                                        "05": 3.25,
+                                        "06": 3.25,
+                                        "07": 3.25,
+                                        "08": 3.25,
+                                        "09": 3.25
+                                      },
+                                      "group": "I"
+                                    }   
+                                  },
+                                  {
                                     "name": "Dove PLATINUM  COMPACT",
+                                    "info":  {
                                     "prices": {
-                                        "01": 7.50,
-                                        "02": 7.50,
-                                        "03": 7.50,
-                                        "04": 7.50,
-                                        "05": 7.50,
-                                        "06": 7.50,
-                                        "07": 7.50
-                                    }
-                                },
-                            
-                            ]
-                        },
-                    ]
-                }
-   
-        },
-        getters: {
-            getUniqueProducers: (state) => () => {
+                                      "01": 3.25,
+                                      "02": 3.25,
+                                      "03": 3.25,
+                                      "04": 3.25,
+                                      "05": 3.25,
+                                      "06": 3.25,
+                                      "07": 3.25,
+                                      "08": 3.25,
+                                      "09": 3.25
+                                    },
+                                      "group": "II"
+                                  }   
+                                  },
+                              ]
+                          },
+                      ]
+                  }
+          },
+          getters: {
+              getUniqueProducers: (state) => () => {
                 const produced = state.data.produced ?? [];
                 const imported = state.data.imported ?? [];
                 
@@ -776,25 +826,45 @@
                     ...produced.map(item => item.producer),
                     ...imported.map(item => item.producer)
                 ];
-            },
-
-            getImportedProducers: (state) => () => {
+              },
+  
+              getImportedProducers: (state) => () => {
                 const imported = state.data.imported ?? []
                 return [...imported.map(item => item.producer)]
-            },
-
-            getLocalProducers: (state) => () => {
+              },
+  
+              getLocalProducers: (state) => () => {
                 const local = state.data.produced ?? []
                 return [...local.map(item => item.producer)]
-            }
-        }
-    });
+              },
 
-    createApp({
-        setup() {
-            const currentYear = new Date().getFullYear();
+              getFirstCategoryCigarettes: (state) => () => {
+                const firstCategoryOfProduced = state.data.produced ?? []
+                const firstCategoryOfImported = state.data.imported ?? []
 
-            const monthOptions = [
+                return [
+                  ...firstCategoryOfProduced.map(item => item.cigarettes.filter(item => item.info.group === "I")),
+                  ...firstCategoryOfImported.map(item => item.cigarettes.filter(item => item.info.group === "I")),
+                ]
+              },
+
+              getSecondCategoryCigarettes: (state) => () => {
+                const secondCategoryOfProduced = state.data.produced ?? []
+                const secondCategoryOfImported = state.data.imported ?? []
+
+                return [
+                  ...secondCategoryOfProduced.map(item => item.cigarettes.filter(item => item.info.group === "II")),
+                  ...secondCategoryOfImported.map(item => item.cigarettes.filter(item => item.info.group === "II")),
+                ]
+              }
+          }
+      });
+  
+      createApp({
+          setup() {
+              const currentYear = new Date().getFullYear();
+  
+              const monthOptions = [
                 { label: 'Январь', value: '01' },
                 { label: 'Февраль', value: '02' },
                 { label: 'Март', value: '03' },
@@ -807,125 +877,143 @@
                 { label: 'Октябрь', value: '10' },
                 { label: 'Ноябрь', value: '11' },
                 { label: 'Декабрь', value: '12' }
-            ];
+              ];
 
-            const selectedMonths = ref(['01','02', '03']);
-            const searchQuery = ref('')
-            const selectedType = ref("all");
-            const selectedProducer = ref("all")
-            let showMonthPicker = ref(false);
-            const monthPicker = ref(null);
-            const period = ref("");
-            let loading = ref(false);
-            
-            const year = new Date().getFullYear();
+              const yearOptions = computed(() => {
+                const startYear = currentYear - 5;
+                const endYear = currentYear + 5;
+                return Array.from({ length: endYear - startYear + 1 }, (_, i) => startYear + i);
+              });
+  
+              const selectedMonths = ref(['01','02', '03']);
+              const searchQuery = ref('')
+              const selectedType = ref("all");
+              const selectedProducer = ref("all")
+              const selectedGroup = ref("all")
+              const monthPicker = ref(null);
+              const period = ref("");
+              let showMonthPicker = ref(false);
+              let loading = ref(false);
+  
+              const updatePeriod = () => {
+                  const periods = selectedMonths.value.map(month => monthOptions.find(monthObject => monthObject.value === month)?.label)
+                      .filter(label => label !== undefined)
+                      .join(', ');
+  
+                  period.value = periods
+              };
+  
+              const handleClickOutside = (event) => {
+                  if (monthPicker.value && !monthPicker.value.contains(event.target)) {
+                      showMonthPicker.value = false;
+                  }
+              };
+  
+              const handleClose = () => {
+                  showMonthPicker.value = false
+              }
+  
+              const handleOpen = () => {
+                  showMonthPicker.value = true;
+              }
+  
+              onMounted(() => {
+                  document.addEventListener('click', handleClickOutside);
+                  loading = false
+              });
+  
+              onBeforeUnmount(() => {
+                  document.removeEventListener('click', handleClickOutside);
+              });
+  
+              onBeforeMount(() => {
+                  loading = true
+                  updatePeriod()
+              })
+  
+              const producers = computed(() => store.getters.getUniqueProducers())
+              const importedProducers = computed(() => store.getters.getImportedProducers())
+              const localProducers = computed(() => store.getters.getLocalProducers())
+              const firstCategoryCigarettes = computed(() => store.getters.getFirstCategoryCigarettes())
+              const secondCategoryCigarettes = computed(() => store.getters.getSecondCategoryCigarettes())
+  
+              const getMonthLabel = (month) => {
+                  const monthOption = monthOptions.find(option => option.value === month);
+                  return monthOption ? monthOption.label : '';
+              };
 
-            const updatePeriod = () => {
-                const periods = selectedMonths.value.map(month => monthOptions.find(monthObject => monthObject.value === month)?.label)
-                    .filter(label => label !== undefined)
-                    .join(', ');
-
-                period.value = periods
-            };
-
-            const handleClickOutside = (event) => {
-                if (monthPicker.value && !monthPicker.value.contains(event.target)) {
-                    showMonthPicker.value = false;
-                }
-            };
-
-            const handleClose = () => {
-                showMonthPicker.value = false
-            }
-
-            const handleOpen = () => {
-                showMonthPicker.value = true;
-            }
-
-            onMounted(() => {
-                document.addEventListener('click', handleClickOutside);
-                loading = false
-            });
-
-            onBeforeUnmount(() => {
-                document.removeEventListener('click', handleClickOutside);
-            });
-
-            onBeforeMount(() => {
-                loading = true
-                updatePeriod()
-            })
-
-            const producers = computed(() => store.getters.getUniqueProducers())
-            const importedProducers = computed(() => store.getters.getImportedProducers())
-            const localProducers = computed(() => store.getters.getLocalProducers())
-
-
-            const getMonthLabel = (month) => {
-                const monthOption = monthOptions.find(option => option.value === month);
-                return monthOption ? monthOption.label : '';
-            };
-
-            const filteredProducedData = computed(() => {
+              const filteredProducedData = computed(() => {
                 return store.state.data.produced
-                    .filter(producerData => 
-                        (selectedProducer.value === 'all' || producerData.producer === selectedProducer.value))
-                    .map(producerData => ({
-                        ...producerData,
-                        cigarettes: producerData.cigarettes.filter(cigarette => 
-                            cigarette.name.toLowerCase().includes(searchQuery.value.toLowerCase())
-                        )
-                    }))
-                    .filter(producerData => producerData.cigarettes.length > 0);     
-            });
+                  .filter(producerData => 
+                      (selectedProducer.value === 'all' || producerData.producer === selectedProducer.value))
+                  .map(producerData => ({
+                      ...producerData,
+                      cigarettes: producerData.cigarettes.filter(cigarette => {
+                          const matchesSearchQuery = cigarette.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+                          const matchesGroup = selectedGroup.value === 'all' || 
+                                              (selectedGroup.value === 'first' && cigarette.info.group === 'I') || 
+                                              (selectedGroup.value === 'second' && cigarette.info.group === 'II');
+                          return matchesSearchQuery && matchesGroup;
+                      })
+                  }))
+                  .filter(producerData => producerData.cigarettes.length > 0);     
+              });
 
+              const filteredImportedData = computed(() => {
+                return store.state.data.produced
+                  .filter(producerData => 
+                      (selectedProducer.value === 'all' || producerData.producer === selectedProducer.value))
+                  .map(producerData => ({
+                      ...producerData,
+                      cigarettes: producerData.cigarettes.filter(cigarette => {
+                          const matchesSearchQuery = cigarette.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+                          const matchesGroup = selectedGroup.value === 'all' || 
+                                              (selectedGroup.value === 'first' && cigarette.info.group === 'I') || 
+                                              (selectedGroup.value === 'second' && cigarette.info.group === 'II');
+                          return matchesSearchQuery && matchesGroup;
+                      })
+                  }))
+                  .filter(producerData => producerData.cigarettes.length > 0);     
+              });
 
-            const filteredImportedData = computed(() => {
-                return store.state.data.imported
-                    .filter(producerData => 
-                        (selectedProducer.value === 'all' || producerData.producer === selectedProducer.value))
-                    .map(producerData => ({
-                        ...producerData,
-                        cigarettes: producerData.cigarettes.filter(cigarette => 
-                            cigarette.name.toLowerCase().includes(searchQuery.value.toLowerCase())
-                        )
-                    }))
-                    .filter(producerData => producerData.cigarettes.length > 0);
-            });
-
-            const hasProducedData = computed(() => {
-                return filteredProducedData.value.length > 0;
-            });
-
-            const hasImportedData = computed(() => {
-                return filteredImportedData.value.length > 0;
-            });
-
-            return {
-                currentYear,
-                monthOptions,
-                selectedMonths,
-                getMonthLabel,
-                producers,
-                filteredProducedData,
-                filteredImportedData,
-                searchQuery,
-                selectedType,
-                selectedProducer,
-                hasProducedData,
-                hasImportedData,
-                period,
-                showMonthPicker,
-                monthPicker,
-                updatePeriod,
-                handleClose,
-                loading,
-                handleOpen,
-                importedProducers,
-                localProducers
-            };
-        }
-    }).use(store).mount('#app');
-</script>
-</body>
-</html>
+  
+              const hasProducedData = computed(() => {
+                  return filteredProducedData.value.length > 0;
+              });
+  
+              const hasImportedData = computed(() => {
+                  return filteredImportedData.value.length > 0;
+              });
+  
+              return {
+                  currentYear,
+                  monthOptions,
+                  selectedMonths,
+                  getMonthLabel,
+                  producers,
+                  filteredProducedData,
+                  filteredImportedData,
+                  searchQuery,
+                  selectedType,
+                  selectedProducer,
+                  selectedGroup,
+                  hasProducedData,
+                  hasImportedData,
+                  period,
+                  showMonthPicker,
+                  monthPicker,
+                  updatePeriod,
+                  handleClose,
+                  loading,
+                  handleOpen,
+                  importedProducers,
+                  localProducers,
+                  firstCategoryCigarettes,
+                  secondCategoryCigarettes,
+                  yearOptions
+              };
+          }
+      }).use(store).mount('#app');
+  </script>
+  </body>
+  </html>
