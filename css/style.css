@@ -9776,8 +9776,8 @@ a {
 
 .cigarettes__input {
   padding: 10px 15px;
-  border: 1px solid #EBEBEB;
-  background-color: #EBEBEB;
+  border: 1px solid #ebebeb;
+  background-color: #ebebeb;
   border-radius: 10px;
   cursor: pointer;
   width: 100%;
@@ -9812,23 +9812,53 @@ a {
 }
 
 .cigarettes__menu-item a.active .h6 {
-  color: #007A65;
+  color: #007a65;
 }
 
 .cigarettes__menu-item a.active .rounded-circle {
-  background-color: #FBC469;
+  background-color: #fbc469;
 }
 
-.table-header th {
-  border: 1px solid #ffffff;
+.cigarettes__button {
+  padding-block: 12px;
 }
 
-.table-header {
+table {
+  overflow-y: scroll;
+  width: 100%;
   border-collapse: collapse;
 }
 
-.table-header th:last-child {
+th,
+td {
+  padding: 16px;
+  border-collapse: collapse;
+}
+
+.table-header {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.table-header__item th {
+  border: 1px solid #ffffff;
+}
+
+.table-header__item th:last-child {
   border-right: none;
+}
+
+.table-header__price {
+  font-size: 14px;
+  width: 160px;
+}
+
+.table-header__group {
+  width: 160px;
+  font-size: 14px;
 }
 
 .month-picker {
@@ -9861,11 +9891,11 @@ a {
           align-items: center;
   margin-bottom: 14px;
   padding-block: 10px;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .month-picker__year {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border-radius: 10px;
   padding-block: 6px;
   padding-inline: 10px;
@@ -9882,17 +9912,17 @@ a {
 .month-picker label {
   text-align: center;
   display: block;
-  width: calc(33.333% - 14px);
+  width: calc(33.333% - 10px);
   border-radius: 10px;
   padding-block: 5px;
   cursor: pointer;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   color: #727270;
 }
 
 .month-picker label.checked {
-  background-color: #007A65;
-  color: #FAFAFA;
+  background-color: #007a65;
+  color: #fafafa;
 }
 
 .month-picker input {
@@ -9904,7 +9934,7 @@ a {
 }
 
 .row-gray {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .row-no-data {
@@ -9913,55 +9943,23 @@ a {
 
 .organization-row {
   table-layout: fixed;
-  background-color: #AFCEC6;
+  background-color: #afcec6;
   font-weight: bold;
   text-align: left;
-  color: #1A1A1A;
+  color: #1a1a1a;
 }
 
 .type-row {
-  background-color: #00654D;
+  background-color: #00654d;
   font-weight: bold;
   text-align: left;
   color: white;
 }
 
-table {
-  overflow-y: scroll;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 16px;
-  border-collapse: collapse;
-}
-
-.bg-gray {
-  background-color: lightgray;
-}
-
-.brand {
-  min-width: 300px;
-}
-
-.table-header {
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.month-picker label {
-  display: block;
-  margin-bottom: 5px;
-}
-
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #00654D;
+  border: 5px solid #00654d;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
