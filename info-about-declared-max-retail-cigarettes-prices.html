@@ -509,7 +509,10 @@
                                                     </span>
                                                 </td>
                                                 <td >
-                                                  <span v-if="selectedMonths.includes(month)">
+                                                  <span v-if="!cigarett.prices[month]">
+                                                    -
+                                                  </span>
+                                                  <span v-else="selectedMonths.includes(month)">
                                                       {{ cigarett.group || '-' }}
                                                   </span>
                                                 </td>
@@ -532,7 +535,10 @@
                                                     </span>
                                                 </td>
                                                 <td >
-                                                  <span v-if="selectedMonths.includes(month)">
+                                                  <span v-if="!cigarett.prices[month]">
+                                                    -
+                                                  </span>
+                                                  <span v-else="selectedMonths.includes(month)">
                                                       {{ cigarett.group || '-' }}
                                                   </span>
                                               </td>
