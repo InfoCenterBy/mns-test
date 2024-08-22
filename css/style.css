@@ -9823,14 +9823,14 @@ a {
   padding-block: 12px;
 }
 
-table {
+table.cigarettes__table {
   overflow-y: scroll;
   width: 100%;
   border-collapse: collapse;
 }
 
-th,
-td {
+.cigarettes__table th,
+.cigarettes__table td {
   padding: 16px;
   border-collapse: collapse;
 }
@@ -10039,6 +10039,41 @@ td {
 
 .width-40 {
   width: 40%;
+}
+
+.business-entity {
+  padding: 24px 30px;
+  background-color: #ebebeb;
+  border-radius: 10px;
+}
+
+.business-entity__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.business-entity__inputs > div > input[type=radio] {
+  accent-color: #00654D;
+}
+
+.business-entity__label {
+  font-weight: 600;
+}
+
+.business-entity__input {
+  padding: 10px 15px;
+  border: 1px solid #CED4DA;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
 }
 
 .page {
@@ -10897,6 +10932,16 @@ figure audio {
 
 .fw-6 {
   font-weight: 600;
+}
+
+.anti-corruption__table th,
+.anti-corruption__table td {
+  padding: 16px;
+  border-collapse: collapse;
+}
+
+.w-35 {
+  width: 35%;
 }
 
 @media (min-width: 576px) {
