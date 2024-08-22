@@ -1,0 +1,29 @@
+.business-entity {
+    padding: 24px 30px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    &__inputs > div > input[type='radio'] {
+        accent-color: #00654D;
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+
+    &__input {
+        padding: 10px 15px;
+        border: 1px solid #CED4DA;
+        background-color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 8px;
+    }
+}
