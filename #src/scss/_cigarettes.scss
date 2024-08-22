@@ -59,14 +59,14 @@
   }
 }
 
-table {
+table.cigarettes__table {
   overflow-y: scroll;
   width: 100%;
   border-collapse: collapse;
 }
 
-th,
-td {
+.cigarettes__table th,
+.cigarettes__table td {
   padding: 16px;
   border-collapse: collapse;
 }
