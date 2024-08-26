@@ -1,0 +1,50 @@
+<div class="item-content" id="telephoneSelectionApp">
+  <div class="container">
+    <section class="item-block px-md-4 px-2 py-4">
+      <h4 class="item-block__title h4 mb-4">
+          Телефоны «Горячих линий по ЭСЧФ» инспекций МНС по областям, городам, районам, районам в городах
+      </h4>
+      <div v-if="isLoading" class="loader">Loading...</div>
+      <div v-else>
+        <form class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="h6 mb-3">Выберите район</div>
+            <div class="d-flex">
+              <select class="select w-100" v-model="selectedDistrict" @change="clearSelectedInspection(); getElementData()">
+                  <option v-for="section in sections" :value="section">{{ section.NAME }}</option>
+              </select>
+            </div>
+
+            <div class="col-md-5">
+                <div class="h6 mb-3">Выберите инспекцию</div>
+                <select class="select w-100" v-model="selectedInspection" @change="selectInspection()">
+                    <option disabled value="">Выберите инспекцию</option>
+                    <option v-for="inspection in getInspections" :value="inspection">{{ inspection.NAME }}</option>
+                </select>
+            </div>
+          </div>
+        </form>
+        <div class="table-mns-gray mb-4" v-if="selectedDistrict.ID && selectedInspection.ID">
+            <table>
+                <tbody>
+                    <tr rowspan="3">
+                        <td class="fw-semibold">{{ selectedInspection.NAME }}</td>
+                        <td class="">Разъяснение порядка заполнения электронных счетов-фактур</td>
+                        <td>
+                            <div v-for="phone in getPhones2" :key="phone">{{ phone }}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="">Разъяснение порядка проведения камерального контроля с использованием АИС "Учет счетов-фактур"</td>
+                        <td>
+                            <div v-for="phone in getPhones" :key="phone">{{ phone }}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
