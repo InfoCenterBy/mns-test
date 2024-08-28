@@ -1506,3 +1506,13 @@ a:hover {
 .fs-48{
 	font-size: 48px;
 }
+
+.transition-3{
+	transition: all ease-out .3s;
+}
+
+.hover-opacity-7{
+	&:hover{
+		opacity: .7;
+	}
+}
