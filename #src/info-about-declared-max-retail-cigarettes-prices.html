@@ -35,8 +35,8 @@
                         <div class="row mx-n2 mt-4 cigarettes__menu">
                           <div class="col-sm-6 col-md-4 px-2 pt-4 d-flex align-items-center cigarettes__menu-item">
                             <a class="d-flex align-items-center" href="info-about-applicable-max-retail-cigarettes-prices.html">
-                                <div class="d-flex align-items-center ">
-                                    <span class="d-flex align-items-center justify-content-center rounded-circle p-3">
+                                <div class="cigarettes-item d-flex align-items-center ">
+                                    <span class="cigarettes-item__icon d-flex align-items-center justify-content-center rounded-circle p-3">
                                         <img src="./img/icons/decret.svg" alt="icon-2643">
                                     </span>
                                     <p class="h6 text-left ml-2">
@@ -47,8 +47,8 @@
                           </div>
                           <div class="col-sm-6 col-md-4 px-2 pt-4 d-flex align-items-center cigarettes__menu-item">
                             <a class="d-flex align-items-center border-end border-start border-success" href="info-about-declared-max-retail-cigarettes-prices.html">
-                                <div class="d-flex align-items-center px-2">
-                                    <span class="d-flex align-items-center justify-content-center rounded-circle p-3">
+                                <div class="cigarettes-item d-flex align-items-center px-2">
+                                    <span class="cigarettes-item__icon d-flex align-items-center justify-content-center rounded-circle p-3">
                                         <img src="./img/icons/apply.svg" alt="icon-2643">
                                     </span>
                                     <p class="h6 text-left ml-2">
@@ -59,8 +59,8 @@
                           </div>
                           <div class="col-sm-6 col-md-4 px-2 pt-4 d-flex align-items-center cigarettes__menu-item">
                               <a class="d-flex align-items-center " href="cigarettes-archive.html">
-                                  <div class="d-flex align-items-center">
-                                      <span class="d-flex align-items-center justify-content-center rounded-circle p-3">
+                                  <div class="cigarettes-item d-flex align-items-center">
+                                      <span class="cigarettes-item__icon d-flex align-items-center justify-content-center rounded-circle p-3">
                                           <img src="./img/icons/archive.svg" alt="icon-2643">
                                       </span>
                                       <p class="h6 text-left ml-2">
@@ -243,7 +243,7 @@
             </div>
         </div>
     </main>
-
+      {{ currentMonth }}
       @@include('_footer.html', {})
   </div>
   @@include('_js.html', {})
@@ -477,6 +477,7 @@
       createApp({
           setup() {
               const currentYear = new Date().getFullYear();
+              const currentMonth = new Date().getMonth();
   
               const monthOptions = [
                 { label: 'Январь', value: '1' },
@@ -493,7 +494,7 @@
                 { label: 'Декабрь', value: '12' }
               ];
   
-              const selectedMonths = ref(['1','2', '3']);
+              const selectedMonths = ref([(currentMonth - 1).toString(), currentMonth.toString(), (currentMonth + 1).toString()]);
               const searchQuery = ref('')
               const selectedType = ref("all");
               const selectedProducer = ref("all")
@@ -523,7 +524,7 @@
               }
   
               const handleOpen = () => {
-                showMonthPicker.value = true;
+                showMonthPicker.value = !showMonthPicker.value;
               }
   
               onMounted(() => {
@@ -617,7 +618,8 @@
                 importedProducers,
                 localProducers,
                 firstCategoryCigarettes,
-                secondCategoryCigarettes
+                secondCategoryCigarettes,
+                currentMonth
               };
           }
       }).use(store).mount('#app');

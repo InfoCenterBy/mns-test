@@ -685,8 +685,8 @@
           };
 
           const handleOpen = () => {
-            showMonthPicker.value = true;
-          };
+            showMonthPicker.value = !showMonthPicker.value;
+          }
 
           onMounted(() => {
             document.addEventListener("click", handleClickOutside);
