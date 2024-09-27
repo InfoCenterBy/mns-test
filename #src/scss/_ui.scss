@@ -1516,3 +1516,35 @@ a:hover {
 		opacity: .7;
 	}
 }
+
+.swiper.children-taxes-slider {
+	height: 316px;
+	.swiper-slide{
+		display: block;
+		border-radius: 10px;
+		img{
+			aspect-ratio: 1/1;
+			max-width: 264px;
+			max-height: 264px;
+			object-fit: contain;
+			width: 100%;
+		}
+	}
+}
+
+.swiper.children-taxes-slider-event{
+	.swiper-slide{
+		img{
+			max-height: 210px;
+			height: 210px;
+			object-fit: cover;
+			@media (max-width: 768px) {
+				object-fit: contain;
+			}
+		}
+	}
+}
+
+.border-15{
+	border-radius: 15px;
+}
