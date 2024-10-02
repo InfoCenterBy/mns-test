@@ -2207,6 +2207,68 @@ a:hover {
   opacity: 0.7;
 }
 
+.swiper.children-taxes-slider {
+  height: 316px;
+}
+
+.swiper.children-taxes-slider .swiper-slide {
+  display: block;
+  border-radius: 10px;
+}
+
+.swiper.children-taxes-slider .swiper-slide img {
+  aspect-ratio: 1/1;
+  max-width: 264px;
+  max-height: 264px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+.swiper.children-taxes-slider-event .swiper-slide img {
+  max-height: 210px;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.border-15 {
+  border-radius: 15px;
+}
+
+.children-media-card {
+  position: relative;
+}
+
+.children-media-card__title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.children-media-card .popular-tags-wrapper,
+.children-media-card .popular-tags-wrapper * {
+  position: relative;
+}
+
+.children-media-card-sm .children-media-card__img img {
+  max-width: 212px;
+  max-height: 212px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.children-media-card-lg .children-media-card__img img {
+  max-width: 329px;
+  max-height: 447px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -12823,6 +12885,11 @@ figure audio {
 }
 
 @media (max-width: 768px) {
+  .swiper.children-taxes-slider-event .swiper-slide img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
   .header-logo__name {
     display: none;
   }
