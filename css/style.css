@@ -2269,6 +2269,11 @@ a:hover {
      object-fit: contain;
 }
 
+.contain {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
