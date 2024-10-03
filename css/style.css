@@ -2209,7 +2209,6 @@ a:hover {
 
 .swiper.children-taxes-slider {
   height: 316px;
-  --swiper-navigation-size: 16px !important;
 }
 
 .swiper.children-taxes-slider .swiper-slide {
@@ -2226,6 +2225,23 @@ a:hover {
   width: 100%;
 }
 
+.swiper.children-taxes-slider-event .swiper-slide img {
+  max-height: 210px;
+  height: 210px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.swiper.children-taxes-slider-ex,
+.swiper.children-taxes-slider-event,
+.swiper.children-taxes-slider {
+  --swiper-navigation-size: 16px !important;
+}
+
+.swiper.children-taxes-slider-ex .swiper-button-prev,
+.swiper.children-taxes-slider-ex .swiper-button-next,
+.swiper.children-taxes-slider-event .swiper-button-prev,
+.swiper.children-taxes-slider-event .swiper-button-next,
 .swiper.children-taxes-slider .swiper-button-prev,
 .swiper.children-taxes-slider .swiper-button-next {
   background-color: #FAFAFA;
@@ -2237,17 +2253,14 @@ a:hover {
   height: 46px;
 }
 
+.swiper.children-taxes-slider-ex .swiper-button-prev::after,
+.swiper.children-taxes-slider-ex .swiper-button-next::after,
+.swiper.children-taxes-slider-event .swiper-button-prev::after,
+.swiper.children-taxes-slider-event .swiper-button-next::after,
 .swiper.children-taxes-slider .swiper-button-prev::after,
 .swiper.children-taxes-slider .swiper-button-next::after {
   line-height: 0;
   font-weight: 600;
-}
-
-.swiper.children-taxes-slider-event .swiper-slide img {
-  max-height: 210px;
-  height: 210px;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .border-15 {
@@ -2267,6 +2280,11 @@ a:hover {
 .children-media-card .popular-tags-wrapper,
 .children-media-card .popular-tags-wrapper * {
   position: relative;
+}
+
+.children-media-card__img {
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .children-media-card-sm .children-media-card__img img {

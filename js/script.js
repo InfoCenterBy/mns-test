@@ -6214,10 +6214,10 @@ const swiperChildrenMain = new Swiper('.swiper.children-taxes-slider', {
 	},
 
 	// Navigation arrows
-	// navigation: {
-	// 	nextEl: '.children-taxes-slider .swiper-button-next',
-	// 	prevEl: '.children-taxes-slider .swiper-button-prev',
-	// },
+	navigation: {
+		nextEl: '.children-taxes-slider .swiper-button-next',
+		prevEl: '.children-taxes-slider .swiper-button-prev',
+	},
 });
 
 const swiperChildrenEx = new Swiper('.swiper.children-taxes-slider-ex', {
@@ -6249,6 +6249,10 @@ const swiperChildrenEx = new Swiper('.swiper.children-taxes-slider-ex', {
 			spaceBetween: 16,
 		},
 	},
+	navigation: {
+		nextEl: '.children-taxes-slider-ex .swiper-button-next',
+		prevEl: '.children-taxes-slider-ex .swiper-button-prev',
+	},
 });
 
 const swiperChildrenEvent = new Swiper('.swiper.children-taxes-slider-event', {
@@ -6275,5 +6279,9 @@ const swiperChildrenEvent = new Swiper('.swiper.children-taxes-slider-event', {
 			slidesPerView: 3,
 			spaceBetween: 16,
 		},
+	},
+	navigation: {
+		nextEl: '.children-taxes-slider-event .swiper-button-next',
+		prevEl: '.children-taxes-slider-event .swiper-button-prev',
 	},
 });
