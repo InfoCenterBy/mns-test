@@ -1537,10 +1537,28 @@ a:hover {
 		img{
 			max-height: 210px;
 			height: 210px;
-			object-fit: cover;
+			object-fit: contain;
 			@media (max-width: 768px) {
 				object-fit: contain;
 			}
+		}
+	}
+	
+}
+
+.swiper.children-taxes-slider-ex, .swiper.children-taxes-slider-event, .swiper.children-taxes-slider{
+	--swiper-navigation-size: 16px !important;
+	.swiper-button-prev, .swiper-button-next{
+		background-color: $color-white;
+		color: $color-green-light;
+		display: grid;
+		place-items: center;
+		border-radius: 50%;
+		width: 46px;
+		height: 46px;
+		&::after{
+			line-height: 0;
+			font-weight: 600;
 		}
 	}
 }
@@ -1548,3 +1566,51 @@ a:hover {
 .border-15{
 	border-radius: 15px;
 }
+
+.children-media-card {
+	position: relative;
+	&__title{
+		&::after{
+			content: '';
+			position: absolute;
+			inset: 0;
+		}
+	}
+	.popular-tags-wrapper{
+		&, *{
+			position: relative;
+		}
+	}
+	&__img {
+		overflow: hidden;
+		border-radius: 10px;
+	}
+}
+.children-media-card-sm {
+	.children-media-card__img{
+		img{
+			max-width: 212px;
+			max-height: 212px;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.children-media-card-lg{
+	.children-media-card__img{
+		img{
+			max-width: 329px;
+			max-height: 447px;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.contain{
+	object-fit: contain !important;
+}
+
