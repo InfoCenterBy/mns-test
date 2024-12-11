@@ -970,8 +970,8 @@ a:hover {
       flex-wrap: nowrap;
   background-color: #EBEBEB;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1011,8 +1011,8 @@ a:hover {
 }
 
 .link-download:hover {
-  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
-          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
 }
 
 .link-download:hover .bi-download {
@@ -1160,8 +1160,8 @@ a:hover {
 .item-card-download {
   background-color: #EBEBEB;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1179,8 +1179,8 @@ a:hover {
 }
 
 .item-card-download:hover {
-  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
-          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #FFFFFF, inset 8px 0px 0px #007A65;
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff, inset 8px 0px 0px #007a65;
 }
 
 .item-card-download:hover .bi-download {
@@ -1415,7 +1415,7 @@ a:hover {
 }
 
 .requisites__tab-accordion.d_active {
-  color: #2B9140;
+  color: #2b9140;
 }
 
 .requisites__tab-accordion.d_active i:before {
@@ -1536,8 +1536,8 @@ a:hover {
 .vid-wrapper {
   max-width: 447px;
   width: 100%;
-  background: #FFFFFF;
-  border: 1px solid #CDCDCD;
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
   border-radius: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1582,7 +1582,7 @@ a:hover {
 
 .download-app > .show .modal-content {
   border: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035);
           box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035);
   border-radius: 10px;
@@ -1597,7 +1597,7 @@ a:hover {
 }
 
 .landing-uns .list-check-icon .bi-x-circle {
-  color: #E30613;
+  color: #e30613;
 }
 
 .landing-uns .item-tax-benefits i:not(.bi-check2-circle) {
@@ -1606,7 +1606,7 @@ a:hover {
 }
 
 .landing-uns .preview__info {
-  background: #007A65;
+  background: #007a65;
   border-radius: 0px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1654,7 +1654,7 @@ a:hover {
   max-width: 348px;
   height: 329px;
   margin: 0 !important;
-  background: #C4C4C4;
+  background: #c4c4c4;
   border-radius: 100px 0;
   padding: 42px 30px 32px 40px;
 }
@@ -1673,7 +1673,7 @@ a:hover {
 }
 
 .landing-uns .list-check-icon-yellow .bi-check2-circle {
-  color: #FCC466;
+  color: #fcc466;
 }
 
 .landing-uns .link_black {
@@ -1814,7 +1814,7 @@ a:hover {
 }
 
 .faq-block-tags-wrapper .faq-block-tags hr {
-  border: 0.2px solid #C5C7C6;
+  border: 0.2px solid #c5c7c6;
   margin: 0;
 }
 
@@ -1850,7 +1850,7 @@ a:hover {
 }
 
 .faq-block-tags-wrapper .accordion-question__btn-tags .divider {
-  border-top: 1px solid #C5C7C6;
+  border-top: 1px solid #c5c7c6;
 }
 
 .faq-block-tags-wrapper .accordion-question__btn-tags-content {
@@ -1870,7 +1870,7 @@ a:hover {
 }
 
 .landing-sdfl .divider {
-  border-top: 1px solid #EBEBEB;
+  border-top: 1px solid #ebebeb;
 }
 
 .landing-sdfl .preview {
@@ -1969,7 +1969,7 @@ a:hover {
 
 .contact-link-wrapper {
   border-radius: 0px 10px 10px 10px;
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
 }
 
 .alert-new {
@@ -2234,7 +2234,8 @@ a:hover {
 
 .swiper.children-taxes-slider-ex,
 .swiper.children-taxes-slider-event,
-.swiper.children-taxes-slider {
+.swiper.children-taxes-slider,
+.children-taxes-slider-online {
   --swiper-navigation-size: 16px !important;
 }
 
@@ -2243,7 +2244,9 @@ a:hover {
 .swiper.children-taxes-slider-event .swiper-button-prev,
 .swiper.children-taxes-slider-event .swiper-button-next,
 .swiper.children-taxes-slider .swiper-button-prev,
-.swiper.children-taxes-slider .swiper-button-next {
+.swiper.children-taxes-slider .swiper-button-next,
+.children-taxes-slider-online .swiper-button-prev,
+.children-taxes-slider-online .swiper-button-next {
   background-color: #FAFAFA;
   color: #007A65;
   display: grid;
@@ -2258,9 +2261,15 @@ a:hover {
 .swiper.children-taxes-slider-event .swiper-button-prev::after,
 .swiper.children-taxes-slider-event .swiper-button-next::after,
 .swiper.children-taxes-slider .swiper-button-prev::after,
-.swiper.children-taxes-slider .swiper-button-next::after {
+.swiper.children-taxes-slider .swiper-button-next::after,
+.children-taxes-slider-online .swiper-button-prev::after,
+.children-taxes-slider-online .swiper-button-next::after {
   line-height: 0;
   font-weight: 600;
+}
+
+.children-taxes-slider-online {
+  max-width: 900px;
 }
 
 .border-15 {
@@ -10273,6 +10282,14 @@ table.cigarettes__table {
   cursor: pointer;
   width: 100%;
   margin-top: 8px;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.z-10 {
+  z-index: 10 !important;
 }
 
 .page {
