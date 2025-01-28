@@ -1619,3 +1619,32 @@ a:hover {
 .contain {
   object-fit: contain !important;
 }
+
+.icon-block {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px 16px;
+  @media (max-width: 960px) {
+    padding: 12px 8px;
+  }
+		&__icon {
+      background-color: $color-green;
+      display: grid;
+      place-items: center;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+		}
+
+		&__title {
+      font-weight: 600;
+      font-size: 18px;
+      color: $color-green-light;
+		}
+}
+
+
+.lh-05{
+  line-height: 0.5;
+}
