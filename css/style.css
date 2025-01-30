@@ -2319,6 +2319,32 @@ a:hover {
      object-fit: contain !important;
 }
 
+.icon-block {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px 16px;
+}
+
+.icon-block__icon {
+  background-color: #00654D;
+  display: grid;
+  place-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.icon-block__title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #007A65;
+}
+
+.lh-05 {
+  line-height: 0.5;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -12907,6 +12933,10 @@ figure audio {
     --bs-accordion-btn-padding-y: 1rem;
     --bs-accordion-body-padding-x: 1rem;
     --bs-accordion-body-padding-y: .5rem;
+  }
+
+  .icon-block {
+    padding: 12px 8px;
   }
 }
 
