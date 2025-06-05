@@ -5648,53 +5648,51 @@ jQuery(document).ready(function($){
 })(Element.prototype);
 
 // ===================  Toggle block menu  ========================================
-// const btnShowBlock = document.querySelectorAll('._btn-toggle');
-// const closeBlock = document.querySelector('.header-special__btn-close');
-// const body = document.querySelector('body');
-// const overlay = document.querySelector('.header__overlay');
+const btnShowBlock = document.querySelectorAll('._btn-toggle');
+const closeBlock = document.querySelector('.header-special__btn-close');
+const body = document.querySelector('body');
+const overlay = document.querySelector('.header__overlay');
 
-// Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
-// 	item.addEventListener('click', function () {
-// 		if (item.classList.contains('_show-block')) {
-// 			item.classList.remove('_show-block');
-// 			overlay.classList.remove('_active');
-// 		} else {
-// 			addClass(item);
-// 		}
-// 	});
-// });
+Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
+	item.addEventListener('click', function () {
+		if (item.classList.contains('_show-block')) {
+			item.classList.remove('_show-block');
+			overlay.classList.remove('_active');
+		} else {
+			addClass(item);
+		}
+	});
+});
 
-// function addClass(currentItem) {
-// 	Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
-// 		item.classList.remove('_show-block');
-// 		overlay.classList.remove('_active');
-// 		item = currentItem;
-// 		item.classList.add('_show-block');
-// 		overlay.classList.add('_active');
-// 	});
-// }
+function addClass(currentItem) {
+	Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
+		item.classList.remove('_show-block');
+		overlay.classList.remove('_active');
+		item = currentItem;
+		item.classList.add('_show-block');
+		overlay.classList.add('_active');
+	});
+}
 
-// document.addEventListener('click', function (e) {
-// 	if (!e.target.closest('.hidden-block, ._btn-toggle')) {
-// 		Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
-// 			if (item.classList.contains('_show-block')) {
-// 				item.classList.remove('_show-block');
-// 			}
-// 		});
-// 		overlay.classList.remove('_active');
-// 	}
-// });
+document.addEventListener('click', function (e) {
+	if (!e.target.closest('.hidden-block, ._btn-toggle')) {
+		Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
+			if (item.classList.contains('_show-block')) {
+				item.classList.remove('_show-block');
+			}
+		});
+		overlay.classList.remove('_active');
+	}
+});
 
-// if (closeBlock) {
-// 	try {
-// 		closeBlock.addEventListener('click', function (e) {
-// 			Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
-// 				item.classList.remove('_show-block');
-// 			});
-// 			overlay.classList.remove('_active');
-// 		});
-// 	} catch (error) {}
-// }
+if (closeBlock) {
+	closeBlock.addEventListener('click', function (e) {
+		Array.prototype.slice.call(btnShowBlock).forEach(function (item) {
+			item.classList.remove('_show-block');
+		});
+		overlay.classList.remove('_active');
+	});
+}
 
 // ===========  Toggle language ===========================
 $(function () {
@@ -6154,10 +6152,12 @@ document.querySelectorAll('#app-popup').forEach((el) => {
 	});
 });
 
-$('.popover-dismiss').popover({
-	trigger: 'focus',
-	animation: true,
-});
+try {
+	$('.popover-dismiss').popover({
+		trigger: 'focus',
+		animation: true,
+	});
+} catch (error) {}
 
 // $("#user-nav-tabs li").on('click', function(e) {
 //    var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);
