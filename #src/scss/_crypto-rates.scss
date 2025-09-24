@@ -1,3 +1,8 @@
+.chart-container {
+  min-height: 270px;
+  max-height: 280px;
+}
+
 .token-card-logo {
   width: 32px;
   height: 32px;
@@ -32,6 +37,27 @@
   }
 }
 
+.dropdown-search {
+  position: relative;
+}
+
+.dropdown-search-input {
+  border: 1px solid $color-gray-stroke;
+  border-radius: 6px;
+  padding: 4px;
+  margin-inline: 12px;
+}
+
+.dropdown-search-icon {
+  line-height: 0;
+  position: absolute;
+  right: 23px;
+  top: 6px;
+}
+
 #tv-attr-logo {
   display: none;
+}
+
+.table-crypto-container {
 }
