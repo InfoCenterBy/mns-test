@@ -8,6 +8,13 @@
   height: 32px;
   min-width: 32px;
   min-height: 32px;
+
+  &__small {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
 
 .token-card-header {
@@ -26,14 +33,27 @@
   min-width: 150px;
 
   &::after {
-    margin-left: 80px;
+    position: absolute;
+    right: 14px;
+    top: 16px;
   }
 
   @media screen and (max-width: 576px) {
     min-width: 120px;
-    &::after {
-      margin-left: 55px;
-    }
+  }
+}
+
+.dropdown-btn__large {
+  padding: 14px 16px;
+  background-color: $color-gray-light;
+  border-radius: 10px;
+  min-width: 150px;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    right: 20px;
+    top: 24px;
   }
 }
 
@@ -60,4 +80,39 @@
 }
 
 .table-crypto-container {
+  margin-top: 32px;
+  overflow-x: scroll;
+}
+
+.mobile-w-100 {
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+}
+
+.table-crypto {
+  td {
+    padding: 16px;
+  }
+
+  thead td {
+    background-color: $color-gray-light;
+    font-weight: 600;
+  }
+
+  thead td:not(:last-child) {
+    border-right: 1px solid $color-white;
+  }
+
+  thead td:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  thead td:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  tbody tr:nth-child(2) {
+    background-color: $color-gray-light;
+  }
 }
