@@ -57,8 +57,19 @@
   }
 }
 
+.dropdown-content {
+  position: relative;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .dropdown-search {
   position: relative;
+}
+
+.dropdown-search {
+  margin-bottom: 8px;
 }
 
 .dropdown-search-input {
@@ -66,6 +77,15 @@
   border-radius: 6px;
   padding: 4px;
   margin-inline: 12px;
+  position: sticky;
+  top: 0;
+}
+
+.dropdown-no-results {
+  padding: 8px 12px;
+  color: #6c757d;
+  font-style: italic;
+  display: none;
 }
 
 .dropdown-search-icon {
