@@ -73,7 +73,7 @@
                       <div>
                         <p class="fs-14 fw-semibold mb-2">Токен</p>
                         <div class="dropdown dropdown-search-token">
-                          <button class="dropdown-toggle dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <button class="dropdown-toggle dropdown-btn chart-token" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             BTC
                           </button>
                           <ul class="dropdown-menu dropdown-content">
@@ -84,20 +84,13 @@
                             <li><a class="dropdown-item" href="#">BTC</a></li>
                             <li><a class="dropdown-item" href="#">XRP</a></li>
                             <li><a class="dropdown-item" href="#">USDT</a></li>
-                            <li><a class="dropdown-item" href="#">SOL</a></li>
-                            <li><a class="dropdown-item" href="#">SHIB</a></li>
-                            <li><a class="dropdown-item" href="#">BTC</a></li>
-                            <li><a class="dropdown-item" href="#">XRP</a></li>
-                            <li><a class="dropdown-item" href="#">USDT</a></li>
-                            <li><a class="dropdown-item" href="#">SOL</a></li>
-                            <li><a class="dropdown-item" href="#">SHIB</a></li>
                           </ul>
                         </div>
                       </div>
                       <div>
                         <p class="fs-14 fw-semibold mb-2">Месяц</p>
                         <div class="dropdown">
-                          <button class="dropdown-toggle dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <button class="dropdown-toggle dropdown-btn chart-month" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Август
                           </button>
                           <ul class="dropdown-menu dropdown-content">
@@ -439,7 +432,8 @@
                       <td>1093,7443</td>
                       <td>1093,7443</td>
                       <td>1093,7443</td>
-                      <td>1093,7443</td>
+                      <td>
+                        1093,7443</td>
                       <td>1093,7443</td>
                       <td>1093,7443</td>
                       <td>1093,7443</td>
@@ -460,369 +454,148 @@
   <!-- @@include('_popup.html',{}) -->
 
   @@include('_js.html',{})
-  <script>
+  <!-- <script>
+    const chartOptions = { layout: { textColor: 'black', background: { type: 'solid', color: 'white' } }, attributionLogo: false };
+    const chart = LightweightCharts.createChart(document.querySelector('.chart'), chartOptions);
+    const areaSeries = chart.addSeries(LightweightCharts.AreaSeries, { lineColor: '#014A37', topColor: '#007A65', bottomColor: 'rgba(0,122,101, 0.28)' });
 
-    // const chartOptions = { layout: { textColor: 'black', background: { type: 'solid', color: 'white' } }, attributionLogo: false };
-    // const chart = LightweightCharts.createChart(document.querySelector('.chart'), chartOptions);
-    // const areaSeries = chart.addSeries(LightweightCharts.AreaSeries, { lineColor: '#014A37', topColor: '#007A65', bottomColor: 'rgba(0,122,101, 0.28)' });
-
-    // const data = [{ value: 0, time: 1642425322 }, { value: 8, time: 1642511722 }, { value: 10, time: 1642598122 }, { value: 20, time: 1642684522 }, { value: 3, time: 1642770922 }, { value: 43, time: 1642857322 }, { value: 41, time: 1642943722 }, { value: 43, time: 1643030122 }, { value: 56, time: 1643116522 }, { value: 46, time: 1643202922 }];
-
-    // areaSeries.setData(data);
-
-    // chart.timeScale().fitContent();
-
-  </script>
-
-  //
-  <script>
-    //   document.addEventListener('DOMContentLoaded', function () {
-    //     const dropdown = document.querySelector('.dropdown-search-token');
-    //     const searchInput = dropdown.querySelector('.dropdown-search-input');
-    //     const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
-    //     const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-
-    //     // Добавляем элемент для сообщения "нет результатов"
-    //     const noResults = document.createElement('li');
-    //     noResults.className = 'dropdown-no-results';
-    //     noResults.textContent = 'Ничего не найдено';
-    //     dropdown.querySelector('.dropdown-content').appendChild(noResults);
-
-    //     // Функция поиска
-    //     function performSearch() {
-    //       const searchTerm = searchInput.value.toLowerCase().trim();
-    //       let visibleCount = 0;
-
-    //       dropdownItems.forEach(item => {
-    //         const text = item.textContent.toLowerCase();
-    //         if (text.includes(searchTerm)) {
-    //           item.classList.remove('d-none');
-    //           visibleCount++;
-    //         } else {
-    //           item.classList.add('d-none');
-    //         }
-    //       });
-
-    //       // Показываем/скрываем сообщение "нет результатов"
-    //       if (visibleCount === 0 && searchTerm !== '') {
-    //         noResults.style.display = 'block';
-    //       } else {
-    //         noResults.style.display = 'none';
-    //       }
-    //     }
-
-    //     // Обработчик ввода в поле поиска
-    //     searchInput.addEventListener('input', performSearch);
-
-    //     // Обработчик клика по элементу
-    //     dropdownItems.forEach(item => {
-    //       item.addEventListener('click', function (e) {
-    //         e.preventDefault();
-    //         const value = this.getAttribute('data-value');
-    //         const text = this.textContent;
-
-    //         // Обновляем текст кнопки
-    //         dropdownToggle.textContent = text;
-
-    //         // Сбрасываем поиск
-    //         searchInput.value = '';
-    //         performSearch();
-    //       });
-    //     });
-
-    //     // Сбрасываем поиск при закрытии дропдауна
-    //     dropdown.addEventListener('hidden.bs.dropdown', function () {
-    //       searchInput.value = '';
-    //       performSearch();
-    //     });
-    //   });
-    // </script>
-  <script>
-    let chart = null;
-    let areaSeries = null;
-    let currentCurrency = 'BTC';
-    let currentMonth = 'Август';
-    let allData = {};
-
-    // Мок данные (замените на реальные данные с бэкенда)
-    const mockData = [
-      {
-        "SOL": {
-          "Август": { "01": "213.123", "02": "213.222", "03": "215.500", "04": "210.800" },
-          "Сентябрь": { "01": "220.100", "02": "218.500", "03": "222.300", "04": "219.700" }
-        }
-      },
-      {
-        "BTC": {
-          "Август": { "01": "45000.50", "02": "45200.75", "03": "44800.25", "04": "45500.00" },
-          "Сентябрь": { "01": "46000.00", "02": "45800.50", "03": "46200.75", "04": "45900.25" }
-        }
-      },
-      {
-        "ETH": {
-          "Август": { "01": "2800.25", "02": "2820.50", "03": "2780.75", "04": "2850.00" },
-          "Сентябрь": { "01": "2900.00", "02": "2880.25", "03": "2920.50", "04": "2890.75" }
-        }
-      }
+    const data = [{
+      "BTC":
+        [{ time: '2018-12-22', value: 32.51 },
+        { time: '2018-12-23', value: 31.11 },
+        { time: '2018-12-24', value: 27.02 },
+        { time: '2018-12-25', value: 27.32 },
+        { time: '2018-12-26', value: 25.17 },
+        { time: '2018-12-27', value: 28.89 },
+        { time: '2018-12-28', value: 25.46 },
+        { time: '2018-12-29', value: 23.92 },
+        { time: '2018-12-30', value: 22.68 },
+        { time: '2018-12-31', value: 22.67 },],
+      "XRP":
+        [{ time: '2018-10-22', value: 213.51 },
+        { time: '2018-10-23', value: 131.11 },
+        { time: '2018-10-24', value: 127.02 },
+        { time: '2018-10-25', value: 127.32 },
+        { time: '2018-10-26', value: 125.17 },
+        { time: '2018-10-27', value: 128.89 },
+        { time: '2018-10-28', value: 122.68 },
+        { time: '2018-10-31', value: 22.67 },],
+      "USDT":
+        [{ time: '2018-05-22', value: 2199.51 },
+        { time: '2018-05-23', value: 1399.11 },
+        { time: '2018-05-24', value: 1299.02 },
+        { time: '2018-05-25', value: 1299.32 },
+        { time: '2018-05-26', value: 1299.17 },
+        { time: '2018-05-27', value: 1299.89 },
+        { time: '2018-05-28', value: 1299.68 },
+        { time: '2018-05-31', value: 299.67 },],
+    }
     ];
 
-    // Конвертируем месяц в номер
-    function monthToNumber(month) {
-      const months = {
-        'Январь': '01', 'Февраль': '02', 'Март': '03', 'Апрель': '04',
-        'Май': '05', 'Июнь': '06', 'Июль': '07', 'Август': '08',
-        'Сентябрь': '09', 'Октябрь': '10', 'Ноябрь': '11', 'Декабрь': '12'
-      };
-      return months[month] || '01';
-    }
+    areaSeries.setData(data);
 
-    // Конвертируем дату в timestamp
-    function dateToTimestamp(dateString) {
-      return Math.floor(new Date(dateString).getTime() / 1000);
-    }
+    chart.timeScale().fitContent();
+  </script> -->
+  <script>
+    // Данные для графика
+    const data = {
+      "BTC": [
+        { time: '2018-12-22', value: 32.51 },
+        { time: '2018-12-23', value: 31.11 },
+        { time: '2018-12-24', value: 27.02 },
+        { time: '2018-12-25', value: 27.32 },
+        { time: '2018-12-26', value: 25.17 },
+        { time: '2018-12-27', value: 28.89 },
+        { time: '2018-12-28', value: 25.46 },
+        { time: '2018-12-29', value: 23.92 },
+        { time: '2018-12-30', value: 22.68 },
+        { time: '2018-12-31', value: 22.67 },
+        { time: '2018-12-22', value: 32.51 },
+        { time: '2018-11-23', value: 31.11 },
+        { time: '2018-11-24', value: 27.02 },
+        { time: '2018-11-25', value: 27.32 },
+        { time: '2018-11-26', value: 25.17 },
+        { time: '2018-11-27', value: 28.89 },
+        { time: '2018-11-28', value: 25.46 },
+        { time: '2018-11-29', value: 23.92 },
+        { time: '2018-11-30', value: 22.68 },
+        { time: '2018-01-31', value: 22.67 },
+        { time: '2018-01-23', value: 31.11 },
+        { time: '2018-01-24', value: 27.02 },
+        { time: '2018-01-25', value: 27.32 },
+        { time: '2018-01-26', value: 25.17 },
+        { time: '2018-01-27', value: 28.89 },
+        { time: '2018-01-28', value: 25.46 },
+        { time: '2018-01-29', value: 23.92 },
+        { time: '2018-01-30', value: 22.68 },
+        { time: '2018-01-31', value: 22.67 }
+      ],
+      "XRP": [
+        { time: '2018-10-22', value: 213.51 },
+        { time: '2018-10-23', value: 131.11 },
+        { time: '2018-10-24', value: 127.02 },
+        { time: '2018-10-25', value: 127.32 },
+        { time: '2018-10-26', value: 125.17 },
+        { time: '2018-10-27', value: 128.89 },
+        { time: '2018-10-28', value: 122.68 },
+        { time: '2018-10-31', value: 22.67 }
+      ],
+      "USDT": [
+        { time: '2018-05-22', value: 2199.51 },
+        { time: '2018-05-23', value: 1399.11 },
+        { time: '2018-05-24', value: 1299.02 },
+        { time: '2018-05-25', value: 1299.32 },
+        { time: '2018-05-26', value: 1299.17 },
+        { time: '2018-05-27', value: 1299.89 },
+        { time: '2018-05-28', value: 1299.68 },
+        { time: '2018-05-31', value: 299.67 }
+      ]
+    };
 
-    // Обрабатываем мок данные в удобный формат
-    function processMockData(data) {
-      const result = {};
-      data.forEach(currencyData => {
-        const currencyName = Object.keys(currencyData)[0];
-        result[currencyName] = {};
+    const chartOptions = {
+      layout: {
+        textColor: 'black',
+        background: { type: 'solid', color: 'white' }
+      },
+      attributionLogo: false
+    };
 
-        Object.entries(currencyData[currencyName]).forEach(([month, days]) => {
-          result[currencyName][month] = Object.entries(days).map(([day, value]) => ({
-            time: dateToTimestamp(`2024-${monthToNumber(month)}-${day}`),
-            value: parseFloat(value)
-          }));
-        });
-      });
-      return result;
-    }
+    const chart = LightweightCharts.createChart(document.querySelector('.chart'), chartOptions);
+    const areaSeries = chart.addSeries(LightweightCharts.AreaSeries, {
+      lineColor: '#014A37',
+      topColor: '#007A65',
+      bottomColor: 'rgba(0,122,101, 0.28)'
+    });
 
-    // Инициализация графика
-    function initChart() {
-      const chartOptions = {
-        layout: {
-          textColor: 'black',
-          background: { type: 'solid', color: 'white' }
-        },
-        grid: {
-          vertLines: { color: '#f0f0f0' },
-          horzLines: { color: '#f0f0f0' }
-        },
-        attributionLogo: false,
-        width: document.querySelector('.chart').clientWidth,
-        height: 500
-      };
+    let currentToken = 'BTC';
+    areaSeries.setData(data[currentToken]);
+    chart.timeScale().fitContent();
 
-      chart = LightweightCharts.createChart(document.querySelector('.chart'), chartOptions);
-      areaSeries = chart.addSeries(LightweightCharts.AreaSeries, {
-        lineColor: '#014A37',
-        topColor: '#007A65',
-        bottomColor: 'rgba(0,122,101, 0.28)',
-        lineWidth: 2
-      });
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownBtn = document.querySelector('.dropdown-btn');
+      const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-      // Респонсив размер графика
-      window.addEventListener('resize', () => {
-        chart.applyOptions({
-          width: document.querySelector('.chart').clientWidth
-        });
-      });
-    }
+      // Обработчик выбора токена
+      dropdownItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          const selectedToken = this.textContent.trim();
 
-    // Debounce для поиска
-    function debounce(func, wait) {
-      let timeout;
-      return function executedFunction(...args) {
-        const later = () => {
-          clearTimeout(timeout);
-          func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-      };
-    }
+          // Обновляем текст кнопки
+          dropdownBtn.textContent = selectedToken;
 
-    // Инициализация дропдауна валют
-    function initCurrencyDropdown() {
-      const dropdown = document.querySelector('.dropdown-search-token');
-      const searchInput = dropdown.querySelector('.dropdown-search-input');
-      const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
-      const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-
-      // Добавляем элемент для "нет результатов"
-      const noResults = document.createElement('li');
-      noResults.className = 'no-results';
-      noResults.textContent = 'Валюты не найдены';
-      dropdown.querySelector('.dropdown-content').appendChild(noResults);
-
-      // Функция поиска
-      function performSearch() {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        let visibleCount = 0;
-
-        dropdownItems.forEach(item => {
-          const text = item.textContent.toLowerCase();
-          if (text.includes(searchTerm)) {
-            item.classList.remove('hidden');
-            visibleCount++;
-          } else {
-            item.classList.add('hidden');
+          // Обновляем график
+          if (data[selectedToken] && selectedToken !== currentToken) {
+            areaSeries.setData(data[selectedToken]);
+            chart.timeScale().fitContent();
+            currentToken = selectedToken;
           }
         });
-
-        noResults.style.display = visibleCount === 0 && searchTerm !== '' ? 'block' : 'none';
-      }
-
-      // Обработчики событий
-      searchInput.addEventListener('input', debounce(performSearch, 300));
-
-      dropdownItems.forEach(item => {
-        item.addEventListener('click', function (e) {
-          e.preventDefault();
-          const value = this.getAttribute('data-value');
-          const text = this.textContent;
-
-          dropdownToggle.textContent = text;
-          currentCurrency = value;
-
-          // Сбрасываем поиск
-          searchInput.value = '';
-          performSearch();
-
-          // Обновляем график
-          updateChart();
-        });
       });
-
-      // Сбрасываем поиск при закрытии
-      dropdown.addEventListener('hidden.bs.dropdown', function () {
-        searchInput.value = '';
-        performSearch();
-      });
-    }
-
-    // Инициализация дропдауна месяцев
-    function initMonthDropdown() {
-      const dropdown = document.querySelector('.dropdown:last-child');
-      const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
-      const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-
-      dropdownItems.forEach(item => {
-        item.addEventListener('click', function (e) {
-          e.preventDefault();
-          const value = this.getAttribute('data-value');
-          const text = this.textContent;
-
-          dropdownToggle.textContent = text;
-          currentMonth = value;
-
-          // Обновляем график
-          updateChart();
-        });
-      });
-    }
-
-    // Получаем данные для графика
-    function getChartData() {
-      const currencyData = allData[currentCurrency];
-      if (!currencyData) {
-        console.warn(`Данные для валюты ${currentCurrency} не найдены`);
-        return [];
-      }
-
-      const monthData = currencyData[currentMonth];
-      if (!monthData) {
-        console.warn(`Данные для месяца ${currentMonth} не найдены`);
-        return [];
-      }
-
-      return monthData;
-    }
-
-    // Обновляем заголовок графика
-    function updateChartTitle() {
-      // Удаляем существующий заголовок
-      const existingTitle = document.querySelector('.chart-title');
-      if (existingTitle) {
-        existingTitle.remove();
-      }
-
-      // Создаем новый заголовок
-      const title = document.createElement('div');
-      title.className = 'chart-title';
-      title.style.cssText = `
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  `;
-      title.textContent = `${currentCurrency} - ${currentMonth} 2024`;
-
-      document.querySelector('.chart-container').insertBefore(title, document.querySelector('.chart'));
-    }
-
-    // Обновление данных графика
-    function updateChart() {
-      const chartData = getChartData();
-      areaSeries.setData(chartData);
-      chart.timeScale().fitContent();
-      updateChartTitle();
-    }
-
-    // Метод для обновления данных из API
-    async function updateDataFromAPI(apiData) {
-      allData = processMockData(apiData);
-      updateChart();
-    }
-
-    // Основная функция инициализации
-    function init() {
-      // Обрабатываем мок данные
-      allData = processMockData(mockData);
-
-      // Инициализируем график
-      initChart();
-
-      // Инициализируем дропдауны
-      initCurrencyDropdown();
-      initMonthDropdown();
-
-      // Первоначальное обновление графика
-      updateChart();
-    }
-
-    // Инициализация когда DOM загружен
-    document.addEventListener('DOMContentLoaded', init);
-
-    // Функция для загрузки данных с API (пример)
-    async function loadChartDataFromAPI() {
-      try {
-        const response = await fetch('/api/chart-data');
-        const apiData = await response.json();
-        updateDataFromAPI(apiData);
-      } catch (error) {
-        console.error('Ошибка загрузки данных:', error);
-      }
-    }
-
-    // Экспортируем функции для использования извне
-    window.chartFunctions = {
-      updateChart,
-      updateDataFromAPI,
-      loadChartDataFromAPI,
-      setCurrency: function (currency) {
-        currentCurrency = currency;
-        updateChart();
-      },
-      setMonth: function (month) {
-        currentMonth = month;
-        updateChart();
-      }
-    };
+    });
   </script>
-  </script>
+
+
 </body>
 
 </html>
