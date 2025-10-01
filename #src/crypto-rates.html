@@ -81,9 +81,9 @@
                               <input class="dropdown-search-input" type="text">
                               <i class="dropdown-search-icon bi bi-search"></i>
                             </li>
-                            <li><a class="dropdown-item" href="#">BTC</a></li>
-                            <li><a class="dropdown-item" href="#">XRP</a></li>
-                            <li><a class="dropdown-item" href="#">USDT</a></li>
+                            <li><a class="dropdown-item chart-token-item" href="#">BTC</a></li>
+                            <li><a class="dropdown-item chart-token-item" href="#">XRP</a></li>
+                            <li><a class="dropdown-item chart-token-item" href="#">USDT</a></li>
                           </ul>
                         </div>
                       </div>
@@ -541,13 +541,13 @@
         { time: '2018-10-31', value: 22.67 }
       ],
       "USDT": [
-        { time: '2018-05-22', value: 2199.51 },
-        { time: '2018-05-23', value: 1399.11 },
+        { time: '2018-05-22', value: 1234.51 },
+        { time: '2018-05-23', value: 765.11 },
         { time: '2018-05-24', value: 1299.02 },
-        { time: '2018-05-25', value: 1299.32 },
-        { time: '2018-05-26', value: 1299.17 },
-        { time: '2018-05-27', value: 1299.89 },
-        { time: '2018-05-28', value: 1299.68 },
+        { time: '2018-05-25', value: 888.32 },
+        { time: '2018-05-26', value: 999.17 },
+        { time: '2018-05-27', value: 345.89 },
+        { time: '2018-05-28', value: 554.68 },
         { time: '2018-05-31', value: 299.67 }
       ]
     };
@@ -572,8 +572,11 @@
     chart.timeScale().fitContent();
 
     document.addEventListener('DOMContentLoaded', function () {
-      const dropdownBtn = document.querySelector('.dropdown-btn');
-      const dropdownItems = document.querySelectorAll('.dropdown-item');
+      const selectTokenBtn = document.querySelector('.chart-token')
+      const selectMonthBtn = document.querySelector('.chart-month')
+
+      // const dropdownBtn = document.querySelector('.dropdown-btn');
+      const tokenItems = document.querySelectorAll('.chart-token-item');
 
       // Обработчик выбора токена
       dropdownItems.forEach(item => {
