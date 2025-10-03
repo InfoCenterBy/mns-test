@@ -549,9 +549,9 @@
                       </button>
                       <ul class="dropdown-menu dropdown-content">
                         <li><a class="dropdown-item table-year-item" href="#">2025</a></li>
-                        <li><a class="dropdown-item table-year-item" href="#">2018</a></li>
                         <li><a class="dropdown-item table-year-item" href="#">2024</a></li>
                         <li><a class="dropdown-item table-year-item" href="#">2023</a></li>
+                        <li><a class="dropdown-item table-year-item" href="#">2018</a></li>
                       </ul>
                     </div>
                   </div>
@@ -863,7 +863,15 @@
         { time: '2018-10-26', value: 125.17 },
         { time: '2018-10-27', value: 128.89 },
         { time: '2018-10-28', value: 122.68 },
-        { time: '2018-10-31', value: 22.67 }
+        { time: '2018-10-31', value: 22.67 },
+        { time: '2025-10-22', value: 213.51 },
+        { time: '2025-10-23', value: 131.11 },
+        { time: '2025-10-24', value: 127.02 },
+        { time: '2025-10-25', value: 127.32 },
+        { time: '2025-10-26', value: 125.17 },
+        { time: '2025-10-27', value: 128.89 },
+        { time: '2025-10-28', value: 122.68 },
+        { time: '2025-10-31', value: 22.67 }
       ],
       "USDT": [
         { time: '2018-05-22', value: 1234.51 },
@@ -918,7 +926,6 @@
       function updateChart() {
         if (data[selectedToken]) {
           const filteredData = filterDataByMonthAndYear(data[selectedToken], selectedMonth, currentYear);
-          console.log("data", filteredData);
           const dataNotFound = document.querySelector('#dataNotFound')
           const chartContainer = document.querySelector('.chart-container')
 
@@ -990,6 +997,57 @@
         });
       });
 
+      function getLastAvailableDate(tokenData, year) {
+        // Фильтруем данные по текущему году
+        const yearData = tokenData.filter(item => {
+          const [itemYear] = item.time.split('-');
+          return itemYear === year;
+        });
+
+        // Если нет данных за текущий год, возвращаем null
+        if (yearData.length === 0) return null;
+
+        // Находим максимальную дату
+        const lastDate = yearData.reduce((max, item) => {
+          return item.time > max ? item.time : max;
+        }, yearData[0].time);
+
+        return lastDate;
+      }
+
+      function updateTokenCards() {
+        const tokenCards = {
+          'BTC': document.querySelector('.token-card-header img[src*="btc"]').closest('.bg-color-gray-light'),
+          'ETH': document.querySelector('.token-card-header img[src*="eth"]').closest('.bg-color-gray-light'),
+          'XRP': document.querySelector('.token-card-header img[src*="xrp"]').closest('.bg-color-gray-light')
+        };
+
+        Object.keys(tokenCards).forEach(token => {
+          if (data[token]) {
+            const lastDate = getLastAvailableDate(data[token], currentYear);
+
+            if (lastDate) {
+              // Находим значение курса для последней доступной даты
+              const lastData = data[token].find(item => item.time === lastDate);
+
+              if (lastData) {
+                const card = tokenCards[token];
+                const priceElement = card.querySelector('.fs-18.fw-semibold');
+                const dateElement = card.querySelector('.fs-14.color-gray-dark');
+
+                // Форматируем дату в нужный формат (дд.мм.гггг)
+                const [year, month, day] = lastDate.split('-');
+                const formattedDate = `${day}.${month}.${year}`;
+
+                // Обновляем значения в карточке
+                priceElement.textContent = `${lastData.value.toLocaleString('ru-RU')} BYN`;
+                dateElement.textContent = `на ${formattedDate}`;
+              }
+            }
+          }
+        });
+      }
+      updateTokenCards();
       updateChart();
     });
 
