@@ -432,8 +432,8 @@
                         <span class="fs-24 fw-semibold">BTC</span>
                       </div>
                       <div class="token-card-content d-flex justify-content-between gap-3 align-items-center">
-                        <span class="fs-18 fw-semibold">345 281,95 BYN</span>
-                        <span class="fs-14 color-gray-dark">на 31.08.2025</span>
+                        <span class="token-card-value fs-18 fw-semibold">345 281,95 BYN</span>
+                        <span class="token-card-date fs-14 color-gray-dark">на 31.08.2025</span>
                       </div>
                     </div>
                     <div class="bg-color-gray-light border-10 p-3">
@@ -442,8 +442,8 @@
                         <span class="fs-24 fw-semibold">ETH</span>
                       </div>
                       <div class="token-card-content d-flex justify-content-between gap-3 align-items-center">
-                        <span class="fs-18 fw-semibold">96,9670 BYN</span>
-                        <span class="fs-14 color-gray-dark">на 31.08.2025</span>
+                        <span class="token-card-value fs-18 fw-semibold">96,9670 BYN</span>
+                        <span class="token-card-date fs-14 color-gray-dark">на 31.08.2025</span>
                       </div>
                     </div>
                     <div class="bg-color-gray-light border-10 p-3">
@@ -452,8 +452,8 @@
                         <span class="fs-24 fw-semibold">XRP</span>
                       </div>
                       <div class="token-card-content d-flex justify-content-between gap-3 align-items-center">
-                        <span class="fs-18 fw-semibold">8,5001 BYN</span>
-                        <span class="fs-14 color-gray-dark">на 31.08.2025</span>
+                        <span class="token-card-value fs-18 fw-semibold">8,5001 BYN</span>
+                        <span class="token-card-date fs-14 color-gray-dark">на 31.08.2025</span>
                       </div>
                     </div>
                   </div>
@@ -1004,10 +1004,8 @@
           return itemYear === year;
         });
 
-        // Если нет данных за текущий год, возвращаем null
         if (yearData.length === 0) return null;
 
-        // Находим максимальную дату
         const lastDate = yearData.reduce((max, item) => {
           return item.time > max ? item.time : max;
         }, yearData[0].time);
@@ -1027,19 +1025,16 @@
             const lastDate = getLastAvailableDate(data[token], currentYear);
 
             if (lastDate) {
-              // Находим значение курса для последней доступной даты
               const lastData = data[token].find(item => item.time === lastDate);
 
               if (lastData) {
                 const card = tokenCards[token];
-                const priceElement = card.querySelector('.fs-18.fw-semibold');
-                const dateElement = card.querySelector('.fs-14.color-gray-dark');
+                const priceElement = card.querySelector('.token-card-value');
+                const dateElement = card.querySelector('.token-card-date');
 
-                // Форматируем дату в нужный формат (дд.мм.гггг)
                 const [year, month, day] = lastDate.split('-');
                 const formattedDate = `${day}.${month}.${year}`;
 
-                // Обновляем значения в карточке
                 priceElement.textContent = `${lastData.value.toLocaleString('ru-RU')} BYN`;
                 dateElement.textContent = `на ${formattedDate}`;
               }
