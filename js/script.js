@@ -5628,10 +5628,10 @@ jQuery(document).ready(function($){
 })(jQuery);
 
 "use strict";
+
 // ==================  polyfill for method Closest  ================================
 (function (ELEMENT) {
-  ELEMENT.matches =
-    ELEMENT.matches || ELEMENT.mozMatchesSelector || ELEMENT.msMatchesSelector || ELEMENT.oMatchesSelector || ELEMENT.webkitMatchesSelector;
+  ELEMENT.matches = ELEMENT.matches || ELEMENT.mozMatchesSelector || ELEMENT.msMatchesSelector || ELEMENT.oMatchesSelector || ELEMENT.webkitMatchesSelector;
   ELEMENT.closest =
     ELEMENT.closest ||
     function closest(selector) {

@@ -10328,11 +10328,23 @@ table.cigarettes__table {
   margin-top: 8px;
 }
 
+.chart-container {
+  min-height: 270px;
+  max-height: 280px;
+}
+
 .token-card-logo {
   width: 32px;
   height: 32px;
   min-width: 32px;
   min-height: 32px;
+}
+
+.token-card-logo__small {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
 }
 
 .token-card-header {
@@ -10342,6 +10354,216 @@ table.cigarettes__table {
 
 .token-card-content {
   padding-top: 12px;
+}
+
+.dropdown-btn {
+  padding: 6px 12px;
+  background-color: #ebebeb;
+  border-radius: 10px;
+  min-width: 150px;
+}
+
+.dropdown-btn::after {
+  position: absolute;
+  right: 14px;
+  top: 16px;
+}
+
+.dropdown-btn__large {
+  padding: 14px 16px;
+  background-color: #ebebeb;
+  border-radius: 10px;
+  min-width: 150px;
+  width: 100%;
+}
+
+.dropdown-btn__large::after {
+  position: absolute;
+  right: 20px;
+  top: 24px;
+}
+
+.dropdown-content {
+  position: relative;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdown-search {
+  position: relative;
+}
+
+.dropdown-search {
+  margin-bottom: 8px;
+}
+
+.dropdown-search-input {
+  border: 1px solid #c5c7c6;
+  border-radius: 6px;
+  padding: 4px;
+  margin-inline: 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.dropdown-no-results {
+  padding: 8px 12px;
+  color: #6c757d;
+  font-style: italic;
+  display: none;
+}
+
+.dropdown-search-icon {
+  line-height: 0;
+  position: absolute;
+  right: 23px;
+  top: 6px;
+}
+
+.dropdown.disabled .dropdown-toggle {
+  opacity: 0.6;
+  pointer-events: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.dropdown.disabled .dropdown-toggle:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+#tv-attr-logo {
+  display: none;
+}
+
+.table-crypto-container {
+  margin-top: 32px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.table-crypto-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.table-crypto-header-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.table-crypto-header-scroll .table-crypto {
+  margin-bottom: 6px;
+}
+
+.table-crypto-header-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-crypto-header-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-crypto-header-scroll::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.table-crypto-body-scroll {
+  max-height: 400px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.table-crypto-body-scroll .table-crypto {
+  margin-top: 6px;
+  border-top: 1px solid #ebebeb;
+}
+
+.table-crypto-body-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.table-crypto-body-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-crypto-body-scroll::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.table-crypto {
+  width: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.table-crypto thead {
+  background-color: #ebebeb;
+}
+
+.table-crypto thead tr td {
+  padding: 16px;
+  font-weight: 600;
+  border-right: 1px solid #fafafa;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.table-crypto thead tr td:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  background-color: #ebebeb;
+  z-index: 20;
+  min-width: 150px;
+}
+
+.table-crypto thead tr td:last-child {
+  border-right: none;
+}
+
+.table-crypto tbody tr:nth-child(even) {
+  background-color: #ebebeb;
+}
+
+.table-crypto tbody tr td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.table-crypto tbody tr td:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  background-color: inherit;
+  z-index: 10;
+  min-width: 150px;
+  font-weight: 500;
+}
+
+.table-crypto tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-crypto-header-scroll::-webkit-scrollbar-thumb,
+.table-crypto-body-scroll::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+}
+
+.table-crypto-header-scroll::-webkit-scrollbar-thumb:hover,
+.table-crypto-body-scroll::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 .list-style-none {
@@ -13458,6 +13680,16 @@ figure audio {
 
   .vacancies__img {
     display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dropdown-btn {
+    min-width: 120px;
+  }
+
+  .mobile-w-100 {
+    width: 100%;
   }
 }
 
