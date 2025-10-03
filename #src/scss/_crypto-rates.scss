@@ -184,7 +184,7 @@
   min-width: 100%;
   border-collapse: collapse;
   margin: 0;
-  // Фиксированная шапка
+
   thead {
     background-color: $color-gray-light;
 
@@ -209,7 +209,6 @@
     }
   }
 
-  // Тело таблицы
   tbody {
     tr {
       &:nth-child(even) {
@@ -239,7 +238,6 @@
   }
 }
 
-// Синхронизация скроллов
 .table-crypto-header-scroll,
 .table-crypto-body-scroll {
   &::-webkit-scrollbar-thumb {
