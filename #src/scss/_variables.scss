@@ -1,72 +1,77 @@
-$color-black: #1A1A1A;
-$color-white: #FAFAFA;
-$color-green-light: #007A65;
-$color-green: #00654D;
-$color-green-dark: #014A37;
-$color-gray-light: #EBEBEB;
-$color-gray: #9D9F9E;
+$color-black: #1a1a1a;
+$color-white: #fafafa;
+$color-green-light: #007a65;
+$color-green: #00654d;
+$color-green-dark: #014a37;
+$color-gray-light: #ebebeb;
+$color-gray-stroke: #c5c7c6;
+$color-gray: #9d9f9e;
 $color-gray-dark: #727270;
-$color-red: #E31E25;
-$color-red-dark: #BC2222;
-$color-vinous: #9A231D;
-$color-yellow: #FBC469;
-$color-brown-light: #B47E36;
-$color-brown: #A86919;
+$color-red: #e31e25;
+$color-red-dark: #bc2222;
+$color-vinous: #9a231d;
+$color-yellow: #fbc469;
+$color-brown-light: #b47e36;
+$color-brown: #a86919;
 $color-black-text: #263238;
-$color-green-transparent: #AFCEC6;
+$color-green-transparent: #afcec6;
 
 $colorsMap: (
-     'black': '#1A1A1A',
-     'white': '#FAFAFA',
-     'green-light': '#007A65',
-     'green': '#00654D',
-     'green-dark': '#014A37',
-     'gray-light': '#EBEBEB',
-     'gray': '#9D9F9E',
-     'gray-dark': '#727270',
-     'red': '#E31E25',
-     'red-dark': '#BC2222',
-     'vinous': '#9A231D',
-     'yellow': '#FBC469',
-     'brown-light': '#B47E36',
-     'brown': '#A86919',
-     'black-text': '#263238',
-     'transparent': 'transparent',
-     'green-transparent': '#AFCEC6'
+  "black": "#1A1A1A",
+  "white": "#FAFAFA",
+  "green-light": "#007A65",
+  "green": "#00654D",
+  "green-dark": "#014A37",
+  "gray-light": "#EBEBEB",
+  "gray-stroke": "#C5C7C6",
+  "gray": "#9D9F9E",
+  "gray-dark": "#727270",
+  "red": "#E31E25",
+  "red-dark": "#BC2222",
+  "vinous": "#9A231D",
+  "yellow": "#FBC469",
+  "brown-light": "#B47E36",
+  "brown": "#A86919",
+  "black-text": "#263238",
+  "transparent": "transparent",
+  "green-transparent": "#AFCEC6",
 );
 
-
 @each $name, $color in $colorsMap {
-	.bg-color-#{$name}{
-          background-color: #{$color};
-     }
-     .color-#{$name}{
-          color: #{$color};
-     }
-     .border-color-#{$name}{
-          border-color: #{$color} !important;
-     }
+  .bg-color-#{$name} {
+    background-color: #{$color};
+  }
+  .color-#{$name} {
+    color: #{$color};
+  }
+  .border-color-#{$name} {
+    border-color: #{$color} !important;
+  }
 }
 
 $fontSizeMap: (10, 12, 14, 16, 18, 20, 22, 24);
 
 @each $name in $fontSizeMap {
-     $result: calc($name / 16);
-     // $adaptiveResult: calc($name - 4);
-     .fs-#{$name}{
-          font-size: #{$result} + rem !important;
-     }
-     // .fs-adaptive-#{$name}{
-     //      @include adaptiv-value('font-size', $name, $adaptiveResult, 1);
-     // }
+  $result: calc($name / 16);
+  // $adaptiveResult: calc($name - 4);
+  .fs-#{$name} {
+    font-size: #{$result} + rem !important;
+  }
+  // .fs-adaptive-#{$name}{
+  //      @include adaptiv-value('font-size', $name, $adaptiveResult, 1);
+  // }
 }
 
-.border-10{
-     border: 10px;
+.border-10 {
+  border-radius: 10px;
 }
 
-.after-no{
-     &::after{
-          content: none;
-     }
+.after-no {
+  &::after {
+    content: none;
+  }
+}
+
+.mt-64 {
+  margin-top: 64px;
 }

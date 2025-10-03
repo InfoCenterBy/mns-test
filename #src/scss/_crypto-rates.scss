@@ -1,0 +1,250 @@
+.chart-container {
+  min-height: 270px;
+  max-height: 280px;
+}
+
+.token-card-logo {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+
+  &__small {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+.token-card-header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid $color-gray-stroke;
+}
+
+.token-card-content {
+  padding-top: 12px;
+}
+
+.dropdown-btn {
+  padding: 6px 12px;
+  background-color: $color-gray-light;
+  border-radius: 10px;
+  min-width: 150px;
+
+  &::after {
+    position: absolute;
+    right: 14px;
+    top: 16px;
+  }
+
+  @media screen and (max-width: 576px) {
+    min-width: 120px;
+  }
+}
+
+.dropdown-btn__large {
+  padding: 14px 16px;
+  background-color: $color-gray-light;
+  border-radius: 10px;
+  min-width: 150px;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+  }
+}
+
+.dropdown-content {
+  position: relative;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdown-search {
+  position: relative;
+}
+
+.dropdown-search {
+  margin-bottom: 8px;
+}
+
+.dropdown-search-input {
+  border: 1px solid $color-gray-stroke;
+  border-radius: 6px;
+  padding: 4px;
+  margin-inline: 12px;
+  position: sticky;
+  top: 0;
+}
+
+.dropdown-no-results {
+  padding: 8px 12px;
+  color: #6c757d;
+  font-style: italic;
+  display: none;
+}
+
+.dropdown-search-icon {
+  line-height: 0;
+  position: absolute;
+  right: 23px;
+  top: 6px;
+}
+
+.dropdown.disabled .dropdown-toggle {
+  opacity: 0.6;
+  pointer-events: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.dropdown.disabled .dropdown-toggle:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+#tv-attr-logo {
+  display: none;
+}
+
+.table-crypto-container {
+  margin-top: 32px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-w-100 {
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+}
+
+.table-crypto-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.table-crypto-header-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  .table-crypto {
+    margin-bottom: 6px;
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+}
+
+// Основной скролл для тела таблицы
+.table-crypto-body-scroll {
+  max-height: 400px;
+  overflow-x: auto;
+  overflow-y: auto;
+
+  .table-crypto {
+    margin-top: 6px;
+    border-top: 1px solid $color-gray-light;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+}
+
+.table-crypto {
+  width: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+
+  thead {
+    background-color: $color-gray-light;
+
+    tr td {
+      padding: 16px;
+      font-weight: 600;
+      border-right: 1px solid $color-white;
+      white-space: nowrap;
+      min-width: 120px;
+
+      &:first-child {
+        position: sticky;
+        left: 0;
+        background-color: $color-gray-light;
+        z-index: 20;
+        min-width: 150px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $color-gray-light;
+      }
+
+      td {
+        padding: 16px;
+        border-bottom: 1px solid #f0f0f0;
+        white-space: nowrap;
+        min-width: 120px;
+
+        &:first-child {
+          position: sticky;
+          left: 0;
+          background-color: inherit;
+          z-index: 10;
+          min-width: 150px;
+          font-weight: 500;
+        }
+      }
+
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.table-crypto-header-scroll,
+.table-crypto-body-scroll {
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+}
