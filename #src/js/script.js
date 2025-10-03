@@ -9,4 +9,5 @@
 @@include('js.cookie.js', {})
 @@include('bvi-init.js', {})
 @@include('bvi.js', {})
+@@include('libs/swiper.min.js', {})
 @@include('app.js', {})
