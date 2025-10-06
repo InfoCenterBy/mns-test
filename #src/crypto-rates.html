@@ -130,8 +130,14 @@
               </div>
 
 
-              <h4 class="fs-20 fw-semibold border-bottom pb-2 mt-64">
-                Архив курсов криптовалют в BYN
+              <h4 class="fs-20 fw-semibold border-bottom pb-2 mt-64 d-flex justify-content-between align-items-center">
+                <span>Архив курсов криптовалют в BYN</span>
+
+                <a href="#" class="d-flex align-items-center gap-2">
+                  <span class="fs-14">Перейти в архив</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+
               </h4>
 
               <div class="row">
@@ -154,22 +160,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-md-4 col-lg-3">
-                  <div class="mt-3">
-                    <p class="fw-semibold mb-2">Год</p>
-                    <div class="dropdown">
-                      <button class="dropdown-toggle dropdown-btn__large table-year" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        2025
-                      </button>
-                      <ul class="dropdown-menu dropdown-content">
-                        <li><a class="dropdown-item table-year-item" href="#">2025</a></li>
-                        <li><a class="dropdown-item table-year-item" href="#">2024</a></li>
-                        <li><a class="dropdown-item table-year-item" href="#">2023</a></li>
-                        <li><a class="dropdown-item table-year-item" href="#">2018</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+
                 <div class="col-12 col-md-4 col-lg-3">
                   <div class="mt-3">
                     <p class="fw-semibold mb-2">Месяц</p>
@@ -218,6 +209,14 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-12 col-md-4 col-lg-3 d-flex justify-content-end">
+                  <div class="d-flex justify-content-end align-items-end mb-4">
+                    <a href="#" class="link-download__icon">
+                      <i class="bi bi-download mr-2"></i>
+                      <span class="fs-14">Скачать документ</span>
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <div class="table-crypto-container">
@@ -230,7 +229,6 @@
                       </thead>
                     </table>
                   </div>
-
 
                   <div class="table-crypto-body-scroll">
                     <table class="table-crypto">
@@ -257,6 +255,7 @@
     const data = {
       "BTC": [
         { time: '2018-12-22', value: 32.51 },
+        { time: '2018-12-22', value: 33.51 },
         { time: '2018-12-23', value: 31.11 },
         { time: '2018-12-24', value: 27.02 },
         { time: '2018-12-25', value: 27.32 },
@@ -264,6 +263,14 @@
         { time: '2025-01-02', value: 31.11 },
         { time: '2025-01-03', value: 27.02 },
         { time: '2025-01-04', value: 27.32 },
+        { time: '2025-03-01', value: 32.51 },
+        { time: '2025-03-02', value: 31.11 },
+        { time: '2025-03-03', value: 27.02 },
+        { time: '2025-03-04', value: 27.32 },
+        { time: '2025-07-01', value: 32.51 },
+        { time: '2025-07-02', value: 31.11 },
+        { time: '2025-07-03', value: 27.02 },
+        { time: '2025-07-04', value: 27.32 },
         { time: '2018-12-26', value: 25.17 },
         { time: '2018-12-27', value: 28.89 },
         { time: '2018-12-28', value: 25.46 },
@@ -420,65 +427,194 @@
           updateChart();
         });
       });
-
-      searchInput.addEventListener('input', performSearch);
-
-      const tokenDropdown = document.querySelector('.dropdown');
-      tokenDropdown.addEventListener('hidden.bs.dropdown', function () {
-        searchInput.value = '';
-        tokenItems.forEach(item => {
-          item.style.display = 'block';
-        });
-      });
-
-      function getLastAvailableDate(tokenData, year) {
-        // Фильтруем данные по текущему году
-        const yearData = tokenData.filter(item => {
-          const [itemYear] = item.time.split('-');
-          return itemYear === year;
-        });
-
-        if (yearData.length === 0) return null;
-
-        const lastDate = yearData.reduce((max, item) => {
-          return item.time > max ? item.time : max;
-        }, yearData[0].time);
-
-        return lastDate;
-      }
-
-      function updateTokenCards() {
-        const tokenCards = {
-          'BTC': document.querySelector('.token-card-header img[src*="btc"]').closest('.bg-color-gray-light'),
-          'ETH': document.querySelector('.token-card-header img[src*="eth"]').closest('.bg-color-gray-light'),
-          'XRP': document.querySelector('.token-card-header img[src*="xrp"]').closest('.bg-color-gray-light')
-        };
-
-        Object.keys(tokenCards).forEach(token => {
-          if (data[token]) {
-            const lastDate = getLastAvailableDate(data[token], currentYear);
-
-            if (lastDate) {
-              const lastData = data[token].find(item => item.time === lastDate);
-
-              if (lastData) {
-                const card = tokenCards[token];
-                const priceElement = card.querySelector('.token-card-value');
-                const dateElement = card.querySelector('.token-card-date');
-
-                const [year, month, day] = lastDate.split('-');
-                const formattedDate = `${day}.${month}.${year}`;
-
-                priceElement.textContent = `${lastData.value.toLocaleString('ru-RU')} BYN`;
-                dateElement.textContent = `на ${formattedDate}`;
-              }
-            }
-          }
-        });
-      }
-      updateTokenCards();
-      updateChart();
     });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   const selectTokenBtn = document.querySelector('.chart-token');
+    //   const selectMonthBtn = document.querySelector('.chart-month');
+    //   const monthContainer = selectMonthBtn.closest('.dropdown').querySelector('.dropdown-menu');
+
+    //   const tokenItems = document.querySelectorAll('.chart-token-item');
+    //   const monthItems = document.querySelectorAll('.chart-month-item');
+    //   const searchInput = document.querySelector('.dropdown-search-input');
+
+    //   const currentYear = new Date().getFullYear().toString();
+
+    //   let selectedToken = 'BTC';
+    //   let selectedMonth = 'ALL';
+    //   let currentToken = 'BTC';
+
+    //   const chartOptions = {
+    //     layout: {
+    //       textColor: 'black',
+    //       background: { type: 'solid', color: 'white' }
+    //     },
+    //     attributionLogo: false
+    //   };
+
+    //   const chart = LightweightCharts.createChart(document.querySelector('.chart'), chartOptions);
+    //   const areaSeries = chart.addSeries(LightweightCharts.AreaSeries, {
+    //     lineColor: '#014A37',
+    //     topColor: '#007A65',
+    //     bottomColor: 'rgba(0,122,101, 0.28)'
+    //   });
+
+    //   function filterDataByYear(tokenData, year) {
+    //     return tokenData.filter(item => {
+    //       const [itemYear] = item.time.split('-');
+    //       return itemYear === year;
+    //     });
+    //   }
+
+    //   function updateChart() {
+    //     if (data[selectedToken]) {
+    //       let filteredData;
+
+    //       if (selectedMonth === 'ALL') {
+    //         filteredData = filterDataByYear(data[selectedToken], currentYear);
+    //       } else {
+    //         filteredData = filterDataByMonthAndYear(data[selectedToken], selectedMonth, currentYear);
+    //       }
+
+    //       const dataNotFound = document.querySelector('#dataNotFound')
+    //       const chartContainer = document.querySelector('.chart-container')
+
+    //       if (filteredData.length === 0) {
+    //         chartContainer.classList.add("d-none")
+    //         dataNotFound.classList.remove('d-none')
+    //         dataNotFound.classList.add('d-flex')
+    //         return
+    //       }
+
+    //       chartContainer.classList.remove("d-none")
+    //       dataNotFound.classList.add('d-none')
+    //       dataNotFound.classList.remove('d-flex')
+    //       areaSeries.setData(filteredData);
+    //       chart.timeScale().fitContent();
+    //       currentToken = selectedToken;
+    //     }
+    //   }
+
+    //   function filterDataByMonthAndYear(tokenData, month, year) {
+    //     return tokenData.filter(item => {
+    //       const [itemYear, itemMonth] = item.time.split('-');
+    //       return itemMonth === month && itemYear === year;
+    //     });
+    //   }
+
+    //   function performSearch() {
+    //     const searchTerm = searchInput.value.toLowerCase().trim();
+
+    //     tokenItems.forEach(item => {
+    //       const text = item.textContent.toLowerCase();
+    //       if (text.includes(searchTerm)) {
+    //         item.style.display = 'block';
+    //       } else {
+    //         item.style.display = 'none';
+    //       }
+    //     });
+    //   }
+
+    //   function addAllMonthOption() {
+    //     const allLi = document.createElement('li');
+    //     const allA = document.createElement('a');
+    //     allA.className = 'dropdown-item chart-month-item';
+    //     allA.href = '#';
+    //     allA.textContent = 'Все';
+    //     allA.setAttribute('data-value', 'ALL');
+    //     allLi.appendChild(allA);
+    //     monthContainer.insertBefore(allLi, monthContainer.firstChild);
+    //   }
+
+    //   function initMonthEvents() {
+    //     const allMonthItems = document.querySelectorAll('.chart-month-item');
+
+    //     allMonthItems.forEach(item => {
+    //       item.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         selectedMonth = this.getAttribute('data-value') || this.textContent.trim();
+    //         const selectedMonthName = this.textContent.trim();
+
+    //         selectMonthBtn.textContent = selectedMonthName;
+    //         updateChart();
+    //       });
+    //     });
+    //   }
+
+    //   selectMonthBtn.textContent = 'Все';
+
+    //   addAllMonthOption();
+    //   initMonthEvents();
+
+    //   tokenItems.forEach(item => {
+    //     item.addEventListener('click', function (e) {
+    //       e.preventDefault();
+    //       selectedToken = this.textContent.trim();
+
+    //       selectTokenBtn.textContent = selectedToken;
+
+    //       updateChart();
+    //     });
+    //   });
+
+    //   searchInput.addEventListener('input', performSearch);
+
+    //   const tokenDropdown = document.querySelector('.dropdown');
+    //   tokenDropdown.addEventListener('hidden.bs.dropdown', function () {
+    //     searchInput.value = '';
+    //     tokenItems.forEach(item => {
+    //       item.style.display = 'block';
+    //     });
+    //   });
+
+    //   function getLastAvailableDate(tokenData, year) {
+    //     const yearData = tokenData.filter(item => {
+    //       const [itemYear] = item.time.split('-');
+    //       return itemYear === year;
+    //     });
+
+    //     if (yearData.length === 0) return null;
+
+    //     const lastDate = yearData.reduce((max, item) => {
+    //       return item.time > max ? item.time : max;
+    //     }, yearData[0].time);
+
+    //     return lastDate;
+    //   }
+
+    //   function updateTokenCards() {
+    //     const tokenCards = {
+    //       'BTC': document.querySelector('.token-card-header img[src*="btc"]').closest('.bg-color-gray-light'),
+    //       'ETH': document.querySelector('.token-card-header img[src*="eth"]').closest('.bg-color-gray-light'),
+    //       'XRP': document.querySelector('.token-card-header img[src*="xrp"]').closest('.bg-color-gray-light')
+    //     };
+
+    //     Object.keys(tokenCards).forEach(token => {
+    //       if (data[token]) {
+    //         const lastDate = getLastAvailableDate(data[token], currentYear);
+
+    //         if (lastDate) {
+    //           const lastData = data[token].find(item => item.time === lastDate);
+
+    //           if (lastData) {
+    //             const card = tokenCards[token];
+    //             const priceElement = card.querySelector('.token-card-value');
+    //             const dateElement = card.querySelector('.token-card-date');
+
+    //             const [year, month, day] = lastDate.split('-');
+    //             const formattedDate = `${day}.${month}.${year}`;
+
+    //             priceElement.textContent = `${lastData.value.toLocaleString('ru-RU')} BYN`;
+    //             dateElement.textContent = `на ${formattedDate}`;
+    //           }
+    //         }
+    //       }
+    //     });
+    //   }
+
+    //   updateTokenCards();
+    //   updateChart();
+    // });
+
 
     document.addEventListener('DOMContentLoaded', function () {
       const tableTokenBtn = document.querySelector('.table-token');
@@ -522,7 +658,6 @@
         if (selectedMonth === 'ALL') return;
 
         const daysInMonth = getDaysInMonth(selectedMonth, selectedYear);
-
 
         tableDayContainer.innerHTML = '';
 
@@ -589,15 +724,7 @@
       }
 
       function getTokenIcon(token) {
-        const icons = {
-          'BTC': './img/crypto/icons/btc.svg',
-          'XRP': './img/crypto/icons/xrp.svg',
-          'USDT': './img/crypto/icons/usdt.svg',
-          'ETH': './img/crypto/icons/eth.svg',
-          'SOL': './img/crypto/icons/sol.svg',
-          'SHIB': './img/crypto/icons/shib.svg'
-        };
-        return icons[token] || './img/crypto/icons/default.svg';
+        return `./img/crypto/icons/${token}.svg`;
       }
 
       function updateTable() {
@@ -633,11 +760,11 @@
 
           const tokenCell = document.createElement('td');
           tokenCell.innerHTML = `
-      <div class="d-flex align-items-center gap-2">
-        <img class="token-card-logo__small" src="${getTokenIcon(token)}" alt="${token}">
-        <span>${token}</span>
-      </div>
-    `;
+            <div class="d-flex align-items-center gap-2">
+              <img class="token-card-logo__small" src="${getTokenIcon(token.toLowerCase())}" alt="${token}">
+              <span>${token}</span>
+            </div>
+          `;
           row.appendChild(tokenCell);
 
           dates.forEach(date => {
@@ -787,6 +914,290 @@
 
       updateTable();
     });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   const tableTokenBtn = document.querySelector('.table-token');
+    //   const tableMonthBtn = document.querySelector('.table-month');
+    //   const tableDayBtn = document.querySelector('.table-day');
+    //   const tableDayDropdown = tableDayBtn.closest('.dropdown');
+
+    //   const tableTokenItems = document.querySelectorAll('.table-token-item');
+    //   const tableMonthContainer = document.querySelector('.table-month').closest('.dropdown').querySelector('.dropdown-menu');
+    //   const tableDayContainer = document.querySelector('.table-day').closest('.dropdown').querySelector('.dropdown-menu');
+    //   const tableTokenContainer = document.querySelector('.table-token').closest('.dropdown').querySelector('.dropdown-menu');
+
+    //   const searchInput = document.querySelector('.table-token').closest('.dropdown').querySelector('.dropdown-search-input');
+
+    //   const currentYear = new Date().getFullYear().toString();
+
+    //   let selectedToken = 'ALL';
+    //   let selectedMonth = 'ALL';
+    //   let selectedDay = 'ALL';
+
+    //   function updateDayState() {
+    //     if (selectedMonth === 'ALL') {
+    //       tableDayBtn.disabled = true;
+    //       tableDayDropdown.classList.add('disabled');
+    //       selectedDay = 'ALL';
+    //       tableDayBtn.textContent = 'Все';
+    //     } else {
+    //       tableDayBtn.disabled = false;
+    //       tableDayDropdown.classList.remove('disabled');
+    //     }
+    //   }
+
+    //   function getDaysInMonth(month, year) {
+    //     return new Date(year, month, 0).getDate();
+    //   }
+
+    //   function updateDaysList() {
+    //     if (selectedMonth === 'ALL') return;
+
+    //     const daysInMonth = getDaysInMonth(selectedMonth, currentYear);
+
+    //     tableDayContainer.innerHTML = '';
+
+    //     const allLi = document.createElement('li');
+    //     const allA = document.createElement('a');
+    //     allA.className = 'dropdown-item table-day-item';
+    //     allA.href = '#';
+    //     allA.textContent = 'Все';
+    //     allA.setAttribute('data-value', 'ALL');
+    //     allLi.appendChild(allA);
+    //     tableDayContainer.appendChild(allLi);
+
+    //     for (let day = 1; day <= daysInMonth; day++) {
+    //       const li = document.createElement('li');
+    //       const a = document.createElement('a');
+    //       a.className = 'dropdown-item table-day-item';
+    //       a.href = '#';
+    //       a.textContent = day;
+    //       a.setAttribute('data-value', day.toString());
+    //       li.appendChild(a);
+    //       tableDayContainer.appendChild(li);
+    //     }
+
+    //     initDayEvents();
+    //   }
+
+    //   function getFilteredDates() {
+    //     const dates = [];
+
+    //     if (selectedMonth === 'ALL') {
+    //       const months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+    //       months.forEach(month => {
+    //         const daysInMonth = getDaysInMonth(month, currentYear);
+    //         for (let day = 1; day <= daysInMonth; day++) {
+    //           const dayStr = day.toString().padStart(2, '0');
+    //           dates.push(`${currentYear}-${month}-${dayStr}`);
+    //         }
+    //       });
+    //     } else if (selectedDay === 'ALL') {
+    //       const daysInMonth = getDaysInMonth(selectedMonth, currentYear);
+    //       for (let day = 1; day <= daysInMonth; day++) {
+    //         const dayStr = day.toString().padStart(2, '0');
+    //         dates.push(`${currentYear}-${selectedMonth}-${dayStr}`);
+    //       }
+    //     } else {
+    //       const dayStr = selectedDay.padStart(2, '0');
+    //       dates.push(`${currentYear}-${selectedMonth}-${dayStr}`);
+    //     }
+
+    //     return dates;
+    //   }
+
+    //   function findValue(token, date) {
+    //     const tokenData = data[token];
+    //     if (!tokenData) return '';
+
+    //     const found = tokenData.find(item => item.time === date);
+    //     return found ? found.value.toString().replace('.', ',') : '';
+    //   }
+
+    //   function formatDate(dateString) {
+    //     const [year, month, day] = dateString.split('-');
+    //     return `${day}.${month}.${year}`;
+    //   }
+
+    //   function getTokenIcon(token) {
+    //     return `./img/crypto/icons/${token}.svg`;
+    //   }
+
+    //   function updateTable() {
+    //     const tableHeader = document.querySelector('.table-crypto-header-scroll .table-crypto');
+    //     const tableBody = document.querySelector('.table-crypto-body-scroll .table-crypto');
+
+    //     tableHeader.innerHTML = '';
+    //     tableBody.innerHTML = '';
+
+    //     const tokens = selectedToken === 'ALL' ? Object.keys(data) : [selectedToken];
+    //     const dates = getFilteredDates();
+
+    //     const thead = document.createElement('thead');
+    //     const headerRow = document.createElement('tr');
+
+    //     const tokenHeader = document.createElement('td');
+    //     tokenHeader.textContent = 'Токен';
+    //     headerRow.appendChild(tokenHeader);
+
+    //     dates.forEach(date => {
+    //       const dateHeader = document.createElement('td');
+    //       dateHeader.textContent = formatDate(date);
+    //       headerRow.appendChild(dateHeader);
+    //     });
+
+    //     thead.appendChild(headerRow);
+    //     tableHeader.appendChild(thead);
+
+    //     const tbody = document.createElement('tbody');
+
+    //     tokens.forEach(token => {
+    //       const row = document.createElement('tr');
+
+    //       const tokenCell = document.createElement('td');
+    //       tokenCell.innerHTML = `
+    //     <div class="d-flex align-items-center gap-2">
+    //       <img class="token-card-logo__small" src="${getTokenIcon(token.toLowerCase())}" alt="${token}">
+    //       <span>${token}</span>
+    //     </div>
+    //   `;
+    //       row.appendChild(tokenCell);
+
+    //       dates.forEach(date => {
+    //         const valueCell = document.createElement('td');
+    //         valueCell.textContent = findValue(token, date);
+    //         row.appendChild(valueCell);
+    //       });
+
+    //       tbody.appendChild(row);
+    //     });
+
+    //     tableBody.appendChild(tbody);
+
+    //     syncScrolls();
+    //   }
+
+    //   function syncScrolls() {
+    //     const headerScroll = document.querySelector('.table-crypto-header-scroll');
+    //     const bodyScroll = document.querySelector('.table-crypto-body-scroll');
+
+    //     headerScroll.addEventListener('scroll', function () {
+    //       bodyScroll.scrollLeft = this.scrollLeft;
+    //     });
+
+    //     bodyScroll.addEventListener('scroll', function () {
+    //       headerScroll.scrollLeft = this.scrollLeft;
+    //     });
+    //   }
+
+    //   document.addEventListener('DOMContentLoaded', function () {
+    //     syncScrolls();
+    //   });
+
+    //   function performSearch() {
+    //     const searchTerm = searchInput.value.toLowerCase().trim();
+
+    //     const allTokenItems = document.querySelectorAll('.table-token-item');
+    //     allTokenItems.forEach(item => {
+    //       const text = item.textContent.toLowerCase();
+    //       if (text === 'все' || text.includes(searchTerm)) {
+    //         item.style.display = 'block';
+    //       } else {
+    //         item.style.display = 'none';
+    //       }
+    //     });
+    //   }
+
+    //   function initDayEvents() {
+    //     const tableDayItems = document.querySelectorAll('.table-day-item');
+
+    //     tableDayItems.forEach(item => {
+    //       item.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         const value = this.getAttribute('data-value') || this.textContent.trim();
+    //         selectedDay = value;
+    //         tableDayBtn.textContent = this.textContent.trim();
+    //         updateTable();
+    //       });
+    //     });
+    //   }
+
+    //   function initTokenEvents() {
+    //     const allTokenItems = document.querySelectorAll('.table-token-item');
+
+    //     allTokenItems.forEach(item => {
+    //       item.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         const value = this.getAttribute('data-value') || this.textContent.trim();
+    //         selectedToken = value;
+    //         tableTokenBtn.textContent = this.textContent.trim();
+    //         updateTable();
+    //       });
+    //     });
+    //   }
+
+    //   function initMonthEvents() {
+    //     const tableMonthItems = document.querySelectorAll('.table-month-item');
+
+    //     tableMonthItems.forEach(item => {
+    //       item.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         const value = this.getAttribute('data-value') || this.textContent.trim();
+    //         selectedMonth = value;
+    //         tableMonthBtn.textContent = this.textContent.trim();
+    //         updateDayState();
+    //         updateDaysList();
+    //         updateTable();
+    //       });
+    //     });
+    //   }
+
+    //   function addAllTokenOption() {
+    //     const allLi = document.createElement('li');
+    //     const allA = document.createElement('a');
+    //     allA.className = 'dropdown-item table-token-item';
+    //     allA.href = '#';
+    //     allA.textContent = 'Все';
+    //     allA.setAttribute('data-value', 'ALL');
+    //     allLi.appendChild(allA);
+    //     tableTokenContainer.insertBefore(allLi, tableTokenContainer.querySelector('.dropdown-search').nextSibling);
+    //   }
+
+    //   function addAllMonthOption() {
+    //     const allLi = document.createElement('li');
+    //     const allA = document.createElement('a');
+    //     allA.className = 'dropdown-item table-month-item';
+    //     allA.href = '#';
+    //     allA.textContent = 'Все';
+    //     allA.setAttribute('data-value', 'ALL');
+    //     allLi.appendChild(allA);
+    //     tableMonthContainer.insertBefore(allLi, tableMonthContainer.firstChild);
+    //   }
+
+    //   searchInput.addEventListener('input', performSearch);
+
+    //   const tokenDropdown = tableTokenBtn.closest('.dropdown');
+    //   tokenDropdown.addEventListener('hidden.bs.dropdown', function () {
+    //     searchInput.value = '';
+    //     const allTokenItems = document.querySelectorAll('.table-token-item');
+    //     allTokenItems.forEach(item => {
+    //       item.style.display = 'block';
+    //     });
+    //   });
+
+    //   addAllTokenOption();
+    //   addAllMonthOption();
+    //   updateDayState();
+    //   updateDaysList();
+    //   initTokenEvents();
+    //   initMonthEvents();
+    //   initDayEvents();
+
+    //   tableTokenBtn.textContent = 'Все';
+    //   tableMonthBtn.textContent = 'Все';
+    //   tableDayBtn.textContent = 'Все';
+
+    //   updateTable();
+    // });
   </script>
 
 
