@@ -152,7 +152,6 @@
   }
 }
 
-// Основной скролл для тела таблицы
 .table-crypto-body-scroll {
   max-height: 400px;
   overflow-x: auto;
@@ -213,6 +212,9 @@
     tr {
       &:nth-child(even) {
         background-color: $color-gray-light;
+      }
+      &:nth-child(odd) {
+        background-color: $color-white;
       }
 
       td {
