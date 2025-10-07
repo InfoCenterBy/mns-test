@@ -1038,7 +1038,7 @@ a:hover {
   border-bottom: 16px solid #FAFAFA;
   position: absolute;
   left: 65px;
-  top: -16px;
+  top: -15px;
 }
 @media (max-width: 564.98px) {
   .accordion-question__body {
