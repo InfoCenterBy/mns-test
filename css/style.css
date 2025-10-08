@@ -1512,7 +1512,7 @@ a:hover {
   border-bottom: 16px solid #fafafa;
   position: absolute;
   left: 65px;
-  top: -16px;
+  top: -15px;
 }
 
 .accordion-question__row {
@@ -10361,6 +10361,12 @@ table.cigarettes__table {
   background-color: #ebebeb;
   border-radius: 10px;
   min-width: 150px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  text-align: left;
 }
 
 .dropdown-btn::after {
@@ -10375,6 +10381,13 @@ table.cigarettes__table {
   border-radius: 10px;
   min-width: 150px;
   width: 100%;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  text-align: left;
+  padding-right: 30px;
 }
 
 .dropdown-btn__large::after {
@@ -10388,13 +10401,14 @@ table.cigarettes__table {
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 330px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .dropdown-search {
   position: relative;
-}
-
-.dropdown-search {
   margin-bottom: 8px;
 }
 
@@ -10406,6 +10420,9 @@ table.cigarettes__table {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  width: calc(100% - 24px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .dropdown-no-results {
@@ -10432,6 +10449,21 @@ table.cigarettes__table {
 .dropdown.disabled .dropdown-toggle:hover {
   background-color: #e9ecef;
   border-color: #dee2e6;
+}
+
+.dropdown-item {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+  padding: 8px 12px;
+}
+
+.dropdown-search {
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 #tv-attr-logo {
@@ -10506,6 +10538,13 @@ table.cigarettes__table {
   margin: 0;
 }
 
+.table-crypto thead tr td:first-child,
+.table-crypto tbody tr td:first-child {
+  white-space: normal;
+  word-wrap: break-word;
+  min-width: 250px;
+}
+
 .table-crypto thead {
   background-color: #ebebeb;
 }
@@ -10524,7 +10563,6 @@ table.cigarettes__table {
   left: 0;
   background-color: #ebebeb;
   z-index: 20;
-  min-width: 150px;
 }
 
 .table-crypto thead tr td:last-child {
@@ -10533,6 +10571,10 @@ table.cigarettes__table {
 
 .table-crypto tbody tr:nth-child(even) {
   background-color: #ebebeb;
+}
+
+.table-crypto tbody tr:nth-child(odd) {
+  background-color: #fafafa;
 }
 
 .table-crypto tbody tr td {
@@ -10548,7 +10590,6 @@ table.cigarettes__table {
   left: 0;
   background-color: inherit;
   z-index: 10;
-  min-width: 150px;
   font-weight: 500;
 }
 
@@ -13690,6 +13731,17 @@ figure audio {
 
   .mobile-w-100 {
     width: 100%;
+  }
+
+  .table-crypto {
+    font-size: 14px;
+  }
+
+  .table-crypto thead tr td:first-child,
+  .table-crypto tbody tr td:first-child {
+    white-space: normal;
+    word-wrap: break-word;
+    min-width: 180px;
   }
 }
 
